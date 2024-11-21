@@ -28,3 +28,22 @@ View this jekyll theme in action [here](https://y7kim.github.io/agency-jekyll-th
 
 =========
 For more details, read [documentation](http://jekyllrb.com/)
+
+=========
+文档结构
+project-root/
+├── _data/
+├── _includes/
+├── _layouts/
+├── _posts/
+├── assets/
+│   ├── css/
+│   │   └── style.css
+│   ├── js/
+│   │   └── main.js
+│   ├── img/
+│       └── logo.png
+├── _config.yml
+├── index.html
+└── README.md
+

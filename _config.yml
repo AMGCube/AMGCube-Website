@@ -1,64 +1,33 @@
-url: https://y7kim.github.io
-baseurl: /agency-jekyll-theme/
+url: ""
+baseurl: ""
 
 # Site settings
-title: Awesome Title
-email: your-email@domain.com
-description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
-
+title: AMGCube
+email: contact@amgcube.com
+description: "AMGCube - Limited Space, Infinite Creativity."
 
 # Team names, titles and social links
 people:
-- name: Kay Garland
+- name: Leon Liu
   pic: 1
-  position: Lead Designer
+  position: Chief Marketing Officer
   social:
     - title: twitter
-      url: #
-    - title: facebook
-      url: #
-    - title: stack-overflow
-      url: #
-
-- name: Larry Parker
-  pic: 2
-  position: Lead Marketer
-  social:
-    - title: twitter
-      url: #
-    - title: facebook
-      url: #
+      url: https://twitter.com/
     - title: linkedin
-      url: #
+      url: https://linkedin.com/
 
-- name: Diana Petersen
-  pic: 3
-  position: Lead Developer
-  social:
-    - title: twitter
-      url: #
-    - title: facebook
-      url: #
-    - title: google-plus
-      url: #
-
-# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
+# Social networks usernames
 social:
   - title: twitter
-    url: http://twitter.com/jekyllrb
-  - title: facebook
-    url:
-  - title: stack-overflow
-    url: http://stackoverflow.com/questions/tagged/jekyll
-  - title: bitbucket 
-    url: http://bitbucket.org/jekyll
+    url: https://twitter.com/amgcube
   - title: github
-    url: http://github.com/jekyll
+    url: https://github.com/amgcube
 
-# Postal address (add as many lines as necessary)
+# Postal address (optional, remove if not needed)
 address:
-  - line: 3481 Melrose Place
-  - line: Beverly Hills, CA 90210
+  - line: 9 Falcon Ave, Thornlands
+  - line: Brisbane, QLD 4164
 
 # Build settings
 markdown: kramdown

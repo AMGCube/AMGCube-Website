@@ -1,9 +1,9 @@
 ---
-title: Dreams
-subtitle: Website Design
+title: Granny Flats in Queensland
+subtitle: Compact in size, spacious in design
 layout: default
 modal-id: 1
-date: 2014-07-18
+date: 2014-11-18
 img: dreams.png
 thumbnail: dreams-thumbnail.png
 alt: image-alt

@@ -4,7 +4,7 @@ subtitle: Compact in size, spacious in design
 layout: default
 modal-id: 3
 date: 2024-11-18
-img: dreams.png
+img: dreams-1.png
 thumbnail: dreams-thumbnail.png
 alt: image-alt
 project-date: November 2024

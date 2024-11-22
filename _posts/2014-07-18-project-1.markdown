@@ -5,6 +5,7 @@ layout: default
 modal-id: 1
 date: 2024-11-18
 img: dreams.png
+
 thumbnail: dreams-thumbnail.png
 alt: image-alt
 project-date: November 2024

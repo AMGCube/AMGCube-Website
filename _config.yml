@@ -10,7 +10,23 @@ description: "AMGCube - Limited Space, Infinite Creativity."
 people:
 - name: Leon Liu
   pic: 1
-  position: Chief Marketing Officer
+  position: Founder, PM
+  social:
+    - title: twitter
+      url: https://twitter.com/
+    - title: linkedin
+      url: https://linkedin.com/
+- name: Bo Liu
+  pic: 2
+  position: Co-Founder, CTO
+  social:
+    - title: twitter
+      url: https://twitter.com/
+    - title: linkedin
+      url: https://linkedin.com/
+- name: Jason Wang
+  pic: 3
+  position: Co-Founder, CCO
   social:
     - title: twitter
       url: https://twitter.com/

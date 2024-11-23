@@ -1,5 +1,5 @@
 ---
-title: Granny Flats
+title: Granny Flat
 subtitle: Compact in size, spacious in design
 layout: default
 modal-id: 1
@@ -9,8 +9,8 @@ img: dreams.png
 thumbnail: dreams-thumbnail.png
 alt: image-alt
 project-date: November 2024
-client: AMGCube Pty Ltd
-category: Gallery
-description: 80 Sqm, 2 Bedroom, Granny-flat, Oxley QLD
+client: AMGCube
+category: Projects
+description: Show Room, 80 Sqm, 2 Bedroom, Granny-flat, Oxley QLD
 
 ---

@@ -1,15 +1,15 @@
 ---
-title: Granny Flats
-subtitle: Compact in size, spacious in design
+title: Kitchen System
+subtitle: wall panel system
 layout: default
 modal-id: 2
 date: 2024-11-18
-img: dreams-1.png
-thumbnail: dreams-thumbnail.png
+img: 2.png
+thumbnail: 2-thumbnail.png
 alt: image-alt
 project-date: November 2024
-client: AMGCube Pty Ltd
-category: Gallery
-description: 80 Sqm, 2 Bedroom, Granny-flat, Oxley QLD
+client: AMGCube
+category: Products
+description: A modular component for cooking activities, produced in a factory and assembled on-site. It includes integrated cabinets, stoves, range hoods, and pipelines. Made of calcium silicate, a non-combustible Class A material, it offers high strength, stability, and resistance to deformation. It provides excellent thermal insulation, soundproofing (≈22dB), and supports recyclable, eco-friendly materials. Various surface finishes are available to suit different design styles.
 
 ---

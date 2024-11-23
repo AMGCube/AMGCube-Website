@@ -1,15 +1,15 @@
 ---
-title: Granny Flats
-subtitle: Compact in size, spacious in design
+title: SMC Bathroom System
+subtitle: SMC Material
 layout: default
 modal-id: 3
 date: 2024-11-18
-img: dreams-1.png
-thumbnail: dreams-thumbnail.png
+img: 3.png
+thumbnail: 3-thumbnail.png
 alt: image-alt
 project-date: November 2024
-client: AMGCube Pty Ltd
-category: Gallery
-description: 80 Sqm, 2 Bedroom, Granny-flat, Oxley QLD
+client: AMGCube
+category: Products
+description: Made of high-quality SMC material with a smooth, baby-skin-like touch, it effectively retains heat from air and hot water, ensuring a warm and comfortable bathing experience in winter without cold feet. The advanced hydrophobic surface allows water droplets to roll off quickly, keeping the surface dry. The SMC nano-coating provides 90% anti-mold efficiency and excellent antibacterial properties. The waterproof base features a raised edge design and integrated molding to prevent leaks entirely.
 
 ---

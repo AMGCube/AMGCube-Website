@@ -1,16 +1,22 @@
 ---
 title: Granny Flat
-subtitle: Compact in size, spacious in design
+subtitle: Prefabricated, Modular House
 layout: default
 modal-id: 1
 date: 2024-11-18
-img: dreams.png
+images: 
+ - img/portfolio/1.png
+ - img/portfolio/1-1.png
+ - img/portfolio/1-2.png
+ - img/portfolio/1-3.png
+ - img/portfolio/1-4.png
+ - img/portfolio/1-5.png
 
-thumbnail: dreams-thumbnail.png
+thumbnail: 1-thumbnail.png
 alt: image-alt
 project-date: November 2024
 client: AMGCube
 category: Projects
-description: Show Room, 80 Sqm, 2 Bedroom, Granny-flat, Oxley QLD
+description: Our first prefabricated modular housing project in Australia. This is a granny flat located in Brisbane, covering 80 square meters, with 2 bedrooms, 1 bathroom, and 1 living room. The highlight of this house is its spacious design, featuring a ceiling height of 3 meters and a living room width of 6.5 meters. These dimensions are unimaginable for most granny flats and prefabricated modular houses and even surpass many standard residential homes.
 
 ---

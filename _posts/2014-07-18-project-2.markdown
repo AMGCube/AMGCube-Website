@@ -1,10 +1,16 @@
 ---
 title: Kitchen System
-subtitle: wall panel system
+subtitle: Prefabricated kitchen system
 layout: default
 modal-id: 2
 date: 2024-11-18
-img: 2.png
+images: 
+ - img\portfolio\2.png
+ - img\portfolio\2-4.png
+ - img\portfolio\2-0.png
+ - img\portfolio\2-1.png
+ - img\portfolio\2-2.png
+ - img\portfolio\2-3.png
 thumbnail: 2-thumbnail.png
 alt: image-alt
 project-date: November 2024

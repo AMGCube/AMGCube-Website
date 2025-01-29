@@ -48,3 +48,10 @@ address:
 # Build settings
 markdown: kramdown
 permalink: pretty
+
+# Additional configurations
+wdm:
+  force_polling: false
+logger: true
+timezone: Australia/Brisbane
+cache: true

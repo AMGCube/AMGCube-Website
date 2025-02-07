@@ -1,0 +1,14 @@
+/* Hero Section for Secondary Pages */
+.hero-page {
+    background-image: url('/img/hero-page-bg.jpg'); /* 确保路径正确 */
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50vh; /* 调整合适的高度 */
+    min-height: 400px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}

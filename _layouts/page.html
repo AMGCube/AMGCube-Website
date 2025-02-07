@@ -3,9 +3,17 @@
 <head>
     {% include head.html %}
 </head>
+
 <body>
     {% include nav.html %}
-    {% include hero-page.html %}  <!-- 二级页面大图 -->
+
+     <!-- 这里的 hero-page 仅用于二级页面背景图 -->
+     <header class="hero-page">
+        {% include hero-page.html %}  
+    </header>
+
+    <!-- 下面是具体的二级页面内容-->
+
     <div class="container">
         {{ content }}
     </div>

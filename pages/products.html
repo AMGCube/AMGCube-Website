@@ -1,0 +1,23 @@
+---
+layout: page
+title: 产品中心
+permalink: /products/
+
+---
+<h1>产品详情</h1>
+
+<p>这里是静态文字部分。</p>
+
+<h2>调试信息</h2>
+<ul>
+  <li>站点文章数量: {{ site.posts | size }}</li>
+  <li>站点文档数量: {{ site.documents | size }}</li>
+</ul>
+
+<h2>相关文章</h2>
+<ul>
+  {% for post in site.posts %}
+    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+  {% endfor %}
+</ul>
+

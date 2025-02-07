@@ -1,0 +1,53 @@
+---
+layout: null
+title: 首页
+---
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    {% include head.html %}
+</head>
+
+<body>
+    {% include nav.html %}
+
+    <!-- 这里的 hero-home 仅用于首页大图 -->
+    <header class="hero-home">
+        {% include hero-home.html %}  
+    </header>
+
+    <!-- 其他部分不会继承 hero-home 的背景 -->
+    <section id="products">
+        {% include products_intro.html %}
+    </section>
+
+    <section id="services">
+        {% include services.html %}
+    </section>
+
+    <section id="portfolio">
+        {% include portfolio_grid.html %}
+    </section>
+
+    <section id="story">
+        {% include story.html %}
+    </section>
+
+    <section id="team">
+        {% include team.html %}
+    </section>
+
+    <section id="clients">
+        {% include clients.html %}
+    </section>
+
+    <section id="contact">
+        {% include contact.html %}
+    </section>
+
+    {% include js.html %}
+    {% include footer.html %}
+</body>
+</html>
+

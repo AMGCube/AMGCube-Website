@@ -1,9 +1,9 @@
 ---
-title: Granny Flat
-subtitle: Prefabricated, Modular House
+title: Test
+subtitle: SIP - Structural Insulated Panel
 layout: page
-modal-id: 1
-date: 2024-11-18
+modal-id: 5
+date: 2024-01-18
 images: 
  - img/portfolio/1.png
  - img/portfolio/1-1.png
@@ -16,7 +16,7 @@ thumbnail: 1-thumbnail.png
 alt: image-alt
 project-date: November 2024
 client: AMGCube
-categories: ["Projects"]
+categories: ["News"]
 description: Our first prefabricated modular housing project in Australia. This is a granny flat located in Brisbane, covering 80 square meters, with 2 bedrooms, 1 bathroom, and 1 living room. The highlight of this house is its spacious design, featuring a ceiling height of 3 meters and a living room width of 6.5 meters. These dimensions are unimaginable for most granny flats and prefabricated modular houses and even surpass many standard residential homes.
 
 ---

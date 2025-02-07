@@ -1,9 +1,9 @@
 ---
-title: Granny Flat
-subtitle: Prefabricated, Modular House
+title: SIP Wall System
+subtitle: SIP - Structural Insulated Panel
 layout: page
-modal-id: 1
-date: 2024-11-18
+modal-id: 4
+date: 2024-01-18
 images: 
  - img/portfolio/1.png
  - img/portfolio/1-1.png

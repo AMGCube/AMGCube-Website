@@ -1,5 +1,5 @@
 {% include css/bootstrap.min.css %}
 {% include css/agency.css %}
 {{ content }}
-.text-product {
+#products .text-product {
     color: #FFA500; /* 你可以换成其他颜色，比如橙色 */}

@@ -11,34 +11,21 @@ people:
 - name: Leon Liu
   pic: 1
   position: Founder, PM
-  social:
-    - title: twitter
-      url: https://twitter.com/
-    - title: linkedin
-      url: https://linkedin.com/
+  
 - name: Bo Liu
   pic: 2
   position: Co-Founder, CTO
-  social:
-    - title: twitter
-      url: https://twitter.com/
-    - title: linkedin
-      url: https://linkedin.com/
+  
 - name: Jason Wang
   pic: 3
   position: Co-Founder, CCO
-  social:
-    - title: twitter
-      url: https://twitter.com/
-    - title: linkedin
-      url: https://linkedin.com/
+  
 
 # Social networks usernames
 social:
   - title: twitter
     url: https://twitter.com/amgcube
-  - title: github
-    url: https://github.com/amgcube
+  
 
 # Postal address (optional, remove if not needed)
 address:
@@ -55,3 +42,16 @@ wdm:
 logger: true
 timezone: Australia/Brisbane
 cache: true
+
+# add 增加pages目录
+include:
+  - _pages
+  
+# 控制页面的URL
+permalink: pretty
+
+# 调整post文章
+collections:
+  posts:
+    output: true
+    permalink: /:path/

@@ -1,21 +1,33 @@
-<!DOCTYPE html>
+---
+layout: default
+---
+
 <html>
-
-  {% include head.html %}
-
+    {% include head.html %}
 
     <body id="page-top" class="index">
+        
+        
+        {% if page.url == "/" %}
+            <!-- 仅在首页加载 -->
+            {% include header.html %}
+            {% include products_intro.html %}
+            {% include services.html %}
+            {% include portfolio_grid.html %}
+            {% include story.html %}
+            {% include team.html %}
+            {% include clients.html %}
+            {% include contact.html %}
+        {% else %}
+            <!-- 其他页面只显示自身内容 -->
+            <div class="container">
+                {{ content }}
+            </div>
+        {% endif %}
 
-    {% include header.html %}
-    {% include services.html %}
-    {% include portfolio_grid.html %}
-    {% include about.html %}
-    {% include team.html %}
-    {% include clients.html %}
-    {% include contact.html %}
-    {% include footer.html %}
-    {% include modals.html %}
-    {% include js.html %}
+        {% include footer.html %}
+        {% include modals.html %}
+        {% include js.html %}
 
     </body>
 </html>

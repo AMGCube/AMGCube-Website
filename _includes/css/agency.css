@@ -421,9 +421,10 @@ section {
 }
 
 section h2.section-heading {
-    margin-top: 0;
-    margin-bottom: 15px;
+    margin-top: 30;
+    margin-bottom: 30px;
     font-size: 40px;
+    
 }
 
 section h3.section-subheading {

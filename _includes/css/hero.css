@@ -13,36 +13,35 @@
     position: relative;
 }
 
-/* 下面部分是二级页面的控制*/
+
+
+/* 二级页面的排版优化 */
 .products-header {
-    text-align: center;  /* 保持标题居中 */
-    max-width: 1000px;  /* 限制内容宽度，防止文字太散 */
-    
+    text-align: left;  /* 保持标题左对齐 */
+    max-width: 1000px;   /* 适应网页内容 */
     margin: 0 auto;
-    padding: 20px 0;
+    padding: 5px 0;
+    margin-bottom: 0px;  /* 调整段落之间的间距，使页面更紧凑 */
 }
 
 .products-header h2 {
     font-size: 2rem;
     font-weight: bold;
-    margin-bottom: 15px;
+    margin-bottom: 0px;
 }
-
 
 .products-header h4 {
-    font-size: 1.4rem;  /* 增大字体 */
+    font-size: 1.2rem;  /* 调整字体大小 */
     font-weight: bold;
-    text-transform: uppercase;  /* 全部大写，跟FEATURES标题一致 */
-    letter-spacing: 1px;  /* 增加字母间距，提高可读性 */
-    margin-bottom: 15px;  /* 增加与正文的间距 */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0px;
 }
 
-
-.products-header p {
-    text-align: left;  /* 让正文内容左对齐 */
-    font-size: none;
+.products-header-p {
+    text-align: left;
     color: #333;
     line-height: 1.8;
-    max-width: 1000px;  /* 保持段落适当宽度 */
-    margin: 0 auto 15x;  /* 保持段落居中但左对齐 */
+    max-width: 1000px;
+    margin: 0 auto 15px;
 }

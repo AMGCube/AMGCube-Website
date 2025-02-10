@@ -1,9 +1,12 @@
 ---
+
 title: Granny Flat
 subtitle: Prefabricated, Modular House
-layout: page
-modal-id: 1
+layout: post
 date: 2024-11-18
+permalink: /news/granny-flat/
+categories: ["News"]
+
 images: 
  - img/portfolio/1.png
  - img/portfolio/1-1.png

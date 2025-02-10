@@ -36,6 +36,10 @@ address:
 markdown: kramdown
 permalink: pretty
 
+# 解决文章目录不统一的问题
+permalink: /projects/:title/
+
+
 # Additional configurations
 wdm:
   force_polling: false

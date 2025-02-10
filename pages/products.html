@@ -152,18 +152,20 @@ permalink: /products/
     <div class="container">
         <div class="row text-center">
             <div class="col-lg-12">
-                <h3 class="section-heading">Related Articles</h3> <!-- 标题变小 -->
+                <h3 class="section-heading">Related Articles</h3>
             </div>
         </div>
         <div class="row">
             <ul>
-                {% for post in site.posts %}
+                {% assign product_posts = site.posts | where: "categories", "Products" %}
+                {% for post in product_posts %}
                     <li><a href="{{ post.url }}">{{ post.title }}</a></li>
                 {% endfor %}
             </ul>
         </div>
     </div>
 </section>
+
 
 <!-- 自定义CSS -->
 <style>

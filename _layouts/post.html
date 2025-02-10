@@ -10,10 +10,16 @@ layout: page
     <div class="post-content">
         {{ content }}
     </div>
+    <div class="post-images">
+        {% for img in page.images %}
+           <img src="{{ site.baseurl }}/{{ img }}" class="img-responsive" alt="{{ page.title }}">
+        {% endfor %}
 
+    </div>
+    
     <hr>
 
     <div class="post-footer">
-        <p><a href="/news/">Back to News</a></p>
+        <p><a href="/projects/">Back to Projects</a></p>
     </div>
 </article>

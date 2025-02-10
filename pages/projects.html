@@ -1,0 +1,32 @@
+---
+layout: page
+title: "Projects"
+permalink: /projects/
+---
+<h1>Projects</h1>
+<div class="container">
+    <div class="row">
+        {% for post in site.posts %}
+            {% if post.categories contains "Projects" %}
+                <div class="col-md-4 col-sm-6 project-item">
+                    <a href="{{ post.url }}" class="project-link">
+                        <div class="project-hover">
+                            <div class="project-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+
+                        <img src="{{ site.baseurl }}/img/projects/{{ post.thumbnail }}" class="img-responsive img-centered" alt="">
+
+
+                    </a>
+                    <div class="project-caption">
+                        <h4>{{ post.title }}</h4>
+                        <p class="text-muted">{{ post.subtitle }}</p>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+

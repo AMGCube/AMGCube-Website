@@ -8,12 +8,12 @@ permalink: /news/granny-flat/
 categories: ["News"]
 
 images: 
- - img/portfolio/1.png
- - img/portfolio/1-1.png
- - img/portfolio/1-2.png
- - img/portfolio/1-3.png
- - img/portfolio/1-4.png
- - img/portfolio/1-5.png
+ - img/project/1.png
+ - img/project/1-1.png
+ - img/project/1-2.png
+ - img/project/1-3.png
+ - img/project/1-4.png
+ - img/project/1-5.png
 
 thumbnail: 1-thumbnail.png
 alt: image-alt

@@ -1,16 +1,16 @@
 ---
-title: SMC Bathroom System
+title: Bathroom
 subtitle: SMC Material
-layout: default
-modal-id: 3
-date: 2024-11-18
+layout: post
+permalink: /products/Bathroom/
+date: 2025-02-01
 img: 3.png
 thumbnail: 3-thumbnail.png
 images:
-  - img/portfolio/3.png
-  - img/portfolio/3-1.png
-  - img/portfolio/3-2.png
-  - img/portfolio/3-3.png
+  - img/projects/3.png
+  - img/projects/3-1.png
+  - img/projects/3-2.png
+  - img/projects/3-3.png
 alt: image-alt
 project-date: November 2024
 client: AMGCube

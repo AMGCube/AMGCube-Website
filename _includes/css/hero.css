@@ -45,3 +45,43 @@
     max-width: 1000px;
     margin: 0 auto 15px;
 }
+
+/* 三级页面的排版优化 */
+
+/* 副标题 */
+.post-subtitle {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+/* 灰色分割线 */
+.post-divider {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 15px 0;
+}
+
+/* 描述部分 */
+.post-description-wrapper {
+    display: flex; /* 让装饰条和文本等高 */
+    align-items: stretch; /* 让内容和装饰条高度匹配 */
+}
+
+.post-description {
+    font-size: 1.5rem;
+    color: #444;
+    line-height: 1.8;
+    background: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 25px;
+    flex: 1; /* 让文本区域自动填充剩余空间 */
+}
+
+.post-description-border {
+    width: 5px; /* 蓝色装饰条宽度 */
+    background-color: #007bff; /* 蓝色装饰条颜色 */
+    margin-right: 10px; /* 控制装饰条与文本之间的间距 */
+}

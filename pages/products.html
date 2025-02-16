@@ -104,68 +104,39 @@ permalink: /products/
     <div class="container">
         <div class="row text-center">
             <div class="col-lg-12">
-                <h3 class="section-heading">Modules</h3> <!-- 标题变小 -->
+                <h3 class="section-heading">Modules</h3>
             </div>
         </div>
-        <div class="row justify-content-center"> <!-- 模块部分居中 -->
-            <div class="col-md-2 text-center module-box">
-                <span class="fa-stack fa-3x">
-                    <i class="fa fa-square fa-stack-2x text-modules"></i>
-                    <i class="fa fa-building fa-stack-1x fa-inverse"></i>
-                </span>
-                <h4 class="products-heading">Steel Structure</h4>
-            </div>
-            <div class="col-md-2 text-center module-box">
-                <span class="fa-stack fa-3x">
-                    <i class="fa fa-square fa-stack-2x text-modules"></i>
-                    <i class="fa fa-th-large fa-stack-1x fa-inverse"></i>
-                </span>
-                <h4 class="products-heading">Wall System</h4>
-            </div>
-            <div class="col-md-2 text-center module-box">
-                <span class="fa-stack fa-3x">
-                    <i class="fa fa-square fa-stack-2x text-modules"></i>
-                    <i class="fa fa-bath fa-stack-1x fa-inverse"></i>
-                </span>
-                <h4 class="products-heading">Bathroom</h4>
-            </div>
-            <div class="col-md-2 text-center module-box">
-                <span class="fa-stack fa-3x">
-                    <i class="fa fa-square fa-stack-2x text-modules"></i>
-                    <i class="fa fa-th-large fa-stack-1x fa-inverse"></i>
-                </span>
-                <h4 class="products-heading">Floor System</h4>
-            </div>
-            <div class="col-md-2 text-center module-box">
-                <span class="fa-stack fa-3x">
-                    <i class="fa fa-square fa-stack-2x text-modules"></i>
-                    <i class="fa fa-building fa-stack-1x fa-inverse"></i>
-                </span>
-                <h4 class="products-heading">Ceiling</h4>
-            </div>
+        <div class="row justify-content-center">
+            {% assign product_posts = site.posts | where: "categories", "Products" %}
+            {% assign product_links = product_posts | map: "title" %}
+            
+            {% assign module_names = "Steel Structure,Wall System,Bathroom,Floor System,Ceiling" | split: "," %}
+            {% assign module_icons = "building,th-large,bath,th-large,building" | split: "," %}
+            
+            {% for module in module_names %}
+                {% assign module_index = forloop.index0 %}
+                {% assign module_icon = module_icons[module_index] %}
+                {% assign post = product_posts | where: "title", module | first %}
+                {% if post %}
+                    {% assign module_url = post.url %}
+                {% else %}
+                    {% assign module_url = "#" %}
+                {% endif %}
+                
+                <div class="col-md-2 text-center module-box">
+                    <span class="fa-stack fa-3x">
+                        <i class="fa fa-square fa-stack-2x text-modules"></i>
+                        <i class="fa fa-{{ module_icon }} fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="products-heading"><a href="{{ module_url }}">{{ module }}</a></h4>
+                </div>
+            {% endfor %}
         </div>
     </div>
 </section>
 
-<!-- 相关文章 -->
-<section id="product-articles" class="bg-white">
-    <div class="container">
-        <div class="row text-center">
-            <div class="col-lg-12">
-                <h3 class="section-heading">Related Articles</h3>
-            </div>
-        </div>
-        <div class="row">
-            <ul>
-                {% assign product_posts = site.posts | where: "categories", "Products" %}
-                {% for post in product_posts %}
-                    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-                {% endfor %}
-            </ul>
-        </div>
-    </div>
-</section>
-
+<!-- 移除相关文章 -->
 
 <!-- 自定义CSS -->
 <style>

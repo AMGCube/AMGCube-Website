@@ -1,7 +1,7 @@
 ---
 title: Kitchen System
 subtitle: Prefabricated kitchen system
-layout: default
+layout: post
 modal-id: 2
 date: 2024-11-18
 img: 2.png

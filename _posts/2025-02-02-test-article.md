@@ -2,7 +2,7 @@
 title: "Test"
 date: 2025-02-02
 categories: ["Test", "Debug"]
-layout: page
+layout: post
 description: "This is a test article to verify if Jekyll reads posts correctly."
 tags: ["jekyll", "debug", "test"]
 thumbnail: 1-thumbnail.png

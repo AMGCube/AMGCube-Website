@@ -85,3 +85,21 @@
     background-color: #007bff; /* 蓝色装饰条颜色 */
     margin-right: 10px; /* 控制装饰条与文本之间的间距 */
 }
+
+/* 默认导航栏透明 */
+.navbar-default {
+    border-color: transparent;
+    background-color: transparent;
+    transition: background-color 0.3s ease-in-out, padding 0.3s;
+}
+
+/* 滚动后导航栏变黑 */
+.navbar-default.navbar-shrink {
+    background-color: #222 !important;
+    padding: 10px 0;
+}
+
+.navbar-default.navbar-shrink .navbar-brand {
+    font-size: 1.5em;
+    transition: font-size 0.3s;
+}

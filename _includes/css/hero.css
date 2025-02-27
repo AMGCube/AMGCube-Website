@@ -1,6 +1,6 @@
 /* Hero Section for Secondary Pages */
+/* 删除了一段代码： background-image: url('/img/hero-page-bg.jpg'); */
 .hero-page {
-    background-image: url('/img/hero-page-bg.jpg'); /* 确保路径正确 */
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -12,7 +12,6 @@
     color: white;
     position: relative;
 }
-
 
 
 /* 二级页面的排版优化 */

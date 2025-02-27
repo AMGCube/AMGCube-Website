@@ -321,11 +321,15 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .intro-leadin {
+    margin-top: 30px; /* 或者 20px，试试哪个更合适 */
     margin-bottom: 25px;
     font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 40px;
     font-style: italic;
     line-height: 40px;
+    padding-top: 150px; /* 你可以增加数值，看变化 */
+    color: #F8F8F8
+    
 }
 
 .intro-heading {
@@ -335,13 +339,15 @@ fieldset[disabled] .btn-xl.active {
     text-transform: uppercase; /* 确保所有字母大写 */
     margin-bottom: 20px; /* 适当调整与下方按钮的距离 */
     color: white; /* 确保颜色与模板一致 */
-    margin-top: 60px; /* 你可以尝试 40px、50px，根据需要调整 */
+    margin-top: 80px; /* 你可以尝试 40px、50px，根据需要调整 */
+    letter-spacing: 1.5px;  /* 适当增加字母间距 */
+    line-height: 1.2; /* 增加行距，提高可读性 */
 }
 
 /* 按钮样式 */
 .btn.btn-xl {
-    padding: 15px 30px;
-    font-size: 20px;
+    padding: 18px 40px;
+    font-size: 22px;
     font-weight: 600;
     background-color: #ffa500;
     color: white;
@@ -350,6 +356,7 @@ fieldset[disabled] .btn-xl.active {
     transition: background-color 0.3s ease;
     /* 添加 margin-top，向下移动按钮 */
     margin-top: 150px; /* 你可以调整这个值，比如 80px 让它更靠下 */
+    
 }
 }
 /* 添加 margin-top，向下移动按钮 */

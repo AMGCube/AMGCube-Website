@@ -335,6 +335,7 @@ fieldset[disabled] .btn-xl.active {
     text-transform: uppercase; /* 确保所有字母大写 */
     margin-bottom: 20px; /* 适当调整与下方按钮的距离 */
     color: white; /* 确保颜色与模板一致 */
+    margin-top: 60px; /* 你可以尝试 40px、50px，根据需要调整 */
 }
 
 /* 按钮样式 */
@@ -347,8 +348,13 @@ fieldset[disabled] .btn-xl.active {
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    /* 添加 margin-top，向下移动按钮 */
+    margin-top: 150px; /* 你可以调整这个值，比如 80px 让它更靠下 */
 }
-
+}
+/* 添加 margin-top，向下移动按钮 */
+    margin-top: 50px; /* 你可以调整这个值，比如 80px 让它更靠下 */
+}
 .btn.btn-xl:hover {
     background-color: #ff8500;
 }

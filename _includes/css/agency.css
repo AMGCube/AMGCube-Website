@@ -6,7 +6,7 @@
 
 body {
     overflow-x: hidden;
-    font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Poppins","Helvetica Neue",Helvetica,Arial,sans-serif; /*删除了"Roboto Slab"字体*/
     color: #{{ site.data.template.color.secondary-dark }};
 }
 
@@ -176,8 +176,9 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .navbar-default .navbar-brand {
-    font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;
-    color: #{{ site.data.template.color.primary }};
+    display: flex;  /* 让 Logo 图片与导航栏对齐 */
+    align-items: center;  /* 垂直居中 */
+    padding: 10px 15px;  /* 适当调整间距 */
 }
 
 .navbar-default .navbar-brand:hover,
@@ -254,7 +255,7 @@ fieldset[disabled] .btn-xl.active {
     .navbar-default .navbar-nav>.active>a {
         border-radius: 3px;
     }
-
+    /* 
     .navbar-default.navbar-shrink {
         padding: 10px 0;
         background-color: #222;
@@ -263,6 +264,11 @@ fieldset[disabled] .btn-xl.active {
     .navbar-default.navbar-shrink .navbar-brand {
         font-size: 1.5em;
     }
+    */
+    .navbar-default.navbar-shrink .navbar-brand img {
+        height: 50px; /* 滚动后缩小 */
+    }
+    
 }
 
 /* 首页的背景 */

@@ -102,3 +102,56 @@
     font-size: 1.5em;
     transition: font-size 0.3s;
 }
+
+/* 二级页面contact的地图格式 */
+.contact-background {
+    position: relative;
+      
+    
+}
+.contact-bg {
+    width: 1224px;
+    height: 600px;
+    background-image: url('/img/about/map-image.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+.company-info {
+    padding: 30px 20px;
+    background-color: #f8f8f8; /* 轻微背景色 */
+    border-radius: 10px;
+}
+
+/* 公司名称样式 */
+.company-name {
+    font-size: 36px;  /* 字号增大 */
+    font-weight: bold;
+    text-align: left;  /* 居中对齐 */
+    margin-bottom: 10px;  /* 增加下方间距 */
+
+.contact-box {
+    text-align: left;
+    padding: 10px;
+}
+
+.contact-box h4 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.contact-box p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.contact-box a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact-box a:hover {
+    text-decoration: underline;
+}
+

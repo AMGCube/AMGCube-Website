@@ -5,8 +5,8 @@ subtitle: SIP - Structural Insulated Panel
 layout: post
 permalink: /products/root-test/
 date: 2024-01-18
-
-categories: ["Projects"]
+header_image: "/img/headers/products-header.jpg"
+categories: ["Products"]
 
 images: 
  - img/projects/1.png

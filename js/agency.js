@@ -47,3 +47,33 @@ $(document).ready(function() {
         }, 500);
     });
 });
+document.addEventListener("DOMContentLoaded", function () {
+    let visionBox = document.querySelector(".vision-box");
+    if (!visionBox) return; // 避免页面没有该元素时报错
+
+    let observer = new IntersectionObserver(
+        function (entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    visionBox.classList.add("appear");
+                }
+            });
+        },
+        { threshold: 0.5 }
+    );
+    observer.observe(visionBox);
+});
+document.addEventListener("DOMContentLoaded", function () {
+    let companyBox = document.querySelector(".company-info-box");
+    let observer = new IntersectionObserver(
+        function (entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    companyBox.classList.add("appear");
+                }
+            });
+        },
+        { threshold: 0.5 }
+    );
+    observer.observe(companyBox);
+});

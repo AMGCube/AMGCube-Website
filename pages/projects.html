@@ -4,30 +4,73 @@ title: "Projects"
 permalink: /projects/
 header_image: "/img/projects-header.jpg"
 ---
-<h1>Projects</h1>
-<div class="container">
-    <div class="row">
-        {% for post in site.posts %}
-            {% if post.categories contains "Projects" %}
-                <div class="col-md-4 col-sm-6 project-item">
-                    <a href="{{ post.url }}" class="project-link">
-                        <div class="project-hover">
-                            <div class="project-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
 
-                        <img src="{{ site.baseurl }}/img/projects/{{ post.thumbnail }}" class="img-responsive img-centered" alt="">
-
-
-                    </a>
-                    <div class="project-caption">
-                        <h4>{{ post.title }}</h4>
-                        <p class="text-muted">{{ post.subtitle }}</p>
-                    </div>
-                </div>
-            {% endif %}
-        {% endfor %}
-    </div>
+<div class="container text-center">
+    <h1 class="projects-title">Projects</h1>
 </div>
 
+<!-- 筛选功能 -->
+<div class="filter-container text-center">
+    <label for="filter-type">Type:</label>
+    <select id="filter-type">
+        <option value="all">All</option>
+        <option value="Granny flat">Granny flat</option>
+        <option value="Bathroom">Bathroom</option>
+        <option value="Kitchen">Kitchen</option>
+        <option value="House">House</option>
+    </select>
+    
+    <label for="filter-location">Location:</label>
+    <select id="filter-location">
+        <option value="all">All</option>
+        <option value="Brisbane">Brisbane</option>
+        <option value="Ipswich">Ipswich</option>
+        <option value="Logan">Logan</option>
+        <option value="Redland">Redland</option>
+    </select>
+</div>
+
+<section class="projects-container">
+    <div class="modules-container" id="projects-list">
+        {% assign unique_posts = site.posts | where: "categories", "Projects" | sort: "date" | reverse %}
+        {% for post in unique_posts %}
+            <div class="module-card" data-type="{{ post.project-type }}" data-location="{{ post.location }}">
+                <img src="{{ site.baseurl }}/img/projects/{{ post.thumbnail }}" alt="{{ post.title }}" class="module-image">
+                <div class="module-content">
+                    <h4 class="module-title">{{ post.title }}</h4>
+                    <p class="module-description">{{ post.subtitle }}</p>
+                    <a href="{{ post.url }}" class="module-link">View Details</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const typeFilter = document.getElementById("filter-type");
+    const locationFilter = document.getElementById("filter-location");
+    const projectCards = document.querySelectorAll(".module-card");
+
+    function filterProjects() {
+        const selectedType = typeFilter.value.toLowerCase();
+        const selectedLocation = locationFilter.value.toLowerCase();
+
+        projectCards.forEach(card => {
+            const cardType = card.getAttribute("data-type")?.toLowerCase();
+            const cardLocation = card.getAttribute("data-location")?.toLowerCase();
+            
+            if ((selectedType === "all" || selectedType === cardType) &&
+                (selectedLocation === "all" || selectedLocation === cardLocation)) {
+                card.style.display = "block";
+            } else {
+                card.style.display = "none";
+            }
+        });
+    }
+
+    typeFilter.addEventListener("change", filterProjects);
+    locationFilter.addEventListener("change", filterProjects);
+    });
+
+</script>

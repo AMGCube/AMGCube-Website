@@ -4,7 +4,7 @@
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 50vh; /* 调整合适的高度 */
+    height: 50vh; 
     min-height: 400px;
     align-items: center;
     justify-content: center;
@@ -14,36 +14,208 @@
 }
 
 
+/* Modules Section Styling */
+.modules-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    padding: 40px 20px;
+    justify-content: center;
+}
+
+.module-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+    text-align: center;
+    max-width: 450px;
+    margin: auto;
+    width: 100%; /* 确保所有卡片宽度一致 */
+    display: flex;
+    flex-direction: column;
+}
+
+.module-card:hover {
+    transform: translateY(-5px);
+}
+
+.module-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.module-content {
+    padding: 20px;
+    flex-grow: 1; /* 让内容区填充剩余空间，保持卡片高度一致 */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.module-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.module-description {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.module-link {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #ffcc00;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background 0.3s;
+    align-self: center; /* 居中按钮 */
+}
+
+.module-link:hover {
+    background: #ffdb4d;
+}
+
 /* 二级页面的排版优化 */
-.products-header {
-    text-align: left;  /* 保持标题左对齐 */
-    max-width: 1000px;   /* 适应网页内容 */
-    margin: 0 auto;
-    padding: 5px 0;
-    margin-bottom: 0px;  /* 调整段落之间的间距，使页面更紧凑 */
+.section-title {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 40px;
 }
-
-.products-header h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 0px;
-}
-
-.products-header h4 {
-    font-size: 1.2rem;  /* 调整字体大小 */
-    font-weight: bold;
-    text-transform: uppercase;
+/* 主标题优化 */
+.section-title h2 {
+    font-size: 42px;
+    font-weight: 700;
     letter-spacing: 1px;
-    margin-bottom: 0px;
+    text-transform: uppercase;
+    color: #222;
+    max-width: 800px;
+    margin: 0 auto 45px;
+    line-height: 1.2;
+    position: relative;
 }
 
-.products-header-p {
-    text-align: left;
+.section-title h2::after {
+    content: "";
+    width: 60px; /* 控制线条长度 */
+    height: 4px;
+    background: #ffcc00; /* 可换成品牌色 */
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+
+/* 背景优化 */
+.bg-light-gray {
+    background: linear-gradient(to bottom, #f9fafb, #ebeff2);
+    padding: 60px 0;
+}
+
+/* 卡片优化 */
+.products-header {
+    max-width: 900px;
+    padding: 30px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease-in-out;
+}
+
+.products-header:hover {
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+}
+
+/* h4 调整 */
+.products-header h4 {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+/* 正文优化 */
+.products-header p {
+    text-align: justify;
     color: #333;
     line-height: 1.8;
-    max-width: 1000px;
-    margin: 0 auto 15px;
+    max-width: 800px;
+    margin: 0 auto 18px;
 }
+
+@media (max-width: 768px) {
+    .section-title h2 {
+        font-size: 32px; /* 在小屏幕上缩小字体 */
+        max-width: 90%; /* 避免占据整个屏幕 */
+    }
+
+    .section-title h2::after {
+        width: 40px; /* 让底部线条在小屏幕上稍微缩短 */
+    }
+}
+
+/* Team页面格式 */
+.vision-statement {
+    max-width: 750px;
+    margin: 40px auto; /* 居中对齐，并与上方团队介绍拉开间距 */
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    font-weight: 400;
+}
+
+.vision-statement strong {
+    font-size: 22px;
+    font-weight: 800;
+    color: #111;
+}
+
+.vision-statement em {
+    color: #ffcc00; /* AMGCube 变成品牌色 */
+    font-weight: 600;
+}
+.vision-box {
+    background: #f9fafb; /* 添加淡灰色背景 */
+    padding: 25px 30px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease-in-out;
+}
+
+.vision-box:hover {
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+}
+.vision-box {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.vision-box.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+.vision-statement strong.highlight {
+    color: #ffcc00;
+    font-weight: 700;
+}
+
+
 
 /* 三级页面的排版优化 */
 
@@ -154,4 +326,113 @@
 .contact-box a:hover {
     text-decoration: underline;
 }
+/* contact 内容格式 */
+.company-info-box {
+    background: #f9fafb; /* 采用淡灰色背景 */
+    padding: 30px 40px;
+    border-radius: 12px; /* 让边角更柔和 */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05); /* 轻微阴影 */
+    transition: all 0.3s ease-in-out;
+    max-width: 900px;
+    margin: 40px auto; /* 让它居中 */
+    text-align: left;
+}
 
+.company-info-box:hover {
+    box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.1); /* 鼠标悬停时增加阴影 */
+    transform: translateY(-2px);
+}
+
+.company-name {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.contact-box h4 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.contact-box p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.contact-box strong {
+    font-weight: 700;
+    color: #000;
+}
+
+.contact-box a {
+    color: #ffcc00; /* 让 Email 使用品牌金色 */
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.contact-box a:hover {
+    text-decoration: underline;
+}
+.company-info-box {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.company-info-box.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+@media (max-width: 768px) {
+    .company-info-box {
+        padding: 20px;
+    }
+    .contact-box {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+/* 设置不同post页面的图片 */
+.post-header {
+    width: 100%;
+    height: 300px; /* 适当调整高度 */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.default-header {
+    background-image: url('/img/default-header.jpg'); /* 默认背景 */
+}
+
+.projects-title {
+    margin-top: 80px;
+    font-size: 42px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.filter-container {
+    margin: 30px auto;
+    padding: 15px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    align-items: center;
+}
+
+.filter-container label {
+    font-weight: bold;
+}
+
+.filter-container select {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}

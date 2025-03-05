@@ -5,96 +5,46 @@ permalink: /products/
 header_image: "/img/products-header.jpg"
 ---
 
-
-<section id="products-header" class="bg-light-gray">
+<!-- Products Section -->
+<section id="products" class="bg-light-gray">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2 class="section-heading">SPACE PRODUCTS</h2>
-                <h4 class="products-header">CONSTRUCTION – A CENTURY WITHOUT CHANGE, CHALLENGES INTENSIFY</h4>
-                <div class="products-header-p">
-                <p>Residential construction is one of the world’s oldest industries, yet it has seen little revolutionary progress in the past 100 years. High costs, inefficiency, and slow construction have severely impacted living standards.
-                </p>
-                <p>In Australia, the housing crisis remains a major social challenge, with high prices, supply shortages, and long construction timelines making homes increasingly unaffordable.
-                </p>
-                </div>
+                <h2 class="section-heading">Making Homes More Attainable</h2>
+                <h3 class="section-subheading text-muted"><strong>Better homes, built faster and more affordably. <br> 
+                    <br> With prefabricated modular technology,<br> <br>we create high-quality living spaces at lower costs in record time.</h3></strong>
             </div>
         </div>
-    </div>
-</section>
-
-<!-- 添加第二部分 -->
-<section id="products-header" class="bg-light-gray">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h4 class="products-header">TRANSFORMING CONSTRUCTION FROM A PROJECT TO A PRODUCT</h4>
-                <div class="products-header-p">
-                 <p>The best way to improve residential construction efficiency is to shift from a project-based approach to a product-based approach, transitioning from on-site construction to factory-based production.
-                 </p>
-                 <p>By standardizing and industrializing housing production, we can significantly reduce costs, shorten construction time, and improve quality and sustainability.
-                 </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 添加第三部分 -->
-<section id="products-header" class="bg-light-gray">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h4 class="products-header">OUR INNOVATION JOURNEY AT AMGCUBE</h4>
-                <div class="products-header-p">
-                <p>
-                    At AMGCube, we are pioneering the transformation of housing into a fully productized space solution. Our modular and prefabricated design approach leverages advanced technology to revolutionize the industry.
-                </p>
-                <p>
-                    We are committed to delivering high-quality, affordable, and sustainable housing solutions that redefine how people live and build.
-                </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<!-- Features（产品特点）-->
-<section id="features" class="bg-white">
-    <div class="container">
         <div class="row text-center">
-            <div class="col-md-12">
-                <h3 class="section-heading">Features</h3> <!-- 标题变小 -->
-            </div>
-        </div>
-        <div class="row">
-            <!-- 高质量 -->
-            <div class="col-md-4 text-center">
+            <div class="col-md-4">
+                <a href="/products/" class="text-decoration-none">
                 <span class="fa-stack fa-4x">
                     <i class="fa fa-circle fa-stack-2x text-product"></i>
                     <i class="fa fa-shield fa-stack-1x fa-inverse"></i>
                 </span>
-                <h4 class="products-heading">High-Quality</h4>
-                <p class="text-muted">Strong, durable, and energy-efficient, providing a superior living experience.</p>
+            </a>  <!-- 正确关闭 <a> -->
+                <h4 class="products-heading">High-quality</h4>
+                <p class="text-muted">Strong durable <br>energy-efficient</p>
             </div>
-            <!-- 经济实惠 -->
-            <div class="col-md-4 text-center">
+            <div class="col-md-4">
+                <a href="/products/" class="text-decoration-none">
                 <span class="fa-stack fa-4x">
                     <i class="fa fa-circle fa-stack-2x text-product"></i>
                     <i class="fa fa-dollar fa-stack-1x fa-inverse"></i>
                 </span>
+            </a>  <!-- 正确关闭 <a> -->
                 <h4 class="products-heading">Affordable</h4>
-                <p class="text-muted">20%-30% cheaper than traditional methods, with no hidden costs.</p>
+                <p class="text-muted">30% cheaper <br>no hidden costs</p>
             </div>
-            <!-- 快速安装 -->
-            <div class="col-md-4 text-center">
+            <div class="col-md-4">
+                <a href="/products/" class="text-decoration-none">
                 <span class="fa-stack fa-4x">
                     <i class="fa fa-circle fa-stack-2x text-product"></i>
                     <i class="fa fa-bolt fa-stack-1x fa-inverse"></i>
                 </span>
+            </a>  <!-- 正确关闭 <a> -->
                 <h4 class="products-heading">Fast</h4>
-                <p class="text-muted">Move-in ready within 3 months, covering the entire process.</p>
+                <p class="text-muted">8 weeks <br>entire process</p>
             </div>
         </div>
     </div>
@@ -108,36 +58,28 @@ header_image: "/img/products-header.jpg"
                 <h3 class="section-heading">Modules</h3>
             </div>
         </div>
-        <div class="row justify-content-center">
-            {% assign product_posts = site.posts | where: "categories", "Products" %}
-            {% assign product_links = product_posts | map: "title" %}
-            
-            {% assign module_names = "Steel Structure,Wall System,Bathroom,Floor System,Ceiling" | split: "," %}
-            {% assign module_icons = "building,th-large,bath,th-large,building" | split: "," %}
-            
-            {% for module in module_names %}
-                {% assign module_index = forloop.index0 %}
-                {% assign module_icon = module_icons[module_index] %}
-                {% assign post = product_posts | where: "title", module | first %}
-                {% if post %}
-                    {% assign module_url = post.url %}
-                {% else %}
-                    {% assign module_url = "#" %}
-                {% endif %}
-                
-                <div class="col-md-2 text-center module-box">
-                    <span class="fa-stack fa-3x">
-                        <i class="fa fa-square fa-stack-2x text-modules"></i>
-                        <i class="fa fa-{{ module_icon }} fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="products-heading"><a href="{{ module_url }}">{{ module }}</a></h4>
+        <div class="modules-container">
+            <div class="module-card">
+                <img src="/img/modules/steel-structure.png" alt="Steel Structure" class="module-image">
+                <div class="module-content">
+                    <h4 class="module-title">Steel Structure</h4>
+                    <p class="module-description">Durable,strong and modular steel frame.</p>
+                    <a href="/products/root-test/" class="module-link">View Details</a>
                 </div>
-            {% endfor %}
+            </div>
+            <div class="module-card">
+                <img src="/img/modules/wall-system.jpg" alt="Wall System" class="module-image">
+                <div class="module-content">
+                    <h4 class="module-title">Wall System</h4>
+                    <p class="module-description">Pre-fabricated wall panels with insulation and finishing.</p>
+                    <a href="/products/root-test/" class="module-link">View Details</a>
+                </div>
+            </div>
+           
+            </div>
         </div>
     </div>
 </section>
-
-<!-- 移除相关文章 -->
 
 <!-- 自定义CSS -->
 <style>

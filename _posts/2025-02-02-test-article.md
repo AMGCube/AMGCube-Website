@@ -1,23 +1,15 @@
 ---
-title: "Test"
-date: 2025-02-02
-categories: ["Test", "Debug"]
-layout: post
-description: "This is a test article to verify if Jekyll reads posts correctly."
-tags: ["jekyll", "debug", "test"]
-thumbnail: 1-thumbnail.png
----
-
-# Test Article
-
-This is a **test article** to verify that `_posts` is working correctly.
-
-## ✅ Testing Jekyll Post Rendering
-
-- **Title:** `{{ page.title }}`
-- **Date:** `{{ page.date }}`
-- **Categories:** `{{ page.categories | join: ", " }}`
-- **Tags:** `{{ page.tags | join: ", " }}`
-- **Description:** `{{ page.description }}`
+title: 9 Falcon Ave
+subtitle: Redland, Kitchen
+layout: project
+date: 2024-11-18
+permalink: /projects/9falcon/
+categories: ["Projects"]
+location: Redland
+project-type: Kitchen
+project-date: Feb-Mar,2024
+client: AMGCube
+description: Our first prefabricated modular housing project in Australia.<br><br>
+thumbnail: 2-thumbnail.png
 
 ---

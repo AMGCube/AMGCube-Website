@@ -450,9 +450,11 @@ section h3.section-subheading {
     margin-bottom: 75px;
     text-transform: none;
     font-family: {{ site.data.template.font.secondary }};
-    font-size: 16px;
+    font-size: 20px;
     font-style: italic;
     font-weight: 400;
+    color:#555;
+    letter-spacing: 0.5px;
 }
 
 @media(min-width:768px) {

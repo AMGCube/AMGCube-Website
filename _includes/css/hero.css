@@ -513,3 +513,54 @@
     border-radius: 5px;
     border: 1px solid #ccc;
 }
+
+/* 文章整体布局 */
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* 标题居中 */
+h1, .post-subtitle, .meta {
+    text-align: center;
+}
+
+/* 副标题样式 */
+.post-subtitle {
+    font-size: 22px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* 文章元信息（日期、作者） */
+.meta {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+/* 移除蓝色竖线 */
+.post-description-border {
+    display: none;
+}
+
+/* 文章正文 */
+.post-content {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #333;
+    text-align: justify;
+}
+
+/* 文章中的图片 */
+.post-images img {
+    max-width: 100%;
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}

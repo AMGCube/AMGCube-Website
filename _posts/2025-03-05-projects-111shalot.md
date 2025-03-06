@@ -6,7 +6,7 @@ date: 2024-11-18
 permalink: /projects/111shalot/
 categories: ["Projects"]
 location: Logan
-project-type: House  # 统一变量名称，与 HTML 一致
+type: House  # 统一变量名称，与 HTML 一致
 
 images:
   - img/projects/1.png

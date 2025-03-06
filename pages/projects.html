@@ -30,27 +30,36 @@ header_image: "/img/projects-header.jpg"
     </select>
 </div>
 
+<body class="projects-page">
+
 <section class="projects-container">
     <div class="modules-container" id="projects-list">
         {% assign unique_posts = site.posts | where: "categories", "Projects" | sort: "date" | reverse %}
         {% for post in unique_posts %}
-            <div class="module-card" data-type="{{ post.project-type }}" data-location="{{ post.location }}">
-                <img src="{{ site.baseurl }}/img/projects/{{ post.thumbnail }}" alt="{{ post.title }}" class="module-image">
-                <div class="module-content">
-                    <h4 class="module-title">{{ post.title }}</h4>
-                    <p class="module-description">{{ post.subtitle }}</p>
-                    <a href="{{ post.url }}" class="module-link">View Details</a>
+            <a href="{{ post.url }}" class="module-card-link" 
+               data-type="{{ post.type }}" 
+               data-location="{{ post.location }}">
+                <div class="project-card">
+                    <img src="{{ site.baseurl }}/img/projects/{{ post.thumbnail }}" 
+                         alt="{{ post.title }}" 
+                         class="module-image">
+                    <div class="module-content">
+                        <h4 class="module-title">{{ post.title }}</h4>
+                        <p class="module-description">{{ post.subtitle }}</p>
+                    </div>
                 </div>
-            </div>
+            </a>
         {% endfor %}
     </div>
+     
 </section>
+
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
     const typeFilter = document.getElementById("filter-type");
     const locationFilter = document.getElementById("filter-location");
-    const projectCards = document.querySelectorAll(".module-card");
+    const projectCards = document.querySelectorAll(".module-card-link");
 
     function filterProjects() {
         const selectedType = typeFilter.value.toLowerCase();
@@ -59,18 +68,19 @@ header_image: "/img/projects-header.jpg"
         projectCards.forEach(card => {
             const cardType = card.getAttribute("data-type")?.toLowerCase();
             const cardLocation = card.getAttribute("data-location")?.toLowerCase();
-            
+
             if ((selectedType === "all" || selectedType === cardType) &&
                 (selectedLocation === "all" || selectedLocation === cardLocation)) {
-                card.style.display = "block";
+                card.style.display = "flex"; // 保持 flexbox 布局
             } else {
-                card.style.display = "none";
+                card.style.display = "none"; // 确保完全隐藏
             }
         });
     }
 
     typeFilter.addEventListener("change", filterProjects);
     locationFilter.addEventListener("change", filterProjects);
-    });
+});
+
 
 </script>

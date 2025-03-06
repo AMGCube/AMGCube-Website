@@ -7,7 +7,7 @@ date: 2024-11-18
 permalink: /projects/146downding/
 categories: ["Projects"]
 location: Brisbane
-project-type: Granny flat
+type: Granny flat
 project-date: Feb-Apr,2025
 client: AMGCube
 description: Our first prefabricated modular housing project in Australia.<br><br>

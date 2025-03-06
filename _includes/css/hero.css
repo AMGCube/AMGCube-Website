@@ -17,8 +17,8 @@
 /* Modules Section Styling */
 .modules-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+    gap: 20px;
     padding: 40px 20px;
     justify-content: center;
 }
@@ -84,6 +84,59 @@
 
 .module-link:hover {
     background: #ffdb4d;
+}
+
+/* 仅在 projects 页面应用可点击卡片 */
+.projects-page .module-card-link {
+    text-decoration: none; /* 移除默认链接样式 */
+    color: inherit; /* 继承颜色，避免变蓝 */
+    display: block; /* 让整个链接占据整个卡片区域 */
+}
+
+.projects-page .module-card-link:hover .module-card {
+    transform: scale(1.03); /* 鼠标悬停时轻微放大 */
+    transition: transform 0.2s ease-in-out;
+}
+
+.projects-page .module-card {
+    cursor: pointer; /* 让整个卡片变为可点击 */
+}
+
+
+/* 针对 Projects 页面 */
+
+.project-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+    text-align: center;
+    max-width: 450px;
+    margin: auto;
+    width: 100%; /* 让所有卡片宽度一致 */
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+
+/* 设置项目图片为 4:3 */
+.project-card .module-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4/3; /* 这里可以改成 4/3 */
+    object-fit: cover;
+}
+
+/* 让 Products 页面仍然保持原来的格式 */
+.product-card .module-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
 }
 
 /* 二级页面的排版优化 */
@@ -156,6 +209,19 @@
     max-width: 800px;
     margin: 0 auto 18px;
 }
+
+/* 让默认状态下的链接继承 h4 的颜色，不变黄 */
+.products-header h4 a {
+    color: inherit;  /* 继承 h4 的默认颜色 */
+    text-decoration: none;  /* 去掉默认下划线 */
+}
+
+/* 鼠标悬停时才变黄 */
+.products-header h4 a:hover {
+    color: #FFA500;  /* 替换成你希望的黄色 */
+    text-decoration: underline; /* 可选，增加下划线 */
+}
+
 
 @media (max-width: 768px) {
     .section-title h2 {
@@ -282,7 +348,8 @@
     
 }
 .contact-bg {
-    width: 1224px;
+    width: 100%
+    max-width: 1224px;
     height: 600px;
     background-image: url('/img/about/map-image.gif');
     background-size: cover;
@@ -410,14 +477,24 @@
 }
 
 .projects-title {
-    margin-top: 80px;
+    margin-top: 60px ;
+    margin-bottom: 5px ;
     font-size: 42px;
     font-weight: bold;
     text-align: center;
 }
 
+.projects-container {
+    width: 100%;  /* 让容器占满整个页面 */
+    max-width: 1200px;  /* 控制最大宽度 */
+    margin: 10px auto;  /* 增加上下外边距，并居中 */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;  /* 让项目卡片居中对齐 */
+}
+
 .filter-container {
-    margin: 30px auto;
+    margin-top: 5px !important;
     padding: 15px;
     background-color: #f8f8f8;
     border-radius: 8px;

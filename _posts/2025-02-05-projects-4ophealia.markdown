@@ -6,7 +6,7 @@ date: 2024-11-18
 permalink: /projects/4ophealia/
 categories: ["Projects"]
 location: Brisbane
-project-type: Bathroom
+type: Bathroom
 project-date: Nov-Dec,2024
 client: AMGCube
 description: Our first prefabricated modular housing project in Australia.Our first prefabricated modular housing project in Australia.<br><br>Our first prefabricated modular housing project in Australia.Our first prefabricated modular housing project in Australia.Our first prefabricated modular housing project in Australia.

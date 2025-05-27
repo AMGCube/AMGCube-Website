@@ -1,10 +1,10 @@
 ---
 
-title: Root Test
-subtitle: SIP - Structural Insulated Panel
+title: Steel Structure
+subtitle: No welding, Fully fastener connected
 layout: post
-permalink: /products/root-test/
-date: 2024-01-18
+permalink: /products/Steel Structure/
+date: 2025-05-18
 header_image: "/img/headers/products-header.jpg"
 categories: ["Products"]
 
@@ -16,6 +16,6 @@ thumbnail: 3-thumbnail.png
 alt: image-alt
 project-date: November 2024
 client: 
-description: standard residential homes.
+description: Floor Load Capacity:250 kg/m²; Roof Load Capacity:25 kg/m²; Wall Wind Load Resistance:110 kg/m²; Galvanized Coating Thickness:30 μm
 
 ---

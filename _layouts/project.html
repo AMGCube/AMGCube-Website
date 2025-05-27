@@ -1,44 +1,52 @@
----
-layout: page
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+</head>
 
-{% if page.header_image %}
-    <div class="post-header" style="background-image: url('{{ page.header_image | relative_url }}');"></div>
-{% else %}
-    <div class="post-header default-header"></div> <!-- 默认背景 -->
-{% endif %}
+<body>
+  {% include nav.html %}
 
-<article class="container">
+  <!-- 项目顶部图 -->
+  {% if page.header_image %}
+    <div class="project-header" style="background-image: url('{{ page.header_image | relative_url }}'); height: 300px; background-size: cover; background-position: center;"></div>
+  {% else %}
+    <div class="project-header" style="background-image: url('/img/project-banner.jpg'); height: 300px; background-size: cover; background-position: center;"></div>
+  {% endif %}
+
+  <article class="container">
     <h1>{{ page.title }}</h1>
 
     {% if page.client %}
-        <p><strong>Client:</strong> {{ page.client }}</p>
+      <p><strong>Client:</strong> {{ page.client }}</p>
     {% endif %}
-    
+
     {% if page.project-date %}
-        <p><strong>Project Date:</strong> {{ page.project-date }}</p>
+      <p><strong>Project Date:</strong> {{ page.project-date }}</p>
     {% endif %}
 
     {% if page.project-type %}
-        <p><strong>Project Type:</strong> {{ page.project-type }}</p>
+      <p><strong>Project Type:</strong> {{ page.project-type }}</p>
     {% endif %}
 
     {% if page.location %}
-    <p><strong>Location:</strong> {{ page.location }}</p>
+      <p><strong>Location:</strong> {{ page.location }}</p>
     {% endif %}
 
-  
-
     {% if page.description %}
-        <div class="post-description-wrapper">
-            <div class="post-description-border"></div>
-            <div class="post-description">{{ page.description }}</div>
-        </div>
+      <div class="post-description-wrapper">
+        <div class="post-description-border"></div>
+        <div class="post-description">{{ page.description }}</div>
+      </div>
     {% endif %}
 
     <div class="project-gallery">
-        {% for img in page.images %}
-            <img src="{{ site.baseurl }}/{{ img }}" class="img-responsive" alt="{{ page.title }}">
-        {% endfor %}
+      {% for img in page.images %}
+        <img src="{{ site.baseurl }}/{{ img }}" class="img-responsive" alt="{{ page.title }}">
+      {% endfor %}
     </div>
-</article>
+  </article>
+
+  {% include footer.html %}
+</body>
+</html>

@@ -966,3 +966,91 @@ img::-moz-selection {
 body {
     webkit-tap-highlight-color: #{{ site.data.template.color.primary }};
 }
+/* === Custom Styles for Projects Page === */
+
+.filter-container {
+  margin: 2rem auto;
+  padding: 1rem 1.5rem;
+  background-color: #f8f8f8;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  width: fit-content;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+
+
+}
+
+.filter-container label {
+  font-weight: bold;
+  margin-right: 0.3rem;
+}
+
+.filter-container select {
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  font-size: 16px;
+
+}
+
+.project-card {
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  width: 100%;
+  max-width: 300px;
+  margin: 1rem auto;
+  text-align: center;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.project-card img.module-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+.module-content {
+  padding: 1rem;
+}
+
+.module-title {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.module-description {
+  margin-top: 0.5rem;
+  color: #777;
+  font-size: 0.9rem;
+}
+.product-intro-text {
+  font-family: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  color: #222;
+  line-height: 1.8;
+  font-style: normal;
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+  text-align: left;
+}
+.product-highlight {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333; /* 更深更醒目 */
+  line-height: 1.6;
+}

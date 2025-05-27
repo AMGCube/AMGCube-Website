@@ -1,35 +1,71 @@
----
-layout: page
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+</head>
 
-{% if page.header_image %}
-    <div class="post-header" style="background-image: url('{{ page.header_image | relative_url }}');"></div>
-{% else %}
-    <div class="post-header default-header"></div> <!-- 默认背景 -->
-{% endif %}
+<body>
+  {% include nav.html %}
 
-<article class="container">
+  <!-- 顶部图 -->
+  {% if page.header_image %}
+    <div class="product-header" style="background-image: url('{{ page.header_image | relative_url }}'); height: 300px; background-size: cover; background-position: center;"></div>
+  {% else %}
+    <div class="product-header" style="background-image: url('/img/project-banner.jpg'); height: 300px; background-size: cover; background-position: center;"></div>
+  {% endif %}
+
+  <article class="container">
+
     <h1>{{ page.title }}</h1>
-    <p class="meta">Category: {{ page.product-category }}</p>
-
-    {% if page.features %}
-        <p><strong>Features:</strong> {{ page.features }}</p>
+    {% if page.product-category %}
+      <h4 style="color: #777;">Category: {{ page.product-category }}</h4>
     {% endif %}
 
+    <!-- 第一部分：产品参数 -->
+    <section class="product-attributes grid-3">
+      {% if page.features %}
+        <div><strong>Features:</strong> {{ page.features }}</div>
+      {% endif %}
+      {% if page.specs %}
+        <div><strong>Specifications:</strong> {{ page.specs }}</div>
+      {% endif %}
+      {% if page.application %}
+        <div><strong>Application:</strong> {{ page.application }}</div>
+      {% endif %}
+    </section>
+
+<hr class="section-divider"> <!-- 分隔线 -->
+
+    <!-- 第二部分：产品描述 -->
     {% if page.description %}
-        <div class="post-description-wrapper">
-            <div class="post-description-border"></div>
-            <div class="post-description">{{ page.description }}</div>
-        </div>
+    <section class="product-description">
+      <h2 class="section-title">Description</h2>
+      <p>{{ page.description | newline_to_br }}</p>
+    </section>
     {% endif %}
 
-    <div class="product-gallery">
-        {% for img in page.images %}
-            <img src="{{ site.baseurl }}/{{ img }}" class="img-responsive" alt="{{ page.title }}">
-        {% endfor %}
-    </div>
+    <!-- 第三部分：产品图片 -->
+    {% if page.images %}
+    <section class="product-gallery">
+      <h2 class="section-title">Gallery</h2>
+      {% for img in page.images %}
+        <div class="timeline-stage">
+          <img src="{{ site.baseurl }}/{{ img }}" class="img-responsive" alt="{{ page.title }}">
+          {% if img.text %}
+            <p class="caption">{{ img.text }}</p>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </section>
+    {% endif %}
 
     {% if page.purchase_link %}
-        <a href="{{ page.purchase_link }}" class="buy-now-btn">Buy Now</a>
+      <a href="{{ page.purchase_link }}" class="buy-now-btn">Buy Now</a>
     {% endif %}
-</article>
+
+  </article>
+
+  {% include footer.html %}
+</body>
+</html>
+

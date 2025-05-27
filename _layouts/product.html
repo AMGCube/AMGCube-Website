@@ -18,21 +18,31 @@
 
     <h1>{{ page.title }}</h1>
     {% if page.product-category %}
-      <h4 style="color: #777;">Category: {{ page.product-category }}</h4>
+      <h4 style="color: #777;">{{ page.product-category }}</h4>
     {% endif %}
 
     <!-- 第一部分：产品参数 -->
-    <section class="product-attributes grid-3">
-      {% if page.features %}
-        <div><strong>Features:</strong> {{ page.features }}</div>
-      {% endif %}
-      {% if page.specs %}
-        <div><strong>Specifications:</strong> {{ page.specs }}</div>
-      {% endif %}
-      {% if page.application %}
-        <div><strong>Application:</strong> {{ page.application }}</div>
-      {% endif %}
-    </section>
+    <section class="product-attributes-vertical">
+  {% if page.features %}
+    <div class="attribute-block">
+      <div class="attribute-title">Features</div>
+      <div class="attribute-content">{{ page.features }}</div>
+    </div>
+  {% endif %}
+  {% if page.specs %}
+    <div class="attribute-block">
+      <div class="attribute-title">Specifications</div>
+      <div class="attribute-content">{{ page.specs }}</div>
+    </div>
+  {% endif %}
+  {% if page.application %}
+    <div class="attribute-block">
+      <div class="attribute-title">Application</div>
+      <div class="attribute-content">{{ page.application }}</div>
+    </div>
+  {% endif %}
+</section>
+
 
 <hr class="section-divider"> <!-- 分隔线 -->
 
@@ -50,17 +60,13 @@
       <h2 class="section-title">Gallery</h2>
       {% for img in page.images %}
         <div class="timeline-stage">
-          <img src="{{ site.baseurl }}/{{ img }}" class="img-responsive" alt="{{ page.title }}">
+          <img src="{{ site.baseurl }}/{{ img.img }}" class="img-responsive" alt="{{ page.title }}">
           {% if img.text %}
             <p class="caption">{{ img.text }}</p>
           {% endif %}
         </div>
       {% endfor %}
     </section>
-    {% endif %}
-
-    {% if page.purchase_link %}
-      <a href="{{ page.purchase_link }}" class="buy-now-btn">Buy Now</a>
     {% endif %}
 
   </article>

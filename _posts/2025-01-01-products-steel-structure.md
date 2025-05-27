@@ -2,7 +2,7 @@
 layout: product
 title: Steel Structure
 permalink: /products/steel-structure/
-header_image: /img/project-banner.jpg
+header_image: /img/products/product-banner.png
 product-category: Structural System
 
 features: No welding, fully fastener connected, modular beams and columns
@@ -15,8 +15,13 @@ description: |
   The system is designed to be flat-pack friendly for efficient transport.
 
 images:
-  - img/products/steel-detail-1.jpg
-  - img/products/steel-detail-2.jpg
-  - img/products/steel-detail-3.jpg
-
+  - img: img/products/steel-detail-0.Jpg
+    text: steel frame
+  - img: img/products/steel-detail-1.png
+    text: steel frame
+  - img: img/products/steel-detail-2.jpg
+    text: steel frame
+  - img: img/products/steel-detail-4.jpg
+    text: steel frame
+  
 ---

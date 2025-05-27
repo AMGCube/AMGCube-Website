@@ -1001,26 +1001,45 @@ body {
 .project-card {
   background: #ffffff;
   border-radius: 14px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   overflow: hidden;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   width: 100%;
   max-width: 300px;
   margin: 1rem auto;
   text-align: center;
+  padding-bottom: 1rem; /* ✅ 新增底部内边距 */
 }
 
 .project-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
+/* ✅ 图片区域优化：更高比例、更自然显示 */
 .project-card img.module-image {
   width: 100%;
-  height: 180px;
+  aspect-ratio: 4 / 3;           /* ✅ 替代固定 height: 180px */
   object-fit: cover;
+  display: block;
   border-bottom: 1px solid #eee;
 }
+
+/* ✅ 标题文字 */
+.project-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0.75rem 0 0.25rem;
+  color: #222;
+}
+
+/* ✅ 副标题（如位置/类型） */
+.project-card p {
+  font-size: 1.6rem;
+  color: #666;
+  margin: 0;
+}
+
 
 .module-content {
   padding: 1rem;
@@ -1053,4 +1072,62 @@ body {
   font-weight: 500;
   color: #333; /* 更深更醒目 */
   line-height: 1.6;
+}
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin: 16px 0 12px;
+}
+
+.project-review {
+  background: #f8f9fa;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.project-review p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.75;
+  color: #333;
+  margin-bottom: 0.75em;
+}
+
+.project-timeline .timeline-stage {
+   margin-bottom: 30px;
+}
+
+.project-timeline img {
+  display: block;
+  margin: 0 auto;         /* ✅ 水平居中 */
+  max-width: 100%;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+
+.project-timeline .caption {
+  font-size: 20px;
+  color: #313131;
+  text-align: center;
+}
+
+h2.section-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #222;
+  text-align: left;
+  margin: 12px 0 8px;
+  border-left: 4px solid #007bff;
+  padding-inline-start: 12px;
+  display: block; /* 替代 inline-block，避免蓝线高度问题 */
+}
+.section-divider {
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  margin: 8px 0 16px;
+}
+article h1 {
+  margin-top: 40px;
 }

@@ -7,7 +7,7 @@
 <body>
   {% include nav.html %}
 
-  <!-- 项目顶部图 -->
+  <!-- 顶部图 -->
   {% if page.header_image %}
     <div class="project-header" style="background-image: url('{{ page.header_image | relative_url }}'); height: 300px; background-size: cover; background-position: center;"></div>
   {% else %}
@@ -15,38 +15,62 @@
   {% endif %}
 
   <article class="container">
+
     <h1>{{ page.title }}</h1>
-
-    {% if page.client %}
-      <p><strong>Client:</strong> {{ page.client }}</p>
+    {% if page.subtitle %}
+      <h4 style="color: #777;">{{ page.subtitle }}</h4>
     {% endif %}
 
-    {% if page.project-date %}
-      <p><strong>Project Date:</strong> {{ page.project-date }}</p>
+    <!-- 第一部分：项目属性 -->
+    <section class="project-attributes grid-3">
+      {% if page.location %}
+        <div><strong>Location:</strong> {{ page.location }}</div>
+      {% endif %}
+      {% if page.client %}
+        <div><strong>Client:</strong> {{ page.client }}</div>
+      {% endif %}
+      {% if page.floor-area %}
+        <div><strong>Floor Area:</strong> {{ page.floor-area }}</div>
+      {% endif %}
+      {% if page.project-type %}
+        <div><strong>Type:</strong> {{ page.project-type }}</div>
+      {% endif %}
+      {% if page.project-status %}
+        <div><strong>Status:</strong> {{ page.project-status }}</div>
+      {% endif %}
+      {% if page.project-date %}
+        <div><strong>Project Date:</strong> {{ page.project-date }}</div>
+      {% endif %}
+    </section>
+
+<hr class="section-divider"> <!-- ✅ 分隔线 -->
+
+    <!-- 第二部分：项目点评 -->
+    {% if page.highlights %}
+    <section class="project-review">
+      <h2 class="section-title">Highlights</h2>
+      <p>{{ page.highlights | newline_to_br }}</p>
+    </section>
     {% endif %}
 
-    {% if page.project-type %}
-      <p><strong>Project Type:</strong> {{ page.project-type }}</p>
-    {% endif %}
-
-    {% if page.location %}
-      <p><strong>Location:</strong> {{ page.location }}</p>
-    {% endif %}
-
-    {% if page.description %}
-      <div class="post-description-wrapper">
-        <div class="post-description-border"></div>
-        <div class="post-description">{{ page.description }}</div>
-      </div>
-    {% endif %}
-
-    <div class="project-gallery">
-      {% for img in page.images %}
-        <img src="{{ site.baseurl }}/{{ img }}" class="img-responsive" alt="{{ page.title }}">
+    <!-- 第三部分：项目进程 -->
+    {% if page.progress %}
+    <section class="project-timeline">
+      <h2 class="section-title">Progress</h2>
+      {% for item in page.progress %}
+        <div class="timeline-stage">
+          <img src="{{ site.baseurl }}/{{ item.img }}" class="img-responsive" alt="project progress image">
+          {% if item.text %}
+            <p class="caption">{{ item.text }}</p>
+          {% endif %}
+        </div>
       {% endfor %}
-    </div>
+    </section>
+    {% endif %}
+
   </article>
 
   {% include footer.html %}
 </body>
 </html>
+

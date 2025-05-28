@@ -171,8 +171,9 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .navbar-default {
-    border-color: transparent;
-    background-color: #222;
+  background-color: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 
 .navbar-default .navbar-brand {
@@ -215,6 +216,7 @@ fieldset[disabled] .btn-xl.active {
     -webkit-transition: all ease .35s;
     -moz-transition: all ease .35s;
     transition: all ease .35s;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .navbar-default .nav li a:hover,
@@ -1033,8 +1035,8 @@ body {
 
 
 .project-timeline .caption {
-  font-size: 20px;
-  color: #313131;
+  font-size: 18px;
+  color: #242424;
   text-align: center;
 }
 
@@ -1043,7 +1045,7 @@ h2.section-title {
   font-weight: 600;
   color: #222;
   text-align: left;
-  margin: 12px 0 8px;
+  margin: 12px 0 20px;
   border-left: 4px solid #007bff;
   padding-inline-start: 12px;
   display: block; /* 替代 inline-block，避免蓝线高度问题 */

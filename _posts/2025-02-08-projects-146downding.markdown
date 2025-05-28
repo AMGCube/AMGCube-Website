@@ -1,10 +1,12 @@
 ---
-title: 146 Downing St
+title: 146 Downding St
 subtitle: Show Room, Brisbane
 layout: project
 date: 2024-11-18
-permalink: /projects/146downing/
+permalink: /projects/146dowding/
 categories: ["Projects"]
+thumbnail: 146/thumbnail.png
+alt: image-alt
 
 client: AMGCube
 location: Brisbane
@@ -27,8 +29,10 @@ highlights: >
  ---重钢结构加上集成化墙体，配合高性能的落地门窗，坚固耐久、隔热隔音，营造了一个舒适，温馨、通透的室内空间。<br>
 
 progress:
+  - img: img/projects/146/progress-0.Jpg
+    text: Site View 现场实景（开工前） 
   - img: img/projects/146/progress-1.png
-    text: Site Location 现场位置
+    text: Site Plan 场地规划
   - img: img/projects/146/progress-2.png
     text: Floor Plan Design 平面设计
   - img: img/projects/146/progress-3.png
@@ -40,6 +44,4 @@ progress:
   - img: img/projects/146/progress-6.png
     text: Interior Decoration Rendering 内装饰效果
 
-thumbnail: 1-thumbnail.png
-alt: image-alt
 ---

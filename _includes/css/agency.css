@@ -658,23 +658,42 @@ section h3.section-subheading {
 }
 
 .team-member {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     text-align: center;
 }
 
+
 .team-member img {
-    margin: 0 auto;
-    border: 7px solid #fff;
+  margin: 0 auto;
+  border: 7px solid #fff;
+
+  width: 200px;        /* ✅ 控制头像尺寸 */
+  height: 200px;
+  object-fit: cover;   /* ✅ 防止图片拉伸变形 */
 }
 
+@media (max-width: 768px) {
+  .team-member img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .team-member {
+    padding: 0 10px;
+  }
+}
+
+
 .team-member h4 {
-    margin-top: 25px;
-    margin-bottom: 0;
-    text-transform: none;
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 18px;
 }
 
 .team-member p {
-    margin-top: 0;
+  font-size: 14px;
+  color: #777;
+  margin-top: 6px;
 }
 
 aside.clients img {

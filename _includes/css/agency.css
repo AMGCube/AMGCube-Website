@@ -273,168 +273,74 @@ fieldset[disabled] .btn-xl.active {
 
 /* 首页的背景 */
 .hero-home {
-    background-image: url("/img/home-bg.jpg");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: container;
-    height: 90vh; /* 只影响 header，防止影响后续 sections */
-    min-height: 500px;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    position: relative;
-    
+  margin: 0;
+  padding: 0;
 }
 
+.hero-background {
+  background-image: url('/img/home-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 60vh;
+  min-height: 400px;
 
-/* 默认情况下，container 适应页面宽度，但有最大宽度限制 */
-.container {
-    max-width: 1200px; /* 确保整个网站不会过宽，适应桌面 */
-    width: 90%; /* 在小屏幕上仍然可以适应 */
-    margin: 0 auto; /* 居中 */
-    padding-left: 15px;
-    padding-right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-
-/* 在 hero-home 内部的 container，取消最大宽度限制 */
-.hero-home .container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    width: 100%;
-    max-width: none;
+@media (max-width: 768px) {
+  .hero-background {
+    height: 50vh;
+    padding: 40px 0;
+  }
 }
 
-/*新增代码*/
 .intro-text-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 100%;
-    width: 100%; /* 确保不受 `.container` 限制 */
-    text-align: center;
-}
-
-/* 文字样式 */
-.intro-text {
-    text-align: center;
-    position: relative;
+  max-width: 1000px;   /* 控制文字显示区域的宽度 */
+  margin: 0 auto;
+  padding: 100px 20px 0;
+  text-align: center;
+  width: 100%;
 }
 
 .intro-leadin {
-    margin-top: 30px; /* 或者 20px，试试哪个更合适 */
-    margin-bottom: 25px;
-    font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 40px;
-    font-style: italic;
-    line-height: 40px;
-    padding-top: 150px; /* 你可以增加数值，看变化 */
-    color: #F8F8F8
-    
+  font-size: 28px;
+  font-style: italic;
+  font-weight: 300;
+  color: #f0f0f0;
+  margin-top: 10px;
+  margin-bottom: 24px;  /* ✅ 与主标题拉开间距 */
+  letter-spacing: 0.3px;
 }
 
 .intro-heading {
-    font-size: 75px; /* 参考模板大小 */
-    font-weight: 700; /* 加粗 */
-    line-height: 75px; /* 适当调整行高 */
-    text-transform: uppercase; /* 确保所有字母大写 */
-    margin-bottom: 20px; /* 适当调整与下方按钮的距离 */
-    color: white; /* 确保颜色与模板一致 */
-    margin-top: 80px; /* 你可以尝试 40px、50px，根据需要调整 */
-    letter-spacing: 1.5px;  /* 适当增加字母间距 */
-    line-height: 1.2; /* 增加行距，提高可读性 */
+  font-size: 52px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.4;     /* ✅ 行高拉开，更容易阅读 */
+  letter-spacing: 1px;  /* ✅ 稍减紧凑感 */
+  text-transform: uppercase;
+  margin-bottom: 36px;
 }
 
-/* 按钮样式 */
 .btn.btn-xl {
-    padding: 18px 40px;
-    font-size: 22px;
-    font-weight: 600;
-    background-color: #ffa500;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    /* 添加 margin-top，向下移动按钮 */
-    margin-top: 150px; /* 你可以调整这个值，比如 80px 让它更靠下 */
-    
+  margin-top: 20px;
+  padding: 14px 28px;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: #ffa500;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
-}
-/* 添加 margin-top，向下移动按钮 */
-    margin-top: 50px; /* 你可以调整这个值，比如 80px 让它更靠下 */
-}
+
 .btn.btn-xl:hover {
-    background-color: #ff8500;
+  background-color: #ff8500;
 }
 
-
-/*header {
-    text-align: center;
-    color: #fff;
-    background-attachment: scroll;
-    background-image: url('{{ site.baseurl }}/img/header-bg.jpg');
-    background-position: unset; !important
-    background-repeat: none;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
-
-header .intro-text {
-    padding-top: 100px;
-    padding-bottom: 50px;
-}
-
-header .intro-text .intro-lead-in {
-    margin-bottom: 25px;
-    font-family: {{ site.data.template.font.secondary }};
-    font-size: 26px;
-    font-style: italic;
-    line-height: 28px;
-    color: #{{ site.data.template.color.lead-text }}
-}
-
-header .intro-text .intro-heading {
-    margin-bottom: 25px;
-    text-transform: uppercase;
-    font-family: {{ site.data.template.font.primary }};
-    font-size: 40px;
-    font-weight: 700;
-    line-height: 42px;
-}
-
-@media(min-width:768px) {
-    header .intro-text {
-        padding-top: 300px;
-        padding-bottom: 200px;
-    }
-
-    header .intro-text .intro-lead-in {
-        margin-bottom: 25px;
-        font-family: {{ site.data.template.font.secondary }};
-        font-size: 44px;
-        font-style: italic;
-        line-height: 46px;
-        color: #{{ site.data.template.color.lead-text }}
-    }
-
-    header .intro-text .intro-heading {
-        margin-bottom: 50px;
-        text-transform: uppercase;
-        font-family: {{ site.data.template.font.primary }};
-        font-size: 60px;
-        font-weight: 700;
-        line-height: 62px;
-    }
-}
-*/ 
-/* 为了测试，先把header相关的注释掉 */
 section {
     padding: 40px 0;
 }
@@ -442,7 +348,7 @@ section {
 section h2.section-heading {
     margin-top: 30;
     margin-bottom: 30px;
-    font-size: 40px;
+    font-size: 28px;
     
 }
 
@@ -1114,7 +1020,7 @@ body {
 }
 
 h2.section-title {
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 600;
   color: #222;
   text-align: left;

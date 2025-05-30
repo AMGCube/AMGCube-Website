@@ -61,10 +61,6 @@ h6 {
     margin: 0 auto;
 }
 
-.bg-light-gray {
-    background-color: #f7f7f7;
-}
-
 .bg-darkest-gray {
     background-color: #222;
 }
@@ -932,7 +928,7 @@ body {
   overflow: hidden;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   width: 100%;
-  max-width: 300px;
+  max-width: 280px;
   margin: 1rem auto;
   text-align: center;
   padding-bottom: 1rem; /* ✅ 新增底部内边距 */
@@ -972,11 +968,12 @@ body {
   padding: 1rem;
 }
 
-.module-title {
-  margin: 0;
-  font-size: 1.2rem;
-  font-weight: 600;
+.project-card h3.project-cards-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
   color: #222;
+  text-transform: uppercase;
 }
 
 .module-description {
@@ -990,16 +987,22 @@ body {
   color: #222;
   line-height: 1.8;
   font-style: normal;
-  max-width: 800px;
-  margin: 0 auto 2rem auto;
+  max-width: 900px;
+  margin: 0 auto 3rem auto;
   text-align: left;
+
 }
 .product-highlight {
   font-size: 16px;
   font-weight: 500;
-  color: #333; /* 更深更醒目 */
+  color: #333;
   line-height: 1.6;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 220px; /* 控制宽度，对齐图标宽度 */
 }
+
 .grid-3 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));

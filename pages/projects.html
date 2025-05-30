@@ -30,7 +30,7 @@ header_image: "/img/projects-header.jpg"
 
 <body class="projects-page">
 
-<section class="projects-container">
+<section class="projects-container bg-light-gray">
     <div class="modules-container" id="projects-list">
         {% assign unique_posts = site.posts | where: "categories", "Projects" | sort: "date" | reverse %}
         {% for post in unique_posts %}
@@ -42,7 +42,7 @@ header_image: "/img/projects-header.jpg"
                          alt="{{ post.title }}" 
                          class="module-image">
                     <div class="module-content">
-                        <h4 class="module-title">{{ post.title }}</h4>
+                        <h3 class="project-cards-title">{{ post.title }}</h3>
                         <p class="module-description">{{ post.subtitle }}</p>
                     </div>
                 </div>

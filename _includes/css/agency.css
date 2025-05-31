@@ -1125,3 +1125,155 @@ article h1 {
   color: #333333;
   line-height: 1.6;
 }
+
+/* =========================================================================
+   1. Icon Card 网格 + 卡片样式
+   ========================================================================= */
+
+/* 1.1 整个 Icon Card 网格容器的上下内边距及背景色（可自行调整） */
+.service-icon-grid-section {
+  padding-top: 3rem;              /* 上方留白 48px */
+  padding-bottom: 3rem;           /* 下方留白 48px */
+  background-color: #ffffff;       /* 默认白底；如需深色背景可改为 #0d0d2b 之类 */
+}
+
+/* 1.2 icon-grid：使用 CSS Grid 实现响应式列布局 */
+.service-icon-grid-section .icon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;                    /* 行距和列距均为 24px */
+  justify-items: center;          /* 单元格内容水平居中 */
+  align-items: start;             /* 单元格内容顶端对齐 */
+  /* 如果你想让少量列在大屏时居中显示，可加下面这行：
+     justify-content: center;
+  */
+}
+
+/* 1.3 icon-link：包裹在每个卡片外面的链接，取消下划线并确保点击区域覆盖整个卡片 */
+.service-icon-grid-section .icon-link {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  width: 100%;
+}
+
+/* 1.4 icon-card：单个卡片的样式（背景、边框、圆角、阴影、内边距） */
+.service-icon-grid-section .icon-card {
+  background-color: #f8f9fa;      /* 浅灰底，可调整为纯白或其它颜色 */
+  border: 1px solid #dee2e6;       /* 浅灰边框 */
+  border-radius: 0.5rem;           /* 圆角 8px */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); /* 轻微阴影 */
+  text-align: center;              /* 文字居中 */
+  padding: 1.75rem 1rem;           /* 上下 28px，左右 16px */
+  width: 100%;                     /* 拉伸至 Grid 单元格宽度 */
+  max-width: 240px;                /* 最大宽度 240px，避免过度拉伸 */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 1.5 icon-card 悬停时的浮动与阴影加强效果 */
+.service-icon-grid-section .icon-card:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 1.6 icon-card 内部 Font Awesome 图标的大小与配色 */
+.service-icon-grid-section .icon-card i.fa {
+  font-size: 2.5rem;               /* 40px，如果需要更大可改为 3rem（48px） */
+  color: #ffc107;                  /* 金黄色 */
+  margin-bottom: 0.75rem;          /* 图标与文字间距 12px */
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+/* 1.7 图标悬停时变色与微放大 */
+.service-icon-grid-section .icon-card:hover i.fa {
+  color: #ffb300;                 /* 更亮的金色 */
+  transform: scale(1.1);          /* 放大 10% */
+}
+
+/* 1.8 icon-card 内部文字样式（标题文本） */
+.service-icon-grid-section .icon-card span {
+  display: block;
+  font-size: 0.9375rem;            /* 15px；如需更大改为 1rem（16px） */
+  color: #343a40;                  /* 深灰文本 */
+  font-weight: 500;
+  text-transform: uppercase;       /* 全部大写 */
+  letter-spacing: 0.05em;
+  line-height: 1.4;
+}
+
+/* 1.9 响应式微调：超窄屏时每行只显示 1 列 */
+@media (max-width: 575.98px) {
+  .service-icon-grid-section .icon-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+}
+/* 如果需要在小于 768px 时改成 2 列，可使用： */
+/*
+@media (max-width: 767.98px) {
+  .service-icon-grid-section .icon-grid {
+    grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+  }
+}
+*/
+
+/* =========================================================================
+   2. FAQ 折叠列表 区块样式
+   ========================================================================= */
+
+/* 2.1 外层 FAQ 列表容器的上下内边距（可自行调整） */
+.service-icon-faq-section {
+  padding-top: 3rem;              /* 上方留白 48px */
+  padding-bottom: 3rem;           /* 下方留白 48px */
+  background-color: #ffffff;       /* 默认为白底 */
+}
+
+/* 2.2 FAQ 大标题 h2 样式（分类标题，如 “DESIGN & APPROVALS FAQs”） */
+.service-icon-faq-section h2 {
+  font-size: 2.25rem;              /* 36px；如需更小可改为 2rem（32px） */
+  line-height: 1.3;
+  margin-bottom: 1.5rem;           /* 下方留白 24px */
+  color: #343a40;                  /* 深灰或几乎黑色 */
+  font-weight: 600;
+}
+
+/* 2.3 Accordion 折叠面板按钮文字样式（小标题） */
+.service-icon-faq-section .accordion-button {
+  font-size: 1rem;                 /* 16px；如需更小可改为 0.9375rem （15px） */
+  font-weight: 500;                /* 中等粗细 */
+  padding: 0.75rem 1rem;           /* 上下 12px，左右 16px */
+  color: #343a40;                  /* 文本颜色深灰 */
+  background-color: #ffffff;       /* 按钮底色白色 */
+  border: 1px solid #dee2e6;       /* 浅灰边框 */
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* 2.4 Accordion 折叠按钮悬停、聚焦、活动态样式 */
+.service-icon-faq-section .accordion-button:hover,
+.service-icon-faq-section .accordion-button:focus {
+  background-color: #f1f3f5;       /* 浅灰底，让按钮在悬停时有反馈 */
+  color: #212529;                  /* 更深的文本色 */
+}
+
+/* 2.5 折叠后面板的容器 */
+.service-icon-faq-section .accordion-collapse {
+  border: none;                    /* 默认无边框 */
+}
+
+/* 2.6 折叠面板内容区块样式 */
+.service-icon-faq-section .accordion-body {
+  padding: 1.25rem 1rem;          /* 上下 20px，左右 16px */
+  background-color: #ffffff;      /* 内容区白底 */
+  border-top: 1px solid #dee2e6;  /* 用一条线隔开标题与内容 */
+  line-height: 1.6;
+  color: #495057;                 /* 中灰文本 */
+}
+
+/* =========================================================================
+   3. 链接滚动平滑效果（可选）
+   ========================================================================= */
+/* 如果想让点击卡片时，自动滚动到对应 FAQ 区块时更平滑，可加： */
+html {
+  scroll-behavior: smooth;
+}

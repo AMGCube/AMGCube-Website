@@ -4,40 +4,283 @@ title: "services"
 permalink: /services/
 header_image: "/img/services-header.jpg"
 ---
-<!-- Services Section -->
-<section id="services">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2 class="section-heading">Services</h2>
-                <h3 class="section-subheading text-muted"><strong>End-to-end solutions for a seamless building experience.</h3></strong>
-            </div>
+
+<!-- ================================
+     一、Icon 卡片网格（可自动换行，多列展示）
+     ================================ -->
+<section class="service-icon-grid-section">
+  <div class="container">
+    <div class="icon-grid">
+      <!-- 1. Design & Approvals -->
+      <a href="#faq-design" class="icon-link">
+        <div class="icon-card">
+          <i class="fa fa-file-text"></i>
+          <span>Design &amp; Approvals</span>
         </div>
-        <div class="row text-center">
-            <div class="col-md-4">
-                <span class="fa-stack fa-4x">
-                    <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                    <i class="fa fa-file fa-stack-1x fa-inverse"></i>
-                </span>
-                <h4 class="service-heading">Design & Building Approvals</h4>
-                <p class="text-muted">From concept to permits, ensuring compliance and efficiency.</p>
-            </div>
-            <div class="col-md-4">
-                <span class="fa-stack fa-4x">
-                    <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                    <i class="fa fa-truck fa-stack-1x fa-inverse"></i>
-                </span>
-                <h4 class="service-heading">Production & Delivery</h4>
-                <p class="text-muted">Precision manufacturing and timely transportation of prefabricated modules.</p>
-            </div>
-            <div class="col-md-4">
-                <span class="fa-stack fa-4x">
-                    <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                    <i class="fa fa-home fa-stack-1x fa-inverse"></i>
-                </span>
-                <h4 class="service-heading">Construction & Maintenance</h4>
-                <p class="text-muted">On-site assembly, quality assurance, and long-term support.</p>
-            </div>
+      </a>
+
+      <!-- 2. Production & Delivery -->
+      <a href="#faq-production" class="icon-link">
+        <div class="icon-card">
+          <i class="fa fa-truck"></i>
+          <span>Production &amp; Delivery</span>
         </div>
+      </a>
+
+      <!-- 3. Construction & Maintenance -->
+      <a href="#faq-maintenance" class="icon-link">
+        <div class="icon-card">
+          <i class="fa fa-wrench"></i>
+          <span>Construction &amp; Maintenance</span>
+        </div>
+      </a>
+
+      <!-- 4. Logistics -->
+      <a href="#faq-logistics" class="icon-link">
+        <div class="icon-card">
+          <i class="fa fa-shipping-fast"></i>
+          <span>Logistics</span>
+        </div>
+      </a>
+
+      <!-- 5. Warranty -->
+      <a href="#faq-warranty" class="icon-link">
+        <div class="icon-card">
+          <i class="fa fa-shield-alt"></i>
+          <span>Warranty</span>
+        </div>
+      </a>
+
+      <!-- 6. Support -->
+      <a href="#faq-support" class="icon-link">
+        <div class="icon-card">
+          <i class="fa fa-headset"></i>
+          <span>Support</span>
+        </div>
+      </a>
+
+      <!-- 未来要新增其他类别时，只需复制下面这段并修改图标+文字+链接：
+      <a href="#faq-newcategory" class="icon-link">
+        <div class="icon-card">
+          <i class="fa fa-new-icon"></i>
+          <span>New Category</span>
+        </div>
+      </a>
+      -->
     </div>
+  </div>
+</section>
+
+
+<!-- ================================
+     二、FAQ 折叠列表（6 个分类，每个分类一个区块）
+     ================================ -->
+<section class="service-icon-faq-section">
+  <div class="container">
+
+    <!-- 1. DESIGN & APPROVALS 区块 -->
+    <div id="faq-design" class="faq-section mb-5">
+      <h2>DESIGN &amp; APPROVALS FAQs</h2>
+      {% assign design_faqs = site.faqs | where: "category", "design" %}
+      {% if design_faqs == empty %}
+        <p>目前没有找到 “design” 类别的 FAQ。</p>
+      {% else %}
+        <div class="accordion" id="accordionDesign">
+          {% for item in design_faqs %}
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading_design_{{ forloop.index }}">
+                <button class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapse_design_{{ forloop.index }}"
+                        aria-expanded="false"
+                        aria-controls="collapse_design_{{ forloop.index }}">
+                  {{ item.title }}
+                </button>
+              </h2>
+              <div id="collapse_design_{{ forloop.index }}"
+                   class="accordion-collapse collapse"
+                   aria-labelledby="heading_design_{{ forloop.index }}"
+                   data-bs-parent="#accordionDesign">
+                <div class="accordion-body">
+                  {{ item.answer | markdownify }}
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+
+    <!-- 2. PRODUCTION & DELIVERY 区块 -->
+    <div id="faq-production" class="faq-section mb-5">
+      <h2>PRODUCTION &amp; DELIVERY FAQs</h2>
+      {% assign production_faqs = site.faqs | where: "category", "production" %}
+      {% if production_faqs == empty %}
+        <p>目前没有找到 “production” 类别的 FAQ。</p>
+      {% else %}
+        <div class="accordion" id="accordionProduction">
+          {% for item in production_faqs %}
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading_production_{{ forloop.index }}">
+                <button class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapse_production_{{ forloop.index }}"
+                        aria-expanded="false"
+                        aria-controls="collapse_production_{{ forloop.index }}">
+                  {{ item.title }}
+                </button>
+              </h2>
+              <div id="collapse_production_{{ forloop.index }}"
+                   class="accordion-collapse collapse"
+                   aria-labelledby="heading_production_{{ forloop.index }}"
+                   data-bs-parent="#accordionProduction">
+                <div class="accordion-body">
+                  {{ item.answer | markdownify }}
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+
+    <!-- 3. CONSTRUCTION & MAINTENANCE 区块 -->
+    <div id="faq-maintenance" class="faq-section mb-5">
+      <h2>CONSTRUCTION &amp; MAINTENANCE FAQs</h2>
+      {% assign maintenance_faqs = site.faqs | where: "category", "maintenance" %}
+      {% if maintenance_faqs == empty %}
+        <p>目前没有找到 “maintenance” 类别的 FAQ。</p>
+      {% else %}
+        <div class="accordion" id="accordionMaintenance">
+          {% for item in maintenance_faqs %}
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading_maintenance_{{ forloop.index }}">
+                <button class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapse_maintenance_{{ forloop.index }}"
+                        aria-expanded="false"
+                        aria-controls="collapse_maintenance_{{ forloop.index }}">
+                  {{ item.title }}
+                </button>
+              </h2>
+              <div id="collapse_maintenance_{{ forloop.index }}"
+                   class="accordion-collapse collapse"
+                   aria-labelledby="heading_maintenance_{{ forloop.index }}"
+                   data-bs-parent="#accordionMaintenance">
+                <div class="accordion-body">
+                  {{ item.answer | markdownify }}
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+
+    <!-- 4. LOGISTICS 区块（新增） -->
+    <div id="faq-logistics" class="faq-section mb-5">
+      <h2>LOGISTICS FAQs</h2>
+      {% assign logistics_faqs = site.faqs | where: "category", "logistics" %}
+      {% if logistics_faqs == empty %}
+        <p>目前没有找到 “logistics” 类别的 FAQ。</p>
+      {% else %}
+        <div class="accordion" id="accordionLogistics">
+          {% for item in logistics_faqs %}
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading_logistics_{{ forloop.index }}">
+                <button class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapse_logistics_{{ forloop.index }}"
+                        aria-expanded="false"
+                        aria-controls="collapse_logistics_{{ forloop.index }}">
+                  {{ item.title }}
+                </button>
+              </h2>
+              <div id="collapse_logistics_{{ forloop.index }}"
+                   class="accordion-collapse collapse"
+                   aria-labelledby="heading_logistics_{{ forloop.index }}"
+                   data-bs-parent="#accordionLogistics">
+                <div class="accordion-body">
+                  {{ item.answer | markdownify }}
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+
+    <!-- 5. WARRANTY 区块（新增） -->
+    <div id="faq-warranty" class="faq-section mb-5">
+      <h2>WARRANTY FAQs</h2>
+      {% assign warranty_faqs = site.faqs | where: "category", "warranty" %}
+      {% if warranty_faqs == empty %}
+        <p>目前没有找到 “warranty” 类别的 FAQ。</p>
+      {% else %}
+        <div class="accordion" id="accordionWarranty">
+          {% for item in warranty_faqs %}
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading_warranty_{{ forloop.index }}">
+                <button class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapse_warranty_{{ forloop.index }}"
+                        aria-expanded="false"
+                        aria-controls="collapse_warranty_{{ forloop.index }}">
+                  {{ item.title }}
+                </button>
+              </h2>
+              <div id="collapse_warranty_{{ forloop.index }}"
+                   class="accordion-collapse collapse"
+                   aria-labelledby="heading_warranty_{{ forloop.index }}"
+                   data-bs-parent="#accordionWarranty">
+                <div class="accordion-body">
+                  {{ item.answer | markdownify }}
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+
+    <!-- 6. SUPPORT 区块（新增） -->
+    <div id="faq-support" class="faq-section mb-5">
+      <h2>SUPPORT FAQs</h2>
+      {% assign support_faqs = site.faqs | where: "category", "support" %}
+      {% if support_faqs == empty %}
+        <p>目前没有找到 “support” 类别的 FAQ。</p>
+      {% else %}
+        <div class="accordion" id="accordionSupport">
+          {% for item in support_faqs %}
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading_support_{{ forloop.index }}">
+                <button class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapse_support_{{ forloop.index }}"
+                        aria-expanded="false"
+                        aria-controls="collapse_support_{{ forloop.index }}">
+                  {{ item.title }}
+                </button>
+              </h2>
+              <div id="collapse_support_{{ forloop.index }}"
+                   class="accordion-collapse collapse"
+                   aria-labelledby="heading_support_{{ forloop.index }}"
+                   data-bs-parent="#accordionSupport">
+                <div class="accordion-body">
+                  {{ item.answer | markdownify }}
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+
+  </div>
 </section>

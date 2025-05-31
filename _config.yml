@@ -59,3 +59,8 @@ collections:
   posts:
     output: true
     permalink: /:path/
+    
+# 增加问题列表
+collections:
+  faqs:
+    output: true

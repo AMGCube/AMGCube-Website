@@ -1180,22 +1180,22 @@ article h1 {
 
 /* 1.6 icon-card 内部 Font Awesome 图标的大小与配色 */
 .service-icon-grid-section .icon-card i.fa {
-  font-size: 2.5rem;               /* 40px，如果需要更大可改为 3rem（48px） */
+  font-size: 6rem;               /* 40px，如果需要更大可改为 3rem（48px） */
   color: #ffc107;                  /* 金黄色 */
-  margin-bottom: 0.75rem;          /* 图标与文字间距 12px */
+  margin-bottom: 1.5rem;          /* 图标与文字间距 12px */
   transition: color 0.2s ease, transform 0.2s ease;
 }
 
 /* 1.7 图标悬停时变色与微放大 */
 .service-icon-grid-section .icon-card:hover i.fa {
   color: #ffb300;                 /* 更亮的金色 */
-  transform: scale(1.1);          /* 放大 10% */
+  transform: scale(1.2);          /* 放大 10% */
 }
 
 /* 1.8 icon-card 内部文字样式（标题文本） */
 .service-icon-grid-section .icon-card span {
   display: block;
-  font-size: 0.9375rem;            /* 15px；如需更大改为 1rem（16px） */
+  font-size: 1rem;            /* 15px；如需更大改为 1rem（16px） */
   color: #343a40;                  /* 深灰文本 */
   font-weight: 500;
   text-transform: uppercase;       /* 全部大写 */
@@ -1276,4 +1276,95 @@ article h1 {
 /* 如果想让点击卡片时，自动滚动到对应 FAQ 区块时更平滑，可加： */
 html {
   scroll-behavior: smooth;
+}
+
+/* ============================================================================
+   FAQ 列表排版（仅调整布局，不修改配色）
+   ============================================================================ */
+
+/* 1. FAQ 区域整体上下留白 */
+.service-icon-faq-section {
+  padding-top: 3rem;    /* 上方留白 48px */
+  padding-bottom: 3rem; /* 下方留白 48px */
+}
+
+/* 2. 分类标题 h2 排版：上下间距、大小、加粗 */
+.service-icon-faq-section h2 {
+  margin-top: 2rem;     /* 上方留白 32px */
+  margin-bottom: 1rem;  /* 下方留白 16px */
+  font-size: 2rem;      /* 32px */
+  font-weight: 600;     /* 略微加粗 */
+}
+
+/* 3. Accordion 样式调整：移除默认圆角与边框，使用底部分隔线 */
+.service-icon-faq-section .accordion .accordion-item {
+  border: none;                     /* 移除默认边框 */
+  border-bottom: 1px solid #dee2e6; /* 底部一条浅灰分隔线 */
+  border-radius: 0;                 /* 去掉圆角 */
+  margin: 0;                        /* 移除默认外边距 */
+}
+.service-icon-faq-section .accordion .accordion-item:last-child {
+  border-bottom: none;              /* 最后一项无需底部分隔线 */
+}
+
+/* 4. Accordion Button 样式：透明背景、全宽、无圆角、左右不留内边距 */
+.service-icon-faq-section .accordion-button {
+  background-color: transparent;  /* 背景透明 */
+  border: none;                   /* 无边框 */
+  border-radius: 0;               /* 去掉圆角 */
+  padding: 1rem 0;                /* 上下 16px，左右 0，让行撑满宽度 */
+  font-size: 1rem;                /* 16px */
+  font-weight: 500;               /* 中等粗细 */
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* 文字左对齐，箭头右对齐 */
+  color: inherit;                 /* 保持原主题文字颜色 */
+}
+
+/* 5. 鼠标悬停与聚焦时的极浅灰高亮提示 */
+.service-icon-faq-section .accordion-button:hover,
+.service-icon-faq-section .accordion-button:focus {
+  background-color: rgba(0, 0, 0, 0.02); /* 极浅灰提示 */
+}
+
+/* 6. Accordion Body 样式：答案区内边距、行高、负上边距对齐 */
+.service-icon-faq-section .accordion-body {
+  padding: 0.5rem 1rem 1rem 1rem; /* 上 8px，下 16px，左右 16px */
+  font-size: 0.9375rem;           /* 15px */
+  line-height: 1.6;               /* 行高 1.6 */
+  margin-top: -0.5rem;            /* 将内容与分隔线紧密连在一起 */
+  background-color: transparent;  /* 背景透明，保持主题 */
+  color: inherit;                 /* 保持原主题文字颜色 */
+}
+
+/* 7. 去掉 Accordion Collapse 默认的上边距 */
+.service-icon-faq-section .accordion-collapse {
+  margin-top: 0;
+}
+
+/* 8. 箭头位置与旋转：右对齐、展开时向上翻转 */
+.service-icon-faq-section .accordion-button::after {
+  right: 0;                             /* 紧贴最右侧 */
+  top: 50%;                            /* 垂直居中 */
+  transform: translateY(-50%);         /* 垂直校正 */
+  transition: transform 0.2s ease;
+}
+.service-icon-faq-section .accordion-button:not(.collapsed)::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+/* 9. 响应式微调：屏幕 < 576px 时，缩小标题与文字 */
+@media (max-width: 575.98px) {
+  .service-icon-faq-section h2 {
+    font-size: 1.75rem;       /* 28px */
+    margin-bottom: 0.75rem;   /* 12px */
+  }
+  .service-icon-faq-section .accordion-button {
+    font-size: 0.9375rem;     /* 15px */
+    padding: 0.75rem 0;       /* 上下 12px，左右 0 */
+  }
+  .service-icon-faq-section .accordion-body {
+    font-size: 0.875rem;      /* 14px */
+    padding: 0.5rem 1rem 1rem 1rem; /* 上 8px，下 16px，左右 16px */
+  }
 }

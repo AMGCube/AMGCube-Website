@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "services"
+title: "Services"
 permalink: /services/
 header_image: "/img/services-header.jpg"
 ---
@@ -11,11 +11,11 @@ header_image: "/img/services-header.jpg"
 <section class="service-icon-grid-section">
   <div class="container">
     <div class="icon-grid">
-      <!-- 1. Consulting (咨询) -->
-      <a href="#faq-consulting" class="icon-link">
+      <!-- 1. Consulting & Order (咨询和下单) -->
+      <a href="#faq-order" class="icon-link">
         <div class="icon-card">
           <i class="fa fa-comments"></i>
-          <span>Consulting</span>
+          <span>Consulting &amp; Order</span>
         </div>
       </a>
       
@@ -27,11 +27,11 @@ header_image: "/img/services-header.jpg"
         </div>
       </a>
       
-      <!-- 3. Procurement & Transportation (采购和运输) -->
-      <a href="#faq-procurement" class="icon-link">
+      <!-- 3. Purchasing & Logistics (采购和运输) -->
+      <a href="#faq-logistics" class="icon-link">
         <div class="icon-card">
           <i class="fa fa-truck"></i>
-          <span>Procurement &amp; Transportation</span>
+          <span>Purchasing &amp; Logistics</span>
         </div>
       </a>
       
@@ -43,16 +43,16 @@ header_image: "/img/services-header.jpg"
         </div>
       </a>
       
-      <!-- 5. Inspection & Maintenance (验收和维护及保养) -->
-      <a href="#faq-inspection" class="icon-link">
+      <!-- 5. Certification & Maintenance (验收和维护及保养) -->
+      <a href="#faq-certification" class="icon-link">
         <div class="icon-card">
           <i class="fa fa-check-circle"></i>
-          <span>Inspection &amp; Maintenance</span>
+          <span>Certification &amp; Maintenance</span>
         </div>
       </a>
       
       <!-- 6. Insurance, Financing & Others (保险、贷款及其它) -->
-      <a href="#faq-insurance" class="icon-link">
+      <a href="#faq-others" class="icon-link">
         <div class="icon-card">
           <i class="fa fa-hand-holding-usd"></i>
           <span>Insurance, Financing &amp; Others</span>
@@ -77,42 +77,47 @@ header_image: "/img/services-header.jpg"
 <section class="service-icon-faq-section">
   <div class="container">
 
-    <!-- 1. CONSULTING 区块 -->
-    <div id="faq-consulting" class="faq-section mb-5">
-      <h2>CONSULTING</h2>
-      {% assign consulting_faqs = site.faqs | where: "category", "consulting" %}
-      {% if consulting_faqs == empty %}
-        <p>No FAQs found for this category.</p>
-      {% else %}
-        <div class="accordion" id="accordionConsulting">
-          {% for item in consulting_faqs %}
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="heading_consulting_{{ forloop.index }}">
-                <button class="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapse_consulting_{{ forloop.index }}"
-                        aria-expanded="false"
-                        aria-controls="collapse_consulting_{{ forloop.index }}">
-                  {{ item.title }}
-                </button>
-              </h2>
-              <div id="collapse_consulting_{{ forloop.index }}"
-                   class="accordion-collapse collapse"
-                   aria-labelledby="heading_consulting_{{ forloop.index }}"
-                   data-bs-parent="#accordionConsulting">
-                <div class="accordion-body">
-                  {{ item.answer | markdownify }}
-                </div>
+
+    <!-- ——— 1. CONSULTING & ORDER 区块（调整后） ——— -->
+<div class="faq-block faq-bg-gray mb-5">
+  <div id="faq-order" class="faq-section">
+    <h2>CONSULTING &amp; ORDER</h2>
+    {% assign order_faqs = site.faqs | where: "category", "order" %}
+    {% if order_faqs == empty %}
+      <p>No FAQs found for this category.</p>
+    {% else %}
+      <div class="accordion" id="accordionOrder">
+        {% for item in order_faqs %}
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading_order_{{ forloop.index }}">
+              <button class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapse_order_{{ forloop.index }}"
+                      aria-expanded="false"
+                      aria-controls="collapse_order_{{ forloop.index }}">
+                {{ item.title }}
+              </button>
+            </h2>
+            <div id="collapse_order_{{ forloop.index }}"
+                 class="accordion-collapse collapse"
+                 aria-labelledby="heading_order_{{ forloop.index }}"
+                 data-bs-parent="#accordionOrder">
+              <div class="accordion-body">
+                {{ item.answer | markdownify }}
               </div>
             </div>
-          {% endfor %}
-        </div>
-      {% endif %}
-    </div>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</div>
+
 
     <!-- 2. DESIGN & APPROVALS 区块 -->
-    <div id="faq-design" class="faq-section mb-5">
+<div class="faq-block faq-bg-gray mb-5">
+    <div id="faq-design" class="faq-section">
       <h2>DESIGN &amp; APPROVALS</h2>
       {% assign design_faqs = site.faqs | where: "category", "design" %}
       {% if design_faqs == empty %}
@@ -144,31 +149,33 @@ header_image: "/img/services-header.jpg"
         </div>
       {% endif %}
     </div>
+  </div>
 
-    <!-- 3. PROCUREMENT & TRANSPORTATION 区块 -->
-    <div id="faq-procurement" class="faq-section mb-5">
-      <h2>PROCUREMENT &amp; TRANSPORTATION</h2>
-      {% assign procurement_faqs = site.faqs | where: "category", "procurement" %}
-      {% if procurement_faqs == empty %}
+    <!-- 3. PURCHASING & LOGISTICS 区块 -->
+  <div class="faq-block faq-bg-gray mb-5">
+    <div id="faq-logistics" class="faq-section">
+      <h2>PURCHASING &amp; LOGISTICS</h2>
+      {% assign logistics_faqs = site.faqs | where: "category", "logistics" %}
+      {% if logistics_faqs == empty %}
         <p>No FAQs found for this category.</p>
       {% else %}
-        <div class="accordion" id="accordionProcurement">
-          {% for item in procurement_faqs %}
+        <div class="accordion" id="accordionLogistics">
+          {% for item in logistics_faqs %}
             <div class="accordion-item">
-              <h2 class="accordion-header" id="heading_procurement_{{ forloop.index }}">
+              <h2 class="accordion-header" id="heading_logistics_{{ forloop.index }}">
                 <button class="accordion-button collapsed"
                         type="button"
                         data-bs-toggle="collapse"
-                        data-bs-target="#collapse_procurement_{{ forloop.index }}"
+                        data-bs-target="#collapse_logistics_{{ forloop.index }}"
                         aria-expanded="false"
-                        aria-controls="collapse_procurement_{{ forloop.index }}">
+                        aria-controls="collapse_logistics_{{ forloop.index }}">
                   {{ item.title }}
                 </button>
               </h2>
-              <div id="collapse_procurement_{{ forloop.index }}"
+              <div id="collapse_logistics_{{ forloop.index }}"
                    class="accordion-collapse collapse"
-                   aria-labelledby="heading_procurement_{{ forloop.index }}"
-                   data-bs-parent="#accordionProcurement">
+                   aria-labelledby="heading_logistics_{{ forloop.index }}"
+                   data-bs-parent="#accordionLogistics">
                 <div class="accordion-body">
                   {{ item.answer | markdownify }}
                 </div>
@@ -178,9 +185,11 @@ header_image: "/img/services-header.jpg"
         </div>
       {% endif %}
     </div>
+  </div>
 
     <!-- 4. CONSTRUCTION & INSTALLATION 区块 -->
-    <div id="faq-construction" class="faq-section mb-5">
+  <div class="faq-block faq-bg-gray mb-5">
+    <div id="faq-construction" class="faq-section">
       <h2>CONSTRUCTION &amp; INSTALLATION</h2>
       {% assign construction_faqs = site.faqs | where: "category", "construction" %}
       {% if construction_faqs == empty %}
@@ -212,31 +221,33 @@ header_image: "/img/services-header.jpg"
         </div>
       {% endif %}
     </div>
+  </div>
 
-    <!-- 5. INSPECTION & MAINTENANCE 区块 -->
-    <div id="faq-inspection" class="faq-section mb-5">
-      <h2>INSPECTION &amp; MAINTENANCE</h2>
-      {% assign inspection_faqs = site.faqs | where: "category", "inspection" %}
-      {% if inspection_faqs == empty %}
+    <!-- 5. CERTIFICATION & MAINTENANCE 区块 -->
+    <div class="faq-block faq-bg-gray mb-5">
+     <div id="faq-certification" class="faq-section">
+      <h2>CERTIFICATION &amp; MAINTENANCE</h2>
+      {% assign certification_faqs = site.faqs | where: "category", "certification" %}
+      {% if certification_faqs == empty %}
         <p>No FAQs found for this category.</p>
       {% else %}
-        <div class="accordion" id="accordionInspection">
-          {% for item in inspection_faqs %}
+        <div class="accordion" id="accordionCertification">
+          {% for item in certification_faqs %}
             <div class="accordion-item">
-              <h2 class="accordion-header" id="heading_inspection_{{ forloop.index }}">
+              <h2 class="accordion-header" id="heading_certification_{{ forloop.index }}">
                 <button class="accordion-button collapsed"
                         type="button"
                         data-bs-toggle="collapse"
-                        data-bs-target="#collapse_inspection_{{ forloop.index }}"
+                        data-bs-target="#collapse_certification_{{ forloop.index }}"
                         aria-expanded="false"
-                        aria-controls="collapse_inspection_{{ forloop.index }}">
+                        aria-controls="collapse_certification_{{ forloop.index }}">
                   {{ item.title }}
                 </button>
               </h2>
-              <div id="collapse_inspection_{{ forloop.index }}"
+              <div id="collapse_certification_{{ forloop.index }}"
                    class="accordion-collapse collapse"
-                   aria-labelledby="heading_inspection_{{ forloop.index }}"
-                   data-bs-parent="#accordionInspection">
+                   aria-labelledby="heading_certification_{{ forloop.index }}"
+                   data-bs-parent="#accordionCertification">
                 <div class="accordion-body">
                   {{ item.answer | markdownify }}
                 </div>
@@ -244,33 +255,35 @@ header_image: "/img/services-header.jpg"
             </div>
           {% endfor %}
         </div>
-      {% endif %}
+         {% endif %}
+      </div>
     </div>
 
     <!-- 6. INSURANCE, FINANCING & OTHERS 区块 -->
-    <div id="faq-insurance" class="faq-section mb-5">
+     <div class="faq-block faq-bg-gray mb-5">
+      <div id="faq-others" class="faq-section mb-5">    
       <h2>INSURANCE, FINANCING &amp; OTHERS</h2>
-      {% assign insurance_faqs = site.faqs | where: "category", "insurance" %}
-      {% if insurance_faqs == empty %}
+      {% assign others_faqs = site.faqs | where: "category", "others" %}
+      {% if others_faqs == empty %}
         <p>No FAQs found for this category.</p>
       {% else %}
-        <div class="accordion" id="accordionInsurance">
-          {% for item in insurance_faqs %}
+        <div class="accordion" id="accordionOthers">
+          {% for item in others_faqs %}
             <div class="accordion-item">
-              <h2 class="accordion-header" id="heading_insurance_{{ forloop.index }}">
+              <h2 class="accordion-header" id="heading_others_{{ forloop.index }}">
                 <button class="accordion-button collapsed"
                         type="button"
                         data-bs-toggle="collapse"
-                        data-bs-target="#collapse_insurance_{{ forloop.index }}"
+                        data-bs-target="#collapse_others_{{ forloop.index }}"
                         aria-expanded="false"
-                        aria-controls="collapse_insurance_{{ forloop.index }}">
+                        aria-controls="collapse_others_{{ forloop.index }}">
                   {{ item.title }}
                 </button>
               </h2>
-              <div id="collapse_insurance_{{ forloop.index }}"
+              <div id="collapse_others_{{ forloop.index }}"
                    class="accordion-collapse collapse"
-                   aria-labelledby="heading_insurance_{{ forloop.index }}"
-                   data-bs-parent="#accordionInsurance">
+                   aria-labelledby="heading_others_{{ forloop.index }}"
+                   data-bs-parent="#accordionOthers">
                 <div class="accordion-body">
                   {{ item.answer | markdownify }}
                 </div>
@@ -283,4 +296,3 @@ header_image: "/img/services-header.jpg"
 
   </div>
 </section>
-

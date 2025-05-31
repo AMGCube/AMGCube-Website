@@ -1132,7 +1132,7 @@ article h1 {
 
 /* 1.1 整个 Icon Card 网格容器的上下内边距及背景色（可自行调整） */
 .service-icon-grid-section {
-  padding-top: 3rem;              /* 上方留白 48px */
+  padding-top: 5rem;              /* 上方留白 48px */
   padding-bottom: 3rem;           /* 下方留白 48px */
   background-color: #ffffff;       /* 默认白底；如需深色背景可改为 #0d0d2b 之类 */
 }
@@ -1224,14 +1224,14 @@ article h1 {
 
 /* 2.1 外层 FAQ 列表容器的上下内边距（可自行调整） */
 .service-icon-faq-section {
-  padding-top: 3rem;              /* 上方留白 48px */
-  padding-bottom: 3rem;           /* 下方留白 48px */
+  padding-top: 2rem;              /* 上方留白 48px */
+  padding-bottom: 2rem;           /* 下方留白 48px */
   background-color: #ffffff;       /* 默认为白底 */
 }
 
 /* 2.2 FAQ 大标题 h2 样式（分类标题，如 “DESIGN & APPROVALS FAQs”） */
 .service-icon-faq-section h2 {
-  font-size: 2.25rem;              /* 36px；如需更小可改为 2rem（32px） */
+  font-size: 2rem;              /* 36px；如需更小可改为 2rem（32px） */
   line-height: 1.3;
   margin-bottom: 1.5rem;           /* 下方留白 24px */
   color: #343a40;                  /* 深灰或几乎黑色 */
@@ -1292,7 +1292,7 @@ html {
 .service-icon-faq-section h2 {
   margin-top: 2rem;     /* 上方留白 32px */
   margin-bottom: 1rem;  /* 下方留白 16px */
-  font-size: 2rem;      /* 32px */
+  font-size: 2.5rem;      /* 32px */
   font-weight: 600;     /* 略微加粗 */
 }
 
@@ -1313,7 +1313,7 @@ html {
   border: none;                   /* 无边框 */
   border-radius: 0;               /* 去掉圆角 */
   padding: 1rem 0;                /* 上下 16px，左右 0，让行撑满宽度 */
-  font-size: 1rem;                /* 16px */
+  font-size: 2rem;                /* 16px */
   font-weight: 500;               /* 中等粗细 */
   display: flex;
   align-items: center;
@@ -1330,7 +1330,7 @@ html {
 /* 6. Accordion Body 样式：答案区内边距、行高、负上边距对齐 */
 .service-icon-faq-section .accordion-body {
   padding: 0.5rem 1rem 1rem 1rem; /* 上 8px，下 16px，左右 16px */
-  font-size: 0.9375rem;           /* 15px */
+  font-size: 1.6rem;           /* 15px */
   line-height: 1.6;               /* 行高 1.6 */
   margin-top: -0.5rem;            /* 将内容与分隔线紧密连在一起 */
   background-color: transparent;  /* 背景透明，保持主题 */
@@ -1367,4 +1367,36 @@ html {
     font-size: 0.875rem;      /* 14px */
     padding: 0.5rem 1rem 1rem 1rem; /* 上 8px，下 16px，左右 16px */
   }
+}
+
+/* Services中，列表背景设置 */
+.faq-bg-gray {
+  background: linear-gradient(to bottom, #f9fafb, #ebeff2);
+  padding-top: 60px;
+  padding-bottom: 20px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.faq-block:last-child.faq-bg-gray {
+  padding-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .faq-bg-gray {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+.faq-bg-gray h2,
+.faq-bg-gray p,
+.faq-bg-gray .accordion-button,
+.faq-bg-gray .accordion-body {
+  color: #343a40;
+}
+
+/* 让所有 FAQ 区块的锚点都往下偏移 120px（或根据实际 header 高度调整） */
+.faq-section {
+  scroll-margin-top: 120px;
 }

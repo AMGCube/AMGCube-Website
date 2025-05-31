@@ -1195,7 +1195,7 @@ article h1 {
 /* 1.8 icon-card 内部文字样式（标题文本） */
 .service-icon-grid-section .icon-card span {
   display: block;
-  font-size: 1rem;            /* 15px；如需更大改为 1rem（16px） */
+  font-size: 1.25rem;            /* 15px；如需更大改为 1rem（16px） */
   color: #343a40;                  /* 深灰文本 */
   font-weight: 500;
   text-transform: uppercase;       /* 全部大写 */
@@ -1399,4 +1399,42 @@ html {
 /* 让所有 FAQ 区块的锚点都往下偏移 120px（或根据实际 header 高度调整） */
 .faq-section {
   scroll-margin-top: 120px;
+}
+
+/* ==============================================
+   Services 栏目顶部简介样式
+   作用对象：<div class="service-intro">…</div>
+   ============================================== */
+.service-intro {
+  /* 宽度限制，居中显示 */
+  max-width: 970px;
+  margin: 40px auto 20px;  /* 上方 40px；左右 auto；下方 20px */   
+ 
+  /* 内边距 */
+  padding: 20px 24px;
+
+  /* 背景色与圆角（在有背景图时，可以用半透明） */
+  background-color: rgba(255, 255, 255, 0.92);
+  border-radius: 8px;
+
+  /* 阴影，让文字区域和背景图区分开 */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+  /* 文本居中对齐 */
+  text-align: left;
+}
+
+/* 响应式：屏幕较窄时适当缩小字体和内边距 */
+@media (max-width: 768px) {
+  .service-intro {
+    max-width: 90%;
+    padding: 16px 20px;
+    font-size: 1rem;       /* 大约 16px */
+  }
+}
+/* ─── 覆盖 .service-intro 容器中 <p> 的样式 ─── */
+.service-intro p {
+  font-size: 2rem !important; /* 约 18px，或你想要的 1.8rem */
+  line-height: 1.6     !important;
+  color: #333          !important; /* 如果要覆盖全局颜色 */
 }

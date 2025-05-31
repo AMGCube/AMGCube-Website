@@ -5,6 +5,14 @@ permalink: /services/
 header_image: "/img/services-header.jpg"
 ---
 
+<!-- 在图标网格上方插入服务简介 -->
+<div class="service-intro">
+  <p>
+    At AMGCUBE, we deliver a streamlined process with clear, quantifiable milestones at every step, turning your build 
+    into a smooth, rewarding experience.
+  </p>
+</div>
+
 <!-- ================================
      一、Icon 卡片网格（6 个服务；自动换行）
      ================================ -->
@@ -27,11 +35,11 @@ header_image: "/img/services-header.jpg"
         </div>
       </a>
       
-      <!-- 3. Purchasing & Logistics (采购和运输) -->
-      <a href="#faq-logistics" class="icon-link">
+      <!-- 3. Shipping & Delivery (运输和交付) -->
+      <a href="#faq-delivery" class="icon-link">
         <div class="icon-card">
           <i class="fa fa-truck"></i>
-          <span>Purchasing &amp; Logistics</span>
+          <span>Shipping &amp; Delivery</span>
         </div>
       </a>
       
@@ -77,6 +85,12 @@ header_image: "/img/services-header.jpg"
 <section class="service-icon-faq-section">
   <div class="container">
 
+{%- comment -%}
+  1. 先把 site.faqs 按“order”全局排序。  
+  2. 之后循环时，只要在循环体里判断 item.category 即可。
+  {%- endcomment -%}
+  
+{% assign all_sorted = site.faqs | sort: "order" %}
 
     <!-- ——— 1. CONSULTING & ORDER 区块（调整后） ——— -->
 <div class="faq-block faq-bg-gray mb-5">
@@ -151,30 +165,30 @@ header_image: "/img/services-header.jpg"
     </div>
   </div>
 
-    <!-- 3. PURCHASING & LOGISTICS 区块 -->
+    <!-- 3. Shipping & Delivery 区块 -->
   <div class="faq-block faq-bg-gray mb-5">
-    <div id="faq-logistics" class="faq-section">
-      <h2>PURCHASING &amp; LOGISTICS</h2>
-      {% assign logistics_faqs = site.faqs | where: "category", "logistics" %}
-      {% if logistics_faqs == empty %}
+    <div id="faq-delivery" class="faq-section">
+      <h2>Shipping &amp; Delivery</h2>
+      {% assign delivery_faqs = site.faqs | where: "category", "delivery" %}
+      {% if Delivery_faqs == empty %}
         <p>No FAQs found for this category.</p>
       {% else %}
         <div class="accordion" id="accordionLogistics">
-          {% for item in logistics_faqs %}
+          {% for item in delivery_faqs %}
             <div class="accordion-item">
-              <h2 class="accordion-header" id="heading_logistics_{{ forloop.index }}">
+              <h2 class="accordion-header" id="heading_delivery_{{ forloop.index }}">
                 <button class="accordion-button collapsed"
                         type="button"
                         data-bs-toggle="collapse"
-                        data-bs-target="#collapse_logistics_{{ forloop.index }}"
+                        data-bs-target="#collapse_delivery_{{ forloop.index }}"
                         aria-expanded="false"
-                        aria-controls="collapse_logistics_{{ forloop.index }}">
+                        aria-controls="collapse_delivery_{{ forloop.index }}">
                   {{ item.title }}
                 </button>
               </h2>
-              <div id="collapse_logistics_{{ forloop.index }}"
+              <div id="collapse_delivery_{{ forloop.index }}"
                    class="accordion-collapse collapse"
-                   aria-labelledby="heading_logistics_{{ forloop.index }}"
+                   aria-labelledby="heading_delivery_{{ forloop.index }}"
                    data-bs-parent="#accordionLogistics">
                 <div class="accordion-body">
                   {{ item.answer | markdownify }}

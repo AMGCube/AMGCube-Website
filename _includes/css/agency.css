@@ -1022,7 +1022,7 @@ body {
   font-weight: 500;
   color: #333;
   line-height: 1.6;
-  text-align: left;
+  text-align: center;
   margin-left: auto;
   margin-right: auto;
   max-width: 220px; /* 控制宽度，对齐图标宽度 */

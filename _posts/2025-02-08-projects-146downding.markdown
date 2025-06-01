@@ -37,6 +37,8 @@ progress:
     text: Floor Plan Design 平面设计
   - img: img/projects/146/progress-3.png
     text: Exterior Concept 外观概念
+  - img: img/projects/146/progress-7.png
+    text: Exterior Concept 外观概念
   - img: img/projects/146/progress-4.png
     text: Interior Decoration Rendering 内装饰效果
   - img: img/projects/146/progress-5.png

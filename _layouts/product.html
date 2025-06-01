@@ -47,12 +47,15 @@
 <hr class="section-divider"> <!-- 分隔线 -->
 
     <!-- 第二部分：产品描述 -->
-    {% if page.description %}
-    <section class="product-description">
-      <h2 class="section-title">Description</h2>
-      <p>{{ page.description | newline_to_br }}</p>
-    </section>
-    {% endif %}
+{% if page.description %}
+<section class="product-description">
+  <h2 class="section-title">Description</h2>
+  <div class="description-content">
+    {{ page.description | markdownify }}
+  </div>
+</section>
+{% endif %}
+
 
     <!-- 第三部分：产品图片 -->
     {% if page.images %}

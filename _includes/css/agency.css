@@ -1109,6 +1109,28 @@ article h1 {
   margin-right: auto;
 }
 
+<!-- Products 二级栏目 展示框样式 自定义CSS -->
+<style>
+    .section-heading-sm {
+        font-size: 1.5rem; /* 标题缩小 */
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    .products-heading {
+        font-size: unset; /* 让特性模块的标题匹配首页 */
+        font-weight: bold;
+        margin-top: 10px;
+    }
+    .module-box {
+        margin: 10px;
+    }
+    .row.justify-content-center {
+        display: flex;
+        justify-content: center;
+        gap: 30px; /* 让模块之间有间距 */
+    }
+</style>
+
 .attribute-block {
   padding-bottom: 10px;
 }

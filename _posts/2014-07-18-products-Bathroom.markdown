@@ -2,7 +2,7 @@
 title: Bathroom
 subtitle: SMC Material
 layout: post
-permalink: /products/Bathroom/
+permalink:
 date: 2025-02-01
 img: 3.png
 thumbnail: 3-thumbnail.png

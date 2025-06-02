@@ -167,8 +167,8 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .navbar-default {
-  background-color: rgba(0, 0, 0, 0.35);
-  backdrop-filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(4px);
 }
 

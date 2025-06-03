@@ -5,12 +5,15 @@ permalink: /products/bathroom/
 header_image: 
 product-category: bathroom
 specs: 
+  - SMC system<br>
+  - Tile system
 
 description: |
  
-  MODCUBE HOMES’ bathroom systems use prefabricated, modular products with waterproofing, plumbing, and electrical components all pre-installed, simplifying on-site work.
-
-  There are two main types of modular bathrooms: SMC and tile.<br> 
+  #### Prefabricated bathroom
+  
+  MODCUBE HOMES’ bathroom systems use prefabricated, modular products with waterproofing, plumbing, and electrical components all pre-installed, simplifying on-site work.<br><br>
+  There are two main types of modular bathrooms: SMC and tile.
   Both offer an excellent user experience, with the primary differences lying in their material composition and aesthetic style.
    
 
@@ -27,7 +30,10 @@ images:
     text: <b>Finished Modular Bathroom<b>
   - img: img/products/bathroom-details-06.png
     text: <b>Finished Modular Bathroom<b>
- 
+  - img: img/products/bathroom-details-07.png
+    text: <b>Finished Modular Bathroom<b>
+  - img: img/products/bathroom-details-08.png
+    text: <b>Finished Modular Bathroom<b>
   
 
 ---

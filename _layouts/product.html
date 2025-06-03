@@ -11,7 +11,7 @@
   {% if page.header_image %}
     <div class="product-header" style="background-image: url('{{ page.header_image | relative_url }}'); height: 300px; background-size: cover; background-position: center;"></div>
   {% else %}
-    <div class="product-header" style="background-image: url('/img/project-banner.jpg'); height: 300px; background-size: cover; background-position: center;"></div>
+    <div class="product-header" style="background-image: url('/img/products-header-b2.png'); height: 300px; background-size: cover; background-position: center;"></div>
   {% endif %}
 
   <article class="container">
@@ -21,8 +21,21 @@
       <h4 style="color: #777;">{{ page.product-category }}</h4>
     {% endif %}
 
-    <!-- 第一部分：产品参数 -->
-    <section class="product-attributes-vertical">
+    <!-- 第一部分：产品描述 -->
+ {% if page.description %}
+<section class="product-description">
+  <h2 class="section-title">Description</h2>
+  <div class="description-content">
+    {{ page.description | markdownify }}
+  </div>
+</section>
+{% endif %}  
+
+
+<hr class="section-divider"> <!-- 分隔线 -->
+
+    <!-- 第二部分：产品参数 -->
+ <section class="product-attributes-vertical">
   {% if page.features %}
     <div class="attribute-block">
       <div class="attribute-title">Features</div>
@@ -43,19 +56,7 @@
   {% endif %}
 </section>
 
-
 <hr class="section-divider"> <!-- 分隔线 -->
-
-    <!-- 第二部分：产品描述 -->
-{% if page.description %}
-<section class="product-description">
-  <h2 class="section-title">Description</h2>
-  <div class="description-content">
-    {{ page.description | markdownify }}
-  </div>
-</section>
-{% endif %}
-
 
     <!-- 第三部分：产品图片 -->
     {% if page.images %}

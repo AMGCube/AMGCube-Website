@@ -19,7 +19,7 @@ body {
 }
 
 p {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.75;
 }
 
@@ -1038,7 +1038,7 @@ body {
 .project-review {
   background: #f8f9fa;
   border-radius: 8px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .project-review p {
@@ -1460,3 +1460,24 @@ html {
   line-height: 1.6     !important;
   color: #333          !important; /* 如果要覆盖全局颜色 */
 }
+
+/* Products页面内容，more less格式 */
+
+  .explore-btn {
+    background-color: #FFA500;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    display: inline-block;
+  }
+
+  .explore-btn:hover {
+    background-color: #e69500;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+

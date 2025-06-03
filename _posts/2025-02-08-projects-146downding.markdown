@@ -1,6 +1,6 @@
 ---
 title: 146 Downding St
-subtitle: Show Room, Brisbane
+subtitle: Granny Flat, Brisbane
 layout: project
 date: 2024-11-18
 permalink: /projects/146dowding/
@@ -15,35 +15,62 @@ project-status: Processing
 project-date: Jun, 2025
 floor-area: 80㎡
 
-highlights: >
- <br>
- The highlight of this granny flat is its exceptional living quality. <br>
- ---First, the space is generously sized — whether it’s the open-plan living room, kitchen, or bedroom, each area offers a level of comfort that borders on luxury. <br>
- ---With a ceiling height of 2.7 meters, the interior feels more than spacious for a granny flat of this size.<br>
- ---The combination of heavy-duty steel framing and integrated wall panels, along with high-performance floor-to-ceiling doors and windows, provides excellent insulation and soundproofing, creating a cozy, airy, and light-filled interior.<br>
-
- <br>
- 品质是这套祖母屋最大的特点<br>
- ---空间宽敞，无论是开放的客厅和厨房空间，还是卧室、卫生间，大小都是非常舒适。<br>
- ---层高2.7米，对于祖母屋在这样的小空间，显得绰绰有余。<br>
- ---重钢结构加上集成化墙体，配合高性能的落地门窗，坚固耐久、隔热隔音，营造了一个舒适，温馨、通透的室内空间。<br>
-
 progress:
-  - img: img/projects/146/progress-0.Jpg
-    text: Site View 现场实景（开工前） 
+  - img: img/projects/146/progress-0.jpg
+    text: Site View (Commencement)
   - img: img/projects/146/progress-1.png
-    text: Site Plan 场地规划
+    text: Site Plan
   - img: img/projects/146/progress-2.png
-    text: Floor Plan Design 平面设计
+    text: Floor Plan Design
   - img: img/projects/146/progress-3.png
-    text: Exterior Concept 外观概念
+    text: Exterior Concept
   - img: img/projects/146/progress-7.png
-    text: Exterior Concept 外观概念
+    text: Exterior Concept
   - img: img/projects/146/progress-4.png
-    text: Interior Decoration Rendering 内装饰效果
+    text: Interior Decoration Rendering
   - img: img/projects/146/progress-5.png
-    text: Interior Decoration Rendering 内装饰效果
+    text: Interior Decoration Rendering
   - img: img/projects/146/progress-6.png
-    text: Interior Decoration Rendering 内装饰效果
+    text: Interior Decoration Rendering
+    
+---
+### Highlights<br><br>
+#### 1. Project Information
+Project name: 146 Dowding St
 
+Project summary: This is the first MODCUBE HOMES residence in Australia — an 80-square-meter granny flat.
+<br><br>
+
+#### 2. Design Background and Concept
+As the unit will serve as a display home for a period of time, the layout and detailing are more refined.
+
+The purpose of this home is to showcase the capabilities of the MODCUBE HOMES product, rather than just a “showroom.”
+
+For example: more floor-to-ceiling windows are used to achieve better visual and spatial effects.<br><br>
+
+#### 3. Living Experience (What can you feel inside?)
+##### 3.1 Sense of Space
+The total floor area may be limited, but the overall experience feels spacious — whether in the open-plan kitchen, living room, bedrooms, bathrooms, or the outdoor deck area.
+
+The layout is well-organized, the ceiling height is generous, and lighting is excellent — qualities that are hard to find in typical granny flats.
+
+##### 3.2 Materials and Texture
+You can directly feel the texture and detail of the selected materials.
+
+The finishes are simple but refined, and the interior has a well-designed aesthetic.
+
+If your expectation of a modular home is low, this house may surprise you.
+
+##### 3.3 Energy and Sound Performance
+When the doors and windows are closed, you can clearly feel the good thermal insulation, sound insulation, and noise reduction.
+
+Walls, floors, and ceilings all use high-performance materials, achieving a high level of insulation.
+
+Whether hosting guests or living alone, you won't be disturbed by external noise.
+
+##### 3.4 Smart System Provisioning
+Due to certain reasons, not all systems are currently installed, such as rooftop solar and smart home systems.
+
+These systems have been reserved for future installation.
+  
 ---

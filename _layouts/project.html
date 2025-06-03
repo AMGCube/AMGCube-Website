@@ -44,19 +44,15 @@
     </section>
 
 <hr class="section-divider"> <!-- ✅ 分隔线 -->
+    <!-- 第二部分：项目点评（直接渲染正文 Markdown）-->
+  <section class="project-review">
+   {{ content }}
+  </section>
 
-    <!-- 第二部分：项目点评 -->
-    {% if page.highlights %}
-    <section class="project-review">
-      <h2 class="section-title">Highlights</h2>
-      <p>{{ page.highlights | newline_to_br }}</p>
-    </section>
-    {% endif %}
-
-    <!-- 第三部分：项目进程 -->
-    {% if page.progress %}
-    <section class="project-timeline">
-      <h2 class="section-title">Progress</h2>
+<!-- 第三部分：项目图片 -->
+  {% if page.progress %}
+  <section class="project-timeline">
+    <h2 class="section-title">Details</h2>
       {% for item in page.progress %}
         <div class="timeline-stage">
           <img src="{{ site.baseurl }}/{{ item.img }}" class="img-responsive" alt="project progress image">
@@ -65,12 +61,9 @@
           {% endif %}
         </div>
       {% endfor %}
-    </section>
-    {% endif %}
-
-  </article>
+   </section>
+{% endif %}
 
   {% include footer.html %}
 </body>
-</html>
 

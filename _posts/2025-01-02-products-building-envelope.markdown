@@ -18,8 +18,11 @@ application:
 
 description: |
  
-  The building envelope of a residential structure separates the interior space from the external environment, including exterior walls, roof, windows & doors, and flooring. It provides thermal insulation, heat resistance, waterproofing, sound insulation, and wind‐pressure resistance to ensure indoor comfort and building durability.<br> 
-  MODCUBE HOMES has invested significant resources to develop its building envelope system and has achieved outstanding results.<br> <br> 
+  #### Building envelope system is crutial.<br>
+  
+  ##### MODCUBE HOMES has invested significant resources to develop its building envelope system and has achieved outstanding results.<br><br> 
+
+  The building envelope of a residential structure separates the interior space from the external environment, including exterior walls, roof, windows & doors, and flooring. It provides thermal insulation, heat resistance, waterproofing, sound insulation, and wind‐pressure resistance to ensure indoor comfort and building durability.<br><br>
 
   ##### 1.Integrated Panels <br> 
    MODCUBE has developed an integrated panel produced using proprietary patented formulas and specialized manufacturing processes, leading the industry in thermal performance, fire resistance, load‐bearing support, and wind & seismic resistance.<br> <br> 
@@ -37,7 +40,7 @@ description: |
   
 
 images:
-   - img: img/products/Internal-wall.png
+   - img: img/products/Interior-wall.png
      text: Integrated Panels - Wall
    - img: img/products/windows-1.png
      text: Thermal Break Windows

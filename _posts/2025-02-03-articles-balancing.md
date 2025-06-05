@@ -38,7 +38,7 @@ description: |
 
   #### ✦ **Traditional Feel, Factory-Made**
 
-  Examples: Timber-frame modulars from Clayton Homes (USA), Pod Modular (Australia)
+  Examples: Timber-frame modulars from Clayton Homes (USA), Podscape Modular (Australia)
 
   - **Pros**: Familiar design, better comfort and longevity
   - **Cons**: Still labor-intensive, efficiency gains limited

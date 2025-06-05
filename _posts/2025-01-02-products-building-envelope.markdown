@@ -3,7 +3,7 @@ layout: product
 title: Building envelope
 permalink: /products/building-envelope/
 header_image: 
-product-category: Building Envelope
+product-category: Wall, roof, floor ...
 
 specs: 
  Wall - 100mm modular integrated wall panel<br>
@@ -22,7 +22,10 @@ description: |
   
   ##### MODCUBE HOMES has invested significant resources to develop its building envelope system and has achieved outstanding results.<br><br> 
 
-  The building envelope of a residential structure separates the interior space from the external environment, including exterior walls, roof, windows & doors, and flooring. It provides thermal insulation, heat resistance, waterproofing, sound insulation, and wind‐pressure resistance to ensure indoor comfort and building durability.<br><br>
+  **A building’s envelope refers to the physical barrier between its interior and the outside environment.**<br>
+  ✅ It typically consists of the walls, roof, and flooring, as well as windows and doors.<br>
+  ✅ This system is essential for regulating indoor conditions and protecting the home from external elements.<br><br>
+  ##### The MODCUBE building envelope system is designed to provide:<br>
 
   ##### 1.Integrated Panels <br> 
    MODCUBE has developed an integrated panel produced using proprietary patented formulas and specialized manufacturing processes, leading the industry in thermal performance, fire resistance, load‐bearing support, and wind & seismic resistance.<br> <br> 
@@ -34,9 +37,10 @@ description: |
    Equipped with a thermal‐break aluminum window and door system that perfectly integrates with the integrated panel walls to achieve outstanding thermal insulation performance.<br> <br> 
 
   ##### 4.Roofing System
-   Uses Australia’s most popular Colorbond brand steel roofing.
+   Uses Australia’s most popular Colorbond brand steel roofing.<br><br>
 
-  
+  ✅ All of these features work together to ensure indoor comfort, improve energy efficiency, and enhance the durability and safety of the building.<br><br>
+
   
 
 images:

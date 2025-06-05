@@ -45,4 +45,4 @@ Whether it’s flooring, ceilings, feature walls, kitchens, or bathrooms, all ar
 <br>
 
 ##### ---2.These systems are not just for display in showrooms.
-they have been fully validated through large-scale, real-world projects and have proven to meet high standards for quality, consistency, and timely delivery.
+They have been fully validated through large-scale, real-world projects and have proven to meet high standards for quality, consistency, and timely delivery.

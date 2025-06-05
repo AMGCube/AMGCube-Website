@@ -31,7 +31,7 @@ images:
   - img: img/products/interior-wall-finishes.png
     text: <br>interior wall panels<br>
   - img: img/products/materials.png
-    text: <br>Materials Reference<br>
+    text: <br>materials reference<br>
   - img: img/products/interior-wall-finishes-1.png
     text: <br>interior finishes<br>
   - img: img/products/interior-wall-finishes-2.png

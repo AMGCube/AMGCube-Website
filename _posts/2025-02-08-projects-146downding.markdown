@@ -44,7 +44,7 @@ Project summary: This is the first MODCUBE HOMES residence in Australia — an 8
 #### 2. Design Background and Concept
 As the unit will serve as a display home for a period of time, the layout and detailing are more refined.
 
-The purpose of this home is to showcase the capabilities of the MODCUBE HOMES product, rather than just a “showroom.”
+The purpose of this home is to showcase the performance and system capabilities of MODCUBE HOMES products — not just to serve as a traditional “showroom.”
 
 For example: more floor-to-ceiling windows are used to achieve better visual and spatial effects.<br><br>
 

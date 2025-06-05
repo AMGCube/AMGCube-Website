@@ -30,7 +30,7 @@ description: |
 images:
    - img: img/products/steel-detail-4.jpg
      text: modular beams and columns
-   - img: img/products/steel-detail-0.Jpg
+   - img: img/products/steel-detail-0.jpg
      text: No welding, fully fastener connected
    - img: img/products/steel-detail-1-1.png
      text: steel frame

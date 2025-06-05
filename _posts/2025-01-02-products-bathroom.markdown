@@ -1,6 +1,6 @@
 ---
 layout: product
-title: AMGCUBE | Bathroom
+title: MODCUBE-Bathroom system
 permalink: /products/bathroom/
 header_image: 
 product-category: bathroom

@@ -1,6 +1,6 @@
 ---
 layout: product
-title: Building envelope
+title: MODCUBE-Building envelope
 permalink: /products/building-envelope/
 header_image: 
 product-category: Wall, roof, floor ...
@@ -45,13 +45,13 @@ description: |
 
 images:
    - img: img/products/Interior-wall.png
-     text: Integrated Panels - Wall
+     text: Integrated panels - wall
    - img: img/products/windows-1.png
-     text: Thermal Break Windows
+     text: Thermal break windows
    - img: img/products/ceiling.png
-     text: Ceiling Panel and Frame
+     text: Ceiling panel and frame
    - img: img/products/flooring layer.png
-     text: Flooring Layer Structure
+     text: Flooring layer structure
    - img: img/products/wall-insulation.png
      text: Outstanding thermal insulation and heat‐resistance performance
 

@@ -1,6 +1,6 @@
 ---
 layout: product
-title: AMGCUBE | Finishes
+title: MODCUBE-Finishes
 permalink: /products/finishes/
 header_image: 
 product-category: finishes

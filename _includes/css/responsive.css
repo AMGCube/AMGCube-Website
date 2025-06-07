@@ -1,0 +1,81 @@
+# 生成一个响应式CSS文件 responsive.css 的内容，专注于导航栏和 hero 区块的移动端适配
+responsive_css = """
+/* ===============================
+   Responsive Styles for Mobile
+   =============================== */
+@media (max-width: 768px) {
+
+  /* Navigation bar adjustments */
+  .navbar-default {
+    padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0.8); /* 强化背景对比 */
+  }
+
+  .navbar-default .navbar-brand {
+    font-size: 1.4em;
+    padding: 8px 12px;
+  }
+
+  .navbar-default .navbar-nav > li > a {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+
+  /* Hero section text adjustments */
+  .hero-background {
+    height: auto;
+    padding: 60px 20px;
+  }
+
+  .intro-leadin {
+    font-size: 22px;
+    margin-bottom: 16px;
+  }
+
+  .intro-heading {
+    font-size: 34px;
+    line-height: 1.3;
+    margin-bottom: 24px;
+  }
+
+  .btn.btn-xl {
+    font-size: 16px;
+    padding: 12px 24px;
+    width: 90%;
+    display: inline-block;
+  }
+
+  /* Card Grid: Ensure full-width in small screens */
+  .module-card,
+  .project-card {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Product/Service sections */
+  .product-highlight {
+    font-size: 15px;
+    max-width: 100%;
+  }
+
+  .product-intro-text {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  /* Team member image scaling */
+  .team-member img {
+    width: 140px;
+    height: 140px;
+  }
+}
+"""
+
+from pathlib import Path
+
+# 保存 responsive.css 到输出目录
+output_path = Path("/mnt/data/responsive.css")
+output_path.write_text(responsive_css.strip(), encoding="utf-8")
+
+output_path.name

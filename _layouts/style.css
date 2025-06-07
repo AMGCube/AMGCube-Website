@@ -3,6 +3,8 @@
 {% include css/bootstrap.min.css %}
 {% include css/agency.css %}
 {% include css/hero.css %}
+{% include css/responsive.css %}
+
 
 {{ content }}
 

@@ -166,108 +166,86 @@ fieldset[disabled] .btn-xl.active {
     background-color: #fff;
 }
 
+/* ===============================
+   Cleaned & Consolidated Navbar Styles 整合并精简 navbar-default 样式
+   =============================== */
+
 .navbar-default {
   background-color: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(4px);
+  border-color: transparent;
+  padding: 20px 0;
+  transition: background-color 0.3s ease-in-out, padding 0.3s;
+}
+
+.navbar-default.navbar-shrink {
+  background-color: #222 !important;
+  padding: 10px 0;
 }
 
 .navbar-default .navbar-brand {
-    display: flex;  /* 让 Logo 图片与导航栏对齐 */
-    align-items: center;  /* 垂直居中 */
-    padding: 10px 15px;  /* 适当调整间距 */
+  font-size: 2em;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  color: #fff;
 }
 
 .navbar-default .navbar-brand:hover,
-.navbar-default .navbar-brand:focus,
-.navbar-default .navbar-brand:active,
-.navbar-default .navbar-brand.active {
-    color: #{{ site.data.template.color.secondary }};
-}
-
-.navbar-default .navbar-collapse {
-    border-color: rgba(255,255,255,.02);
+.navbar-default .navbar-brand:focus {
+  color: #ffcc00;
 }
 
 .navbar-default .navbar-toggle {
-    border-color: #{{ site.data.template.color.primary }};
-    background-color: #{{ site.data.template.color.primary }};
+  border-color: #ffcc00;
+  background-color: #ffcc00;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
-    background-color: #fff;
+  background-color: #fff;
 }
 
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-    background-color: #{{ site.data.template.color.primary }};
+  background-color: #e6b800;
 }
 
-.navbar-default .nav li a {
-    text-transform: uppercase;
-    font-family: {{ site.data.template.font.primary }};
-    font-weight: 400;
-    letter-spacing: 1px;
-    color: #fff;
-    -webkit-transition: all ease .35s;
-    -moz-transition: all ease .35s;
-    transition: all ease .35s;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+.navbar-default .navbar-collapse {
+  border-color: rgba(255,255,255,0.05);
 }
 
-.navbar-default .nav li a:hover,
-.navbar-default .nav li a:focus {
-    outline: 0;
-    color: #{{ site.data.template.color.primary }};
+.navbar-default .navbar-nav > li > a {
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  color: #fff;
+  padding: 16px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  transition: color 0.3s ease;
 }
 
-.navbar-default .navbar-nav>.active>a {
-    border-radius: 0;
-    color: #fff;
-    background-color: #{{ site.data.template.color.primary }};
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #ffcc00;
 }
 
-.navbar-default .navbar-nav>.active>a:hover,
-.navbar-default .navbar-nav>.active>a:focus {
-    color: #fff;
-    background-color: #{{ site.data.template.color.secondary }};
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #fff;
+  background-color: #ffcc00;
+  border-radius: 3px;
 }
 
-@media(min-width:768px) {
-    .navbar-default {
-        padding: 25px 0;
-        border: 0;
-        background-color: transparent;
-        -webkit-transition: padding .3s;
-        -moz-transition: padding .3s;
-        transition: padding .3s;
-    }
-
-    .navbar-default .navbar-brand {
-        font-size: 2em;
-        -webkit-transition: all .3s;
-        -moz-transition: all .3s;
-        transition: all .3s;
-    }
-
-    .navbar-default .navbar-nav>.active>a {
-        border-radius: 3px;
-    }
-    /* 
-    .navbar-default.navbar-shrink {
-        padding: 10px 0;
-        background-color: #222;
-    }
-
-    .navbar-default.navbar-shrink .navbar-brand {
-        font-size: 1.5em;
-    }
-    */
-    .navbar-default.navbar-shrink .navbar-brand img {
-        height: 50px; /* 滚动后缩小 */
-    }
-    
+/* Responsive Navbar shrink logo */
+.navbar-default.navbar-shrink .navbar-brand img {
+  height: 50px;
 }
+
 
 /* 首页的背景 */
 .hero-home {

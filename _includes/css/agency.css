@@ -334,14 +334,14 @@ fieldset[disabled] .btn-xl.active {
   font-size: 18px;
   font-weight: 600;
   background-color: #ffa500;
-  color: white;
+  color: #ffffff;
   border-radius: 5px;
   text-decoration: none;
   transition: background-color 0.3s ease;
 }
 
 .btn.btn-xl:hover {
-  background-color: #ff8500;
+  background-color: #cc7a00;
 }
 
 section {

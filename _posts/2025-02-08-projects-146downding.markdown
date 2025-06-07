@@ -10,7 +10,7 @@ alt: image-alt
 
 client: AMGCube
 location: Brisbane
-project-type: Granny Flat
+type: Granny flat
 project-status: Processing
 project-date: Jun, 2025
 floor-area: 80㎡

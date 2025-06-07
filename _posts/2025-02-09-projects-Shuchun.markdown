@@ -10,7 +10,7 @@ alt: image-alt
 
 client: Rongchuang Group
 location: Others
-project-type: House
+type: House
 project-status: finished
 project-date: Jun, 2024
 floor-area: 140-280㎡

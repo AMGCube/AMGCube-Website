@@ -2,7 +2,7 @@
 
 {% include css/bootstrap.min.css %}
 {% include css/agency.css %}
-{% include css/hero.css %}
+/* {% include css/hero.css %} 把hero内容全部导入agency*/
 
 {{ content }}
 

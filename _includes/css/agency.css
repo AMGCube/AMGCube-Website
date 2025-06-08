@@ -345,7 +345,7 @@ fieldset[disabled] .btn-xl.active {
 }
 
 section {
-    padding: 40px 0;
+    padding: 30px 0;
 }
 
 section h2.section-heading {
@@ -371,6 +371,212 @@ section h3.section-subheading {
         padding: 40px 0;
     }
 }
+
+/* ========================================
+   Hero Page Section - 页面顶部横幅区块
+   ======================================== */
+.hero-page {
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50vh; 
+    min-height: 400px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+
+/* ========================================
+   Modules Section - 通用模块卡片容器
+   ======================================== */
+.modules-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 40px 20px;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .modules-container {
+    grid-template-columns: 1fr;
+    padding: 20px 10px;
+  }
+}
+
+
+/* ========================================
+   Module Card 样式
+   ======================================== */
+.module-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+    text-align: center;
+    max-width: 450px;
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.module-card:hover {
+    transform: translateY(-5px);
+}
+
+.module-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.module-content {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.module-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.module-description {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.module-link {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #ffcc00;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background 0.3s;
+    align-self: center;
+}
+
+.module-link:hover {
+    background: #ffdb4d;
+}
+
+
+/* ========================================
+   Projects 页面卡片链接样式
+   ======================================== */
+.projects-page .module-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.projects-page .module-card-link:hover .module-card {
+    transform: scale(1.03);
+    transition: transform 0.2s ease-in-out;
+}
+
+.projects-page .module-card {
+    cursor: pointer;
+}
+
+
+/* ========================================
+   Project Card 样式（与 module-card 相似）
+   ======================================== */
+.project-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+    text-align: center;
+    max-width: 450px;
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+
+/* 设置项目图片比例为 4:3 */
+.project-card .module-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+}
+
+
+/* 保持 Product 页面图片比例不变 */
+.product-card .module-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+
+/* ========================================
+   Section Title 区域（标题样式）
+   ======================================== */
+.section-title {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 40px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #222;
+    max-width: 800px;
+    margin: 0 auto 45px;
+    line-height: 1.2;
+    position: relative;
+}
+
+.section-title h2::after {
+    content: "";
+    width: 60px;
+    height: 4px;
+    background: #ffcc00;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+    .section-title h2 {
+        font-size: 24px;
+        max-width: 85%;
+    }
+
+    .section-title h2::after {
+        width: 40px;
+    }
+}
+
 
 .product-heading {
     margin: 15px 0;
@@ -702,73 +908,6 @@ section h3.section-subheading {
 aside.clients img {
     margin: 50px auto;
 }
-/*
-section#contact {
-    background-color: #222;
-    background-image: url('{{ site.baseurl }}/img/map-image.png');
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-
-section#contact .section-heading {
-    color: #fff;
-}
-
-section#contact .form-group {
-    margin-bottom: 25px;
-}
-
-section#contact .form-group input,
-section#contact .form-group textarea {
-    padding: 20px;
-}
-
-section#contact .form-group input.form-control {
-    height: auto;
-}
-
-section#contact .form-group textarea.form-control {
-    height: 236px;
-}
-
-section#contact .form-control:focus {
-    border-color: #{{ site.data.template.color.primary }};
-    box-shadow: none;
-}
-
-section#contact::-webkit-input-placeholder {
-    text-transform: uppercase;
-    font-family: {{ site.data.template.font.primary }};
-    font-weight: 700;
-    color: #bbb;
-}
-
-section#contact:-moz-placeholder {
-    text-transform: uppercase;
-    font-family: {{ site.data.template.font.primary }};
-    font-weight: 700;
-    color: #bbb;
-}
-
-section#contact::-moz-placeholder {
-    text-transform: uppercase;
-    font-family: {{ site.data.template.font.primary }};
-    font-weight: 700;
-    color: #bbb;
-}
-
-section#contact:-ms-input-placeholder {
-    text-transform: uppercase;
-    font-family: {{ site.data.template.font.primary }};
-    font-weight: 700;
-    color: #bbb;
-}
-
-section#contact .text-danger {
-    color: #e74c3c;
-}
-*/
 
 
 footer {
@@ -786,24 +925,7 @@ footer {
     align-items: center;
     justify-content: center;
 }
-  /*修改的footer 
-
-.footer-container {
-  text-align: center;
-  font-size: 14px;
-  color: #888;
-  padding: 20px 0;
-}
-
-.footer-container a {
-  color: #666;
-  text-decoration: none;
-}
-
-.footer-container a:hover {
-  color: #000;
-}
-*/
+ 
 footer span.copyright {
 
     font-family: {{ site.data.template.font.primary }};
@@ -913,6 +1035,7 @@ img::-moz-selection {
 body {
     webkit-tap-highlight-color: #{{ site.data.template.color.primary }};
 }
+
 /* === Custom Styles for Projects Page === */
 
 .filter-container {
@@ -1548,5 +1671,65 @@ html {
   .btn {
     font-size: 14px;
     padding: 8px 16px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  /* 产品页主标题 */
+  .section-heading {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    text-align: center;
+  }
+
+  /* 产品页正文段落 */
+  .product-intro-text {
+    font-size: 15px;
+    line-height: 1.6;
+    padding: 0 16px;
+    max-width: 100%;
+    margin: 0 auto 16px auto;
+    text-align: left;
+  }
+
+  /* 可选：精简段落上下间距 */
+  .product-intro-text p {
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* 缩小图片高度 */
+  .module-image {
+    max-height: 180px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  /* 缩小主标题 */
+  .module-title {
+    font-size: 18px;
+    margin-top: 12px;
+    margin-bottom: 4px;
+  }
+
+  /* 副标题字体缩小 */
+  .module-description {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  /* 调整按钮大小 */
+  .module-link {
+    font-size: 14px;
+    padding: 6px 16px;
+  }
+
+  /* 整体卡片内边距减少 */
+  .module-content {
+    padding: 12px;
   }
 }

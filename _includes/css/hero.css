@@ -15,12 +15,20 @@
 
 /* Modules Section Styling */
 .modules-container {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 40px 20px;
-    justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 40px 20px;
+  justify-content: center;
 }
+
+@media (max-width: 768px) {
+  .modules-container {
+    grid-template-columns: 1fr; /* 移动端只显示一列 */
+    padding: 20px 10px;         /* 可适当缩小间距 */
+  }
+}
+
 
 .module-card {
     background: white;

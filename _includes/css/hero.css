@@ -16,11 +16,11 @@
 /* Modules Section Styling */
 .modules-container {
     display: grid;
-    grid-template-columns: repeat(2, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
     padding: 40px 20px;
     justify-content: center;
-}
+
 
 .module-card {
     background: white;
@@ -562,4 +562,30 @@ h1, .post-subtitle, .meta {
     margin: 20px auto;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 767px) {
+  .modules-container {
+    grid-template-columns: 1fr; /* 强制一列 */
+    padding: 20px 10px;
+  }
+
+  .module-card {
+    max-width: 100%; /* 避免超出屏幕 */
+  }
+
+  .module-image {
+    height: auto; /* 避免图片高度撑开 */
+  }
+}
+/* 添加在 hero.css 或 style.css 的末尾 */
+@media (max-width: 767px) {
+  .modules-container {
+    grid-template-columns: 1fr !important; /* 强制覆盖 */
+    padding: 20px 10px;
+  }
+
+  .module-card {
+    max-width: 100%;
+  }
 }

@@ -14,7 +14,7 @@
     <div class="project-header" style="background-image: url('/img/project-banner.jpg'); height: 300px; background-size: cover; background-position: center;"></div>
   {% endif %}
 
-  <article class="container">
+  <article class="container markdown-content">
 
     <h1>{{ page.title }}</h1>
     {% if page.subtitle %}
@@ -43,27 +43,28 @@
       {% endif %}
     </section>
 
-<hr class="section-divider"> <!-- ✅ 分隔线 -->
+   <hr class="section-divider"> <!-- ✅ 分隔线 -->
     <!-- 第二部分：项目点评（直接渲染正文 Markdown）-->
-  <section class="project-review">
-   {{ content }}
-  </section>
+    <section class="project-review">
+    {{ content }}
+     </section>
 
-<!-- 第三部分：项目图片 -->
-  {% if page.progress %}
-  <section class="project-timeline">
-    <h2 class="section-title">Details</h2>
-      {% for item in page.progress %}
-        <div class="timeline-stage">
-          <img src="{{ site.baseurl }}/{{ item.img }}" class="img-responsive" alt="project progress image">
-          {% if item.text %}
-            <p class="caption">{{ item.text }}</p>
-          {% endif %}
-        </div>
-      {% endfor %}
-   </section>
-{% endif %}
+      <!-- 第三部分：项目图片 -->
+      {% if page.progress %}
+      <section class="project-timeline">
+        <h2 class="section-title">Details</h2>
+          {% for item in page.progress %}
+            <div class="timeline-stage">
+              <img src="{{ site.baseurl }}/{{ item.img }}" class="img-responsive" alt="project progress image">
+              {% if item.text %}
+                <p class="caption">{{ item.text }}</p>
+              {% endif %}
+            </div>
+          {% endfor %}
+      </section>
+    {% endif %}
 
+  </article>
   {% include footer.html %}
 </body>
 

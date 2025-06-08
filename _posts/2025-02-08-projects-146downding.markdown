@@ -16,7 +16,7 @@ project-date: Jun, 2025
 floor-area: 80㎡
 
 progress:
-  - img: img/projects/146/progress-0.jpg
+  - img: img/projects/146/progress-0.JPG
     text: Site View (Commencement)
   - img: img/projects/146/progress-1.png
     text: Site Plan

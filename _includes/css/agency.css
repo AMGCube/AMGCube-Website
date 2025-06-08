@@ -1311,10 +1311,15 @@ article h1 {
   text-align: center;              /* 文字居中 */
   padding: 1.75rem 1rem;           /* 上下 28px，左右 16px */
   width: 100%;                     /* 拉伸至 Grid 单元格宽度 */
-  max-width: 240px;                /* 最大宽度 240px，避免过度拉伸 */
+  /*max-width: 240px;     */           /* 最大宽度 240px，避免过度拉伸 */
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   position: relative;
   overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;     /* 图标和文字 水平居中 */
+  justify-content: center; /* 图标和文字 垂直居中 */
 }
 
 /* 1.5 icon-card 悬停时的浮动与阴影加强效果 */
@@ -1354,14 +1359,6 @@ article h1 {
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   }
 }
-/* 如果需要在小于 768px 时改成 2 列，可使用： */
-/*
-@media (max-width: 767.98px) {
-  .service-icon-grid-section .icon-grid {
-    grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
-  }
-}
-*/
 
 /* =========================================================================
    2. FAQ 折叠列表 区块样式
@@ -1463,6 +1460,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: space-between; /* 文字左对齐，箭头右对齐 */
+  text-align: left; /* 添加这一句确保文字对齐 */
   color: inherit;                 /* 保持原主题文字颜色 */
 }
 
@@ -1505,8 +1503,8 @@ html {
     margin-bottom: 0.75rem;   /* 12px */
   }
   .service-icon-faq-section .accordion-button {
-    font-size: 0.9375rem;     /* 15px */
-    padding: 0.75rem 0;       /* 上下 12px，左右 0 */
+    font-size: 1.4rem;     /* 20px*/
+    padding: 0.75rem 0.5rem;       /* 上下 12px，左右 0 */
   }
   .service-icon-faq-section .accordion-body {
     font-size: 0.875rem;      /* 14px */
@@ -1565,23 +1563,16 @@ html {
   /* 阴影，让文字区域和背景图区分开 */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 
-  /* 文本居中对齐 */
+  /* 文本左对齐*/
   text-align: left;
 }
 
-/* 响应式：屏幕较窄时适当缩小字体和内边距 */
-@media (max-width: 768px) {
-  .service-intro {
-    max-width: 90%;
-    padding: 16px 20px;
-    font-size: 1rem;       /* 大约 16px */
-  }
-}
 /* ─── 覆盖 .service-intro 容器中 <p> 的样式 ─── */
 .service-intro p {
-  font-size: 2rem !important; /* 约 18px，或你想要的 1.8rem */
-  line-height: 1.6     !important;
-  color: #333          !important; /* 如果要覆盖全局颜色 */
+  font-size: 2rem ; /* 约 18px，或你想要的 1.8rem */
+  line-height: 1.6     ;
+  color: #333        ; /* 如果要覆盖全局颜色 */
+
 }
 
 /* Products页面内容，more less格式 */
@@ -1852,5 +1843,12 @@ html {
   .markdown-content p {
     font-size: 15px;
     padding: 0 4px;
+  }
+}
+
+/* 响应式：服务页面，介绍文字 */
+@media (max-width: 768px) {
+  .service-intro p {
+    font-size: 1.5rem; 
   }
 }

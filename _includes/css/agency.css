@@ -1491,3 +1491,62 @@ html {
   margin-bottom: 2rem;
   border-radius: 4px;
 }
+
+/* Responsive Styles for Mobile Devices */
+
+@media (max-width: 768px) {
+  /* 示例样式，可后续逐步添加 */
+  .navbar-brand img {
+    max-height: 32px;
+    width: auto;
+    max-width: 260px;
+  }
+
+  .hero-page h1 {
+    font-size: 28px;
+  }
+
+  .hero-page p {
+    font-size: 16px;
+  }
+
+  .section-intro h2 {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 768px) {
+  .intro-leadin {
+    font-size: 22px;
+    line-height: 1.4;
+  }
+
+  .intro-heading {
+    font-size: 30px;
+    line-height: 1.3;
+    text-shadow: none;
+    letter-spacing: normal;
+  }
+
+  .hero-home {
+    padding: 0px 0;
+  }
+
+}
+@media (max-width: 768px) {
+  .section-intro h2 {
+    font-size: 18px;
+    line-height: 1.4;
+    text-align: center;
+  }
+
+  .section-intro p {
+    font-size: 14px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}

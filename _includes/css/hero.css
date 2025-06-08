@@ -232,8 +232,8 @@
 
 @media (max-width: 768px) {
     .section-title h2 {
-        font-size: 32px; /* 在小屏幕上缩小字体 */
-        max-width: 90%; /* 避免占据整个屏幕 */
+        font-size: 24px; /* 在小屏幕上缩小字体 */
+        max-width: 85%; /* 避免占据整个屏幕 */
     }
 
     .section-title h2::after {

@@ -1036,7 +1036,7 @@ body {
     webkit-tap-highlight-color: #{{ site.data.template.color.primary }};
 }
 
-/* === Custom Styles for Projects Page === */
+/* === Custom Styles for Projects Page === 
 
 .filter-container {
   margin: 2rem auto;
@@ -1067,6 +1067,74 @@ body {
   font-size: 16px;
 
 }
+*/
+
+/* 项目页面标题 */
+.projects-title {
+  font-size: 3.2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+
+
+/* 筛选容器样式 */
+.filter-container {
+  padding: 2rem 0rem;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);
+  border-radius: 0.5rem;
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+}
+
+/* 筛选栏内部布局 */
+.filter-row {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* 每一组 label + select */
+.filter-group {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.95rem;
+}
+
+.filter-group label {
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.filter-group select {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.4rem;
+  font-size: 1rem;
+}
+
+/* 响应式优化 */
+@media (max-width: 576px) {
+  .filter-row {
+    flex-direction: column;
+  }
+
+  .filter-group {
+    width: 100%;
+  }
+
+  .projects-title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+}
+
 
 .project-card {
   background: #ffffff;
@@ -1850,5 +1918,48 @@ html {
 @media (max-width: 768px) {
   .service-intro p {
     font-size: 1.5rem; 
+  }
+}
+
+/* ===== About 页面移动端优化 ===== */
+@media (max-width: 575.98px) {
+  .vision-statement {
+    font-size: 1rem;        /* 原可能为 1.25rem 或更大 */
+    line-height: 1.6;
+    padding: 0 1rem;
+  }
+
+  .vision-statement strong {
+    font-size: 1.1rem;
+    display: block;
+    margin: 0.5rem 0;
+  }
+
+  .section-heading {
+    font-size: 1.5rem;
+  }
+
+  .section-subheading {
+    font-size: 1rem;
+    font-style: italic;
+    padding: 0 1rem;
+  }
+
+   .timeline h4 {
+    font-size: 1.3rem;        /* 默认可能是 0.875rem，太小 */
+    margin-bottom: 0.25rem;
+  }
+
+  /* 时间轴副标题（事件标题） */
+  .timeline h4.subheading {
+    font-size: 1.4rem;      /* 原为 1rem，可略放大 */
+    font-weight: 600;
+  }
+
+  /* 时间轴正文内容 */
+  .timeline .timeline-body p {
+    font-size: 1.2rem;        /* 原为 0.875rem 或更小 */
+    line-height: 1.6;
+    padding-right: 0.5rem;
   }
 }

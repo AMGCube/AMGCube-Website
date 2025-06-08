@@ -253,16 +253,7 @@ fieldset[disabled] .btn-xl.active {
     .navbar-default .navbar-nav>.active>a {
         border-radius: 3px;
     }
-    /* 
-    .navbar-default.navbar-shrink {
-        padding: 10px 0;
-        background-color: #222;
-    }
-
-    .navbar-default.navbar-shrink .navbar-brand {
-        font-size: 1.5em;
-    }
-    */
+  
     .navbar-default.navbar-shrink .navbar-brand img {
         height: 50px; /* 滚动后缩小 */
     }
@@ -290,7 +281,7 @@ fieldset[disabled] .btn-xl.active {
 
 @media (max-width: 768px) {
   .hero-background {
-    height: 50vh;
+    height: 40vh;
     padding: 40px 0;
   }
 }
@@ -366,6 +357,8 @@ section h3.section-subheading {
     letter-spacing: 0.5px;
 }
 
+
+
 @media(min-width:768px) {
     section {
         padding: 40px 0;
@@ -380,7 +373,7 @@ section h3.section-subheading {
     background-size: cover;
     background-repeat: no-repeat;
     height: 50vh; 
-    min-height: 400px;
+
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -388,6 +381,11 @@ section h3.section-subheading {
     position: relative;
 }
 
+@media (max-width: 768px) {
+  .hero-page {
+    height: 30vh /* 固定较小高度 */
+        }
+}
 
 /* ========================================
    Modules Section - 通用模块卡片容器
@@ -1035,39 +1033,6 @@ img::-moz-selection {
 body {
     webkit-tap-highlight-color: #{{ site.data.template.color.primary }};
 }
-
-/* === Custom Styles for Projects Page === 
-
-.filter-container {
-  margin: 2rem auto;
-  padding: 1rem 1.5rem;
-  background-color: #f8f8f8;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-  width: fit-content;
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: center;
-
-
-}
-
-.filter-container label {
-  font-weight: bold;
-  margin-right: 0.3rem;
-}
-
-.filter-container select {
-  padding: 0.4rem 0.8rem;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  background-color: #fff;
-  font-size: 16px;
-
-}
-*/
 
 /* 项目页面标题 */
 .projects-title {
@@ -1728,13 +1693,20 @@ html {
   margin: 20px auto;
 }
 
+/* Contact页面地理图格式 */
+.contact-bg {
+  background-size: cover;
+  background-position: center;
+  min-height: 300px;
+}
+
 
 /* Responsive Styles for Mobile Devices */
 
 @media (max-width: 768px) {
   /* 示例样式，可后续逐步添加 */
   .navbar-brand img {
-    max-height: 32px;
+    max-height: 42px;
     width: auto;
     max-width: 260px;
   }
@@ -1752,6 +1724,7 @@ html {
     line-height: 1.4;
   }
 }
+
 
 @media (max-width: 768px) {
   .intro-leadin {
@@ -1961,5 +1934,56 @@ html {
     font-size: 1.2rem;        /* 原为 0.875rem 或更小 */
     line-height: 1.6;
     padding-right: 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #contact-header .company-name {
+    font-size: 1.5rem;  /* 原字体过大，适当缩小 */
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  #contact-header h4 {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+
+  #contact-header p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+}
+@media (max-width: 768px) {
+  .company-info-box {
+    padding: 1rem 1rem;
+  }
+
+  .contact-box {
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-box p {
+    margin: 0.3rem 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-bg {
+    height: 180px !important;
+    background-size: contain; /* 或 cover，根据实际效果调整 */
+  }
+}
+@media (max-width: 768px) {
+  .contact-box h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-box p,
+  .contact-box a,
+  .contact-box strong {
+    font-size: 1.1rem;
+    line-height: 1.5;
   }
 }

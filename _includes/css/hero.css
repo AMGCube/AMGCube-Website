@@ -184,6 +184,7 @@
     padding: 60px 0;
 }
 
+
 /* 卡片优化 */
 .products-header {
     max-width: 900px;
@@ -211,6 +212,7 @@
 /* 正文优化 */
 .products-header p {
     text-align: justify;
+    hyphens: auto;
     color: #333;
     line-height: 1.8;
     max-width: 800px;

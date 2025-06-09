@@ -279,13 +279,6 @@ fieldset[disabled] .btn-xl.active {
   justify-content: center;
 }
 
-@media (max-width: 768px) {
-  .hero-background {
-    height: 40vh;
-    padding: 40px 0;
-  }
-}
-
 .intro-text-container {
   max-width: 1000px;   /* 控制文字显示区域的宽度 */
   margin: 0 auto;
@@ -356,6 +349,33 @@ section h3.section-subheading {
     letter-spacing: 0.5px;
 }
 
+@media screen and (max-width: 768px) {
+  .hero-background {
+    min-height: 240px;
+    height: 40vh;
+    padding: 20px 0;
+  }
+
+  .intro-text-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .intro-text .intro-leadin {
+    font-size: 1.95rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .intro-text .intro-heading {
+    font-size: 2.5rem;
+    margin-bottom: 0.9rem;
+  }
+
+  .btn.btn-xl {
+    padding: 10px 20px;
+    font-size: 1.3rem;
+  }
+}
 
 
 @media(min-width:768px) {

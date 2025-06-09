@@ -1,4 +1,4 @@
-/* Hero Section for Secondary Pages */
+/* Hero Section for Secondary Pages 
 .hero-page {
     background-position: center center;
     background-size: cover;
@@ -11,7 +11,7 @@
     color: white;
     position: relative;
 }
-
+相关内容移入agency*/
 
 /* Modules Section Styling */
 .modules-container {
@@ -234,7 +234,7 @@
 
 @media (max-width: 768px) {
     .section-title h2 {
-        font-size: 24px; /* 在小屏幕上缩小字体 */
+        font-size: 2rem; /* 在小屏幕上缩小字体 */
         max-width: 85%; /* 避免占据整个屏幕 */
     }
 
@@ -242,6 +242,27 @@
         width: 40px; /* 让底部线条在小屏幕上稍微缩短 */
     }
 }
+
+@media screen and (max-width: 768px) {
+  .products-header {
+    padding: 12px 10px;
+    margin-left: 4px;
+  }
+  .products-header h4 {
+    font-size: 1.5rem;
+    padding-left: 10px;
+    margin-left: 4px;
+    padding-right: 10px;
+  }
+  .products-header p {
+    font-size: 1.25rem;
+    margin-left: 4px;
+    margin-right: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
 
 /* Team页面格式 */
 .vision-statement {
@@ -291,6 +312,50 @@
 }
 
 
+/* ===== About 页面移动端优化 ===== */
+@media (max-width: 575.98px) {
+  .vision-statement {
+    font-size: 1.5rem;        /* 原可能为 1.25rem 或更大 */
+    line-height: 1.6;
+    padding: 0 1rem;
+    text-align: left;
+  }
+
+  .vision-statement strong {
+    font-size: 1.75rem;
+    display: block;
+    margin: 0.5rem 0;
+    text-align: left;
+  }
+
+  .section-heading {
+    font-size: 1.5rem;
+  }
+
+  .section-subheading {
+    font-size: 1rem;
+    font-style: italic;
+    padding: 0 1rem;
+  }
+
+   .timeline h4 {
+    font-size: 1.3rem;        /* 默认可能是 0.875rem，太小 */
+    margin-bottom: 0.25rem;
+  }
+
+  /* 时间轴副标题（事件标题） */
+  .timeline h4.subheading {
+    font-size: 1.4rem;      /* 原为 1rem，可略放大 */
+    font-weight: 600;
+  }
+
+  /* 时间轴正文内容 */
+  .timeline .timeline-body p {
+    font-size: 1.2rem;        /* 原为 0.875rem 或更小 */
+    line-height: 1.6;
+    padding-right: 0.5rem;
+  }
+}
 
 /* 三级页面的排版优化 */
 

@@ -349,8 +349,7 @@ section h2.section-heading {
 section h3.section-subheading {
     margin-bottom: 75px;
     text-transform: none;
-    font-family: {{ site.data.template.font.secondary }};
-    font-size: 20px;
+    font-size: 1.6rem;
     font-style: italic;
     font-weight: 400;
     color:#555;
@@ -361,7 +360,7 @@ section h3.section-subheading {
 
 @media(min-width:768px) {
     section {
-        padding: 40px 0;
+        padding: 30px 0;
     }
 }
 
@@ -1213,7 +1212,7 @@ body {
   display: block;
   margin: 0 auto;         /* ✅ 水平居中 */
   max-width: 100%;
-  border-radius: 6px;
+  border-radius: 0px;
   margin-bottom: 8px;
 }
 
@@ -1883,7 +1882,7 @@ html {
 
   .markdown-content p {
     font-size: 15px;
-    padding: 0 4px;
+    padding: 4px 10px;
   }
 }
 
@@ -1894,63 +1893,21 @@ html {
   }
 }
 
-/* ===== About 页面移动端优化 ===== */
-@media (max-width: 575.98px) {
-  .vision-statement {
-    font-size: 1rem;        /* 原可能为 1.25rem 或更大 */
-    line-height: 1.6;
-    padding: 0 1rem;
-  }
-
-  .vision-statement strong {
-    font-size: 1.1rem;
-    display: block;
-    margin: 0.5rem 0;
-  }
-
-  .section-heading {
-    font-size: 1.5rem;
-  }
-
-  .section-subheading {
-    font-size: 1rem;
-    font-style: italic;
-    padding: 0 1rem;
-  }
-
-   .timeline h4 {
-    font-size: 1.3rem;        /* 默认可能是 0.875rem，太小 */
-    margin-bottom: 0.25rem;
-  }
-
-  /* 时间轴副标题（事件标题） */
-  .timeline h4.subheading {
-    font-size: 1.4rem;      /* 原为 1rem，可略放大 */
-    font-weight: 600;
-  }
-
-  /* 时间轴正文内容 */
-  .timeline .timeline-body p {
-    font-size: 1.2rem;        /* 原为 0.875rem 或更小 */
-    line-height: 1.6;
-    padding-right: 0.5rem;
-  }
-}
 
 @media (max-width: 768px) {
   #contact-header .company-name {
-    font-size: 1.5rem;  /* 原字体过大，适当缩小 */
+    font-size: 1.8rem;  /* 原字体过大，适当缩小 */
     text-align: center;
     margin-bottom: 1rem;
   }
 
   #contact-header h4 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin-top: 1rem;
   }
 
   #contact-header p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1.5;
   }
 }
@@ -1983,7 +1940,7 @@ html {
   .contact-box p,
   .contact-box a,
   .contact-box strong {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     line-height: 1.5;
   }
 }

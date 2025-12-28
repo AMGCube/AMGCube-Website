@@ -38,13 +38,13 @@ progress:
 #### 1. Project Information
 Project name: 146 Dowding St
 
-Project summary: This is the first MODCUBE HOMES residence in Australia — an 80-square-meter granny flat.
+Project summary: This is the first AMGCBUE HOMES residence in Australia — an 80-square-meter granny flat.
 <br><br>
 
 #### 2. Design Background and Concept
 As the unit will serve as a display home for a period of time, the layout and detailing are more refined.
 
-The purpose of this home is to showcase the performance and system capabilities of MODCUBE HOMES products — not just to serve as a traditional “showroom.”
+The purpose of this home is to showcase the performance and system capabilities of AMGCBUE HOMES products — not just to serve as a traditional “showroom.”
 
 For example: more floor-to-ceiling windows are used to achieve better visual and spatial effects.<br><br>
 

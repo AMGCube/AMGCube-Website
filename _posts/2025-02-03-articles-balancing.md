@@ -58,7 +58,7 @@ description: |
   - **Maximize what can be done in the factory** – without compromising flexibility or quality
   - **Preserve individuality** – through modular combinations, material options, and layout variations
 
-  In our latest first-generation product, **MODCUBE HOMES**, this balance comes to life. You can see how:
+  In our latest first-generation product, **AMGCBUE HOMES**, this balance comes to life. You can see how:
 
   - Kitchens and bathrooms are pre-integrated with high precision
   - Wall, floor, and ceiling systems support rapid, consistent installation

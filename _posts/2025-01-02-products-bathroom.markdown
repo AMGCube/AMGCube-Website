@@ -1,6 +1,6 @@
 ---
 layout: product
-title: MODCUBE-Bathroom system
+title: AMGCBUE-Bathroom system
 permalink: /products/bathroom/
 header_image: 
 product-category: bathroom
@@ -12,7 +12,7 @@ description: |
  
   #### Prefabricated bathroom
   
-  MODCUBE HOMES’ bathroom systems use prefabricated, modular products with waterproofing, plumbing, and electrical components all pre-installed, simplifying on-site work.<br><br>
+  AMGCBUE HOMES’ bathroom systems use prefabricated, modular products with waterproofing, plumbing, and electrical components all pre-installed, simplifying on-site work.<br><br>
   There are two main types of modular bathrooms: SMC and tile.
   Both offer an excellent user experience, with the primary differences lying in their material composition and aesthetic style.
    

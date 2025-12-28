@@ -1,6 +1,6 @@
 ---
 layout: product
-title: MODCUBE-Finishes
+title: AMGCBUE-Finishes
 permalink: /products/finishes/
 header_image: 
 product-category: finishes
@@ -8,7 +8,7 @@ specs: paint, stone, wood, tiles, carpet, epoxy self‐leveling
 
 description: |
  <br>
- ### MODCUBE HOMES offers a wide range of finishing options. <br>
+ ### AMGCBUE HOMES offers a wide range of finishing options. <br>
  Whether it’s the exterior façade, interior walls, or floors—and whether it’s paint, stone, wood, or tile—homeowners enjoy tremendous design freedom.<br><br>
  
  #### Exterior Façade<br>

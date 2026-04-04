@@ -1,13 +1,14 @@
 ---
-title: Can I build granny flat on my property?
-subtitle: 
 layout: articles-model
+title: Can I build granny flat on my property?
 date: 2026-01-01
 permalink: /articles/can-i-build-granny-flat/
 categories: ["articles"]
 auther: Leon, AMGCube
-description: |
+description:
 ---
+ 
+ 
  <br>
  <div class="summary-box"> In many cases, yes — but it depends on your land and local council requirements.
  </div>

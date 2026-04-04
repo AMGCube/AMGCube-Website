@@ -167,7 +167,7 @@
 
 .section-title h2::after {
     content: "";
-    width: 60px; /* 控制线条长度 */
+    width: 90px; /* 控制线条长度 */
     height: 4px;
     background: #ffcc00; /* 可换成品牌色 */
     position: absolute;
@@ -239,7 +239,7 @@
     }
 
     .section-title h2::after {
-        width: 40px; /* 让底部线条在小屏幕上稍微缩短 */
+        width: 60px; /* 让底部线条在小屏幕上稍微缩短 */
     }
 }
 

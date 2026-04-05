@@ -1129,7 +1129,19 @@ body {
   color: #222;
 }
 
+.projects-heading {
+  margin: 40px auto 10px;
+}
 
+.projects-title {
+  margin-bottom: 0px;
+}
+
+.projects-subtitle {
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 0;
+}
 
 /* 筛选容器样式 */
 .filter-container {
@@ -1280,15 +1292,20 @@ body {
 .project-review {
   background: #f8f9fa;
   border-radius: 8px;
-  margin-bottom: 10px;
+  padding: 16px 18px;
+  margin: 12px 0 8px;
 }
 
 .project-review p {
   font-size: 16px;
   font-weight: 400;
-  line-height: 1.75;
+  line-height: 1.6;
   color: #333;
-  margin-bottom: 0.75em;
+  margin-bottom: 0.5em;
+}
+
+.project-review p:last-child {
+  margin-bottom: 0;
 }
 
 .project-timeline .timeline-stage {

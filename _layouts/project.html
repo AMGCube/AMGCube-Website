@@ -26,9 +26,6 @@
       {% if page.location %}
         <div><strong>Location:</strong> {{ page.location }}</div>
       {% endif %}
-      {% if page.client %}
-        <div><strong>Client:</strong> {{ page.client }}</div>
-      {% endif %}
       {% if page.floor-area %}
         <div><strong>Floor Area:</strong> {{ page.floor-area }}</div>
       {% endif %}
@@ -38,8 +35,11 @@
       {% if page.project-status %}
         <div><strong>Status:</strong> {{ page.project-status }}</div>
       {% endif %}
-      {% if page.project-date %}
-        <div><strong>Project Date:</strong> {{ page.project-date }}</div>
+      {% if page.completion %}
+        <div><strong>completion:</strong> {{ page.completion }}</div>
+      {% endif %}
+      {% if page.construction-time %}
+        <div><strong>Construction-Time:</strong> {{ page.construction-time }}</div>
       {% endif %}
     </section>
 

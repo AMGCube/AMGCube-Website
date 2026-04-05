@@ -1,76 +1,50 @@
 ---
-title: 146 Downding St
+title: 146 Oxley
 subtitle: Granny Flat, Brisbane
 layout: project
-date: 2024-11-18
+date: 2026-02-01
 permalink: /projects/146dowding/
 categories: ["Projects"]
-thumbnail: 146/thumbnail.png
+thumbnail: 146/thumbnail.jpg
 alt: image-alt
 
-client: AMGCube
 location: Brisbane
-type: Granny flat
-project-status: Processing
-project-date: Jun, 2025
-floor-area: 80㎡
+project-type: Granny Flat
+project-status: Completed
+completion: Jan, 2026
+floor-area: 80m², 2 Bedroom 1 Bath
+construction-time: 3.5 monthes
 
 progress:
-  - img: img/projects/146/progress-0.JPG
-    text: Site View (Commencement)
-  - img: img/projects/146/progress-1.png
-    text: Site Plan
-  - img: img/projects/146/progress-2.png
-    text: Floor Plan Design
-  - img: img/projects/146/progress-3.png
-    text: Exterior Concept
-  - img: img/projects/146/progress-7.png
-    text: Exterior Concept
-  - img: img/projects/146/progress-4.png
-    text: Interior Decoration Rendering
-  - img: img/projects/146/progress-5.png
-    text: Interior Decoration Rendering
-  - img: img/projects/146/progress-6.png
-    text: Interior Decoration Rendering
-    
----
-### Highlights<br><br>
-#### 1. Project Information
-Project name: 146 Dowding St
-
-Project summary: This is the first AMGCBUE HOMES residence in Australia — an 80-square-meter granny flat.
-<br><br>
-
-#### 2. Design Background and Concept
-As the unit will serve as a display home for a period of time, the layout and detailing are more refined.
-
-The purpose of this home is to showcase the performance and system capabilities of AMGCBUE HOMES products — not just to serve as a traditional “showroom.”
-
-For example: more floor-to-ceiling windows are used to achieve better visual and spatial effects.<br><br>
-
-#### 3. Living Experience (What can you feel inside?)
-##### 3.1 Sense of Space
-The total floor area may be limited, but the overall experience feels spacious — whether in the open-plan kitchen, living room, bedrooms, bathrooms, or the outdoor deck area.
-
-The layout is well-organized, the ceiling height is generous, and lighting is excellent — qualities that are hard to find in typical granny flats.
-
-##### 3.2 Materials and Texture
-You can directly feel the texture and detail of the selected materials.
-
-The finishes are simple but refined, and the interior has a well-designed aesthetic.
-
-If your expectation of a modular home is low, this house may surprise you.
-
-##### 3.3 Energy and Sound Performance
-When the doors and windows are closed, you can clearly feel the good thermal insulation, sound insulation, and noise reduction.
-
-Walls, floors, and ceilings all use high-performance materials, achieving a high level of insulation.
-
-Whether hosting guests or living alone, you won't be disturbed by external noise.
-
-##### 3.4 Smart System Provisioning
-Due to certain reasons, not all systems are currently installed, such as rooftop solar and smart home systems.
-
-These systems have been reserved for future installation.
+  - img: img/projects/146/146-exterior-finished-1.JPG
+    text: Jan, 2026
+  - img: img/projects/146/146-interior-finished-1.JPG
+    text: Dec, 2025
+  - img: img/projects/146/146-progress-10.jpg
+    text: Oct 31, 2025
+  - img: img/projects/146/146-progress-8.jpg
+    text: Oct 17, 2025
+  - img: img/projects/146/146-progress-7.jpg
+    text: Sep 24, 2025
+  - img: img/projects/146/146-progress-9.jpg
+    text: Sep 20, 2025
+  - img: img/projects/146/146-progress-6.jpg
+    text: Sep 09, 2025
+  - img: img/projects/146/146-progress-5.JPG
+    text: Aug 08, 2025
+  - img: img/projects/146/146-progress-3.JPG
+    text: July 30, 2025
+  - img: img/projects/146/146-progress-2.JPG
+    text: July 11, 2025
+  - img: img/projects/146/146-progress-1.JPG
+    text: Jun 16, 2025
   
+  
+
+---
+### Project Overview
+A modern two-bedroom, one-bathroom granny flat with 80m² of internal space, complemented by a generous 70m² outdoor deck.<br><br>
+The open-plan living area connects seamlessly with the kitchen, while full-height glazing and a 2.7m ceiling create a bright, spacious, and comfortable living environment.<br><br>
+The entire home was completed in approximately 3.5 months, from foundation commencement in mid-June to final completion in late October 2025, demonstrating the efficiency of the AMGCUBE modular building system.
+
 ---

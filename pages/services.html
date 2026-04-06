@@ -4,310 +4,161 @@ title: "AMGCUBE | Services"
 permalink: /services/
 header_image: "/img/services-header.jpg"
 hero_title: "What We Deliver"
-hero_subtitle: "From design support to construction, we simplify the journey of building your home."
+hero_subtitle: "From concept to completion, we provide a faster, more predictable way to build your home."
 ---
 
-<!-- 在图标网格上方插入服务简介 -->
-<div class="service-intro">
-  <p>
-    At AMGCUBE, we deliver a streamlined process with clear, quantifiable milestones at every step, turning your build 
-    into a smooth, rewarding experience.
-  </p>
-</div>
-
-<!-- ================================
-     一、Icon 卡片网格（6 个服务；自动换行）
-     ================================ -->
-<section class="service-icon-grid-section">
+<section class="service-intro-section">
   <div class="container">
-    <div class="icon-grid">
-      <!-- 1. Consulting & Order (咨询和下单) -->
-      <a href="#faq-order" class="icon-link">
-        <div class="icon-card">
-          <i class="fa fa-comments"></i>
-          <span>Consulting &amp; Order</span>
-        </div>
-      </a>
-      
-      <!-- 2. Design & Approvals (设计和审批) -->
-      <a href="#faq-design" class="icon-link">
-        <div class="icon-card">
-          <i class="fa fa-file-text"></i>
-          <span>Design &amp; Approvals</span>
-        </div>
-      </a>
-      
-      <!-- 3. Shipping & Delivery (运输和交付) -->
-      <a href="#faq-delivery" class="icon-link">
-        <div class="icon-card">
-          <i class="fa fa-truck"></i>
-          <span>Shipping &amp; Delivery</span>
-        </div>
-      </a>
-      
-      <!-- 4. Construction & Installation (施工和安装) -->
-      <a href="#faq-construction" class="icon-link">
-        <div class="icon-card">
-          <i class="fa fa-tools"></i>
-          <span>Construction &amp; Installation</span>
-        </div>
-      </a>
-      
-      <!-- 5. Certification & Maintenance (验收和维护及保养) -->
-      <a href="#faq-certification" class="icon-link">
-        <div class="icon-card">
-          <i class="fa fa-check-circle"></i>
-          <span>Certification &amp; Maintenance</span>
-        </div>
-      </a>
-      
-      <!-- 6. Insurance, Financing & Others (保险、贷款及其它) -->
-      <a href="#faq-others" class="icon-link">
-        <div class="icon-card">
-          <i class="fa fa-hand-holding-usd"></i>
-          <span>Insurance, Financing &amp; Others</span>
-        </div>
-      </a>
-      <!-- 如果将来要继续新增服务，只需在此复制下面这段并替换图标/文本/锚点：
-      <a href="#faq-newcategory" class="icon-link">
-        <div class="icon-card">
-          <i class="fa fa-new-icon"></i>
-          <span>New Category</span>
-        </div>
-      </a>
-      -->
+    <div class="service-intro-card">
+      <p>
+        At AMGCUBE, we simplify the journey of building a granny flat or small home through a more
+        systemised approach that combines design support, prefabricated building systems, and
+        efficient on-site construction.
+      </p>
+      <p>
+        Instead of navigating a fragmented process alone, you get a clearer path from feasibility
+        and approval through to delivery, completion, and certification.
+      </p>
     </div>
   </div>
 </section>
 
+<section class="service-icon-grid-section">
+  <div class="container">
+    <div class="icon-grid">
+      <a href="#planning-feasibility" class="icon-link">
+        <div class="icon-card">
+          <i class="fa fa-comments"></i>
+          <span>Planning &amp; Feasibility</span>
+        </div>
+      </a>
 
-<!-- ================================
-     二、FAQ 折叠列表（6 个服务，每个一个区块）
-     ================================ -->
-<section class="service-icon-faq-section">
+      <a href="#cost-timeline" class="icon-link">
+        <div class="icon-card">
+          <i class="fa fa-file-text"></i>
+          <span>Cost &amp; Timeline</span>
+        </div>
+      </a>
+
+      <a href="#why-amgcube" class="icon-link">
+        <div class="icon-card">
+          <i class="fa fa-cubes"></i>
+          <span>Why AMGCUBE</span>
+        </div>
+      </a>
+
+      <a href="#compliance-delivery" class="icon-link">
+        <div class="icon-card">
+          <i class="fa fa-check-circle"></i>
+          <span>Compliance &amp; Delivery</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="service-content-section">
   <div class="container">
 
-{%- comment -%}
-  1. 先把 site.faqs 按“order”全局排序。  
-  2. 之后循环时，只要在循环体里判断 item.category 即可。
-  {%- endcomment -%}
-  
-{% assign all_sorted = site.faqs | sort: "order" %}
-
-    <!-- ——— 1. CONSULTING & ORDER 区块（调整后） ——— -->
-<div class="faq-block faq-bg-gray mb-5">
-  <div id="faq-order" class="faq-section">
-    <h2>CONSULTING &amp; ORDER</h2>
-    {% assign order_faqs = site.faqs | where: "category", "order" %}
-    {% if order_faqs == empty %}
-      <p>No FAQs found for this category.</p>
-    {% else %}
-      <div class="accordion" id="accordionOrder">
-        {% for item in order_faqs %}
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="heading_order_{{ forloop.index }}">
-              <button class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapse_order_{{ forloop.index }}"
-                      aria-expanded="false"
-                      aria-controls="collapse_order_{{ forloop.index }}">
-                {{ item.title }}
-              </button>
-            </h2>
-            <div id="collapse_order_{{ forloop.index }}"
-                 class="accordion-collapse collapse"
-                 aria-labelledby="heading_order_{{ forloop.index }}"
-                 data-bs-parent="#accordionOrder">
-              <div class="accordion-body">
-                {{ item.answer | markdownify }}
-              </div>
-            </div>
-          </div>
-        {% endfor %}
-      </div>
-    {% endif %}
-  </div>
-</div>
-
-
-    <!-- 2. DESIGN & APPROVALS 区块 -->
-<div class="faq-block faq-bg-gray mb-5">
-    <div id="faq-design" class="faq-section">
-      <h2>DESIGN &amp; APPROVALS</h2>
-      {% assign design_faqs = site.faqs | where: "category", "design" %}
-      {% if design_faqs == empty %}
-        <p>No FAQs found for this category.</p>
-      {% else %}
-        <div class="accordion" id="accordionDesign">
-          {% for item in design_faqs %}
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="heading_design_{{ forloop.index }}">
-                <button class="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapse_design_{{ forloop.index }}"
-                        aria-expanded="false"
-                        aria-controls="collapse_design_{{ forloop.index }}">
-                  {{ item.title }}
-                </button>
-              </h2>
-              <div id="collapse_design_{{ forloop.index }}"
-                   class="accordion-collapse collapse"
-                   aria-labelledby="heading_design_{{ forloop.index }}"
-                   data-bs-parent="#accordionDesign">
-                <div class="accordion-body">
-                  {{ item.answer | markdownify }}
-                </div>
-              </div>
-            </div>
-          {% endfor %}
+    <div id="planning-feasibility" class="service-block">
+      <div class="service-block-inner">
+        <div class="service-label">01</div>
+        <div class="service-copy">
+          <h2>Planning &amp; Feasibility</h2>
+          <p>
+            Every site is different. Before moving into design or construction, we help assess the
+            key factors that affect whether and how a granny flat can be built on your land.
+          </p>
+          <p>
+            These may include zoning, overlays, setbacks, site access, slope, existing structures,
+            and local approval requirements. Our goal is to give you a clearer understanding of what
+            is possible before you commit too far.
+          </p>
+          <ul class="service-points">
+            <li>Initial site and project feasibility review</li>
+            <li>Guidance on likely approval pathway</li>
+            <li>Advice on access, layout, and design constraints</li>
+          </ul>
         </div>
-      {% endif %}
-    </div>
-  </div>
-
-    <!-- 3. Shipping & Delivery 区块 -->
-  <div class="faq-block faq-bg-gray mb-5">
-    <div id="faq-delivery" class="faq-section">
-      <h2>Shipping &amp; Delivery</h2>
-      {% assign delivery_faqs = site.faqs | where: "category", "delivery" %}
-      {% if Delivery_faqs == empty %}
-        <p>No FAQs found for this category.</p>
-      {% else %}
-        <div class="accordion" id="accordionLogistics">
-          {% for item in delivery_faqs %}
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="heading_delivery_{{ forloop.index }}">
-                <button class="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapse_delivery_{{ forloop.index }}"
-                        aria-expanded="false"
-                        aria-controls="collapse_delivery_{{ forloop.index }}">
-                  {{ item.title }}
-                </button>
-              </h2>
-              <div id="collapse_delivery_{{ forloop.index }}"
-                   class="accordion-collapse collapse"
-                   aria-labelledby="heading_delivery_{{ forloop.index }}"
-                   data-bs-parent="#accordionLogistics">
-                <div class="accordion-body">
-                  {{ item.answer | markdownify }}
-                </div>
-              </div>
-            </div>
-          {% endfor %}
-        </div>
-      {% endif %}
-    </div>
-  </div>
-
-    <!-- 4. CONSTRUCTION & INSTALLATION 区块 -->
-  <div class="faq-block faq-bg-gray mb-5">
-    <div id="faq-construction" class="faq-section">
-      <h2>CONSTRUCTION &amp; INSTALLATION</h2>
-      {% assign construction_faqs = site.faqs | where: "category", "construction" %}
-      {% if construction_faqs == empty %}
-        <p>No FAQs found for this category.</p>
-      {% else %}
-        <div class="accordion" id="accordionConstruction">
-          {% for item in construction_faqs %}
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="heading_construction_{{ forloop.index }}">
-                <button class="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapse_construction_{{ forloop.index }}"
-                        aria-expanded="false"
-                        aria-controls="collapse_construction_{{ forloop.index }}">
-                  {{ item.title }}
-                </button>
-              </h2>
-              <div id="collapse_construction_{{ forloop.index }}"
-                   class="accordion-collapse collapse"
-                   aria-labelledby="heading_construction_{{ forloop.index }}"
-                   data-bs-parent="#accordionConstruction">
-                <div class="accordion-body">
-                  {{ item.answer | markdownify }}
-                </div>
-              </div>
-            </div>
-          {% endfor %}
-        </div>
-      {% endif %}
-    </div>
-  </div>
-
-    <!-- 5. CERTIFICATION & MAINTENANCE 区块 -->
-    <div class="faq-block faq-bg-gray mb-5">
-     <div id="faq-certification" class="faq-section">
-      <h2>CERTIFICATION &amp; MAINTENANCE</h2>
-      {% assign certification_faqs = site.faqs | where: "category", "certification" %}
-      {% if certification_faqs == empty %}
-        <p>No FAQs found for this category.</p>
-      {% else %}
-        <div class="accordion" id="accordionCertification">
-          {% for item in certification_faqs %}
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="heading_certification_{{ forloop.index }}">
-                <button class="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapse_certification_{{ forloop.index }}"
-                        aria-expanded="false"
-                        aria-controls="collapse_certification_{{ forloop.index }}">
-                  {{ item.title }}
-                </button>
-              </h2>
-              <div id="collapse_certification_{{ forloop.index }}"
-                   class="accordion-collapse collapse"
-                   aria-labelledby="heading_certification_{{ forloop.index }}"
-                   data-bs-parent="#accordionCertification">
-                <div class="accordion-body">
-                  {{ item.answer | markdownify }}
-                </div>
-              </div>
-            </div>
-          {% endfor %}
-        </div>
-         {% endif %}
       </div>
     </div>
 
-    <!-- 6. INSURANCE, FINANCING & OTHERS 区块 -->
-     <div class="faq-block faq-bg-gray mb-5">
-      <div id="faq-others" class="faq-section mb-5">    
-      <h2>INSURANCE, FINANCING &amp; OTHERS</h2>
-      {% assign others_faqs = site.faqs | where: "category", "others" %}
-      {% if others_faqs == empty %}
-        <p>No FAQs found for this category.</p>
-      {% else %}
-        <div class="accordion" id="accordionOthers">
-          {% for item in others_faqs %}
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="heading_others_{{ forloop.index }}">
-                <button class="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapse_others_{{ forloop.index }}"
-                        aria-expanded="false"
-                        aria-controls="collapse_others_{{ forloop.index }}">
-                  {{ item.title }}
-                </button>
-              </h2>
-              <div id="collapse_others_{{ forloop.index }}"
-                   class="accordion-collapse collapse"
-                   aria-labelledby="heading_others_{{ forloop.index }}"
-                   data-bs-parent="#accordionOthers">
-                <div class="accordion-body">
-                  {{ item.answer | markdownify }}
-                </div>
-              </div>
-            </div>
-          {% endfor %}
+    <div id="cost-timeline" class="service-block">
+      <div class="service-block-inner">
+        <div class="service-label">02</div>
+        <div class="service-copy">
+          <h2>Cost &amp; Timeline</h2>
+          <p>
+            One of the biggest concerns for homeowners is uncertainty. We aim to reduce that by
+            using a more systemised building approach, with clearer scopes, more predictable
+            timelines, and fewer unknowns than a purely traditional build process.
+          </p>
+          <p>
+            Project cost depends on size, layout, finishes, and site conditions. Timeline depends on
+            approval requirements, site preparation, and construction scope. A typical project can
+            often be completed in around 3 to 4 months from construction commencement to final completion.
+          </p>
+          <ul class="service-points">
+            <li>Clearer scope before construction starts</li>
+            <li>Reduced on-site build time through prefabrication</li>
+            <li>Better visibility on delivery milestones</li>
+          </ul>
         </div>
-      {% endif %}
+      </div>
+    </div>
+
+    <div id="why-amgcube" class="service-block">
+      <div class="service-block-inner">
+        <div class="service-label">03</div>
+        <div class="service-copy">
+          <h2>Why Build with AMGCUBE</h2>
+          <p>
+            AMGCUBE combines the efficiency of prefabrication with the flexibility of on-site
+            construction. Rather than relying on fully modular building pods, our system uses
+            prefabricated components that are assembled onsite, making it easier to adapt to real
+            site conditions while maintaining speed and consistency.
+          </p>
+          <p>
+            This approach allows better control over quality, construction sequencing, and finish
+            integration, while also creating more flexibility in design, layout, and material selection.
+          </p>
+          <p>
+            Behind AMGCUBE’s work in Australia is a technology foundation that has already been
+            tested and applied in large-scale real-world projects, giving us confidence in the
+            practicality and reliability of the system.
+          </p>
+          <ul class="service-points">
+            <li>Faster and more controlled construction process</li>
+            <li>Flexible layouts and finish options</li>
+            <li>Technology supported by real project experience</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="compliance-delivery" class="service-block">
+      <div class="service-block-inner">
+        <div class="service-label">04</div>
+        <div class="service-copy">
+          <h2>Compliance &amp; Delivery</h2>
+          <p>
+            All projects must comply with Australian building requirements, and this remains a core
+            part of our delivery approach. We work within the local approval and construction
+            framework, using licensed professionals where required and completing inspections through
+            the appropriate process.
+          </p>
+          <p>
+            From design support and approval coordination through to component delivery, on-site
+            construction, final inspection, and certification, we focus on turning a complex project
+            into a more manageable and transparent experience for the homeowner.
+          </p>
+          <ul class="service-points">
+            <li>Built in line with Australian standards and regulations</li>
+            <li>Licensed trades and required inspections</li>
+            <li>Support from planning through to completion</li>
+          </ul>
+        </div>
+      </div>
     </div>
 
   </div>

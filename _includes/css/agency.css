@@ -2020,6 +2020,109 @@ article h1 {
 }
 
 /* =========================================================================
+   Service 重新后样式
+   ========================================================================= */
+
+.service-intro-section {
+  padding: 28px 0 10px;
+}
+
+.service-intro-card {
+  max-width: 900px;
+  margin: 0 auto 20px;
+  background: #fff;
+  border: 1px solid #ececec;
+  border-radius: 10px;
+  padding: 24px 28px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+.service-intro-card p {
+  margin: 0 0 12px;
+  color: #555;
+  line-height: 1.8;
+}
+
+.service-intro-card p:last-child {
+  margin-bottom: 0;
+}
+
+.service-content-section {
+  padding: 30px 0 70px;
+}
+
+.service-block {
+  margin-bottom: 28px;
+}
+
+.service-block-inner {
+  display: flex;
+  gap: 24px;
+  background: #f7f7f7;
+  border-radius: 10px;
+  padding: 32px;
+}
+
+.service-label {
+  flex: 0 0 64px;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #f0b400;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-copy {
+  flex: 1;
+}
+
+.service-copy h2 {
+  margin: 0 0 14px;
+  font-size: 30px;
+  line-height: 1.2;
+}
+
+.service-copy p {
+  margin: 0 0 14px;
+  color: #555;
+  line-height: 1.9;
+}
+
+.service-points {
+  margin: 8px 0 0;
+  padding-left: 20px;
+}
+
+.service-points li {
+  margin-bottom: 8px;
+  color: #444;
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  .service-block-inner {
+    flex-direction: column;
+    gap: 18px;
+    padding: 24px 20px;
+  }
+
+  .service-label {
+    width: 56px;
+    height: 56px;
+    font-size: 20px;
+  }
+
+  .service-copy h2 {
+    font-size: 24px;
+  }
+}
+
+/* =========================================================================
    2. FAQ 折叠列表 区块样式
    ========================================================================= */
 

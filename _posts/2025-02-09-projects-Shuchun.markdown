@@ -20,29 +20,21 @@ progress:
     text: The entrance
   - img: img/projects/shuchun/shuchun05.jpg
     text: The overview
-  - img: img/projects/shuchun/shuchun01.png
-    text: Interior Decoration Rendering
-  - img: img/projects/shuchun/shuchun02.png
-    text: Interior Decoration Rendering
-  - img: img/projects/shuchun/shuchun03.png
-    text: Interior Decoration Rendering
+  - img: img/projects/shuchun/shuchun06.jpg
+    text: Living room
+  - img: img/projects/shuchun/shuchun08.png
+    text: Living room
+  - img: img/projects/shuchun/shuchun07.png
+    text: Kitchen room
+ 
     
 ---
-### Highlights<br><br>
 
-#### Perfect interior decoration with "AMGCBUE HOMES"
-This is a high-end residential apartment project carried out in Beijing, China in 2024 by AMGCBUE, a technology partner of AMGCUBE. <br>
-The project consists of 900 apartments, each ranging from 140 to 280 square meters, distributed across 30 buildings with 4 to 5 storeys.<br><br>
+### Project Overview
 
-##### ---The project adopted AMGCBUE's interior prefabricated fit-out system. 
-Thanks to this system, the entire construction period lasted only six months.<br>
-Completing a project of this scale in such a short timeframe would have been virtually impossible using traditional renovation methods.<br><br>
+This project is a high-end residential apartment development completed in Beijing, China, in 2024 by MODCUBE, a shareholder and technology partner of AMGCUBE.<br><br>
+The development includes 900 apartments ranging from 140 to 280 square metres, distributed across 30 buildings of 4 to 5 storeys.<br><br>
+AMGCUBE HOMES’ interior prefabricated fit-out system was applied throughout the project, covering key elements such as flooring, ceilings, feature walls, kitchens, and bathrooms. Through this integrated construction approach, the entire project was completed in just six months, demonstrating the system’s efficiency at scale.<br><br>
+As AMGCUBE expands its operations in Australia, this project serves as a strong reference for the underlying technology. It shows that the system has already been extensively tested and validated in large-scale real-world applications, providing a solid foundation for delivering reliable, high-quality outcomes in the Australian market.
 
-#### We mention this project here to highlight two key points:<br><br>
-
-##### ---1.The AMGCBUE HOMES interior fit-out system is highly practical and expressive. 
-Whether it’s flooring, ceilings, feature walls, kitchens, or bathrooms, all areas can be completed quickly and efficiently through integrated construction.
-<br>
-
-##### ---2.These systems are not just for display in showrooms.
-They have been fully validated through large-scale, real-world projects and have proven to meet high standards for quality, consistency, and timely delivery.
+---

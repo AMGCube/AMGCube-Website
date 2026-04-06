@@ -23,23 +23,11 @@ designs:
     floorplan: /img/designs/layout-a-floorplan.png
 
     renders:
-      - /img/designs/layout-a-3d-1.png
-      - /img/designs/layout-a-3d-2.png
-
-    real_images:
-      - /img/designs/layout-a-real-1.jpg
-
-  - name: Layout B – Open Living Concept
-    description: Larger living area with more open space and flexibility.
-
-    floorplan: /img/designs/layout-b-floorplan.png
-
-    renders:
-      - /img/designs/layout-b-3d-1.jpg
-
-    real_images:
-      - /img/designs/layout-b-real-1.jpg
-  
+      - /img/designs/layout-a-3d-1.jpg
+      - /img/designs/layout-a-3d-2.jpg
+      - /img/designs/layout-a-3d-3.jpg
+      - /img/designs/layout-a-3d-4.jpg
+    
   - name: Layout c – Open Living Concept
     description: Larger living area with more open space and flexibility.
 

@@ -1130,7 +1130,7 @@ body {
 }
 
 .projects-heading {
-  margin: 40px auto 10px;
+  margin: 30px auto 10px;
 }
 
 .projects-title {
@@ -1677,6 +1677,10 @@ article h1 {
 
 .design-overview .description-content p:last-child {
   margin-bottom: 0;
+}
+
+.design-overview .description-content p {
+  padding-left: 30px;
 }
 
 .design-attributes {

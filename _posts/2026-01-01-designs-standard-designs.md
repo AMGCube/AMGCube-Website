@@ -1,18 +1,19 @@
 ---
 layout: design
-title: Standard Designs
+title: Recommended Designs
 subtitle: Practical layout ideas based on typical granny flat projects in Brisbane.
 permalink: /designs/standard-designs/
 header_image: /img/designs/design-banner.png
 product-category: Design / standard-designs
 
-overview: >
-  Most projects fall within 60–80㎡, typically with 1–2 bedrooms and 1 bathroom. The layouts shown here are not fixed solutions, but practical examples to help you understand what works well in real projects.
-  They provide a clear starting point for planning your own granny flat, whether you choose a standard design or move towards a custom solution.
-
-best_for: Homeowners looking for a clear starting point, rental-focused layouts, or compact living solutions.
-key_benefits: Clear layout direction, proven configurations, and a faster path from idea to construction.
-typical_use: Typical backyard granny flats in Brisbane, usually 60–80㎡ with 1–2 bedrooms and 1 bathroom.
+overview: 
+  <strong>Typical size:</strong>Most projects fall within 60–80m²  <br>
+  <strong>Common layouts:</strong>1–2 bedrooms with 1–2 bathrooms  <br>
+  <strong>Optimised for delivery:</strong>Efficient planning, smoother approvals, faster construction  <br>
+  <strong>Flexible:</strong>Can be adjusted, or fully customised if needed
+best_for: 
+key_benefits: 
+typical_use: 
 
 designs:
 
@@ -42,13 +43,14 @@ designs:
   - name: Layout c – Open Living Concept
     description: Larger living area with more open space and flexibility.
 
-    floorplan: /img/designs/layout-c-floorplan.jpg
+    floorplan: /img/designs/layout-c-floorplan.png
 
     renders:
-      - /img/designs/layout-b-3d-1.jpg
+      - /img/designs/layout-c-3d-1.png
+      - /img/designs/layout-c-3d-2.png
 
     real_images:
-      - /img/designs/layout-b-real-1.jpg
+      - /img/designs/layout-c-real-1.jpg
 
 cta_title: Interested in this design?
 cta_text: Visit our display home or talk to us about your site and project needs.

@@ -16,9 +16,9 @@ floor-area: 80m², 2 Bedroom 1 Bath
 construction-time: 3.5 monthes
 
 progress:
-  - img: img/projects/146/146-exterior-finished-1.JPG
+  - img: img/projects/146/146-exterior-finished-1.jpg
     text: Jan, 2026
-  - img: img/projects/146/146-interior-finished-1.JPG
+  - img: img/projects/146/146-interior-finished-1.jpg
     text: Dec, 2025
   - img: img/projects/146/146-progress-10.jpg
     text: Oct 31, 2025
@@ -30,13 +30,13 @@ progress:
     text: Sep 20, 2025
   - img: img/projects/146/146-progress-6.jpg
     text: Sep 09, 2025
-  - img: img/projects/146/146-progress-5.JPG
+  - img: img/projects/146/146-progress-5.jpg
     text: Aug 08, 2025
-  - img: img/projects/146/146-progress-3.JPG
+  - img: img/projects/146/146-progress-3.jpg
     text: July 30, 2025
-  - img: img/projects/146/146-progress-2.JPG
+  - img: img/projects/146/146-progress-2.jpg
     text: July 11, 2025
-  - img: img/projects/146/146-progress-1.JPG
+  - img: img/projects/146/146-progress-1.jpg
     text: Jun 16, 2025
   
   

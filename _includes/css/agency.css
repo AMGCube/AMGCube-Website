@@ -1263,12 +1263,6 @@ body {
   text-transform: uppercase;
 }
 
-
-.module-description {
-  margin-top: 0.5rem;
-  color: #777;
-  font-size: 0.9rem;
-}
 .product-intro-text {
   font-family: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
@@ -1417,40 +1411,6 @@ article h1 {
 }
 
 /*二级栏目图片栏目格式 */
-/*.page-hero-text-container {
-  position: absolute;
-  top:50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 90%;
-  z-index: 2;
-}
-
-.page-hero-text {
-  max-width: 760px;
-  margin: 0 auto;
-  text-align: center;
-  color: #fff;
-}
-
-.page-hero-title {
-  font-size: 42px;
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 12px;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
-}
-
-.page-hero-subtitle {
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1.5;
-  opacity: 0.9; 
-  max-width: 600px;
-  margin: 0 auto;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
-}
-*/
 
 .hero-page-wrapper {
   position: relative;
@@ -1484,16 +1444,14 @@ article h1 {
   );
 }
 
+
 .page-hero-text-container {
   position: relative;
   z-index: 2;
   width: 100%;
   max-width: 1100px;
   margin: 0 auto;
-  padding: 140px 32px 90px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 0 32px;
   text-align: center;
 }
 
@@ -1503,7 +1461,7 @@ article h1 {
 }
 
 .page-hero-subtitle {
-  font-size: 1.8rem;
+  font-size: 2.3rem;
   line-height: 1.6;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.9);
@@ -1511,7 +1469,7 @@ article h1 {
 }
 
 .page-hero-title {
-  font-size: 3.3rem;
+  font-size: 3.8rem;
   line-height: 1.25;
   font-weight: 700;
   letter-spacing: 0.01em;
@@ -1526,7 +1484,7 @@ article h1 {
   }
 
   .page-hero-text-container {
-    padding: 120px 24px 80px;
+    padding: 0 24px;
   }
 
   .page-hero-title {
@@ -1535,18 +1493,17 @@ article h1 {
   }
 
   .page-hero-subtitle {
-    font-size: 1.3rem; /* 从1.5稍微降一点 */
+    font-size: 1.5rem;
     margin-bottom: 18px;
   }
-}
-@media (max-width: 768px) {
+}@media (max-width: 768px) {
   .hero-page {
     min-height: 400px;
     background-position: center center;
   }
 
   .page-hero-text-container {
-    padding: 110px 20px 60px;
+    padding: 0 20px;
   }
 
   .page-hero-text {
@@ -1554,12 +1511,12 @@ article h1 {
   }
 
   .page-hero-title {
-    font-size: 2rem;
+    font-size: 2.2rem;
     line-height: 1.35;
   }
 
   .page-hero-subtitle {
-    font-size: 1.15rem; /* 关键：不要太小，但比PC略小 */
+    font-size: 1.3rem;
     line-height: 1.5;
     margin-bottom: 14px;
   }
@@ -1576,21 +1533,6 @@ article h1 {
     rgba(0,0,0,0.35)
   );
   z-index: 1;
-}
-
-@media (max-width: 768px) {
-  .page-hero-text-container {
-    top: 40%;
-  }
-
-  .page-hero-title {
-    font-size: 24px;
-  }
-
-  .page-hero-subtitle {
-    font-size: 16px;
-    line-height: 1.4;
-  }
 }
 
 /* =========================
@@ -2621,7 +2563,7 @@ html {
 
   /* 缩小主标题 */
   .module-title {
-    font-size: 18px;
+    font-size: 16px;
     margin-top: 12px;
     margin-bottom: 4px;
   }

@@ -1,18 +1,3 @@
-/* Hero Section for Secondary Pages 
-.hero-page {
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 50vh; 
-    min-height: 400px;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    position: relative;
-}
-相关内容移入agency*/
-
 /* Modules Section Styling */
 .modules-container {
   display: grid;
@@ -421,7 +406,7 @@
 
 /* 公司名称样式 */
 .company-name {
-    font-size: 36px;  /* 字号增大 */
+    font-size: 32px;  /* 字号增大 */
     font-weight: bold;
     text-align: left;  /* 居中对齐 */
     margin-bottom: 10px;  /* 增加下方间距 */
@@ -466,13 +451,6 @@
     transform: translateY(-2px);
 }
 
-.company-name {
-    text-align: center;
-    font-size: 26px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    color: #222;
-}
 
 .contact-box h4 {
     font-size: 20px;

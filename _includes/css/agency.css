@@ -369,12 +369,6 @@ fieldset[disabled] .btn-xl.active {
     padding: 120px 20px 70px;
   }
 
-  .intro-heading {
-    font-size: 2.3rem;
-    line-height: 1.2;
-    margin-bottom: 14px;
-  }
-
   .intro-subtitle {
     font-size: 1.35rem;
     line-height: 1.35;
@@ -409,9 +403,9 @@ section {
 }
 
 section h2.section-heading {
-    margin-top: 30;
-    margin-bottom: 30px;
-    font-size: 28px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 26px;
     
 }
 
@@ -464,21 +458,14 @@ section h3.section-subheading {
    Hero Page Section - 页面顶部横幅区块
    ======================================== */
 .hero-page {
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 50vh; 
-
-    align-items: center;
-    justify-content: center;
+    height: 45vh; 
     text-align: center;
     color: white;
-    position: relative;
-}
+    }
 
 @media (max-width: 768px) {
   .hero-page {
-    height: 30vh /* 固定较小高度 */
+    height: 35vh /* 固定较小高度 */
         }
 }
 
@@ -1372,26 +1359,6 @@ article h1 {
 }
 
 /* Products 二级栏目 展示框样式 自定义CSS */
-<style>
-    .section-heading-sm {
-        font-size: 1.5rem; /* 标题缩小 */
-        font-weight: bold;
-        margin-bottom: 20px;
-    }
-    .products-heading {
-        font-size: unset; /* 让特性模块的标题匹配首页 */
-        font-weight: bold;
-        margin-top: 10px;
-    }
-    .module-box {
-        margin: 10px;
-    }
-    .row.justify-content-center {
-        display: flex;
-        justify-content: center;
-        gap: 30px; /* 让模块之间有间距 */
-    }
-</style>
 
 .attribute-block {
   padding-bottom: 10px;
@@ -1420,7 +1387,6 @@ article h1 {
 
 .hero-page {
   position: relative;
-  min-height: 520px;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -1458,6 +1424,8 @@ article h1 {
 .page-hero-text {
   max-width: 880px;
   color: #ffffff;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .page-hero-subtitle {
@@ -1479,11 +1447,7 @@ article h1 {
 }
 
 @media (max-width: 992px) {
-  .hero-page {
-    min-height: 460px;
-  }
-
-  .page-hero-text-container {
+    .page-hero-text-container {
     padding: 0 24px;
   }
 
@@ -1497,12 +1461,7 @@ article h1 {
     margin-bottom: 18px;
   }
 }@media (max-width: 768px) {
-  .hero-page {
-    min-height: 400px;
-    background-position: center center;
-  }
-
-  .page-hero-text-container {
+   .page-hero-text-container {
     padding: 0 20px;
   }
 
@@ -2394,11 +2353,6 @@ html {
   border-radius: 8px;
 }
 
-.company-name {
-  margin-bottom: 36px;
-  text-align: left;
-}
-
 .contact-info-row {
   align-items: flex-start;
 }
@@ -2434,11 +2388,6 @@ html {
   background: #eef1f3;
   padding: 48px 56px;
   border-radius: 8px;
-}
-
-.company-name {
-  margin-bottom: 36px;
-  text-align: left;
 }
 
 .contact-info-row {
@@ -2498,7 +2447,6 @@ html {
   }
 
   .intro-heading {
-    font-size: 30px;
     line-height: 1.3;
     text-shadow: none;
     letter-spacing: normal;

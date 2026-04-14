@@ -55,7 +55,7 @@
         <h2 class="section-title">Details</h2>
           {% for item in page.progress %}
             <div class="timeline-stage">
-              <img src="{{ site.baseurl }}/{{ item.img }}" class="img-responsive" alt="project progress image">
+              <img src="{{ site.baseurl }}/{{ item.img }}" class="img-responsive" loading="lazy" alt="project progress image">
               {% if item.text %}
                 <p class="caption">{{ item.text }}</p>
               {% endif %}

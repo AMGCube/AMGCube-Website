@@ -43,7 +43,7 @@
       <h2 class="section-title">Details</h2>
       {% for img in page.images %}
         <div class="timeline-stage">
-          <img src="{{ site.baseurl }}/{{ img.img }}" class="img-responsive" alt="{{ page.title }}">
+          <img src="{{ site.baseurl }}/{{ img.img }}" class="img-responsive" loading="lazy" alt="{{ page.title }}">
           {% if img.text %}
             <p class="caption">{{ img.text }}</p>
           {% endif %}

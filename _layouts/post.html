@@ -34,7 +34,7 @@ layout: page
     </div>
     <div class="post-images">
         {% for img in page.images %}
-           <img src="{{ site.baseurl }}/{{ img }}" class="img-responsive" alt="{{ page.title }}">
+           <img src="{{ site.baseurl }}/{{ img }}" class="img-responsive" loading="lazy" alt="{{ page.title }}">
         {% endfor %}
 
     </div>

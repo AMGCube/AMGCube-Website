@@ -81,7 +81,7 @@
              data-lightbox="{{ design.name | slugify }}"
              data-title="{{ design.name }} - Floorplan">
             <img src="{{ design.floorplan | relative_url }}"
-                 class="img-responsive design-thumb"
+                 class="img-responsive design-thumb" loading="lazy"
                  alt="{{ design.name }} floorplan">
           </a>
         </div>
@@ -99,7 +99,7 @@
                  data-lightbox="{{ design.name | slugify }}"
                  data-title="{{ design.name }} - Render">
                 <img src="{{ render | relative_url }}"
-                     class="img-responsive design-thumb"
+                     class="img-responsive design-thumb" loading="lazy"
                      alt="{{ design.name }} render">
               </a>
             </div>
@@ -113,7 +113,7 @@
                  data-lightbox="{{ design.name | slugify }}"
                  data-title="{{ design.name }} - Real Image">
                 <img src="{{ real | relative_url }}"
-                     class="img-responsive design-thumb"
+                     class="img-responsive design-thumb" loading="lazy"
                      alt="{{ design.name }} real image">
               </a>
             </div>

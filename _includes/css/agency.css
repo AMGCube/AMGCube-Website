@@ -38,9 +38,9 @@
    - .vision-box 和 .vision-statement 原在 hero.css 中（已注释），
      已在本文件第11节末尾补回，否则 About 页面动画失效
    - .section-title 在第8节（通用）和第21节（Designs专用）各有一套定义，
-     Designs 专用版会覆盖通用版，建议后续加更具体的选择器限制作用域
+     已用 .design-post-content .section-title 限定作用域，冲突已解决
    - .attribute-block / .attribute-title / .attribute-content 同样有
-     两套定义（第19节 Products 与第21节 Designs），同上问题
+     两套定义，已分别加 .product-attributes-vertical 和 .design-attributes 父选择器，冲突已解决
    ============================================================ */
 
 
@@ -678,8 +678,8 @@ section h3.section-subheading {
 
 /* ============================================================
    8. 版块标题 (Section Title)
-   ⚠️  注意：此处的 .section-title 是通用样式，在第21节 Designs 页面
-   有另一套同名定义，会覆盖此处。建议后续加父选择器限制作用域。
+   此处的 .section-title 是通用样式。第21节 Designs 页面的同名样式
+   已改为 .design-post-content .section-title，不再冲突。
    ============================================================ */
 .section-title {
     text-align: center;
@@ -1409,8 +1409,8 @@ body {
 
 /* ============================================================
    19. Products 页面 (Products Page)
-   ⚠️  注意：此节的 .attribute-block / .attribute-title / .attribute-content
-   是 Products 专用样式，第21节 Designs 页面有另一套同名定义会覆盖它。
+   此节的 .attribute-block / .attribute-title / .attribute-content
+   已改为 .product-attributes-vertical .attribute-* 限定作用域，不再与第21节冲突。
    建议后续加父选择器限制作用域。
    ============================================================ */
 
@@ -1524,18 +1524,18 @@ article h1 {
 
 /* Products 二级栏目 展示框样式 自定义CSS */
 
-.attribute-block {
+.product-attributes-vertical .attribute-block {
   padding-bottom: 10px;
 }
 
-.attribute-title {
+.product-attributes-vertical .attribute-title {
   font-weight: 600;
   font-size: 18px;
   margin-bottom: 5px;
   color: #333333;
 }
 
-.attribute-content {
+.product-attributes-vertical .attribute-content {
   font-size: 16px;
   color: #333333;
   line-height: 1.6;
@@ -1679,8 +1679,8 @@ article h1 {
 
 /* ============================================================
    21. Designs 页面 (Designs Page)
-   ⚠️  注意：此节重新定义了 .section-title / .attribute-block /
-   .attribute-title / .attribute-content，会全局覆盖第8节和第19节的同名样式。
+   已将 .section-title 改为 .design-post-content .section-title，
+   .attribute-* 改为 .design-attributes .attribute-*，作用域已隔离。
    ============================================================ */
 
 /* =========================
@@ -1755,7 +1755,7 @@ article h1 {
 .design-overview {
   margin-bottom: 22px;
 }
-.section-title {
+.design-post-content .section-title {
   font-size: 30px;
   font-weight: 600;
   line-height: 1.3;
@@ -1788,7 +1788,7 @@ article h1 {
   gap: 18px;
 }
 
-.attribute-block {
+.design-attributes .attribute-block {
   background: #f7f7f7;
   border-radius: 16px;
   padding: 22px 22px 20px;
@@ -1796,7 +1796,7 @@ article h1 {
   box-shadow: 0 4px 12px rgba(0,0,0,0.03);
 }
 
-.attribute-title {
+.design-attributes .attribute-title {
   font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -1805,7 +1805,7 @@ article h1 {
   font-weight: 600;
 }
 
-.attribute-content {
+.design-attributes .attribute-content {
   font-size: 16px;
   line-height: 1.75;
   color: #222;
@@ -1930,7 +1930,7 @@ article h1 {
     padding: 40px 20px 64px;
   }
 
-  .section-title {
+  .design-post-content .section-title {
     font-size: 26px;
   }
 
@@ -1978,7 +1978,7 @@ article h1 {
     margin-bottom: 40px;
   }
 
-  .section-title {
+  .design-post-content .section-title {
     font-size: 24px;
     margin-bottom: 18px;
   }
@@ -1992,13 +1992,13 @@ article h1 {
   }
 
   .design-overview .description-content,
-  .attribute-content,
+  .design-attributes .attribute-content,
   .caption,
   .cta-text {
     font-size: 15px;
   }
 
-  .attribute-block {
+  .design-attributes .attribute-block {
     padding: 18px 18px 16px;
   }
 

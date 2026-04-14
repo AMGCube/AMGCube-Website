@@ -18,7 +18,7 @@ Whether you're building for family use, rental income, or extra space, we work w
 
 The final price depends on several factors, including size, layout, materials, and level of finishes. Site conditions and access can also affect the overall cost.
 
-In terms of cost, most granny flat projects typically range between $250,000 and $300,000.
+In terms of cost, most granny flat projects typically range between $200,000 and $300,000 AUD.
 
 At AMGCUBE, we focus on providing clear pricing and practical solutions — helping you balance budget, functionality, and long-term value.
 

@@ -49,35 +49,19 @@ $(document).ready(function() {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-    let visionBox = document.querySelector(".vision-box");
-    if (visionBox) {
-        let observer = new IntersectionObserver(
-            function (entries) {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        visionBox.classList.add("appear");
-                    }
-                });
-            },
-            { threshold: 0.5 }
-        );
-        observer.observe(visionBox);
-    }
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-    let companyBox = document.querySelector(".company-info-box");
-    if (companyBox) {
-        let observer = new IntersectionObserver(
-            function (entries) {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        companyBox.classList.add("appear");
-                    }
-                });
-            },
-            { threshold: 0.5 }
-        );
-        observer.observe(companyBox);
-    }
+    [".vision-box", ".company-info-box"].forEach(function (selector) {
+        let el = document.querySelector(selector);
+        if (el) {
+            new IntersectionObserver(
+                function (entries) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("appear");
+                        }
+                    });
+                },
+                { threshold: 0.5 }
+            ).observe(el);
+        }
+    });
 });

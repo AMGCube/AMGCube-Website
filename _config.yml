@@ -35,10 +35,6 @@ address:
 markdown: kramdown
 permalink: pretty
 
-# 解决文章目录不统一的问题
-permalink: /projects/:title/
-
-
 # Additional configurations
 wdm:
   force_polling: false
@@ -46,20 +42,12 @@ logger: true
 timezone: Australia/Brisbane
 cache: true
 
-# add 增加pages目录
 include:
   - _pages
-  
-# 控制页面的URL
-permalink: pretty
 
-# 调整post文章
 collections:
   posts:
     output: true
     permalink: /:path/
-    
-# 增加问题列表
-collections:
   faqs:
     output: true

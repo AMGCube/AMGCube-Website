@@ -4,6 +4,50 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+/* ============================================================
+   AMGCube Website — 主样式表 (agency.css)
+   目录 (Table of Contents):
+    1.  全局基础样式        Global Base
+    2.  按钮               Buttons
+    3.  导航栏             Navbar
+    4.  首页 Hero          Homepage Hero
+    5.  通用 Section       Section
+    6.  二级页面 Hero 横幅  Page Hero Banner
+    7.  卡片组件 — 通用    Card Components (Generic)
+    8.  版块标题            Section Title
+    9.  产品/服务标题       Product & Service Headings
+   10.  旧版 Project Grid  Legacy Project Grid
+   11.  时间轴 / About 页面 Timeline / About Page
+   12.  团队               Team
+   13.  客户               Clients
+   14.  页脚               Footer
+   15.  按钮 Focus 状态    Button Focus States
+   16.  弹窗               Modal
+   17.  全局杂项           Global Misc
+   18.  Projects 页面      Projects Page
+   19.  Products 页面      Products Page
+   20.  二级页面 Hero 详细  Page Hero Banner (Detail)
+   21.  Designs 页面       Designs Page
+   22.  Services & FAQ 页面 Services & FAQ
+   23.  Products — Explore 按钮  Products Explore Button
+   24.  Post / Article 页面 Post / Article
+   25.  Contact 页面       Contact Page
+   26.  响应式媒体查询（汇总）Responsive Media Queries
+
+   ⚠️  已知问题 (Known Issues):
+   - .vision-box 和 .vision-statement 原在 hero.css 中（已注释），
+     已在本文件第11节末尾补回，否则 About 页面动画失效
+   - .section-title 在第8节（通用）和第21节（Designs专用）各有一套定义，
+     Designs 专用版会覆盖通用版，建议后续加更具体的选择器限制作用域
+   - .attribute-block / .attribute-title / .attribute-content 同样有
+     两套定义（第19节 Products 与第21节 Designs），同上问题
+   ============================================================ */
+
+
+/* ============================================================
+   1. 全局基础样式 (Global Base)
+   ============================================================ */
+
 body {
     overflow-x: hidden;
     font-family: "Poppins","Helvetica Neue",Helvetica,Arial,sans-serif; /*删除了"Roboto Slab"字体*/
@@ -64,6 +108,11 @@ h6 {
 .bg-darkest-gray {
     background-color: #222;
 }
+
+
+/* ============================================================
+   2. 按钮 (Buttons)
+   ============================================================ */
 
 .btn-primary {
     border-color: #{{ site.data.template.color.primary }};
@@ -166,6 +215,10 @@ fieldset[disabled] .btn-xl.active {
     background-color: #fff;
 }
 
+/* ============================================================
+   3. 导航栏 (Navbar)
+   ============================================================ */
+
 .navbar-default {
   background-color: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(3px);
@@ -259,6 +312,10 @@ fieldset[disabled] .btn-xl.active {
     }
     
 }
+
+/* ============================================================
+   4. 首页 Hero (Homepage Hero)
+   ============================================================ */
 
 /* 首页的背景 */
 .hero-home {
@@ -398,6 +455,10 @@ fieldset[disabled] .btn-xl.active {
   background-color: #cc7a00;
 }
 
+/* ============================================================
+   5. 通用 Section (Section)
+   ============================================================ */
+
 section {
     padding: 30px 0;
 }
@@ -454,9 +515,9 @@ section h3.section-subheading {
     }
 }
 
-/* ========================================
-   Hero Page Section - 页面顶部横幅区块
-   ======================================== */
+/* ============================================================
+   6. 二级页面 Hero 横幅 (Page Hero Banner) — 基础定义
+   ============================================================ */
 .hero-page {
     height: 45vh; 
     text-align: center;
@@ -469,9 +530,11 @@ section h3.section-subheading {
         }
 }
 
-/* ========================================
-   Modules Section - 通用模块卡片容器
-   ======================================== */
+/* ============================================================
+   7. 卡片组件 — 通用 (Card Components — Generic)
+   ============================================================ */
+
+/* Modules Section - 通用模块卡片容器 */
 .modules-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -613,9 +676,11 @@ section h3.section-subheading {
 }
 
 
-/* ========================================
-   Section Title 区域（标题样式）
-   ======================================== */
+/* ============================================================
+   8. 版块标题 (Section Title)
+   ⚠️  注意：此处的 .section-title 是通用样式，在第21节 Designs 页面
+   有另一套同名定义，会覆盖此处。建议后续加父选择器限制作用域。
+   ============================================================ */
 .section-title {
     text-align: center;
     max-width: 900px;
@@ -658,6 +723,10 @@ section h3.section-subheading {
 }
 
 
+/* ============================================================
+   9. 产品 / 服务标题 (Product & Service Headings)
+   ============================================================ */
+
 .product-heading {
     margin: 15px 0;
     text-transform: none;
@@ -667,6 +736,10 @@ section h3.section-subheading {
     margin: 15px 0;
     text-transform: none;
 }
+
+/* ============================================================
+   10. 旧版 Project Grid (Legacy Project Grid)
+   ============================================================ */
 
 #project .project-item {
     right: 0;
@@ -745,6 +818,12 @@ section h3.section-subheading {
         margin: 0 0 30px;
     }
 }
+
+/* ============================================================
+   11. 时间轴 / About 页面 (Timeline / About Page)
+   ⚠️  注意：.vision-box 和 .vision-statement 原本在 hero.css 中
+   (已注释)，JS 中有引用这两个类。下方已将其补回以恢复 About 页面动画。
+   ============================================================ */
 
 .timeline {
     position: relative;
@@ -946,6 +1025,60 @@ section h3.section-subheading {
     }
 }
 
+/* vision-statement 和 vision-box（从 hero.css 补回，恢复 About 页面动画） */
+.vision-statement {
+    max-width: 750px;
+    margin: 40px auto;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    font-weight: 400;
+}
+
+.vision-statement strong {
+    font-size: 22px;
+    font-weight: 800;
+    color: #111;
+}
+
+.vision-statement em {
+    color: #ffcc00;
+    font-weight: 600;
+}
+
+.vision-statement strong.highlight {
+    color: #ffcc00;
+    font-weight: 700;
+}
+
+.vision-box {
+    background: #f9fafb;
+    padding: 25px 30px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease-in-out;
+}
+
+.vision-box:hover {
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.vision-box {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.vision-box.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ============================================================
+   12. 团队 (Team)
+   ============================================================ */
+
 .team-member {
     margin-bottom: 30px;
     text-align: center;
@@ -985,13 +1118,21 @@ section h3.section-subheading {
   margin-top: 6px;
 }
 
+/* ============================================================
+   13. 客户 (Clients)
+   ============================================================ */
+
 aside.clients img {
     margin: 50px auto;
 }
 
 
+/* ============================================================
+   14. 页脚 (Footer)
+   ============================================================ */
+
 footer {
-    
+
     box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1); 
     text-align: center;
     padding: 20px 0;
@@ -1016,12 +1157,20 @@ footer span.copyright {
     margin-bottom: 5px; 
 }
 
+/* ============================================================
+   15. 按钮 Focus 状态 (Button Focus States)
+   ============================================================ */
+
 .btn:focus,
 .btn:active,
 .btn.active,
 .btn:active:focus {
     outline: 0;
 }
+
+/* ============================================================
+   16. 弹窗 (Modal)
+   ============================================================ */
 
 .project-modal .modal-content {
     padding: 100px 0;
@@ -1094,6 +1243,10 @@ footer span.copyright {
     transform: rotate(90deg);
 }
 
+/* ============================================================
+   17. 全局杂项 (Global Misc)
+   ============================================================ */
+
 ::-moz-selection {
     text-shadow: none;
     background: #{{ site.data.template.color.primary }};
@@ -1115,6 +1268,10 @@ img::-moz-selection {
 body {
     webkit-tap-highlight-color: #{{ site.data.template.color.primary }};
 }
+
+/* ============================================================
+   18. Projects 页面 (Projects Page)
+   ============================================================ */
 
 /* 项目页面标题 */
 .projects-title {
@@ -1250,6 +1407,13 @@ body {
   text-transform: uppercase;
 }
 
+/* ============================================================
+   19. Products 页面 (Products Page)
+   ⚠️  注意：此节的 .attribute-block / .attribute-title / .attribute-content
+   是 Products 专用样式，第21节 Designs 页面有另一套同名定义会覆盖它。
+   建议后续加父选择器限制作用域。
+   ============================================================ */
+
 .product-intro-text {
   font-family: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
@@ -1377,6 +1541,11 @@ article h1 {
   line-height: 1.6;
 }
 
+/* ============================================================
+   20. 二级页面 Hero 详细样式 (Page Hero Banner — Detail)
+   补充第6节的基础定义，包含完整背景遮罩和文字样式。
+   ============================================================ */
+
 /*二级栏目图片栏目格式 */
 
 .hero-page-wrapper {
@@ -1493,6 +1662,26 @@ article h1 {
   );
   z-index: 1;
 }
+
+/* ============================================================
+   20b. 项目页面顶部横幅 (Project Header)
+   对应 project.html 中的 .project-header（替代原先的内联 height: 300px）
+   ============================================================ */
+
+.project-header {
+  width: 100%;
+  height: 320px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/* ============================================================
+   21. Designs 页面 (Designs Page)
+   ⚠️  注意：此节重新定义了 .section-title / .attribute-block /
+   .attribute-title / .attribute-content，会全局覆盖第8节和第19节的同名样式。
+   ============================================================ */
 
 /* =========================
    Design Detail Page
@@ -1840,8 +2029,12 @@ article h1 {
 .icon-row-spacing {
   margin-top: 70px;
 }
+/* ============================================================
+   22. Services & FAQ 页面 (Services & FAQ Page)
+   ============================================================ */
+
 /* =========================================================================
-   1. Icon Card 网格 + 卡片样式
+   Icon Card 网格 + 卡片样式
    ========================================================================= */
 
 /* 1.1 整个 Icon Card 网格容器的上下内边距及背景色（可自行调整） */
@@ -2247,6 +2440,10 @@ html {
 
 }
 
+/* ============================================================
+   23. Products — Explore 按钮 (Products Explore Button)
+   ============================================================ */
+
 /* Products页面内容，more less格式 */
 
   .explore-btn {
@@ -2266,6 +2463,10 @@ html {
     background-color: #e69500;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   }
+
+/* ============================================================
+   24. Post / Article 页面 (Post / Article Page)
+   ============================================================ */
 
   /* 给MD文章效果 */
 .summary-box {
@@ -2332,6 +2533,10 @@ html {
   margin: 20px auto;
 }
 
+/* ============================================================
+   25. Contact 页面 (Contact Page)
+   ============================================================ */
+
 /* Contact页面地理图格式 */
 .contact-bg {
   background-size: cover;
@@ -2378,53 +2583,21 @@ html {
   line-height: 1.7;
 }
 
-.contact-section {
-  padding: 60px 0 80px;
-}
-
-.company-info-box {
-  max-width: 980px;
-  margin: 0 auto;
-  background: #eef1f3;
-  padding: 48px 56px;
-  border-radius: 8px;
-}
-
-.contact-info-row {
-  align-items: flex-start;
-}
-
-.contact-box {
-  padding-right: 30px;
-}
-
-.contact-box-left {
-  max-width: 520px;
-}
-
-.contact-box-right {
-  padding-left: 30px;
-}
-
-.contact-box h4 {
-  margin-bottom: 18px;
-}
-
-.contact-box p {
-  margin-bottom: 14px;
-  line-height: 1.7;
-}
-
-/* Responsive Styles for Mobile Devices */
+/* ============================================================
+   26. 响应式媒体查询（汇总）Responsive Media Queries
+   以下各 @media 块原本分散在文件末尾，现合并为一个区块。
+   ============================================================ */
 
 @media (max-width: 768px) {
-  /* 示例样式，可后续逐步添加 */
+
+  /* --- 导航栏 --- */
   .navbar-brand img {
     max-height: 42px;
     width: auto;
     max-width: 260px;
   }
 
+  /* --- 首页 Hero --- */
   .hero-page h1 {
     font-size: 28px;
   }
@@ -2433,14 +2606,6 @@ html {
     font-size: 16px;
   }
 
-  .section-intro h2 {
-    font-size: 18px;
-    line-height: 1.4;
-  }
-}
-
-
-@media (max-width: 768px) {
   .intro-leadin {
     font-size: 22px;
     line-height: 1.4;
@@ -2456,8 +2621,7 @@ html {
     padding: 0px 0;
   }
 
-}
-@media (max-width: 768px) {
+  /* --- 通用 Section --- */
   .section-intro h2 {
     font-size: 18px;
     line-height: 1.4;
@@ -2472,11 +2636,8 @@ html {
     font-size: 14px;
     padding: 8px 16px;
   }
-}
 
-
-@media (max-width: 768px) {
-  /* 产品页主标题 */
+  /* --- Products 页面 --- */
   .section-heading {
     font-size: 22px;
     font-weight: 600;
@@ -2484,7 +2645,6 @@ html {
     text-align: center;
   }
 
-  /* 产品页正文段落 */
   .product-intro-text {
     font-size: 15px;
     line-height: 1.6;
@@ -2494,14 +2654,11 @@ html {
     text-align: left;
   }
 
-  /* 可选：精简段落上下间距 */
   .product-intro-text p {
     margin-bottom: 12px;
   }
-}
 
-@media (max-width: 768px) {
-  /* 缩小图片高度 */
+  /* --- 卡片组件 --- */
   .module-image {
     max-height: 180px;
     width: 100%;
@@ -2509,32 +2666,27 @@ html {
     object-fit: contain;
   }
 
-  /* 缩小主标题 */
   .module-title {
     font-size: 16px;
     margin-top: 12px;
     margin-bottom: 4px;
   }
 
-  /* 副标题字体缩小 */
   .module-description {
     font-size: 14px;
     line-height: 1.4;
   }
 
-  /* 调整按钮大小 */
   .module-link {
     font-size: 14px;
     padding: 6px 16px;
   }
 
-  /* 整体卡片内边距减少 */
   .module-content {
     padding: 12px;
   }
-}
 
-@media (max-width: 768px) {
+  /* --- Markdown / Post 内容 --- */
   .markdown-content h1 {
     font-size: 26px;
     line-height: 1.3;
@@ -2582,35 +2734,15 @@ html {
     padding: 10px 14px;
     margin: 16px 10px;
   }
-}
 
-@media (max-width: 768px) {
-  .markdown-content h1 {
-    font-size: 26px;
-    text-align: center;
-  }
-
-  .markdown-content h2 {
-    font-size: 20px;
-  }
-
-  .markdown-content p {
-    font-size: 15px;
-    padding: 4px 10px;
-  }
-}
-
-/* 响应式：服务页面，介绍文字 */
-@media (max-width: 768px) {
+  /* --- Services 介绍文字 --- */
   .service-intro p {
-    font-size: 1.5rem; 
+    font-size: 1.5rem;
   }
-}
 
-
-@media (max-width: 768px) {
+  /* --- Contact 页面 --- */
   #contact-header .company-name {
-    font-size: 1.8rem;  /* 原字体过大，适当缩小 */
+    font-size: 1.8rem;
     text-align: center;
     margin-bottom: 1rem;
   }
@@ -2624,8 +2756,7 @@ html {
     font-size: 1.2rem;
     line-height: 1.5;
   }
-}
-@media (max-width: 768px) {
+
   .company-info-box {
     padding: 1rem 1rem;
   }
@@ -2637,15 +2768,12 @@ html {
   .contact-box p {
     margin: 0.3rem 0;
   }
-}
 
-@media (max-width: 768px) {
   .contact-bg {
     height: 180px !important;
-    background-size: contain; /* 或 cover，根据实际效果调整 */
+    background-size: contain;
   }
-}
-@media (max-width: 768px) {
+
   .contact-box h4 {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
@@ -2656,5 +2784,200 @@ html {
   .contact-box strong {
     font-size: 1.3rem;
     line-height: 1.5;
+  }
+
+  /* 项目页横幅 */
+  .project-header {
+    height: 200px;
+  }
+}
+
+
+/* ============================================================
+   27. iPad 平板 (Tablet — 769px to 1024px)
+   针对 iPad 竖屏/横屏的专属样式，填补手机端与桌面端之间的空白
+   ============================================================ */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  /* 导航栏 Logo */
+  #nav-logo {
+    height: 52px;
+    width: auto;
+  }
+
+  /* 首页 Hero */
+  .hero-background {
+    height: 55vh;
+    min-height: 320px;
+  }
+
+  .intro-text-container {
+    min-height: 55vh;
+    padding: 100px 40px 60px;
+  }
+
+  .intro-heading {
+    font-size: 3rem;
+  }
+
+  .intro-subtitle {
+    font-size: 2rem;
+  }
+
+  .intro-subheading {
+    font-size: 1.3rem;
+    max-width: 90%;
+  }
+
+  /* 二级页面 Hero */
+  .page-hero-title {
+    font-size: 3rem;
+  }
+
+  .page-hero-subtitle {
+    font-size: 1.8rem;
+  }
+
+  /* 项目页横幅 */
+  .project-header {
+    height: 260px;
+  }
+
+  /* 卡片网格：iPad 上保持 2 列 */
+  .modules-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Project 卡片 */
+  .project-card {
+    max-width: 340px;
+  }
+
+  /* Design 属性块：2 列（桌面 3 列，移动 1 列，平板 2 列） */
+  .design-attributes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Service icon 网格调整 */
+  .service-icon-grid-section .icon-grid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+
+  /* Service 内容块 */
+  .service-block-inner {
+    padding: 28px 24px;
+  }
+
+  /* Vision / About 页面 */
+  .vision-statement {
+    font-size: 1.6rem;
+    padding: 0 2rem;
+  }
+
+  /* Company info box */
+  .company-info-box {
+    padding: 36px 40px;
+  }
+}
+
+
+/* ============================================================
+   28. 小屏手机 (Small Phone — ≤480px)
+   针对宽度不足 480px 的设备（iPhone SE、小屏安卓等）
+   ============================================================ */
+
+@media (max-width: 480px) {
+
+  /* 首页 Hero */
+  .hero-background {
+    min-height: 280px;
+  }
+
+  .intro-text-container {
+    padding: 90px 16px 48px;
+    min-height: auto;
+  }
+
+  .intro-heading {
+    font-size: 1.9rem;
+    line-height: 1.2;
+  }
+
+  .intro-subtitle {
+    font-size: 1.15rem;
+    line-height: 1.4;
+  }
+
+  .intro-subheading {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+  }
+
+  .btn.btn-xl {
+    font-size: 1.1rem;
+    padding: 10px 18px;
+  }
+
+  /* 二级页面 Hero */
+  .page-hero-title {
+    font-size: 1.75rem;
+    line-height: 1.3;
+  }
+
+  .page-hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  /* 项目页横幅 */
+  .project-header {
+    height: 160px;
+  }
+
+  /* 版块标题 */
+  .section-title h2 {
+    font-size: 1.35rem;
+  }
+
+  /* 卡片容器 */
+  .modules-container {
+    padding: 16px 8px;
+    gap: 12px;
+  }
+
+  /* Projects 筛选栏 */
+  .filter-container {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .filter-row {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  /* Services 服务内容 */
+  .service-label {
+    width: 48px;
+    height: 48px;
+    font-size: 18px;
+  }
+
+  .service-copy h2 {
+    font-size: 20px;
+  }
+
+  /* Contact */
+  .company-info-box {
+    padding: 1rem 0.75rem;
+  }
+
+  /* Vision / About */
+  .vision-statement {
+    font-size: 1.3rem;
+    padding: 0 0.75rem;
+  }
+
+  .vision-statement strong {
+    font-size: 1.5rem;
   }
 }

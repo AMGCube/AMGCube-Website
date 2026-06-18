@@ -7,10 +7,10 @@ header_image: /img/designs/design-banner.png
 product-category: Design / standard-designs
 
 overview: 
-  <strong>Typical size:</strong>Most projects fall within 60–80m²  <br>
-  <strong>Common layouts:</strong>1–2 bedrooms with 1–2 bathrooms  <br>
-  <strong>Optimised for delivery:</strong>Efficient planning, smoother approvals, faster construction  <br>
-  <strong>Flexible:</strong>Can be adjusted, or fully customised if needed
+  <strong>Typical size:</strong> Most projects fall within 60–80m²  <br>
+  <strong>Common layouts:</strong> 1–2 bedrooms with 1–2 bathrooms  <br>
+  <strong>Optimised for delivery:</strong> Efficient planning, smoother approvals, faster construction  <br>
+  <strong>Flexible:</strong> Can be adjusted, or fully customised if needed
 best_for: 
 key_benefits: 
 typical_use: 
@@ -28,7 +28,7 @@ designs:
       - /img/designs/layout-a-3d-3.jpg
       - /img/designs/layout-a-3d-4.jpg
     
-  - name: Layout c – Open Living Concept
+  - name: Layout C – Open Living Concept
     description: Larger living area with more open space and flexibility.
 
     floorplan: /img/designs/layout-c-floorplan.png

@@ -3203,3 +3203,159 @@ html {
     font-size: 1.5rem;
   }
 }
+
+/* ============================================================
+   29. 首页移动端专项优化 (Homepage Mobile — final override)
+   确保手机端首页的 Hero、OUR APPROACH、Footer 正确显示
+   ============================================================ */
+
+@media (max-width: 768px) {
+
+  /* Hero */
+  .hero-background {
+    height: 52vh;
+    min-height: 300px;
+  }
+
+  .intro-text-container {
+    padding: 80px 20px 40px;
+    min-height: 52vh;
+  }
+
+  .intro-text {
+    padding-top: 0;
+  }
+
+  .intro-heading {
+    font-size: 1.75rem;
+    line-height: 1.25;
+    margin-bottom: 10px;
+  }
+
+  .intro-subtitle {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+
+  .hero-actions {
+    display: flex;
+    justify-content: center;
+  }
+
+  .btn.btn-xl {
+    font-size: 0.9rem;
+    padding: 12px 28px;
+    width: auto;
+  }
+
+  /* OUR APPROACH — 两列 */
+  .home-trust {
+    padding: 40px 0 32px;
+  }
+
+  .home-trust .section-title {
+    margin-bottom: 28px;
+  }
+
+  .home-trust .section-title h2 {
+    font-size: 1.3rem;
+  }
+
+  .home-trust-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    padding: 0 16px;
+  }
+
+  .home-trust-card {
+    padding: 22px 18px 20px;
+  }
+
+  .home-trust-card-icon {
+    margin-bottom: 14px;
+  }
+
+  .home-trust-card-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .home-trust-card h3 {
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+
+  .home-trust-card p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  /* Footer — 单列堆叠 */
+  .footer-main {
+    padding: 40px 0 28px;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .footer-brand {
+    padding-right: 0;
+    padding-bottom: 28px;
+    margin-bottom: 28px;
+    border-bottom: 1px solid #e8e8e8;
+  }
+
+  .footer-logo {
+    width: 140px;
+  }
+
+  .footer-links {
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    padding: 0 0 28px 0;
+    margin-bottom: 28px;
+    border-bottom: 1px solid #e8e8e8;
+  }
+
+  .footer-contact {
+    padding-left: 0;
+    border-top: none;
+    padding-top: 0;
+  }
+
+  .footer-links h4,
+  .footer-contact h4 {
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
+
+  .footer-links li {
+    margin-bottom: 12px;
+  }
+
+  .footer-links a {
+    font-size: 14px;
+  }
+
+  .footer-contact li {
+    font-size: 14px;
+    margin-bottom: 14px;
+  }
+
+  .footer-bottom {
+    padding: 16px 0;
+  }
+}
+
+/* 极小屏 ≤ 390px — 卡片改为单列 */
+@media (max-width: 390px) {
+  .home-trust-grid {
+    grid-template-columns: 1fr;
+  }
+}

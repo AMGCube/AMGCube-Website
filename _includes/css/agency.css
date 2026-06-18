@@ -326,10 +326,7 @@ fieldset[disabled] .btn-xl.active {
 
 .hero-background {
   position: relative;
-  background-image: url(/img/home-bg.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  overflow: hidden;
   height: 60vh;
   min-height: 400px;
 
@@ -338,11 +335,28 @@ fieldset[disabled] .btn-xl.active {
   justify-content: center;
 }
 
+.hero-background::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url(/img/projects/146/146-exterior-finished-1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: brightness(1.08) contrast(1.05) saturate(1.10);
+  z-index: 0;
+}
+
 .hero-background::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55);
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.42) 0%,
+    rgba(0, 0, 0, 0.12) 50%,
+    rgba(0, 0, 0, 0.34) 100%
+  );
   z-index: 1;
 }
 
@@ -366,6 +380,7 @@ fieldset[disabled] .btn-xl.active {
 
 .intro-text {
   max-width: 860px;
+  padding-top: 50px;
   margin: 0 auto;
 }
 .intro-leadin {
@@ -438,6 +453,44 @@ fieldset[disabled] .btn-xl.active {
     max-width: 100%;
     margin-bottom: 26px;
   }
+
+  .hero-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-actions .btn.btn-xl {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .home-trust-grid {
+    grid-template-columns: 1fr;
+    padding: 0 14px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .footer-brand {
+    padding-right: 0;
+  }
+
+  .footer-links {
+    border-left: none;
+    border-right: none;
+    padding: 0;
+    border-top: 1px solid #e8e8e8;
+    padding-top: 24px;
+  }
+
+  .footer-contact {
+    padding-left: 0;
+    border-top: 1px solid #e8e8e8;
+    padding-top: 24px;
+  }
 }
 .btn.btn-xl {
   margin-top: 20px;
@@ -453,6 +506,81 @@ fieldset[disabled] .btn-xl.active {
 
 .btn.btn-xl:hover {
   background-color: #cc7a00;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-actions .btn.btn-xl {
+  margin-top: 0;
+}
+
+.hero-actions .btn-outline {
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  background-color: transparent;
+  color: #ffffff;
+}
+
+.hero-actions .btn-outline:hover,
+.hero-actions .btn-outline:focus {
+  border-color: #ffcc00;
+  background-color: rgba(255, 204, 0, 0.18);
+  color: #ffffff;
+}
+
+.home-trust {
+  padding: 46px 0 34px;
+}
+
+.home-trust .section-title {
+  margin-bottom: 40px;
+}
+
+.home-trust .section-title h2 {
+  font-size: 27px;
+}
+
+.home-trust-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  padding: 0 20px;
+}
+
+.home-trust-card {
+  background: #ffffff;
+  border-top: 3px solid #ffcc00;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  padding: 32px 28px 28px;
+}
+
+.home-trust-card-icon {
+  margin-bottom: 20px;
+}
+
+.home-trust-card-icon svg {
+  width: 34px;
+  height: 34px;
+}
+
+.home-trust-card h3 {
+  margin: 0 0 12px;
+  font-size: 15px;
+  line-height: 1.3;
+  color: #222222;
+}
+
+.home-trust-card p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #777777;
 }
 
 /* ============================================================
@@ -1132,29 +1260,106 @@ aside.clients img {
    ============================================================ */
 
 footer {
-
-    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1); 
-    text-align: center;
-    padding: 20px 0;
-    font-size: 14px;
-    
+  background: #f7f7f7;
+  border-top: 1px solid #e0e0e0;
+  font-size: 14px;
 }
 
-.footer-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.footer-main {
+  padding: 56px 0 40px;
 }
- 
-footer span.copyright {
 
-    font-family: {{ site.data.template.font.primary }};
-    text-align: center; 
-    font-size:14px;
-    color: #666
-    line-height: 30px;
-    margin-bottom: 5px; 
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 0;
+}
+
+.footer-brand {
+  padding-right: 52px;
+}
+
+.footer-links {
+  border-left: 1px solid #e8e8e8;
+  border-right: 1px solid #e8e8e8;
+  padding: 0 52px;
+}
+
+.footer-contact {
+  padding-left: 52px;
+}
+
+.footer-logo {
+  width: 170px;
+  height: auto;
+  display: block;
+  margin-bottom: 18px;
+  filter: brightness(0.48);
+}
+
+.footer-brand p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.85;
+  margin: 0;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  color: #222;
+  text-transform: uppercase;
+  margin: 0 0 24px;
+}
+
+.footer-links ul,
+.footer-contact ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 20px;
+}
+
+.footer-links a {
+  color: #555;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: #ffcc00;
+}
+
+.footer-contact li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: #555;
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+
+.footer-contact li svg {
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.footer-bottom {
+  border-top: 1px solid #e0e0e0;
+  padding: 18px 0;
+  text-align: center;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 13px;
+  color: #bbb;
 }
 
 /* ============================================================
@@ -2830,6 +3035,10 @@ html {
     max-width: 90%;
   }
 
+  .home-trust-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   /* 二级页面 Hero */
   .page-hero-title {
     font-size: 3rem;
@@ -2899,6 +3108,10 @@ html {
     min-height: auto;
   }
 
+  .intro-text {
+    padding-top: 0;
+  }
+
   .intro-heading {
     font-size: 1.9rem;
     line-height: 1.2;
@@ -2917,6 +3130,15 @@ html {
   .btn.btn-xl {
     font-size: 1.1rem;
     padding: 10px 18px;
+  }
+
+  .home-trust {
+    padding: 34px 0 24px;
+  }
+
+  .home-trust-card {
+    min-height: 0;
+    padding: 18px 16px;
   }
 
   /* 二级页面 Hero */

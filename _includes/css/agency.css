@@ -413,6 +413,19 @@ fieldset[disabled] .btn-xl.active {
   text-shadow: 0 1px 6px rgba(0, 0, 0, 0.24);
 }
 
+.intro-licence {
+  display: inline-block;
+  margin-bottom: 24px;
+  padding: 6px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 2px;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.24);
+}
+
 .intro-heading.sub-line {
   display: block;
   font-size: 2rem;   /* 从2.6降一点，但比现在大 */
@@ -1302,6 +1315,13 @@ footer {
   color: #666;
   line-height: 1.85;
   margin: 0;
+}
+
+.footer-brand .footer-licence {
+  margin-top: 14px;
+  color: #444;
+  font-weight: 600;
+  line-height: 1.55;
 }
 
 .footer-links h4,

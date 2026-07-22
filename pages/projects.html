@@ -14,7 +14,8 @@ hero_subtitle: "See how AMGCUBE projects take shape in real sites and real condi
 <section class="projects-container bg-light-gray">
     <div class="modules-container" id="projects-list">
         {% assign unique_posts = site.posts | where: "categories", "Projects" | sort: "date" | reverse %}
-        {% for post in unique_posts %}
+        {% assign public_projects = unique_posts | where_exp: "post", "post.listed != false" %}
+        {% for post in public_projects %}
             <a href="{{ post.url }}" class="module-card-link" 
                data-type="{{ post.type }}" 
                data-location="{{ post.location }}">

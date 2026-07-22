@@ -5,6 +5,7 @@ layout: project
 date: 2024-06-18
 permalink: /projects/Shuchun/
 categories: ["Projects"]
+listed: false
 thumbnail: shuchun/shuchun-thumbnail.jpg
 alt: image-alt
 

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+</head>
+
+<body class="can-i-build-body can-i-build-detail-body">
+  {% include nav.html %}
+  {% include hero-page.html %}
+
+  <main class="build-detail-main">
+    <div class="container">
+      {% include can-i-build-breadcrumb.html %}
+      {{ content }}
+    </div>
+  </main>
+
+  <section class="build-detail-next" aria-label="Can I Build next step">
+    <div class="container">
+      <div>
+        <p>Continue your property check</p>
+        <h2>Start with the property, not the floor plan.</h2>
+      </div>
+      <div class="build-detail-next-actions">
+        <a class="build-back-link" href="/can-i-build/"><span aria-hidden="true">&larr;</span> Back to Can I Build</a>
+        <a class="property-check-button" href="/contact/#contact-header">Start the property check <span aria-hidden="true">&rarr;</span></a>
+      </div>
+    </div>
+  </section>
+
+  {% include js.html %}
+  {% include footer.html %}
+</body>
+</html>

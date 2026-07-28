@@ -10,18 +10,21 @@ hero_subtitle: "Visit our Oxley display home or talk to our Brisbane team about 
 <section id="contact-header" class="bg-light-gray contact-section">
   <div class="container">
     <div class="company-info-box">
-      <h2 class="company-name">AMGCUBE Pty Ltd</h2>
+      <h2 class="company-name">{{ site.company.legal_name }}</h2>
       <p>Brisbane-based QBCC-licensed builder focused on granny flats.</p>
 
       <div class="row contact-info-row">
         <div class="col-md-6 contact-box contact-box-left">
-          <h4>Brisbane, Queensland</h4>
-          <p><strong>Phone:</strong> +61 458 533 333</p>
-          <p><strong>Email:</strong> info@amgcube.com</p>
-          <p><strong>Display Home:</strong> 146 Dowding St, Oxley</p>
+          <h4>{{ site.company.location }}</h4>
+          <p><strong>Phone:</strong> {{ site.company.phone }}</p>
+          <p><strong>Email:</strong> {{ site.company.email }}</p>
+          <p><strong>Display Home:</strong> {{ site.company.display_home }}</p>
         </div>
 
         <div class="col-md-6 contact-box contact-box-right">
+          <h4>Builder Details</h4>
+          <p><strong>QBCC Licence:</strong> {{ site.company.qbcc_licence_number }}</p>
+          <p><strong>Licence Class:</strong> {{ site.company.qbcc_licence_class }}</p>
           <h4>Social Media</h4>
           <p><strong>Wechat:</strong> AMGCUBE</p>
           <p><strong>RED / Xiaohongshu :</strong> AMGCube</p>

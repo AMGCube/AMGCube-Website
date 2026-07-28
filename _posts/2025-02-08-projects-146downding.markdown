@@ -1,5 +1,6 @@
 ---
 title: 146 Dowding St, Oxley Display Home
+card-title: Oxley Display Home
 subtitle: Completed granny flat display home, Brisbane
 layout: project
 date: 2026-02-01
@@ -11,8 +12,13 @@ alt: image-alt
 location: Oxley, Brisbane
 project-type: Granny flat / display home
 project-status: Completed
+status-label: Completed · Display Home
+status-key: completed
+card-description: A completed two-bedroom granny flat display home in Oxley.
+card-cta: View Project
 completion: Jan, 2026
 floor-area: 80m²
+layout-summary: 2 bedrooms, 1 bathroom
 construction-time: Approximately 3.5 months
 
 progress:

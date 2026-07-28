@@ -5,6 +5,15 @@ baseurl: ""
 title: "AMGCUBE | Granny Flat Builder Brisbane"
 description: "AMGCUBE is a Brisbane-based licensed builder focused on practical, well-planned granny flats."
 
+company:
+  legal_name: "AMGCUBE PTY LTD"
+  phone: "+61 458 533 333"
+  email: "info@amgcube.com"
+  display_home: "146 Dowding St, Oxley"
+  location: "Brisbane, Queensland"
+  qbcc_licence_number: "15616213"
+  qbcc_licence_class: "Builder – Low Rise"
+
 # Team names, titles and social links
 people:
 - name: Leon Liu

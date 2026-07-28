@@ -1,0 +1,118 @@
+{% assign featured_project = site.posts | where: "permalink", "/projects/146dowding/" | first %}
+
+<main class="home-overview">
+  <section class="home-section home-split-section" aria-labelledby="property-check-title">
+    <div class="container home-can-build">
+      <div class="home-can-build-heading">
+        <p class="home-eyebrow">Can I build?</p>
+        <h2 id="property-check-title">Not sure if your backyard works?</h2>
+      </div>
+      <div class="home-can-build-copy">
+        <p>It's not just about how big your yard is. Access, slope and where your pipes run all make a difference — and they're easy to check.</p>
+        <a class="text-link" href="/can-i-build/">See what's involved <span aria-hidden="true">&rarr;</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-section home-basics bg-light-gray" aria-labelledby="basics-title">
+    <div class="container">
+      <div class="home-section-heading">
+        <p class="home-eyebrow">Granny flat basics</p>
+        <h2 id="basics-title">What to expect</h2>
+      </div>
+      <div class="home-basics-grid">
+        <article class="home-basics-card">
+          <i class="fa-solid fa-ruler-combined" aria-hidden="true"></i>
+          <p class="home-basics-figure">60&ndash;100m&sup2;</p>
+          <p class="home-basics-label">1 to 3 bedrooms</p>
+        </article>
+        <article class="home-basics-card">
+          <i class="fa-solid fa-coins" aria-hidden="true"></i>
+          <p class="home-basics-figure">From $250k<span class="home-basics-star">*</span></p>
+          <p class="home-basics-label">All in</p>
+        </article>
+        <article class="home-basics-card">
+          <i class="fa-solid fa-calendar-days" aria-hidden="true"></i>
+          <p class="home-basics-figure">4&ndash;6 months</p>
+          <p class="home-basics-label">Start to keys</p>
+        </article>
+      </div>
+      <div class="home-basics-footer">
+        <p class="home-basics-disclaimer">*Indicative only. Final price depends on your site and selections.</p>
+        <a class="text-link" href="/can-i-build/">See what your block can take <span aria-hidden="true">&rarr;</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-section home-process" aria-labelledby="process-title">
+    <div class="container home-process-container">
+      <div class="home-section-heading">
+        <p class="home-eyebrow">How it works</p>
+        <h2 id="process-title">From first chat to moving in</h2>
+        <p>A clear path, with every decision made before it becomes expensive to change.</p>
+      </div>
+      <ol class="home-process-timeline">
+        <li data-process-item>
+          <div class="home-process-marker">
+            <button class="home-process-step" type="button" aria-expanded="false" aria-controls="process-detail-01">01</button>
+            <div class="home-process-popover" id="process-detail-01" role="tooltip" hidden><strong>First chat</strong><p>Tell us what you need, what matters to you and where your property is located.</p></div>
+          </div>
+          <p>First chat</p>
+        </li>
+        <li data-process-item>
+          <div class="home-process-marker">
+            <button class="home-process-step" type="button" aria-expanded="false" aria-controls="process-detail-02">02</button>
+            <div class="home-process-popover" id="process-detail-02" role="tooltip" hidden><strong>We check your block</strong><p>We look at access, slope, services and the planning constraints that shape the project.</p></div>
+          </div>
+          <p>We check your block</p>
+        </li>
+        <li data-process-item>
+          <div class="home-process-marker">
+            <button class="home-process-step" type="button" aria-expanded="false" aria-controls="process-detail-03">03</button>
+            <div class="home-process-popover" id="process-detail-03" role="tooltip" hidden><strong>Design and site planning</strong><p>The layout, orientation and site works are developed around your block and priorities.</p></div>
+          </div>
+          <p>Design and site planning</p>
+        </li>
+        <li data-process-item>
+          <div class="home-process-marker">
+            <button class="home-process-step" type="button" aria-expanded="false" aria-controls="process-detail-04">04</button>
+            <div class="home-process-popover" id="process-detail-04" role="tooltip" hidden><strong>You see the price</strong><p>We explain the proposed scope, site allowances and selections before you commit.</p></div>
+          </div>
+          <p>You see the price</p>
+        </li>
+        <li data-process-item>
+          <div class="home-process-marker">
+            <button class="home-process-step" type="button" aria-expanded="false" aria-controls="process-detail-05">05</button>
+            <div class="home-process-popover" id="process-detail-05" role="tooltip" hidden><strong>Contract and approvals</strong><p>Documentation, contracts and the required approvals are coordinated before construction.</p></div>
+          </div>
+          <p>Contract and approvals</p>
+        </li>
+        <li data-process-item>
+          <div class="home-process-marker">
+            <button class="home-process-step" type="button" aria-expanded="false" aria-controls="process-detail-06">06</button>
+            <div class="home-process-popover" id="process-detail-06" role="tooltip" hidden><strong>Build and handover</strong><p>We manage construction, keep you informed and complete the final handover with you.</p></div>
+          </div>
+          <p>We build it and hand you the keys</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="home-section home-projects bg-light-gray" aria-labelledby="home-projects-title">
+    <div class="container">
+      <div class="home-section-heading">
+        <p class="home-eyebrow">Our projects</p>
+        <h2 id="home-projects-title">See one for yourself</h2>
+      </div>
+      <article class="featured-project-card">
+        <img src="{{ site.baseurl }}/img/projects/{{ featured_project.thumbnail }}" alt="Completed Oxley granny flat display home" loading="lazy">
+        <div class="featured-project-copy">
+          <p class="project-status-tag">Completed &middot; Display home</p>
+          <h3>{{ featured_project.title }}</h3>
+          <p class="featured-project-summary">{{ featured_project.location }} <span aria-hidden="true">&middot;</span> {{ featured_project.floor-area }} <span aria-hidden="true">&middot;</span> {{ featured_project.layout-summary }}</p>
+          <a class="text-link" href="{{ featured_project.url }}">View project <span aria-hidden="true">&rarr;</span></a>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>

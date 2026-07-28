@@ -10,9 +10,9 @@ thumbnail: shuchun/shuchun-thumbnail.jpg
 alt: image-alt
 
 client: Rongchuang Group
-location: Others
-type: House
-project-status: finished
+location: Haidian, Beijing, China
+project-type: Historical technology collaboration
+project-status: Completed
 project-date: Jun, 2024
 floor-area: 140-280㎡
 
@@ -30,6 +30,11 @@ progress:
  
     
 ---
+
+<div class="historical-project-notice">
+  <strong>Historical technology collaboration in Beijing, China.</strong>
+  This was not an AMGCUBE Queensland building project.
+</div>
 
 ### Project Overview
 

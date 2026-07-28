@@ -44,7 +44,7 @@ description: |
   
 
 images:
-   - img: img/products/interior-wall.png
+   - img: img/products/interior-wall-finishes.png
      text: Integrated panels - wall
    - img: img/products/windows-1.png
      text: Thermal break windows

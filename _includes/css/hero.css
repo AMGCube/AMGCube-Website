@@ -549,7 +549,7 @@
 }
 
 /* 文章整体布局 */
-.container {
+.article-container {
     max-width: 800px;
     margin: 40px auto;
     padding: 20px;

@@ -3,32 +3,44 @@ layout: page
 title: "AMGCUBE | Projects"
 permalink: /projects/
 header_image: "/img/projects-header.jpg"
-hero_title: "From Concept to Reality"
-hero_subtitle: "See how AMGCUBE projects take shape in real sites and real conditions."
+hero_title: "Brisbane Granny Flat Projects"
+hero_subtitle: "Completed work and future builds documented with practical project details."
 ---
 
 <div class="container text-center projects-heading">
     <h1 class="projects-title">Projects</h1>
+    <p class="projects-intro">A growing record of our granny flat projects across Brisbane — from active construction sites to completed homes.</p>
 </div>
 
-<section class="projects-container bg-light-gray">
-    <div class="modules-container" id="projects-list">
+<section class="projects-container">
+    <div class="projects-grid" id="projects-list">
         {% assign unique_posts = site.posts | where: "categories", "Projects" | sort: "date" | reverse %}
         {% assign public_projects = unique_posts | where_exp: "post", "post.listed != false" %}
         {% for post in public_projects %}
-            <a href="{{ post.url }}" class="module-card-link" 
-               data-type="{{ post.type }}" 
-               data-location="{{ post.location }}">
-                <div class="project-card">
+            <article class="project-list-card">
+                <div class="project-list-image">
                     <img src="{{ site.baseurl }}/img/projects/{{ post.thumbnail }}"
-                         alt="{{ post.title }}"
-                         class="module-image" loading="lazy">
-                    <div class="module-content">
-                        <h3 class="project-cards-title">{{ post.title }}</h3>
-                        <p class="module-description">{{ post.subtitle }}</p>
-                    </div>
+                         alt="{{ post.card-title | default: post.title }}"
+                         loading="lazy">
+                    <span class="project-status-badge project-status-{{ post.status-key | default: 'completed' }}">
+                        {{ post.status-label | default: post.project-status }}
+                    </span>
                 </div>
-            </a>
+                <div class="project-list-content">
+                    <h2>{{ post.card-title | default: post.title }}</h2>
+                    {% if post.current-stage %}
+                        <p class="project-current-stage"><strong>Current stage:</strong> {{ post.current-stage }}</p>
+                    {% elsif post.card-description %}
+                        <p class="project-card-description">{{ post.card-description }}</p>
+                    {% endif %}
+                    <dl class="project-list-facts">
+                        {% if post.location %}<div><dt>Location</dt><dd>{{ post.location }}</dd></div>{% endif %}
+                        {% if post.floor-area %}<div><dt>Floor area</dt><dd>{{ post.floor-area }}</dd></div>{% endif %}
+                        {% if post.layout-summary %}<div><dt>Layout</dt><dd>{{ post.layout-summary }}</dd></div>{% endif %}
+                    </dl>
+                    <a class="project-card-link" href="{{ post.url }}">{{ post.card-cta | default: "View Project" }}</a>
+                </div>
+            </article>
         {% endfor %}
     </div>
 </section>

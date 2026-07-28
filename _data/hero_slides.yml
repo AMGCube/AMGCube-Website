@@ -1,0 +1,8 @@
+# Add future Hero images here. Keep all images close to a 16:9 aspect ratio.
+- image: /img/hero-granny-flat-linework.png
+  alt: Line drawing of a Brisbane granny flat elevation
+  label: A home shaped around your site
+
+- image: /img/hero-granny-flat-linework-cropped.png
+  alt: Architectural line drawing showing a granny flat facade
+  label: Practical design, carefully resolved

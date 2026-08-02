@@ -15,6 +15,18 @@
           {{ page.hero_title | default: page.title }}
         </div>
 
+        {% if page.hero_lead %}
+        <p class="page-hero-lead">
+          {{ page.hero_lead }}
+        </p>
+        {% endif %}
+
+        {% if page.hero_detail %}
+        <p class="page-hero-detail">
+          {{ page.hero_detail }}
+        </p>
+        {% endif %}
+
       </div>
     </div>
     {% endif %}

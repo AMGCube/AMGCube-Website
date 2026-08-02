@@ -4,73 +4,92 @@
   {% include head.html %}
 </head>
 
-<body>
+<body class="project-detail-page">
   {% include nav.html %}
 
-  <!-- 顶部图 -->
-  {% if page.header_image %}
-    <div class="project-header" style="background-image: url('{{ page.header_image | relative_url }}');"></div>
-  {% else %}
-    <div class="project-header" style="background-image: url('/img/project-banner.jpg');"></div>
-  {% endif %}
+  <main>
+    <header class="project-detail-hero">
+      <div class="container project-detail-hero-grid">
+        <div class="project-detail-hero-copy">
+          <a class="project-detail-back" href="{{ '/projects/' | relative_url }}"><span aria-hidden="true">←</span> All projects</a>
+          <p class="project-detail-status project-detail-status-{{ page.status-key | default: 'completed' }}">
+            {{ page.status-label | default: page.project-status }}
+          </p>
+          <h1>{{ page.card-title | default: page.title }}</h1>
+          {% if page.card-description or page.subtitle %}
+            <p class="project-detail-lead">{{ page.card-description | default: page.subtitle }}</p>
+          {% endif %}
+        </div>
 
-  <article class="article-container markdown-content">
+        {% if page.hero-image %}
+          <figure class="project-detail-hero-image project-detail-hero-image-{{ page.hero-fit | default: 'cover' }}">
+            <img src="{{ page.hero-image | relative_url }}" alt="{{ page.hero-alt | default: page.card-title | default: page.title }}">
+          </figure>
+        {% endif %}
+      </div>
+    </header>
 
-    <h1>{{ page.title }}</h1>
-    {% if page.subtitle %}
-      <h4 style="color: #777;">{{ page.subtitle }}</h4>
-    {% endif %}
-
-    <!-- 第一部分：项目属性 -->
-    <section class="project-attributes grid-3">
-      {% if page.location %}
-        <div><strong>Location:</strong> {{ page.location }}</div>
-      {% endif %}
-      {% if page.floor-area %}
-        <div><strong>Floor Area:</strong> {{ page.floor-area }}</div>
-      {% endif %}
-      {% if page.layout-summary %}
-        <div><strong>Layout:</strong> {{ page.layout-summary }}</div>
-      {% endif %}
-      {% if page.project-type %}
-        <div><strong>Type:</strong> {{ page.project-type }}</div>
-      {% endif %}
-      {% if page.project-status %}
-        <div><strong>Status:</strong> {{ page.project-status }}</div>
-      {% endif %}
-      {% if page.current-stage %}
-        <div><strong>Current Stage:</strong> {{ page.current-stage }}</div>
-      {% endif %}
-      {% if page.completion %}
-        <div><strong>Completion:</strong> {{ page.completion }}</div>
-      {% endif %}
-      {% if page.construction-time %}
-        <div><strong>Construction Time:</strong> {{ page.construction-time }}</div>
-      {% endif %}
+    <section class="project-detail-facts" aria-label="Project details">
+      <div class="container">
+        <dl class="project-detail-facts-grid">
+          {% if page.location %}<div><dt>Location</dt><dd>{{ page.location }}</dd></div>{% endif %}
+          {% if page.project-type %}<div><dt>Project</dt><dd>{{ page.project-type }}</dd></div>{% endif %}
+          {% if page.floor-area %}<div><dt>Floor area</dt><dd>{{ page.floor-area }}</dd></div>{% endif %}
+          {% if page.layout-summary %}<div><dt>Layout</dt><dd>{{ page.layout-summary }}</dd></div>{% endif %}
+          {% if page.current-stage %}<div><dt>Current stage</dt><dd>{{ page.current-stage }}</dd></div>{% endif %}
+          {% if page.commencement %}<div><dt>Started</dt><dd>{{ page.commencement }}</dd></div>{% endif %}
+          {% if page.completion %}<div><dt>Completed</dt><dd>{{ page.completion }}</dd></div>{% endif %}
+          {% if page.construction-time %}<div><dt>Construction</dt><dd>{{ page.construction-time }}</dd></div>{% endif %}
+        </dl>
+      </div>
     </section>
 
-   <hr class="section-divider"> <!-- ✅ 分隔线 -->
-    <!-- 第二部分：项目点评（直接渲染正文 Markdown）-->
-    <section class="project-review">
-    {{ content }}
-     </section>
+    <article class="project-detail-story">
+      <div class="container project-detail-story-grid">
+        <header class="project-detail-section-heading">
+          <p class="project-detail-eyebrow">Project overview</p>
+          <h2>The project, in context.</h2>
+        </header>
+        <div class="project-detail-markdown">
+          {{ content }}
+        </div>
+      </div>
+    </article>
 
-      <!-- 第三部分：项目图片 -->
-      {% if page.progress %}
-      <section class="project-timeline">
-        <h2 class="section-title">Details</h2>
-          {% for item in page.progress %}
-            <div class="timeline-stage">
-              <img src="{{ site.baseurl }}/{{ item.img }}" class="img-responsive" loading="lazy" alt="project progress image">
-              {% if item.text %}
-                <p class="caption">{{ item.text }}</p>
-              {% endif %}
-            </div>
-          {% endfor %}
+    {% if page.progress %}
+      <section class="project-detail-progress" aria-labelledby="project-progress-title">
+        <div class="container">
+          <header class="project-detail-progress-heading">
+            <p class="project-detail-eyebrow">Project record</p>
+            {% if page.status-key == 'completed' %}
+              <h2 id="project-progress-title">From site to completion.</h2>
+              <p>Selected stages from the completed project, shown from the most recent record back to where the work began.</p>
+            {% else %}
+              <h2 id="project-progress-title">Construction progress.</h2>
+              <p>Construction stages recorded to date, shown from the most recent update back to where the work began.</p>
+            {% endif %}
+          </header>
+
+          <div class="project-detail-progress-grid">
+            {% for item in page.progress %}
+              <figure class="project-detail-progress-item project-detail-progress-item-{{ item.orientation | default: 'landscape' }}">
+                <img src="{{ item.img | relative_url }}" loading="lazy" alt="{{ item.alt | default: page.card-title | default: page.title }} — {{ item.text | default: 'project progress' }}">
+                {% if item.text %}<figcaption>{{ item.text }}</figcaption>{% endif %}
+              </figure>
+            {% endfor %}
+          </div>
+        </div>
       </section>
     {% endif %}
 
-  </article>
+    <nav class="project-detail-footer" aria-label="Projects navigation">
+      <div class="container">
+        <p class="project-detail-eyebrow">More work</p>
+        <a href="{{ '/projects/' | relative_url }}">View all projects <span aria-hidden="true">→</span></a>
+      </div>
+    </nav>
+  </main>
+
   {% include footer.html %}
 </body>
 </html>

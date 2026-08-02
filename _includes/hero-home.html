@@ -1,18 +1,18 @@
 <header class="hero-home">
   <div class="hero-background">
-    <div class="hero-grid">
+    <div class="hero-grid container" data-hero-carousel data-interval="6000" aria-roledescription="carousel" aria-label="Featured granny flat designs">
       <div class="intro-text">
         <p class="hero-eyebrow">Designed and built for South East Queensland</p>
         <div class="intro-heading">
           <span class="hero-heading-primary">Granny flats</span>
           <span class="hero-heading-location">Brisbane &amp; surrounds</span>
         </div>
-        <p class="intro-subtitle">A second home in your backyard — designed to fit your block.</p>
+        <p class="intro-subtitle">A second home in your backyard, designed to fit your block.</p>
         <div class="hero-actions">
           <a class="hero-secondary-link" href="/projects/">View our projects</a>
         </div>
       </div>
-      <div class="hero-linework" data-hero-carousel data-interval="6000" aria-roledescription="carousel" aria-label="Featured granny flat designs">
+      <div class="hero-linework">
         <div class="hero-carousel-viewport" aria-live="off">
           {% for slide in site.data.hero_slides %}
             <figure class="hero-carousel-slide{% if forloop.first %} is-active{% endif %}"
@@ -28,20 +28,20 @@
             </figure>
           {% endfor %}
         </div>
-        {% if site.data.hero_slides.size > 1 %}
-          <div class="hero-carousel-controls" aria-label="Choose a Hero image">
-            {% for slide in site.data.hero_slides %}
-              <button type="button"
-                      class="hero-carousel-dot{% if forloop.first %} is-active{% endif %}"
-                      data-hero-dot="{{ forloop.index0 }}"
-                      aria-label="Show image {{ forloop.index }}"
-                      aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}">
-                <span></span>
-              </button>
-            {% endfor %}
-          </div>
-        {% endif %}
       </div>
+      {% if site.data.hero_slides.size > 1 %}
+        <div class="hero-carousel-controls" aria-label="Choose a Hero image">
+          {% for slide in site.data.hero_slides %}
+            <button type="button"
+                    class="hero-carousel-dot{% if forloop.first %} is-active{% endif %}"
+                    data-hero-dot="{{ forloop.index0 }}"
+                    aria-label="Show image {{ forloop.index }}"
+                    aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}">
+              <span></span>
+            </button>
+          {% endfor %}
+        </div>
+      {% endif %}
     </div>
   </div>
 </header>

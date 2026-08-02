@@ -1,47 +1,16 @@
-<header class="hero-home">
-  <div class="hero-background">
-    <div class="hero-grid container" data-hero-carousel data-interval="6000" aria-roledescription="carousel" aria-label="Featured granny flat designs">
-      <div class="intro-text">
-        <p class="hero-eyebrow">Designed and built for South East Queensland</p>
-        <div class="intro-heading">
-          <span class="hero-heading-primary">Granny flats</span>
-          <span class="hero-heading-location">Brisbane &amp; surrounds</span>
-        </div>
-        <p class="intro-subtitle">A second home in your backyard, designed to fit your block.</p>
-        <div class="hero-actions">
-          <a class="hero-secondary-link" href="/projects/">View our projects</a>
-        </div>
+<header class="home-hero" aria-labelledby="home-hero-title">
+  <div class="home-shell home-hero-grid">
+    <div class="home-hero-copy">
+      <p class="home-eyebrow">Designed and built for South East Queensland</p>
+      <h1 id="home-hero-title">Granny flats<br><span>Brisbane &amp; surrounds</span></h1>
+      <p class="home-hero-lead">A second home in your backyard, designed to fit your block.</p>
+      <div class="home-hero-actions">
+        <a class="editorial-button" href="/contact/">Talk to us</a>
+        <a class="editorial-text-link" href="/projects/">View our projects <span aria-hidden="true">→</span></a>
       </div>
-      <div class="hero-linework">
-        <div class="hero-carousel-viewport" aria-live="off">
-          {% for slide in site.data.hero_slides %}
-            <figure class="hero-carousel-slide{% if forloop.first %} is-active{% endif %}"
-                    data-hero-slide
-                    aria-hidden="{% if forloop.first %}false{% else %}true{% endif %}">
-              <img src="{{ slide.image }}"
-                   alt="{{ slide.alt }}"
-                   {% if forloop.first %}loading="eager"{% else %}loading="lazy"{% endif %}>
-              <figcaption class="hero-drawing-caption">
-                <span>{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>
-                {{ slide.label }}
-              </figcaption>
-            </figure>
-          {% endfor %}
-        </div>
-      </div>
-      {% if site.data.hero_slides.size > 1 %}
-        <div class="hero-carousel-controls" aria-label="Choose a Hero image">
-          {% for slide in site.data.hero_slides %}
-            <button type="button"
-                    class="hero-carousel-dot{% if forloop.first %} is-active{% endif %}"
-                    data-hero-dot="{{ forloop.index0 }}"
-                    aria-label="Show image {{ forloop.index }}"
-                    aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}">
-              <span></span>
-            </button>
-          {% endfor %}
-        </div>
-      {% endif %}
     </div>
+    <figure class="home-hero-image">
+      <img src="/img/projects/oxley-granny-flat/hero.webp" alt="Completed AMGCube granny flat in Oxley, Brisbane" width="1690" height="900">
+    </figure>
   </div>
 </header>

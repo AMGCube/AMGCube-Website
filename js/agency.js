@@ -76,6 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
         var timer = null;
         var interval = parseInt(carousel.getAttribute("data-interval"), 10) || 6000;
         var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        var heroBackground = carousel.closest(".hero-background");
 
         if (slides.length < 2) {
             return;
@@ -89,6 +90,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 slide.classList.toggle("is-active", isActive);
                 slide.setAttribute("aria-hidden", isActive ? "false" : "true");
             });
+
+            if (heroBackground) {
+                heroBackground.classList.toggle(
+                    "is-project-scene",
+                    slides[currentIndex].classList.contains("hero-carousel-slide--project-scene")
+                );
+            }
 
             dots.forEach(function (dot, dotIndex) {
                 var isActive = dotIndex === currentIndex;

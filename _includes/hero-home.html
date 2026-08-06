@@ -12,12 +12,14 @@
       <div class="hero-linework">
         <div class="hero-carousel-viewport" aria-live="off">
           {% for slide in site.data.hero_slides %}
-            <figure class="hero-carousel-slide{% if forloop.first %} is-active{% endif %}"
+            <figure class="hero-carousel-slide{% if slide.crop_scene %} hero-carousel-slide--project-scene{% endif %}{% if forloop.first %} is-active{% endif %}"
                     data-hero-slide
                     aria-hidden="{% if forloop.first %}false{% else %}true{% endif %}">
+              {% if slide.crop_scene %}<div class="hero-carousel-image-frame">{% endif %}
               <img src="{{ slide.image }}"
                    alt="{{ slide.alt }}"
                    {% if forloop.first %}loading="eager"{% else %}loading="lazy"{% endif %}>
+              {% if slide.crop_scene %}</div>{% endif %}
               <figcaption class="hero-drawing-caption">
                 <span>{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>
                 {{ slide.label }}

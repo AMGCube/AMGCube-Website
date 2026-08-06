@@ -1,5 +1,5 @@
 ---
-title: Sunnybank Hills Granny Flat Project
+title: Sunnybank Hills Granny Flat
 card-title: Sunnybank Hills Granny Flat Project
 subtitle: Active granny flat project in Sunnybank Hills, Brisbane
 layout: project

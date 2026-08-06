@@ -1,239 +1,273 @@
-/* Contact page unified content area. Scoped below the existing Hero. */
-.contact-main .contact-hub {
-  padding: 100px 0 104px;
-  background: var(--surface-page);
+/* Talk to Us — compact, page-specific contact actions. */
+html,
+.contact-page-body {
+  overflow-x: clip;
 }
 
-.contact-main .contact-hub-grid {
-  display: grid;
-  width: calc(100% - 48px);
-  max-width: var(--container-max);
-  grid-template-columns: minmax(0, 44fr) minmax(0, 50fr);
-  grid-template-rows: auto auto auto 1fr;
-  column-gap: 6%;
-  margin: 0 auto;
+/* The top value includes the overlaid navigation; visible Hero breathing room stays compact. */
+.contact-page-body .hero-page {
+  height: auto;
+  min-height: 0;
+  padding: 116px 0 62px;
+  align-items: flex-start;
 }
 
-.contact-main .contact-hub-grid::before,
-.contact-main .contact-hub-grid::after {
-  display: none;
-  content: none;
+.contact-page-body .page-hero-text {
+  max-width: 760px;
 }
 
-.contact-main .contact-hub-eyebrow,
-.contact-main .contact-hub-title,
-.contact-main .contact-hub-intro,
-.contact-main .contact-hub-local {
-  grid-column: 1;
+.contact-page-body .page-hero-title {
+  max-width: 700px;
 }
 
-.contact-main .contact-hub-eyebrow {
-  grid-row: 1;
-  margin-bottom: 18px;
+.contact-page-body .page-hero-lead {
+  max-width: 650px;
+  margin-top: 25px;
 }
 
-.contact-main .contact-hub-title {
-  grid-row: 2;
-  max-width: 500px;
+.contact-main .talk-actions {
+  height: auto;
+  min-height: 0;
   margin: 0;
-  color: var(--brand-navy-deep);
-  font-size: clamp(38px, 4vw, 54px);
-  font-weight: 600;
-  letter-spacing: -1.8px;
-  line-height: 1.08;
-  text-transform: none;
+  padding: 74px 0 78px;
+  background: var(--surface-page, #fcfcfa);
 }
 
-.contact-main .contact-hub-intro {
-  grid-row: 3;
-  max-width: 500px;
-  margin: 27px 0 0;
-  color: var(--type-muted);
-  font-size: var(--type-body-feature);
-  line-height: var(--type-line);
-}
-
-.contact-main .contact-hub-local {
-  grid-row: 4;
-  align-self: end;
-  max-width: 460px;
-  margin: 43px 0 0;
-  padding-top: 22px;
-  border-top: 1px solid var(--surface-line);
-  color: var(--brand-navy-deep);
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 1.4;
-}
-
-.contact-main .contact-hub-list {
-  grid-column: 2;
-  grid-row: 1 / span 4;
-  width: 100%;
-  border-top: 1px solid var(--surface-line);
-  border-bottom: 1px solid var(--surface-line);
-}
-
-.contact-main .contact-hub-row {
+.contact-main .talk-actions__inner {
   display: grid;
-  grid-template-columns: minmax(118px, 0.72fr) minmax(0, 1.65fr) auto;
-  align-items: center;
-  gap: 24px;
-  min-height: 92px;
-  padding: 20px 0;
-  border-bottom: 1px solid var(--surface-line);
-  color: var(--brand-navy);
-  text-decoration: none;
-  transition: color 180ms ease;
+  width: min(1180px, calc(100% - 64px));
+  margin-inline: auto;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+  column-gap: 80px;
 }
 
-.contact-main .contact-hub-row:last-child {
-  border-bottom: 0;
-}
-
-.contact-main a.contact-hub-row:hover,
-.contact-main a.contact-hub-row:focus {
-  color: var(--brand-accent-dark);
-  text-decoration: none;
-}
-
-.contact-main a.contact-hub-row:focus-visible {
-  outline: 2px solid var(--brand-accent);
-  outline-offset: 3px;
-}
-
-.contact-main .contact-hub-label {
-  color: var(--type-subtle);
-  font-size: var(--type-label);
-  font-weight: 600;
-  letter-spacing: 0.65px;
-  line-height: 1.45;
-  text-transform: uppercase;
-}
-
-.contact-main .contact-hub-value {
+.contact-main .talk-action {
   display: flex;
   min-width: 0;
   flex-direction: column;
-  color: var(--brand-navy-deep);
-  font-size: clamp(17px, 1.65vw, 21px);
-  font-weight: 600;
-  line-height: 1.4;
-  overflow-wrap: anywhere;
+  padding-right: 6px;
 }
 
-.contact-main .contact-hub-value strong {
-  font-weight: 600;
+.contact-main .talk-action + .talk-action {
+  padding-left: 80px;
+  border-left: 1px solid var(--surface-line, rgba(19, 53, 68, 0.12));
 }
 
-.contact-main .contact-hub-value small {
-  margin-top: 4px;
-  color: var(--type-subtle);
-  font-size: var(--type-small);
+.contact-main .talk-action__eyebrow {
+  margin: 0 0 15px;
+  color: var(--brand-accent-dark, #a67d00);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.15px;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.contact-main .talk-action h2 {
+  max-width: 470px;
+  margin: 0;
+  color: var(--brand-navy, #17384a);
+  font-size: clamp(28px, 2.6vw, 36px);
+  font-weight: 600;
+  letter-spacing: -0.65px;
+  line-height: 1.18;
+  text-transform: none;
+}
+
+.contact-main .talk-action__copy,
+.contact-main .talk-action__address,
+.contact-main .talk-action__appointment {
+  max-width: 500px;
+  color: var(--type-text, #263d4a);
+  font-size: 16px;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.65;
 }
 
-.contact-main .contact-hub-action {
-  color: #8f6900;
+.contact-main .talk-action__copy {
+  margin: 24px 0 0;
+}
+
+.contact-main .talk-action__address {
+  margin: 24px 0 0;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.contact-main .talk-action__appointment {
+  margin: 13px 0 0;
+  color: var(--type-muted, #536873);
+}
+
+.contact-main .talk-actions__contact {
+  grid-column: 1 / -1;
+  margin-top: 54px;
+  padding-top: 28px;
+  border-top: 1px solid var(--surface-line, rgba(19, 53, 68, 0.12));
+}
+
+.contact-main .talk-actions__contact .talk-action__eyebrow {
+  margin-bottom: 12px;
+}
+
+.contact-main .talk-actions__contact-row {
+  display: grid;
+  grid-template-columns: minmax(0, 760px) auto;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.contact-main .talk-actions__contact-row p {
+  margin: 0;
+  color: var(--type-text, #263d4a);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+.contact-main .talk-actions__contact-link {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  padding: 8px 0 6px;
+  border-bottom: 1px solid var(--brand-accent, #e4b71d);
+  color: var(--brand-navy, #17384a);
   font-size: 15px;
   font-weight: 600;
   line-height: 1.4;
-  white-space: nowrap;
+  text-decoration: none;
+  transition: color 180ms ease, border-color 180ms ease;
 }
 
-.contact-main a.contact-hub-row:hover .contact-hub-action,
-.contact-main a.contact-hub-row:focus .contact-hub-action {
-  color: var(--brand-accent-dark);
+.contact-main .talk-actions__contact-link span {
+  display: inline-block;
+  margin-left: 10px;
+  color: var(--brand-accent-dark, #a67d00);
+  transition: transform 180ms ease;
 }
 
-.contact-main .contact-hub-row-static {
-  cursor: default;
+.contact-main .talk-actions__contact-link:hover,
+.contact-main .talk-actions__contact-link:focus {
+  border-color: var(--brand-accent-dark, #a67d00);
+  color: var(--brand-accent-dark, #a67d00);
+}
+
+.contact-main .talk-actions__contact-link:hover span,
+.contact-main .talk-actions__contact-link:focus span {
+  transform: translateX(4px);
+}
+
+.contact-main .talk-actions__contact-link:focus-visible {
+  outline: 2px solid var(--brand-accent, #e4b71d);
+  outline-offset: 4px;
 }
 
 @media (max-width: 900px) {
-  .contact-main .contact-hub {
-    padding: 76px 0 82px;
+  .contact-page-body .hero-page {
+    /* At tablet widths the desktop navigation wraps to a second row. */
+    padding-top: 172px;
+    padding-bottom: 56px;
   }
 
-  .contact-main .contact-hub-grid {
-    display: flex;
-    flex-direction: column;
+  .contact-main .talk-actions__inner {
+    column-gap: 44px;
   }
 
-  .contact-main .contact-hub-eyebrow {
-    order: 1;
-  }
-
-  .contact-main .contact-hub-title {
-    order: 2;
-  }
-
-  .contact-main .contact-hub-intro {
-    order: 3;
-  }
-
-  .contact-main .contact-hub-list {
-    order: 4;
-    margin-top: 42px;
-  }
-
-  .contact-main .contact-hub-local {
-    order: 5;
-    align-self: auto;
-    margin-top: 38px;
+  .contact-main .talk-action + .talk-action {
+    padding-left: 44px;
   }
 }
 
-@media (max-width: 767px) {
-  .contact-main .contact-hub {
-    padding: 60px 0 66px;
+@media (max-width: 600px) {
+  .contact-page-body .hero-page {
+    padding-top: 96px;
+    padding-bottom: 46px;
   }
 
-  .contact-main .contact-hub-grid {
+  .contact-page-body .page-hero-title {
+    font-size: clamp(36px, 10.2vw, 42px);
+  }
+
+  .contact-page-body .page-hero-lead {
+    margin-top: 20px;
+  }
+
+  .contact-main .talk-actions {
+    padding: 50px 0 54px;
+  }
+
+  .contact-main .talk-actions__inner {
     width: calc(100% - 36px);
+    grid-template-columns: 1fr;
+    column-gap: 0;
+  }
+
+  .contact-main .talk-action {
     padding-right: 0;
+  }
+
+  .contact-main .talk-action + .talk-action {
+    margin-top: 44px;
+    padding-top: 44px;
     padding-left: 0;
+    border-top: 1px solid var(--surface-line, rgba(19, 53, 68, 0.12));
+    border-left: 0;
   }
 
-  .contact-main .contact-hub-title {
-    font-size: 34px;
-    letter-spacing: -1px;
+  .contact-main .talk-action h2 {
+    font-size: 28px;
   }
 
-  .contact-main .contact-hub-intro {
-    margin-top: 22px;
-    font-size: var(--type-body);
+  .contact-main .talk-action__copy,
+  .contact-main .talk-action__address,
+  .contact-main .talk-action__appointment {
+    font-size: 16px;
   }
 
-  .contact-main .contact-hub-list {
-    margin-top: 34px;
+  .contact-main .talk-actions__contact {
+    margin-top: 42px;
+    padding-top: 28px;
   }
 
-  .contact-main .contact-hub-row {
-    grid-template-columns: minmax(0, 1fr) auto;
-    gap: 8px 16px;
-    min-height: 0;
-    padding: 22px 0 24px;
+  .contact-main .talk-actions__contact-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 
-  .contact-main .contact-hub-label {
-    grid-column: 1 / -1;
+  .contact-main .talk-actions__contact-link {
+    width: 100%;
+    min-height: 48px;
+    justify-content: space-between;
   }
 
-  .contact-main .contact-hub-value {
-    grid-column: 1;
-    font-size: 17px;
+  /* Preserve the site's intended single-column Footer at phone widths. */
+  .contact-page-body .footer-grid {
+    grid-template-columns: 1fr;
   }
 
-  .contact-main .contact-hub-action {
-    grid-column: 2;
-    align-self: center;
+  .contact-page-body .footer-brand {
+    margin-bottom: 30px;
+    padding-right: 0;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--surface-line, rgba(19, 53, 68, 0.12));
   }
 
-  .contact-main .contact-hub-local {
-    margin-top: 31px;
-    padding-top: 20px;
-    font-size: 18px;
+  .contact-page-body .footer-brand .footer-licence {
+    overflow-wrap: anywhere;
+    white-space: normal;
+  }
+
+  .contact-page-body .footer-links {
+    margin-bottom: 30px;
+    padding: 0 0 30px;
+    border-right: 0;
+    border-bottom: 1px solid var(--surface-line, rgba(19, 53, 68, 0.12));
+    border-left: 0;
+  }
+
+  .contact-page-body .footer-contact {
+    padding-left: 0;
   }
 }

@@ -1,5 +1,4 @@
-/* Shared section hierarchy for the About and Contact page bodies. */
-.about-main .about-module-title,
+/* Contact heading hierarchy. About uses isolated component classes below. */
 .contact-main .contact-hub-section-title {
   margin: 0 0 9px;
   color: var(--brand-accent-dark, #9a7600);
@@ -10,14 +9,6 @@
   text-transform: uppercase;
 }
 
-.about-main .about-module-title > span {
-  display: inline;
-  margin-right: 9px;
-  color: inherit;
-  font: inherit;
-}
-
-.about-main .about-module-statement,
 .contact-main .contact-hub-question {
   margin: 0;
   color: var(--brand-navy-mid, #315466);
@@ -28,84 +19,94 @@
   text-wrap: balance;
 }
 
-/* About: one continuous, single-column editorial reading path. */
-.about-main > .about-principles {
+/* About editorial sections use new, direct-child DOM to avoid legacy story rules. */
+.about-main > .about-editorial {
   background: var(--surface-page, #fcfcfa);
 }
 
-.about-main .about-principles > .about-story {
-  padding: 58px 0;
+.about-main .about-section {
+  height: auto;
+  min-height: 0;
+  margin: 0;
+  padding: 60px 0;
   border-top: 1px solid var(--surface-line, rgba(19, 53, 68, 0.12));
   background: transparent;
 }
 
-.about-main .about-principles > .about-story:first-child {
+.about-main .about-section:first-child {
   border-top: 0;
 }
 
-.about-main .about-principles > .about-story:nth-child(even) {
-  background: rgba(19, 53, 68, 0.018);
+.about-main .about-section__inner {
+  display: grid;
+  width: min(1180px, calc(100% - 64px));
+  margin-inline: auto;
+  grid-template-columns: minmax(260px, 0.34fr) minmax(0, 0.66fr);
+  align-items: start;
+  column-gap: 72px;
 }
 
-.about-main .about-story-grid,
-.about-main .about-story-grid.about-story-grid-reverse {
-  display: block;
-  width: calc(100% - 48px);
-  max-width: var(--container-max, 1200px);
-}
-
-.about-main .about-story-heading,
-.about-main .about-story-body,
-.about-main .about-story-direction .about-story-body {
-  width: min(100%, 720px);
-}
-
-.about-main .about-story-heading {
-  min-width: 0;
-}
-
-.about-main .about-principles .about-module-title {
-  font-size: clamp(18px, 1.4vw, 20px);
-}
-
-.about-main .about-principles .about-module-statement {
-  max-width: 720px;
-  font-size: clamp(17px, 1.3vw, 19px);
-}
-
-.about-main .about-story-body,
-.about-main .about-story-direction .about-story-body {
-  max-width: 720px;
-  margin: 22px 0 0;
-  padding: 0;
-  border-top: 0;
-}
-
-.about-main .about-story-body p {
-  margin: 0;
-  color: var(--type-muted, #536873);
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.65;
-}
-
-.about-main .about-story-body p + p {
-  margin-top: 14px;
-}
-
-.about-main .about-story-thinking .about-story-body p:last-child,
-.about-main .about-story-why .about-story-body p:last-child {
-  padding-top: 0;
-  border-top: 0;
-  color: var(--type-muted, #536873);
-  font-size: 16px;
-  font-weight: 400;
-}
-
-.about-main .about-story-value .about-story-body p:first-child {
+.about-main .about-section__intro,
+.about-main .about-section__body {
   width: auto;
-  margin: 0 0 20px;
-  padding: 5px 0 5px 15px;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  transform: none;
+}
+
+.about-main .about-section__title,
+.about-main .about-team__title {
+  margin: 0;
+  color: var(--brand-accent-dark, #9a7600);
+  font-size: clamp(18px, 1.4vw, 20px);
+  font-weight: 700;
+  letter-spacing: 0.7px;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.about-main .about-section__title > span {
+  display: inline;
+  margin-right: 16px;
+  color: inherit;
+  font: inherit;
+}
+
+.about-main .about-section__statement,
+.about-main .about-team__statement {
+  max-width: 390px;
+  margin-top: 16px;
+  margin-bottom: 0;
+  color: var(--brand-navy-mid, #315466);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.4;
+  text-wrap: balance;
+}
+
+.about-main .about-section__body {
+  justify-self: start;
+  max-width: 680px;
+}
+
+.about-main .about-section__body p,
+.about-main .about-team__body p {
+  margin: 0;
+  color: var(--type-text, #263d4a);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.about-main .about-section__body p + p,
+.about-main .about-team__body p + p {
+  margin-top: 16px;
+}
+
+.about-main .about-section__body .about-section__quote {
+  margin: 0 0 16px;
+  padding: 4px 0 4px 20px;
   border-left: 2px solid var(--brand-accent, #e4b71d);
   color: var(--brand-navy-mid, #315466);
   font-size: 17px;
@@ -113,58 +114,109 @@
   line-height: 1.55;
 }
 
-.about-main .about-direction-transition {
-  margin-top: 14px !important;
+.about-main .about-section__transition {
   color: var(--brand-navy-mid, #315466) !important;
   font-weight: 500 !important;
 }
 
-/* About leadership remains a top-aligned two-column record. */
-.about-main > .about-leadership {
-  padding: 60px 0 64px;
+/* About team uses a separate, uncomplicated two-column composition. */
+.about-main > .about-team {
+  height: auto;
+  min-height: 0;
+  margin: 0;
+  padding: 64px 0;
   border-top: 1px solid var(--surface-line, rgba(19, 53, 68, 0.12));
 }
 
-.about-main .about-leadership-grid {
+.about-main .about-team__inner {
   display: grid;
-  width: calc(100% - 48px);
-  max-width: var(--container-max, 1200px);
-  grid-template-columns: minmax(0, 42fr) minmax(0, 50fr);
-  grid-template-rows: auto auto 1fr;
+  width: min(1180px, calc(100% - 64px));
+  margin-inline: auto;
+  grid-template-columns: minmax(0, 0.38fr) minmax(0, 0.62fr);
   align-items: start;
-  column-gap: 8%;
-  row-gap: 0;
+  column-gap: 68px;
 }
 
-.about-main .about-leadership-grid > .about-module-title,
-.about-main .about-leadership-grid > .about-module-statement,
-.about-main .about-leadership-intro {
-  grid-column: 1;
+.about-main .about-team__copy {
+  min-width: 0;
+  transform: none;
 }
 
-.about-main .about-leadership-grid > .about-module-title {
-  grid-row: 1;
+.about-main .about-team__statement {
+  max-width: 440px;
 }
 
-.about-main .about-leadership-grid > .about-module-statement {
-  grid-row: 2;
-}
-
-.about-main .about-leadership-intro {
-  grid-row: 3;
-  max-width: 520px;
-  margin-top: 24px;
-  padding-top: 22px;
+.about-main .about-team__body {
+  position: relative;
+  max-width: 440px;
+  margin-top: 22px;
+  padding-top: 24px;
+  border-top: 0;
+  color: var(--type-text, #263d4a);
   font-size: 16px;
-  line-height: 1.65;
+  line-height: 1.7;
 }
 
-.about-main .about-leadership-image {
-  grid-row: 1 / span 3;
-  grid-column: 2;
+.about-main .about-team__body::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 1px;
+  background: var(--surface-line-strong, rgba(19, 53, 68, 0.18));
+  content: "";
+}
+
+.about-main .about-team__figure {
   width: 100%;
-  aspect-ratio: 3 / 2;
   margin: 0;
+}
+
+.about-main .about-team__image-frame {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border: 1px solid var(--surface-card-border, rgba(19, 53, 68, 0.08));
+  border-radius: 2px;
+  background: #eee8dc;
+  box-shadow: 12px 12px 0 #eee8dc;
+}
+
+.about-main .about-team__image-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+  transform: scale(1.14);
+  transform-origin: 50% 100%;
+  filter: saturate(0.96) sepia(0.025) contrast(1.015);
+}
+
+.about-main .about-team__figure figcaption {
+  margin-top: 26px;
+  text-align: left;
+}
+
+.about-main .about-team__figure figcaption strong,
+.about-main .about-team__figure figcaption span {
+  display: block;
+}
+
+.about-main .about-team__figure figcaption strong {
+  color: var(--brand-navy, #17384a);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.about-main .about-team__figure figcaption span {
+  margin-top: 3px;
+  color: var(--type-subtle, #667982);
+  font-size: 13px;
+  line-height: 1.4;
 }
 
 /* Contact: compact two-column composition beneath a shorter, still substantial Hero. */
@@ -285,6 +337,16 @@
 }
 
 @media (max-width: 900px) {
+  .about-main .about-section__inner {
+    grid-template-columns: minmax(220px, 0.38fr) minmax(0, 0.62fr);
+    column-gap: 42px;
+  }
+
+  .about-main .about-team__inner {
+    grid-template-columns: minmax(0, 0.4fr) minmax(0, 0.6fr);
+    column-gap: 44px;
+  }
+
   .contact-main .contact-hub {
     padding: 60px 0 64px;
   }
@@ -312,78 +374,75 @@
   }
 }
 
+@media (max-width: 600px) {
+  .about-main .about-section {
+    padding: 44px 0;
+  }
+
+  .about-main .about-section__inner,
+  .about-main .about-team__inner {
+    width: calc(100% - 36px);
+    grid-template-columns: 1fr;
+    column-gap: 0;
+  }
+
+  .about-main .about-section__title,
+  .about-main .about-team__title {
+    margin-bottom: 8px;
+    font-size: clamp(18px, 5vw, 20px);
+    letter-spacing: 0.55px;
+  }
+
+  .about-main .about-section__statement,
+  .about-main .about-team__statement {
+    max-width: none;
+    margin-top: 12px;
+    font-size: 17px;
+    line-height: 1.4;
+  }
+
+  .about-main .about-section__body {
+    max-width: none;
+    margin-top: 26px;
+  }
+
+  .about-main > .about-team {
+    padding: 52px 0 54px;
+  }
+
+  .about-main .about-team__figure {
+    margin-top: 28px;
+  }
+
+  .about-main .about-team__image-frame {
+    box-shadow: 8px 8px 0 #eee8dc;
+  }
+
+  .about-main .about-team__figure figcaption {
+    margin-top: 20px;
+  }
+
+  .about-main .about-section__body p,
+  .about-main .about-team__body p {
+    font-size: 16px;
+  }
+
+  .about-main .about-team__body {
+    margin-top: 24px;
+    padding-top: 20px;
+  }
+}
+
 @media (max-width: 767px) {
-  .about-main .about-module-title,
   .contact-main .contact-hub-section-title {
     margin-bottom: 8px;
     font-size: clamp(18px, 5vw, 20px);
     letter-spacing: 0.55px;
   }
 
-  .about-main .about-module-statement,
   .contact-main .contact-hub-question {
     font-size: clamp(15px, 4.2vw, 17px);
     line-height: 1.4;
-  }
-
-  .about-main .about-principles > .about-story {
-    padding: 40px 0;
-  }
-
-  .about-main .about-story-grid,
-  .about-main .about-story-grid.about-story-grid-reverse {
-    width: calc(100% - 36px);
-    max-width: var(--container-max, 1200px);
-  }
-
-  .about-main .about-story-heading,
-  .about-main .about-story-body,
-  .about-main .about-story-direction .about-story-body {
-    width: 100%;
-  }
-
-  .about-main .about-story-body p,
-  .about-main .about-story-thinking .about-story-body p:last-child,
-  .about-main .about-story-why .about-story-body p:last-child {
-    font-size: 15px;
-  }
-
-  .about-main .about-story-value .about-story-body p:first-child {
-    font-size: 16px;
-  }
-
-  .about-main > .about-leadership {
-    padding: 52px 0 54px;
-  }
-
-  .about-main .about-leadership-grid {
-    width: calc(100% - 36px);
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto auto;
-    gap: 0;
-  }
-
-  .about-main .about-leadership-image {
-    grid-row: 3;
-    grid-column: 1;
-    margin-top: 24px;
-    aspect-ratio: 3 / 2;
-  }
-
-  .about-main .about-leadership-grid > .about-module-title {
-    grid-row: 1;
-  }
-
-  .about-main .about-leadership-grid > .about-module-statement {
-    grid-row: 2;
-  }
-
-  .about-main .about-leadership-intro {
-    grid-row: 4;
-    grid-column: 1;
-    margin-top: 24px;
-    padding-top: 20px;
-    font-size: 15px;
   }
 
   .contact-page-body .hero-page {

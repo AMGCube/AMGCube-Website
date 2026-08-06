@@ -179,7 +179,7 @@
   border: 1px solid var(--surface-card-border, rgba(19, 53, 68, 0.08));
   border-radius: 2px;
   background: #eee8dc;
-  box-shadow: 12px 12px 0 #eee8dc;
+  box-shadow: 7px 7px 0 #eee8dc;
 }
 
 .about-main .about-team__image-frame img {
@@ -217,6 +217,17 @@
   color: var(--type-subtle, #667982);
   font-size: 13px;
   line-height: 1.4;
+}
+
+@media (min-width: 901px) {
+  .about-main .about-team__inner {
+    column-gap: 56px;
+  }
+
+  .about-main .about-team__figure {
+    width: 80%;
+    justify-self: start;
+  }
 }
 
 /* Contact: compact two-column composition beneath a shorter, still substantial Hero. */

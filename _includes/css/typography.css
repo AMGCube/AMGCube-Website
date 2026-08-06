@@ -1,0 +1,381 @@
+/* AMGCube typography refinement — shared hierarchy and readable text. */
+:root {
+  --type-body: 16px;
+  --type-body-feature: 17px;
+  --type-small: 14px;
+  --type-label: 13px;
+  --type-nav: 15px;
+  --type-line: 1.65;
+  --type-text: #263d4a;
+  --type-muted: #536873;
+  --type-subtle: #667982;
+  --type-on-dark: rgba(255, 255, 255, 0.9);
+  --type-on-dark-muted: rgba(255, 255, 255, 0.78);
+}
+
+body {
+  color: var(--type-text);
+  font-size: var(--type-body);
+  font-weight: 400;
+  line-height: var(--type-line);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+p,
+li,
+dd,
+address {
+  font-weight: 400;
+}
+
+/* Keep large-heading scale intact while avoiding an overly heavy contrast. */
+.hero-home .intro-heading,
+.page-hero-title,
+.project-detail-hero-copy h1,
+.projects-main h2,
+.projects-main h3,
+.about-main h2,
+.about-main h3 {
+  font-weight: 600;
+}
+
+/* Navigation, buttons and text actions share one practical UI scale. */
+.navbar-default .nav li a,
+.navbar-default.navbar-shrink .nav li a {
+  font-size: var(--type-nav);
+  font-weight: 500;
+  letter-spacing: 0.55px;
+}
+
+.btn,
+.btn.btn-xl,
+.property-check-button,
+.text-link,
+.hero-primary-link,
+.hero-secondary-link,
+.project-record-link,
+.project-card-link,
+.build-explore-link,
+.build-back-link {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* Eyebrows and compact labels: larger, darker and less widely tracked. */
+.hero-eyebrow,
+.home-eyebrow,
+.projects-eyebrow,
+.project-detail-eyebrow,
+.about-eyebrow,
+.contact-eyebrow,
+.contact-page-body .page-hero-subtitle,
+.can-i-build-body .page-hero-subtitle,
+.projects-page-body .page-hero-subtitle,
+.about-page-body .page-hero-subtitle,
+.build-overview-kicker,
+.build-detail-section-label {
+  font-size: var(--type-label);
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 1.45;
+}
+
+.project-status-tag,
+.project-status-badge,
+.project-record-status,
+.project-detail-status {
+  font-size: var(--type-small);
+  font-weight: 700;
+  letter-spacing: 0.7px;
+  line-height: 1.3;
+}
+
+/* Primary and explanatory copy. */
+.home-can-build-copy > p,
+.home-section-heading > p:last-child,
+.projects-introduction-copy p,
+.project-record-description,
+.project-detail-markdown p,
+.project-detail-markdown li,
+.project-detail-progress-heading > p:last-child,
+.about-story-body p,
+.about-leadership-intro,
+.about-section-copy p,
+.about-section-heading-wide > p:last-child,
+.about-focus-column > p:not(.about-eyebrow),
+.contact-intro,
+.build-section-intro > p,
+.build-lead,
+.build-overview-intro-copy p,
+.build-overview-lead,
+.build-overview-topic-content > p:not(.build-overview-lead):not(.build-overview-closing),
+.build-detail-intro > p:last-child,
+.site-question-copy > p {
+  color: var(--type-muted);
+  font-size: var(--type-body-feature);
+  font-weight: 400;
+  line-height: var(--type-line);
+}
+
+.home-basics-label,
+.featured-project-summary,
+.home-process-timeline li p,
+.home-process-popover p,
+.project-current-stage,
+.project-card-description,
+.about-fact p,
+.about-work-grid p,
+.about-display-copy > p,
+.about-leon-copy > p,
+.caption,
+.cta-text {
+  color: var(--type-muted);
+  font-size: var(--type-body);
+  line-height: var(--type-line);
+}
+
+.home-basics-disclaimer,
+.home-basics-footer .home-basics-disclaimer {
+  color: var(--type-subtle);
+  font-size: var(--type-small);
+  line-height: 1.6;
+}
+
+/* Project parameters and metadata. */
+.project-record-facts dt,
+.project-list-facts dt,
+.project-facts dt,
+.project-card-facts dt,
+.project-detail-facts-grid dt,
+.contact-detail-block dt {
+  color: var(--type-subtle);
+  font-size: var(--type-label);
+  font-weight: 600;
+  letter-spacing: 0.55px;
+  line-height: 1.45;
+}
+
+.project-record-facts dd,
+.project-list-facts dd,
+.project-facts dd,
+.project-card-facts dd,
+.project-detail-facts-grid dd,
+.contact-detail-block dd {
+  color: #314a58;
+  font-size: var(--type-body);
+  font-weight: 500;
+  line-height: 1.55;
+}
+
+.project-current-stage span,
+.project-detail-progress-item figcaption,
+.about-company-detail,
+.about-leon-detail span,
+.about-display-copy address span,
+.projects-page-body .page-hero-detail,
+.about-page-body .page-hero-detail {
+  color: var(--type-subtle);
+  font-size: var(--type-small);
+  letter-spacing: 0.55px;
+  line-height: 1.55;
+}
+
+/* Smaller supporting lists still remain comfortably readable. */
+.site-question-copy > strong,
+.site-question-factors li,
+.build-context-note p,
+.budget-explainer p,
+.build-overview-topic-content li,
+.build-question-nav small {
+  color: var(--type-muted);
+  font-size: var(--type-small);
+  line-height: 1.6;
+}
+
+/* Improve copy contrast on navy and other dark backgrounds. */
+.hero-home .intro-subtitle,
+.page-hero-lead,
+.projects-page-body .page-hero-lead,
+.about-page-body .page-hero-lead,
+.contact-page-body .page-hero-lead,
+.project-detail-lead,
+.about-pause-content > p:last-child {
+  color: var(--type-on-dark);
+}
+
+.hero-heading-location,
+.hero-drawing-caption,
+.page-hero-detail,
+.project-detail-back {
+  color: var(--type-on-dark-muted);
+}
+
+.home-trust-item p {
+  color: var(--type-on-dark);
+  font-size: var(--type-body);
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* Footer shares the same UI hierarchy as navigation and controls. */
+.footer-brand p,
+.footer-links a,
+.footer-contact li {
+  color: #4e6069;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+.footer-brand .footer-membership-note {
+  color: #5d6f77;
+  font-size: var(--type-small);
+}
+
+.footer-links h4,
+.footer-contact h4 {
+  font-size: var(--type-body);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.footer-bottom p {
+  color: #6d7a80;
+  font-size: var(--type-small);
+  line-height: 1.55;
+}
+
+/* Second pass: only the remaining compact UI and supporting copy. */
+.navbar-default .nav li a,
+.navbar-default.navbar-shrink .nav li a {
+  font-size: 16px;
+  letter-spacing: 0.4px;
+}
+
+.home-trust-item p {
+  color: rgba(255, 255, 255, 0.94);
+  font-size: 17px;
+  line-height: 1.45;
+}
+
+.home-process-timeline li p {
+  color: #263f4d;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.home-process-popover strong {
+  color: #173244;
+  font-size: 15px;
+}
+
+.home-process-popover p {
+  color: #425963;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.site-question-copy > strong,
+.site-question-factors li,
+.build-context-note p,
+.budget-explainer p,
+.build-overview-topic-content li,
+.build-question-nav small,
+.build-overview-closing,
+.overview-budget-point small,
+.overview-budget-point span {
+  color: #465e69;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.build-context-note strong,
+.budget-explainer strong {
+  font-size: 15px;
+}
+
+.property-check-cta .build-eyebrow {
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.property-check-cta li {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.property-check-cta-option p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.property-check-cta-option address {
+  color: rgba(255, 255, 255, 0.94);
+  font-size: 14px;
+}
+
+.footer-brand p,
+.footer-links a,
+.footer-contact li {
+  color: #40545e;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.footer-brand .footer-membership-note {
+  color: #536770;
+  font-size: 15px;
+}
+
+.footer-bottom p {
+  color: #586a72;
+  font-size: 15px;
+}
+
+@media (max-width: 767px) {
+  body {
+    font-size: var(--type-body);
+  }
+
+  .hero-eyebrow,
+  .home-eyebrow,
+  .projects-eyebrow,
+  .project-detail-eyebrow,
+  .about-eyebrow,
+  .contact-eyebrow,
+  .contact-page-body .page-hero-subtitle,
+  .can-i-build-body .page-hero-subtitle,
+  .projects-page-body .page-hero-subtitle,
+  .about-page-body .page-hero-subtitle {
+    font-size: var(--type-label);
+    letter-spacing: 0.85px;
+  }
+
+  .hero-home .intro-subtitle,
+  .page-hero-lead,
+  .projects-page-body .page-hero-lead,
+  .about-page-body .page-hero-lead,
+  .contact-page-body .page-hero-lead,
+  .project-detail-lead,
+  .projects-introduction-copy p,
+  .project-record-description,
+  .project-detail-markdown p,
+  .project-detail-markdown li,
+  .about-story-body p,
+  .about-leadership-intro,
+  .about-section-copy p,
+  .about-focus-column > p:not(.about-eyebrow),
+  .contact-intro,
+  .build-detail-intro > p:last-child {
+    font-size: var(--type-body);
+    line-height: var(--type-line);
+  }
+
+  .navbar-default .nav li a,
+  .navbar-default.navbar-shrink .nav li a {
+    font-size: var(--type-body);
+  }
+}

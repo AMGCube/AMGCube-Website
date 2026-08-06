@@ -3,70 +3,45 @@ layout: contact
 title: "AMGCUBE | Contact"
 permalink: /contact/
 hero_subtitle: "Talk to us"
-hero_title: "Let’s talk about your granny flat."
-hero_lead: "Visit our Oxley display home or talk to our Brisbane team about your property."
+hero_title: "Let’s talk about your property."
+hero_lead: "Tell us about your plans, or arrange a visit to our Oxley display home."
 ---
 
-<section id="contact-header" class="contact-primary" aria-labelledby="contact-primary-title">
-  <div class="container contact-primary-grid">
-    <header class="contact-section-heading">
-      <p class="contact-eyebrow">Start a conversation</p>
-      <h2 id="contact-primary-title">Start with your property.</h2>
-    </header>
+<section id="contact-header" class="contact-hub" aria-labelledby="contact-hub-title">
+  <div class="container contact-hub-grid">
+    <h2 id="contact-hub-title" class="contact-hub-section-title">Start a conversation</h2>
+    <p class="contact-hub-question">Start with your property.</p>
+    <p class="contact-hub-intro">Tell us where your property is and what you are hoping to build. We can begin with a practical conversation about the site and the next step.</p>
+    <p class="contact-hub-local">Brisbane-based. Personally involved.</p>
 
-    <div class="contact-primary-content">
-      <p class="contact-intro">Tell us where your property is and what you are hoping to build. We can begin with a practical conversation about the site and the next step.</p>
+    <div class="contact-hub-list" aria-label="Contact options">
+      <a class="contact-hub-row" href="tel:{{ site.company.phone | remove: ' ' }}">
+        <span class="contact-hub-label">Call</span>
+        <span class="contact-hub-value contact-hub-primary"><strong>{{ site.company.phone }}</strong><span class="contact-hub-action" aria-hidden="true">→</span></span>
+      </a>
 
-      <div class="contact-channels">
-        <a href="tel:{{ site.company.phone | remove: ' ' }}">
-          <span>Call</span>
-          <strong>{{ site.company.phone }}</strong>
-          <i aria-hidden="true">→</i>
-        </a>
-        <a href="mailto:{{ site.company.email }}">
-          <span>Email</span>
-          <strong>{{ site.company.email }}</strong>
-          <i aria-hidden="true">→</i>
-        </a>
+      <a class="contact-hub-row" href="mailto:{{ site.company.email }}">
+        <span class="contact-hub-label">Email</span>
+        <span class="contact-hub-value contact-hub-primary"><strong>{{ site.company.email }}</strong><span class="contact-hub-action" aria-hidden="true">→</span></span>
+      </a>
+
+      <a class="contact-hub-row" href="mailto:{{ site.company.email }}?subject=Display%20home%20visit">
+        <span class="contact-hub-label">Visit the display home</span>
+        <span class="contact-hub-value">
+          <strong>{{ site.company.display_home }}</strong>
+          <small>By appointment</small>
+          <span class="contact-hub-action">Book a visit <span aria-hidden="true">→</span></span>
+        </span>
+      </a>
+
+      <div class="contact-hub-row contact-hub-row-static">
+        <span class="contact-hub-label">Find us online</span>
+        <span class="contact-hub-value contact-hub-accounts">
+          <span><strong>WeChat:</strong> AMGCUBE</span>
+          <span><strong>Xiaohongshu:</strong> AMGCUBE 澳洲装配式 <small>ID: AMGCUBE01</small></span>
+          <span><strong>Xiaohongshu:</strong> 布村LeonLiu</span>
+        </span>
       </div>
-    </div>
-  </div>
-</section>
-
-<section class="contact-details" aria-labelledby="contact-details-title">
-  <div class="container">
-    <p class="contact-eyebrow">Contact details</p>
-    <h2 id="contact-details-title">Brisbane-based and directly involved.</h2>
-
-    <div class="contact-details-grid">
-      <section class="contact-detail-block">
-        <p class="contact-detail-number">01</p>
-        <h3>Visit the display home</h3>
-        <dl>
-          <div><dt>Address</dt><dd>{{ site.company.display_home }}</dd></div>
-          <div><dt>Location</dt><dd>{{ site.company.location }}</dd></div>
-          <div><dt>Visits</dt><dd>By appointment</dd></div>
-        </dl>
-      </section>
-
-      <section class="contact-detail-block">
-        <p class="contact-detail-number">02</p>
-        <h3>Builder details</h3>
-        <dl>
-          <div><dt>Company</dt><dd>{{ site.company.legal_name }}</dd></div>
-          <div><dt>QBCC licence</dt><dd>{{ site.company.qbcc_licence_number }}</dd></div>
-          <div><dt>Licence class</dt><dd>{{ site.company.qbcc_licence_class }}</dd></div>
-        </dl>
-      </section>
-
-      <section class="contact-detail-block">
-        <p class="contact-detail-number">03</p>
-        <h3>Find us online</h3>
-        <dl>
-          <div><dt>WeChat</dt><dd>AMGCUBE</dd></div>
-          <div><dt>RED / Xiaohongshu</dt><dd>AMGCube</dd></div>
-        </dl>
-      </section>
     </div>
   </div>
 </section>

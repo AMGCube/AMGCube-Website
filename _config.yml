@@ -54,6 +54,10 @@ cache: true
 include:
   - _pages
 
+# Repository-only maintenance templates; never publish these files with the site.
+exclude:
+  - templates
+
 collections:
   posts:
     output: true

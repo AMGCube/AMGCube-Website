@@ -6,6 +6,7 @@ layout: project
 date: 2026-02-01
 permalink: /projects/146dowding/
 categories: ["Projects"]
+featured: true
 thumbnail: /img/projects/oxley-granny-flat/thumbnail.webp
 hero-image: /img/projects/oxley-granny-flat/hero.webp
 hero-alt: Completed Oxley granny flat exterior

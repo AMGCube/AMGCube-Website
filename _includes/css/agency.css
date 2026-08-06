@@ -4334,8 +4334,8 @@ html {
 
 .hero-background {
   isolation: isolate;
-  min-height: 700px;
-  padding: 142px 48px 82px;
+  min-height: 660px;
+  padding: 136px 48px 72px;
   background:
     radial-gradient(circle at 77% 42%, rgba(255, 255, 255, 0.11), transparent 31%),
     linear-gradient(118deg, #152d3c 0%, #23485d 54%, #537384 100%);
@@ -4407,29 +4407,24 @@ html {
 .hero-home .intro-heading {
   max-width: 520px;
   margin-bottom: 24px;
-  font-size: clamp(54px, 5vw, 76px);
+  font-size: clamp(40px, 3.3vw, 48px);
   font-weight: 600;
-  letter-spacing: -2.8px;
-  line-height: 0.98;
+  letter-spacing: -2.2px;
+  line-height: 1.03;
 }
 
-.hero-heading-primary,
-.hero-heading-location {
+.hero-heading-line {
   display: block;
+  white-space: nowrap;
 }
 
-.hero-heading-location {
-  margin-top: 15px;
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 0.46em;
-  font-weight: 400;
-  letter-spacing: -0.5px;
-  line-height: 1.15;
+.hero-heading-line + .hero-heading-line {
+  margin-top: 4px;
 }
 
 .hero-home .intro-subtitle {
   max-width: 475px;
-  margin-bottom: 34px;
+  margin-bottom: 0;
   color: rgba(255, 255, 255, 0.78);
   font-size: 20px;
   line-height: 1.65;
@@ -5064,7 +5059,7 @@ html {
   }
 
   .hero-home .intro-heading {
-    font-size: 52px;
+    font-size: 40px;
   }
 
   .home-process-timeline li {
@@ -5123,12 +5118,12 @@ html {
   }
 
   .hero-home .intro-heading {
-    font-size: clamp(42px, 13vw, 56px);
-    letter-spacing: -2px;
+    font-size: clamp(32px, 8.5vw, 36px);
+    letter-spacing: -1.5px;
   }
 
   .hero-home .intro-subtitle {
-    margin-bottom: 27px;
+    margin-bottom: 0;
     font-size: 17px;
   }
 

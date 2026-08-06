@@ -1,105 +1,56 @@
-{% assign featured_project = site.posts | where: "permalink", "/projects/146dowding/" | first %}
+{% assign featured_projects = site.posts | where: "categories", "Projects" | where: "featured", true | sort: "date" | reverse %}
+{% assign featured_project = featured_projects | first %}
+{% unless featured_project %}
+  {% assign featured_project = site.posts | where: "permalink", "/projects/146dowding/" | first %}
+{% endunless %}
 
 <main class="home-overview">
-  <section class="home-section home-split-section" aria-labelledby="property-check-title">
-    <div class="container home-can-build">
-      <div class="home-can-build-heading">
-        <p class="home-eyebrow">Can I build?</p>
-        <h2 id="property-check-title">Size is only part of it.</h2>
-      </div>
-      <div class="home-can-build-copy">
-        <p>Access, slope and services matter just as much — and they're easy to check.</p>
-        <a class="text-link" href="/can-i-build/">See what's involved <span aria-hidden="true">&rarr;</span></a>
-      </div>
-    </div>
-  </section>
-
-  <section class="home-section home-basics bg-light-gray" aria-labelledby="basics-title">
+  <section class="home-section home-feasibility" aria-labelledby="property-check-title">
     <div class="container">
-      <div class="home-section-heading">
-        <p class="home-eyebrow">Granny flat basics</p>
-        <h2 id="basics-title">Size, cost and time.</h2>
+      <div class="home-section-heading home-feasibility-heading">
+        <h2 id="property-check-title" class="home-section-title">Can I build?</h2>
+        <p class="home-section-lead">Start with your block, then look at size, cost and timing.</p>
       </div>
-      <div class="home-basics-grid">
-        <article class="home-basics-card">
-          <p class="home-basics-figure">60&ndash;100m&sup2;</p>
-          <p class="home-basics-label">1 to 3 bedrooms</p>
-        </article>
-        <article class="home-basics-card">
-          <p class="home-basics-figure">From $250k<span class="home-basics-star">*</span></p>
-          <p class="home-basics-label">All in</p>
-        </article>
-        <article class="home-basics-card">
-          <p class="home-basics-figure">4&ndash;6 months</p>
-          <p class="home-basics-label">Start to keys</p>
-        </article>
-      </div>
-      <div class="home-basics-footer">
-        <p class="home-basics-disclaimer">*Indicative only. Final price depends on your site and selections.</p>
-        <a class="text-link" href="/can-i-build/">See what your block can take <span aria-hidden="true">&rarr;</span></a>
-      </div>
-    </div>
-  </section>
 
-  <section class="home-section home-process" aria-labelledby="process-title">
-    <div class="container home-process-container">
-      <div class="home-section-heading">
-        <p class="home-eyebrow">How it works</p>
-        <h2 id="process-title">Every decision made before it becomes expensive to change.</h2>
+      <div class="home-feasibility-grid">
+        <article class="home-feasibility-item">
+          <h3>Site suitability</h3>
+          <p class="home-feasibility-value">Access, slope &amp; services</p>
+          <p class="home-feasibility-detail">Assessed together with planning and other site constraints.</p>
+        </article>
+        <article class="home-feasibility-item">
+          <h3>Size &amp; layout</h3>
+          <p class="home-feasibility-value">60&ndash;100m&sup2;</p>
+          <div class="home-feasibility-layouts" aria-label="Available layouts">
+            <p>1 bed &middot; 1 bath</p>
+            <p>2 bed &middot; 1&ndash;2 baths</p>
+            <p>3 bed &middot; 2 baths</p>
+          </div>
+        </article>
+        <article class="home-feasibility-item">
+          <h3>Indicative cost</h3>
+          <p class="home-feasibility-value">From $250k<sup class="home-feasibility-star">*</sup></p>
+          <p class="home-feasibility-detail">Design, approvals and build</p>
+          <p class="home-feasibility-note">*Final price depends on your site and selections.</p>
+        </article>
+        <article class="home-feasibility-item">
+          <h3>Overall timeline</h3>
+          <p class="home-feasibility-value">4&ndash;6 months</p>
+          <p class="home-feasibility-detail">From planning to handover</p>
+        </article>
       </div>
-      <ol class="home-process-timeline">
-        <li data-process-item>
-          <div class="home-process-marker">
-            <button class="home-process-step" type="button" aria-expanded="false" aria-controls="process-detail-01">01</button>
-            <div class="home-process-popover" id="process-detail-01" role="tooltip" hidden><strong>First chat</strong><p>Tell us what you need, what matters to you and where your property is located.</p></div>
-          </div>
-          <p>First chat</p>
-        </li>
-        <li data-process-item>
-          <div class="home-process-marker">
-            <button class="home-process-step" type="button" aria-expanded="false" aria-controls="process-detail-02">02</button>
-            <div class="home-process-popover" id="process-detail-02" role="tooltip" hidden><strong>We check your block</strong><p>We look at access, slope, services and the planning constraints that shape the project.</p></div>
-          </div>
-          <p>Site check</p>
-        </li>
-        <li data-process-item>
-          <div class="home-process-marker">
-            <button class="home-process-step" type="button" aria-expanded="false" aria-controls="process-detail-03">03</button>
-            <div class="home-process-popover" id="process-detail-03" role="tooltip" hidden><strong>Design and site planning</strong><p>The layout, orientation and site works are developed around your block and priorities.</p></div>
-          </div>
-          <p>Design</p>
-        </li>
-        <li data-process-item>
-          <div class="home-process-marker">
-            <button class="home-process-step" type="button" aria-expanded="false" aria-controls="process-detail-04">04</button>
-            <div class="home-process-popover" id="process-detail-04" role="tooltip" hidden><strong>You see the price</strong><p>We explain the proposed scope, site allowances and selections before you commit.</p></div>
-          </div>
-          <p>Your price</p>
-        </li>
-        <li data-process-item>
-          <div class="home-process-marker">
-            <button class="home-process-step" type="button" aria-expanded="false" aria-controls="process-detail-05">05</button>
-            <div class="home-process-popover" id="process-detail-05" role="tooltip" hidden><strong>Contract and approvals</strong><p>Documentation, contracts and the required approvals are coordinated before construction.</p></div>
-          </div>
-          <p>Contract</p>
-        </li>
-        <li data-process-item>
-          <div class="home-process-marker">
-            <button class="home-process-step" type="button" aria-expanded="false" aria-controls="process-detail-06">06</button>
-            <div class="home-process-popover" id="process-detail-06" role="tooltip" hidden><strong>Build and handover</strong><p>We manage construction, keep you informed and complete the final handover with you.</p></div>
-          </div>
-          <p>Build &amp; handover</p>
-        </li>
-      </ol>
+
+      <div class="home-feasibility-footer">
+        <a class="text-link" href="/can-i-build/">Explore feasibility, costs and timelines <span aria-hidden="true">&rarr;</span></a>
+      </div>
     </div>
   </section>
 
   <section class="home-section home-projects bg-light-gray" aria-labelledby="home-projects-title">
     <div class="container">
       <div class="home-section-heading">
-        <p class="home-eyebrow">Our projects</p>
-        <!-- This H2 currently points to the display home. If this slot later features a different recommended project, replace only the H2 copy; keep the eyebrow and structure unchanged. -->
-        <h2 id="home-projects-title">Come and walk through the display home.</h2>
+        <h2 id="home-projects-title" class="home-section-title">Display home</h2>
+        <p class="home-section-lead">Come and walk through the display home.</p>
       </div>
       <article class="featured-project-card">
         <img src="{{ featured_project.thumbnail | relative_url }}" alt="Completed Oxley granny flat" loading="lazy">

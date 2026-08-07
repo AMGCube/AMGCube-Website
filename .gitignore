@@ -1,5 +1,9 @@
 _site
 
+# Claude Code local settings
+.claude/settings.local.json
+.claude/settings.json
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db

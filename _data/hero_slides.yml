@@ -1,8 +1,8 @@
 # Add future Hero images here. Keep all images close to a 16:9 aspect ratio.
-- image: /img/house_scheme_navy_transparent-2.webp
+- image: /img/hero/hero-navy-roof-house.webp
   alt: Rendered granny flat with a navy metal roof and brick exterior
   label: A home shaped around your site
 
-- image: /img/amgcube_hero_house_transparent_optimized.webp
+- image: /img/hero/hero-green-roof-house-transparent.webp
   alt: Rendered granny flat with a green metal roof, shown on a transparent background
   label: Every angle considered before we build

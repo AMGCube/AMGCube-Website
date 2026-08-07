@@ -187,15 +187,12 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 50% 50%;
-  transform: scale(1.14);
-  transform-origin: 50% 100%;
-  filter: saturate(0.96) sepia(0.025) contrast(1.015);
+  object-position: center;
 }
 
 .about-main .about-team__figure figcaption {
   margin-top: 26px;
-  text-align: left;
+  text-align: center;
 }
 
 .about-main .about-team__figure figcaption strong,

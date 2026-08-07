@@ -14,21 +14,6 @@ company:
   qbcc_licence_number: "15616213"
   qbcc_licence_class: "Builder – Low Rise"
 
-# Team names, titles and social links
-people:
-- name: Leon Liu
-  pic: 1
-  position: Founder, PM
-  
-- name: Bo Liu
-  pic: 2
-  position: Co-Founder, CTO
-  
-- name: Jason Wang
-  pic: 3
-  position: Co-Founder, CCO
-  
-
 # Social networks usernames
 social:
   - title: twitter

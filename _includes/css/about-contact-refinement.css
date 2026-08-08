@@ -85,6 +85,13 @@
   text-wrap: balance;
 }
 
+/* Idea-block statements only — strengthened; Behind AMGCube statement stays 18px/500/1.4. */
+.about-main .about-section__statement {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
 .about-main .about-section__body {
   justify-self: start;
   max-width: 680px;

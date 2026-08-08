@@ -41,6 +41,18 @@ description: "Explore AMGCube granny flat projects across Brisbane, with practic
               {% if post.project-type %}<div><dt>Project</dt><dd>{{ post.project-type }}</dd></div>{% endif %}
               {% if post.floor-area %}<div><dt>Floor area</dt><dd>{{ post.floor-area }}</dd></div>{% endif %}
               {% if post.layout-summary %}<div><dt>Layout</dt><dd>{{ post.layout-summary }}</dd></div>{% endif %}
+              {% if post.commencement %}<div><dt>Started</dt><dd>{{ post.commencement | date: "%-d %B %Y" }}</dd></div>{% endif %}
+              {% if post.completion %}<div><dt>Completed</dt><dd>{{ post.completion | date: "%B %Y" }}</dd></div>{% endif %}
+              {% if post.commencement and post.completion %}
+                {% assign start_s = post.commencement | date: "%s" | plus: 0 %}
+                {% assign end_s = post.completion | date: "%s" | plus: 0 %}
+                {% assign diff_days = end_s | minus: start_s | divided_by: 86400 %}
+                {% assign months_x10 = diff_days | times: 10 | plus: 15 | divided_by: 30 %}
+                {% assign whole = months_x10 | divided_by: 10 %}
+                {% assign frac = months_x10 | modulo: 10 %}
+                {% if frac == 0 %}{% assign duration = whole | append: " months" %}{% else %}{% assign duration = whole | append: "." | append: frac | append: " months" %}{% endif %}
+                <div><dt>Construction</dt><dd>Approximately {{ duration }}</dd></div>
+              {% endif %}
             </dl>
 
             <a class="project-record-link" href="{{ post.url | relative_url }}">

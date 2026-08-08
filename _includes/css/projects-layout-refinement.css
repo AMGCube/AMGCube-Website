@@ -112,6 +112,7 @@
 }
 
 .projects-main .project-record-link {
+  align-self: flex-end;
   margin-top: 22px;
 }
 
@@ -131,9 +132,7 @@
 }
 
 .projects-main .project-record-time {
-  margin: 16px 0 0;
-  padding-top: 15px;
-  border-top: 1px solid var(--surface-line, rgba(19, 53, 68, 0.12));
+  margin: 14px 0 0;
   color: var(--brand-navy, #17384a);
   font-size: 15px;
   font-weight: 600;

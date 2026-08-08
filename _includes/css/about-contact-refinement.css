@@ -58,19 +58,29 @@
 .about-main .about-section__title,
 .about-main .about-team__title {
   margin: 0;
-  color: var(--brand-accent-dark, #9a7600);
-  font-size: clamp(18px, 1.4vw, 20px);
-  font-weight: 700;
   letter-spacing: 0.7px;
   line-height: 1.2;
   text-transform: uppercase;
 }
 
+.about-main .about-team__title {
+  color: var(--brand-accent-dark, #9a7600);
+  font-size: clamp(18px, 1.4vw, 20px);
+  font-weight: 700;
+}
+
+/* Idea-block sub-labels: demoted to quiet grey category tags; the gold stays on the number. */
+.about-main .about-section__title {
+  color: var(--type-muted, #536873);
+  font-size: 12px;
+  font-weight: 600;
+}
+
 .about-main .about-section__title > span {
   display: inline;
   margin-right: 16px;
-  color: inherit;
-  font: inherit;
+  color: var(--brand-accent-dark, #9a7600);
+  font-weight: 700;
 }
 
 .about-main .about-section__statement,
@@ -401,10 +411,15 @@
     column-gap: 0;
   }
 
-  .about-main .about-section__title,
   .about-main .about-team__title {
     margin-bottom: 8px;
     font-size: clamp(18px, 5vw, 20px);
+    letter-spacing: 0.55px;
+  }
+
+  .about-main .about-section__title {
+    margin-bottom: 8px;
+    font-size: 12px;
     letter-spacing: 0.55px;
   }
 

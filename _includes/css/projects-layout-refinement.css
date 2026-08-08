@@ -67,13 +67,8 @@
   width: 100%;
   height: auto;
   min-height: 0;
-  aspect-ratio: 3 / 2;
+  aspect-ratio: 16 / 10;
   background: var(--surface-soft, #f7f7f4);
-}
-
-.projects-main .project-record-image-contain img {
-  padding: clamp(14px, 2vw, 28px);
-  background: transparent;
 }
 
 .projects-main .project-record-content {
@@ -214,7 +209,7 @@
   .projects-main .project-record:nth-child(even) .project-record-image {
     grid-row: auto;
     grid-column: 1;
-    aspect-ratio: 3 / 2;
+    aspect-ratio: 16 / 10;
   }
 
   .projects-main .project-record-content,

@@ -1,6 +1,6 @@
 ---
 title: Oxley Granny Flat Project
-card-title: Oxley Granny Flat Project
+card-title: Dowding St, Oxley
 subtitle: Completed two-bedroom granny flat in Oxley, Brisbane
 layout: project
 date: 2026-02-01
@@ -13,6 +13,7 @@ hero-alt: Completed Oxley granny flat exterior
 og_image: /img/projects/oxley-granny-flat/hero.webp
 
 location: Oxley, Brisbane
+council: Brisbane
 project-type: Granny flat
 project-status: Completed
 status-label: Completed

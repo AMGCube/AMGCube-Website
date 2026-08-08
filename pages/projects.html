@@ -36,10 +36,6 @@ description: "Explore AMGCube granny flat projects across Brisbane, with practic
               {{ post.location }}{% if post.project-type %} &middot; {{ post.project-type }}{% endif %}
             </p>
 
-            {% if post.current-stage %}
-              <p class="project-current-stage"><span>Current stage</span>{{ post.current-stage }}</p>
-            {% endif %}
-
             <p class="project-record-specs">
               {% if post.floor-area %}{{ post.floor-area }}{% endif %}{% if post.floor-area and post.layout-summary %} &middot; {% endif %}{% if post.layout-summary %}{{ post.layout-summary }}{% endif %}
             </p>
@@ -67,8 +63,8 @@ description: "Explore AMGCube granny flat projects across Brisbane, with practic
               </p>
             {% endif %}
 
-            <a class="project-record-link" href="{{ post.url | relative_url }}">
-              {{ post.card-cta | default: "View project" }} <span aria-hidden="true">→</span>
+            <a class="project-record-link" href="{{ post.url | relative_url }}" aria-label="More about {{ post.card-title | default: post.title }}">
+              More <span aria-hidden="true">→</span>
             </a>
           </div>
         </article>

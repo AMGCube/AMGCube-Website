@@ -22,7 +22,6 @@ status-label: In Progress
 status-key: in-progress
 current-stage: Underground Services
 card-description: An active granny flat project in Sunnybank Hills, Brisbane.
-card-cta: View Project Updates
 
 progress:
   - img: /img/projects/sunnybank-hills-granny-flat/progress/2026-07-22-underground-services-council-inspection.webp

@@ -39,9 +39,15 @@ cache: true
 include:
   - _pages
 
-# Repository-only maintenance templates; never publish these files with the site.
+# Repository-only maintenance files; never publish these with the site.
+# AGENTS.md contains Liquid template syntax that would otherwise break the build.
 exclude:
   - templates
+  - AGENTS.md
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
 
 collections:
   posts:

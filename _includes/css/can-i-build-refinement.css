@@ -508,3 +508,45 @@ html,
     text-align: center;
   }
 }
+
+/* 2x2 card grid for the four build-question cards */
+.can-i-build-main .build-questions-grid {
+  width: min(1180px, calc(100% - 64px));
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 40px 0;
+}
+
+.can-i-build-main .build-questions-grid .build-question {
+  padding: 32px 30px;
+  border: 1px solid var(--surface-line, rgba(19, 53, 68, 0.12));
+  border-top: 1px solid var(--surface-line, rgba(19, 53, 68, 0.12));
+  border-radius: 12px;
+  background: #fff;
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.can-i-build-main .build-questions-grid .build-question:hover {
+  border-color: var(--brand-accent, #e4b71d);
+  box-shadow: 0 6px 24px rgba(23, 56, 74, 0.06);
+}
+
+.can-i-build-main .build-questions-grid .build-question__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  margin-inline: 0;
+}
+
+.can-i-build-main .build-questions-grid .build-question__body {
+  max-width: none;
+}
+
+@media (max-width: 720px) {
+  .can-i-build-main .build-questions-grid {
+    grid-template-columns: 1fr;
+  }
+}

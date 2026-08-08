@@ -1,6 +1,6 @@
 ---
 title: Sunnybank Hills Granny Flat
-card-title: Sunnybank Hills Granny Flat Project
+card-title: Nym Ct, Sunnybank Hills
 subtitle: Active granny flat project in Sunnybank Hills, Brisbane
 layout: project
 date: 2026-07-25
@@ -13,6 +13,7 @@ og_image: /img/projects/sunnybank-hills-granny-flat/hero.webp
 hero-fit: contain
 hero-alt: Front elevation drawing for the Sunnybank Hills granny flat project
 location: Sunnybank Hills, Brisbane
+council: Brisbane
 project-type: Granny flat
 floor-area: 80m²
 layout-summary: 2 bed · 2 bath

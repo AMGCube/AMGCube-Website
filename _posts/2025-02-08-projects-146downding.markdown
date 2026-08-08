@@ -21,7 +21,7 @@ card-description: A completed two-bedroom granny flat project in Oxley.
 completion: 2025-10-31
 commencement: 2025-06-16
 floor-area: 80m²
-layout-summary: 2 bedrooms, 1 bathroom
+layout-summary: 2 bed · 1 bath
 
 progress:
   - img: /img/projects/oxley-granny-flat/progress/2026-01-completed-exterior.webp

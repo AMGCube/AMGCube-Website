@@ -37,8 +37,8 @@
           {% if page.floor-area %}<div><dt>Floor area</dt><dd>{{ page.floor-area }}</dd></div>{% endif %}
           {% if page.layout-summary %}<div><dt>Layout</dt><dd>{{ page.layout-summary }}</dd></div>{% endif %}
           {% if page.current-stage %}<div><dt>Current stage</dt><dd>{{ page.current-stage }}</dd></div>{% endif %}
-          {% if page.commencement %}<div><dt>Started</dt><dd>{{ page.commencement | date: "%-d %B %Y" }}</dd></div>{% endif %}
-          {% if page.completion %}<div><dt>Completed</dt><dd>{{ page.completion | date: "%B %Y" }}</dd></div>{% endif %}
+          {% if page.commencement %}<div><dt>Started</dt><dd>{{ page.commencement | date: "%-d %b %Y" }}</dd></div>{% endif %}
+          {% if page.completion %}<div><dt>Completed</dt><dd>{{ page.completion | date: "%b %Y" }}</dd></div>{% endif %}
           {% if page.commencement and page.completion %}
             {% assign start_s = page.commencement | date: "%s" | plus: 0 %}
             {% assign end_s = page.completion | date: "%s" | plus: 0 %}
@@ -52,7 +52,7 @@
             {% else %}
               {% assign duration = whole | append: "." | append: frac | append: " months" %}
             {% endif %}
-            <div><dt>Construction</dt><dd>Approximately {{ duration }}</dd></div>
+            <div><dt>Construction</dt><dd>Approx. {{ duration }}</dd></div>
           {% endif %}
         </dl>
       </div>

@@ -45,9 +45,9 @@ description: "Explore AMGCube granny flat projects across Brisbane, with practic
             </p>
 
             {% if post.commencement and post.completion %}
-              {% assign start_month = post.commencement | date: "%B" %}
+              {% assign start_month = post.commencement | date: "%b" %}
               {% assign start_year = post.commencement | date: "%Y" %}
-              {% assign end_month = post.completion | date: "%B" %}
+              {% assign end_month = post.completion | date: "%b" %}
               {% assign end_year = post.completion | date: "%Y" %}
               {% assign start_s = post.commencement | date: "%s" | plus: 0 %}
               {% assign end_s = post.completion | date: "%s" | plus: 0 %}
@@ -59,11 +59,11 @@ description: "Explore AMGCube granny flat projects across Brisbane, with practic
               <p class="project-record-time">
                 <span class="k">Built</span>
                 {% if start_year == end_year %}{{ start_month }} &ndash; {{ end_month }} {{ end_year }}{% else %}{{ start_month }} {{ start_year }} &ndash; {{ end_month }} {{ end_year }}{% endif %}
-                <span class="k">&middot; approximately</span> {{ duration }}
+                <span class="k">&middot; approx.</span> {{ duration }}
               </p>
             {% elsif post.commencement %}
               <p class="project-record-time">
-                <span class="k">Started</span> {{ post.commencement | date: "%-d %B %Y" }}
+                <span class="k">Started</span> {{ post.commencement | date: "%-d %b %Y" }}
               </p>
             {% endif %}
 

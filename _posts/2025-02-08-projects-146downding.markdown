@@ -54,14 +54,10 @@ progress:
   
 
 ---
-Completed in collaboration with a licensed Queensland building partner, the Oxley display home demonstrates AMGCUBE’s approach to planning and coordinating a practical granny flat on a Brisbane property.
+The Oxley granny flat is a completed two-bedroom home on a Brisbane property, now open as our display home.
 
-The home includes 80m² of internal space with two bedrooms and one bathroom, complemented by a 70m² outdoor deck. The open-plan living area connects with the kitchen, while full-height glazing and a 2.7m ceiling create a bright and practical living environment.
+Inside, 80m² holds two bedrooms, one bathroom and an open-plan living area connected to the kitchen. Full-height glazing and a 2.7m ceiling keep the space bright and open, and a 70m² deck extends the living area outdoors.
 
-### What this project demonstrates
+The home is fully prefabricated: every component above ground level is made in the factory, then assembled on site. It is built on a heavy steel frame — a structural system usually reserved for commercial buildings and rarely used in housing — which gives the home long spans, a solid feel and lasting durability.
 
-- Practical 80m² granny-flat layout
-- Design shaped around the property and intended use
-- Coordinated construction on a Brisbane site
-- Approximately 3.5 months from foundation to practical completion
-- A completed display home that prospective clients can visit
+Built with a licensed Queensland building partner, the home is open for prospective clients to visit and walk through in person.

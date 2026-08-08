@@ -22,7 +22,7 @@
         </div>
 
         {% if page.hero-image %}
-          <figure class="project-detail-hero-image project-detail-hero-image-{{ page.hero-fit | default: 'cover' }}">
+          <figure class="project-detail-hero-image">
             <img src="{{ page.hero-image | relative_url }}" alt="{{ page.hero-alt | default: page.card-title | default: page.title }}">
           </figure>
         {% endif %}
@@ -110,7 +110,7 @@
 
           <div class="project-detail-progress-grid">
             {% for item in page.progress %}
-              <figure class="project-detail-progress-item project-detail-progress-item-{{ item.orientation | default: 'landscape' }}">
+              <figure class="project-detail-progress-item">
                 <img src="{{ item.img | relative_url }}" loading="lazy" alt="{{ item.alt | default: page.card-title | default: page.title }} — {{ item.text | default: 'project progress' }}">
                 {% if item.text %}<figcaption>{{ item.text }}</figcaption>{% endif %}
               </figure>

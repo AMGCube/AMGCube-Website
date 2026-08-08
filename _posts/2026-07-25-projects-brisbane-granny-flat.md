@@ -10,7 +10,6 @@ listed: true
 thumbnail: /img/projects/sunnybank-hills-granny-flat/thumbnail.webp
 hero-image: /img/projects/sunnybank-hills-granny-flat/hero.webp
 og_image: /img/projects/sunnybank-hills-granny-flat/hero.webp
-hero-fit: contain
 hero-alt: Front elevation drawing for the Sunnybank Hills granny flat project
 location: Sunnybank Hills, Brisbane
 council: Brisbane
@@ -31,7 +30,6 @@ progress:
   - img: /img/projects/sunnybank-hills-granny-flat/progress/2026-07-18-ground-piers-dimension-check.webp
     text: 18 July 2026 · Ground piers completed · On-site dimension check
     alt: On-site dimension check after the concrete ground piers were completed
-    orientation: portrait
   - img: /img/projects/sunnybank-hills-granny-flat/progress/2026-07-10-construction-start-site-levelling.webp
     text: 10 July 2026 · Construction start · Site levelling
     alt: Track loader levelling the site at the start of construction

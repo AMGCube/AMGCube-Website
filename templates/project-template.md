@@ -29,9 +29,6 @@ featured: false
 # Projects列表封面图
 thumbnail: /img/projects/suburb-granny-flat/thumbnail.webp
 
-# 实景照片用cover；图纸或白底立面图用contain
-thumbnail-fit: cover
-
 # 项目详情页Hero图片
 hero-image: /img/projects/suburb-granny-flat/hero.webp
 hero-fit: cover

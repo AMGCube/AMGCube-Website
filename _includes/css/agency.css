@@ -8462,12 +8462,6 @@ html {
   transition: transform 600ms ease;
 }
 
-.project-record-image-contain img {
-  padding: clamp(22px, 3vw, 42px);
-  background: #fff;
-  object-fit: contain;
-}
-
 .project-record-image:hover img,
 .project-record-image:focus img {
   transform: scale(1.018);
@@ -8834,11 +8828,6 @@ html {
   object-fit: cover;
 }
 
-.project-detail-hero-image-contain img {
-  padding: clamp(22px, 3vw, 42px);
-  object-fit: contain;
-}
-
 .project-detail-facts {
   padding: 34px 0;
   border-bottom: 1px solid #d5dee1;
@@ -8995,14 +8984,6 @@ html {
   aspect-ratio: 4 / 3;
   object-fit: cover;
   background: #dfe5e7;
-}
-
-.project-detail-progress-item-portrait {
-  width: 100%;
-}
-
-.project-detail-progress-item-portrait img {
-  aspect-ratio: 4 / 5;
 }
 
 .project-detail-progress-item figcaption {

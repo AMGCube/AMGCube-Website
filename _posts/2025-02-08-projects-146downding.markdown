@@ -10,6 +10,7 @@ featured: true
 thumbnail: /img/projects/oxley-granny-flat/thumbnail.webp
 hero-image: /img/projects/oxley-granny-flat/hero.webp
 hero-alt: Completed Oxley granny flat exterior
+og_image: /img/projects/oxley-granny-flat/hero.webp
 
 location: Oxley, Brisbane
 project-type: Granny flat

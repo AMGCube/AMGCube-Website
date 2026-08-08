@@ -10,6 +10,7 @@ listed: true
 thumbnail: /img/projects/sunnybank-hills-granny-flat/thumbnail.webp
 thumbnail-fit: contain
 hero-image: /img/projects/sunnybank-hills-granny-flat/hero.webp
+og_image: /img/projects/sunnybank-hills-granny-flat/hero.webp
 hero-fit: contain
 hero-alt: Front elevation drawing for the Sunnybank Hills granny flat project
 location: Sunnybank Hills, Brisbane

@@ -12,6 +12,62 @@
 
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
+  <!-- Icons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="{{ site.company.legal_name }}">
+  <meta property="og:type" content="{{ page.og_type | default: 'website' }}">
+  <meta property="og:title" content="{{ page.title | default: site.title }}">
+  <meta property="og:description" content="{{ page.description | default: site.description | escape }}">
+  <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <meta property="og:image" content="{{ page.og_image | default: '/img/og/og-default.webp' | prepend: site.baseurl | prepend: site.url }}">
+  <meta property="og:locale" content="en_AU">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page.title | default: site.title }}">
+  <meta name="twitter:description" content="{{ page.description | default: site.description | escape }}">
+  <meta name="twitter:image" content="{{ page.og_image | default: '/img/og/og-default.webp' | prepend: site.baseurl | prepend: site.url }}">
+
+  <!-- Structured data: Local business -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "{{ site.company.legal_name }}",
+    "alternateName": "AMGCUBE",
+    "description": "{{ site.description | escape }}",
+    "url": "{{ site.url }}/",
+    "image": "{{ site.url }}/img/og/og-default.webp",
+    "logo": "{{ site.url }}/img/about/logo-title.png",
+    "telephone": "+61 458 533 333",
+    "priceRange": "$$$",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Brisbane",
+      "addressRegion": "QLD",
+      "addressCountry": "AU"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "-27.4705",
+      "longitude": "153.0260"
+    },
+    "areaServed": ["Brisbane", "South East Queensland"],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "sales",
+      "telephone": "+61 458 533 333",
+      "email": "info@amgcube.com",
+      "availableLanguage": ["English"]
+    },
+    "sameAs": []
+  }
+  </script>
+
   <!-- Preconnect to third-party origins -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

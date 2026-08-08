@@ -17,7 +17,7 @@ location: Sunnybank Hills, Brisbane
 project-type: Granny flat
 floor-area: 80m²
 layout-summary: 2 bedrooms, 2 bathrooms
-commencement: 10 July 2026
+commencement: 2026-07-10
 project-status: In Progress
 status-label: In Progress
 status-key: in-progress

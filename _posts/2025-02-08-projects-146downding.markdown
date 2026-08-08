@@ -18,10 +18,10 @@ project-status: Completed
 status-label: Completed
 status-key: completed
 card-description: A completed two-bedroom granny flat project in Oxley.
-completion: Jan, 2026
+completion: 2025-10-31
+commencement: 2025-06-16
 floor-area: 80m²
 layout-summary: 2 bedrooms, 1 bathroom
-construction-time: Approximately 3.5 months
 
 progress:
   - img: /img/projects/oxley-granny-flat/progress/2026-01-completed-exterior.webp

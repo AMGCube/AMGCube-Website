@@ -49,3 +49,6 @@ collections:
     permalink: /:path/
   faqs:
     output: true
+  guides:
+    output: true
+    permalink: /guides/:title/

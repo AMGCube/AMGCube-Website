@@ -30,12 +30,12 @@
 }
 
 .projects-main .projects-introduction-grid {
-  grid-template-columns: minmax(0, 44fr) minmax(400px, 50fr);
-  gap: 6%;
+  display: block;
 }
 
 .projects-main .projects-introduction-copy {
-  padding-top: 20px;
+  padding-top: 26px;
+  max-width: 780px;
 }
 
 .projects-main .projects-record {

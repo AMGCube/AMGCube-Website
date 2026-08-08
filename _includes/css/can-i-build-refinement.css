@@ -341,10 +341,13 @@ html,
 
 .can-i-build-main .build-cta__heading .build-eyebrow {
   display: block;
-  margin-bottom: 15px;
-  color: var(--brand-accent, #e4b71d);
-  font-size: 13px;
-  letter-spacing: 1.4px;
+  margin-bottom: 0;
+  color: #fff;
+  font-size: clamp(26px, 2.6vw, 34px);
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+  text-transform: none;
 }
 
 .can-i-build-main .build-cta__heading h2 {

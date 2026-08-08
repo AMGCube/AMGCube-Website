@@ -31,10 +31,7 @@ html,
 }
 
 .can-i-build-main .build-editorial-intro__inner {
-  display: grid;
-  grid-template-columns: minmax(260px, 0.34fr) minmax(0, 0.66fr);
-  align-items: start;
-  column-gap: 72px;
+  display: block;
 }
 
 .can-i-build-main .build-editorial-intro__heading,
@@ -57,7 +54,7 @@ html,
 }
 
 .can-i-build-main .build-editorial-intro__heading h2 {
-  max-width: 420px;
+  max-width: 720px;
   margin: 0;
   color: var(--brand-navy, #17384a);
   font-size: clamp(30px, 2.75vw, 38px);
@@ -68,8 +65,10 @@ html,
 }
 
 .can-i-build-main .build-editorial-intro__copy {
-  justify-self: start;
-  max-width: 620px;
+  margin-top: 30px;
+  max-width: none;
+  columns: 2;
+  column-gap: 56px;
 }
 
 .can-i-build-main .build-editorial-intro__copy p,
@@ -83,6 +82,11 @@ html,
 
 .can-i-build-main .build-editorial-intro__copy p + p {
   margin-top: 16px;
+}
+
+.can-i-build-main .build-editorial-intro__copy p {
+  break-inside: avoid;
+  margin: 0;
 }
 
 .can-i-build-main .build-question {
@@ -445,7 +449,12 @@ html,
     font-size: 30px;
   }
 
-  .can-i-build-main .build-editorial-intro__copy,
+  .can-i-build-main .build-editorial-intro__copy {
+    columns: 1;
+    margin-top: 24px;
+    max-width: none;
+  }
+
   .can-i-build-main .build-question__body {
     max-width: none;
     margin-top: 26px;

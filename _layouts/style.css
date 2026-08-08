@@ -6,6 +6,7 @@
 {% include css/surfaces.css %}
 {% include css/home-heading-hierarchy.css %}
 {% include css/projects-layout-refinement.css %}
+{% include css/project-detail-refinement.css %}
 {% include css/about-contact-refinement.css %}
 {% include css/home-footer-density.css %}
 {% include css/secondary-hero-unified.css %}

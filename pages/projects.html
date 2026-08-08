@@ -32,28 +32,40 @@ description: "Explore AMGCube granny flat projects across Brisbane, with practic
             </p>
             <h3>{{ post.card-title | default: post.title }}</h3>
 
+            <p class="project-record-sub">
+              {{ post.location }}{% if post.project-type %} &middot; {{ post.project-type }}{% endif %}
+            </p>
+
             {% if post.current-stage %}
               <p class="project-current-stage"><span>Current stage</span>{{ post.current-stage }}</p>
             {% endif %}
 
-            <dl class="project-record-facts">
-              {% if post.location %}<div><dt>Location</dt><dd>{{ post.location }}</dd></div>{% endif %}
-              {% if post.project-type %}<div><dt>Project</dt><dd>{{ post.project-type }}</dd></div>{% endif %}
-              {% if post.floor-area %}<div><dt>Floor area</dt><dd>{{ post.floor-area }}</dd></div>{% endif %}
-              {% if post.layout-summary %}<div><dt>Layout</dt><dd>{{ post.layout-summary }}</dd></div>{% endif %}
-              {% if post.commencement %}<div><dt>Started</dt><dd>{{ post.commencement | date: "%-d %B %Y" }}</dd></div>{% endif %}
-              {% if post.completion %}<div><dt>Completed</dt><dd>{{ post.completion | date: "%B %Y" }}</dd></div>{% endif %}
-              {% if post.commencement and post.completion %}
-                {% assign start_s = post.commencement | date: "%s" | plus: 0 %}
-                {% assign end_s = post.completion | date: "%s" | plus: 0 %}
-                {% assign diff_days = end_s | minus: start_s | divided_by: 86400 %}
-                {% assign months_x10 = diff_days | times: 10 | plus: 15 | divided_by: 30 %}
-                {% assign whole = months_x10 | divided_by: 10 %}
-                {% assign frac = months_x10 | modulo: 10 %}
-                {% if frac == 0 %}{% assign duration = whole | append: " months" %}{% else %}{% assign duration = whole | append: "." | append: frac | append: " months" %}{% endif %}
-                <div><dt>Construction</dt><dd>Approximately {{ duration }}</dd></div>
-              {% endif %}
-            </dl>
+            <p class="project-record-specs">
+              {% if post.floor-area %}{{ post.floor-area }}{% endif %}{% if post.floor-area and post.layout-summary %} &middot; {% endif %}{% if post.layout-summary %}{{ post.layout-summary }}{% endif %}
+            </p>
+
+            {% if post.commencement and post.completion %}
+              {% assign start_month = post.commencement | date: "%B" %}
+              {% assign start_year = post.commencement | date: "%Y" %}
+              {% assign end_month = post.completion | date: "%B" %}
+              {% assign end_year = post.completion | date: "%Y" %}
+              {% assign start_s = post.commencement | date: "%s" | plus: 0 %}
+              {% assign end_s = post.completion | date: "%s" | plus: 0 %}
+              {% assign diff_days = end_s | minus: start_s | divided_by: 86400 %}
+              {% assign months_x10 = diff_days | times: 10 | plus: 15 | divided_by: 30 %}
+              {% assign whole = months_x10 | divided_by: 10 %}
+              {% assign frac = months_x10 | modulo: 10 %}
+              {% if frac == 0 %}{% assign duration = whole | append: " months" %}{% else %}{% assign duration = whole | append: "." | append: frac | append: " months" %}{% endif %}
+              <p class="project-record-time">
+                <span class="k">Built</span>
+                {% if start_year == end_year %}{{ start_month }} &ndash; {{ end_month }} {{ end_year }}{% else %}{{ start_month }} {{ start_year }} &ndash; {{ end_month }} {{ end_year }}{% endif %}
+                <span class="k">&middot; approximately</span> {{ duration }}
+              </p>
+            {% elsif post.commencement %}
+              <p class="project-record-time">
+                <span class="k">Started</span> {{ post.commencement | date: "%-d %B %Y" }}
+              </p>
+            {% endif %}
 
             <a class="project-record-link" href="{{ post.url | relative_url }}">
               {{ post.card-cta | default: "View project" }} <span aria-hidden="true">→</span>

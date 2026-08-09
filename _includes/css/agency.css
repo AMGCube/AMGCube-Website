@@ -6657,6 +6657,42 @@ html {
   line-height: 1.75;
 }
 
+.build-layout-section {
+  margin-top: 56px;
+  padding-top: 48px;
+  border-top: 1px solid var(--surface-line, rgba(19, 53, 68, 0.12));
+}
+
+.build-layout-section .build-detail-section-label {
+  margin-bottom: 14px;
+}
+
+.build-layout-lead {
+  max-width: 640px;
+  margin: 0 0 24px;
+  color: var(--brand-navy, #17384a);
+  font-size: clamp(24px, 2.4vw, 30px);
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.3px;
+  text-transform: none;
+}
+
+.build-layout-body {
+  max-width: 720px;
+}
+
+.build-layout-body p {
+  margin: 0;
+  color: var(--type-muted, #5a6b73);
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.build-layout-body p + p {
+  margin-top: 18px;
+}
+
 .build-detail-site .build-context-note,
 .build-detail-budget .budget-explainer {
   margin-top: 24px;

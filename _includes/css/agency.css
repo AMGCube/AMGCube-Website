@@ -6680,6 +6680,10 @@ html {
   grid-column: 1;
 }
 
+.build-detail-size .build-detail-intro-left .build-detail-section-label {
+  margin-bottom: 16px;
+}
+
 .build-detail-size .build-detail-intro .build-detail-intro-lead {
   grid-column: 2;
   grid-row: 1;

@@ -59,8 +59,8 @@
 /* Shared footer: retain its structure while removing unused vertical space. */
 .footer-main {
   min-height: 0;
-  padding-top: 52px;
-  padding-bottom: 48px;
+  padding-top: 40px;
+  padding-bottom: 36px;
 }
 
 .footer-grid {
@@ -82,7 +82,7 @@
 }
 
 .footer-brand-logos {
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .footer-brand .footer-membership-note {
@@ -91,20 +91,17 @@
 
 .footer-links h4,
 .footer-contact h4 {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
-.footer-links li {
-  margin-bottom: 18px;
+.footer-links li,
+.footer-contact li {
+  margin-bottom: 14px;
 }
 
 .footer-links li:last-child,
 .footer-contact li:last-child {
   margin-bottom: 0;
-}
-
-.footer-contact li {
-  margin-bottom: 18px;
 }
 
 .footer-bottom {

@@ -5667,9 +5667,7 @@ html {
 
 .build-context-note,
 .budget-explainer {
-  display: grid;
-  grid-template-columns: minmax(240px, 0.7fr) minmax(0, 1.3fr);
-  gap: 30px;
+  display: block;
   margin-top: 18px;
   padding: 20px 24px;
   border-left: 3px solid #f4c020;
@@ -5678,6 +5676,8 @@ html {
 
 .build-context-note strong,
 .budget-explainer strong {
+  display: block;
+  margin-bottom: 8px;
   color: #173244;
   font-size: 14px;
 }
@@ -6170,12 +6170,6 @@ html {
     margin-top: 10px;
   }
 
-  .build-context-note,
-  .budget-explainer {
-    grid-template-columns: 1fr;
-    gap: 8px;
-  }
-
   .cost-driver-grid {
     grid-template-columns: 1fr;
   }
@@ -6655,6 +6649,22 @@ html {
   color: #5d6d75;
   font-size: 16px;
   line-height: 1.75;
+}
+
+.build-detail-intro .build-detail-intro-lead {
+  grid-area: lead;
+  align-self: start;
+}
+
+.build-detail-intro .build-detail-intro-lead p {
+  margin: 0;
+  color: var(--type-muted, #536873);
+  font-size: var(--type-body-feature, 17px);
+  line-height: var(--type-line, 1.65);
+}
+
+.build-detail-intro .build-detail-intro-lead p + p {
+  margin-top: 16px;
 }
 
 .build-layout-section {

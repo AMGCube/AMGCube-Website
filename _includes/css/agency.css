@@ -5615,6 +5615,14 @@ html {
   line-height: 1.7;
 }
 
+.site-question-copy > .site-question-lead {
+  margin: 0 0 12px;
+  color: var(--brand-navy, #17384a);
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
 .site-question-copy > strong {
   display: block;
   padding-left: 14px;
@@ -6617,7 +6625,7 @@ html {
 .build-detail-next {
   padding: 50px 0;
   border-top: 1px solid #dce3e6;
-  background: #f3f6f7;
+  background: var(--surface-muted, #f3f3f0);
 }
 
 .build-detail-next > .container {

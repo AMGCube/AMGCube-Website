@@ -15,58 +15,44 @@ description: "Follow the granny flat project path through property assessment, d
     <p>The project has two broad stages: preparing the property, design and approvals properly, then managing the construction and handover on site.</p>
   </header>
 
-  <section class="process-phase" aria-labelledby="detail-preconstruction-title">
-    <div class="process-phase-label">
-      <span>Phase 01</span>
-      <h3 id="detail-preconstruction-title">Property, design &amp; approvals</h3>
+  <div class="process-phase-container p1" id="process-phase-1">
+    <span class="process-milestone start"><span aria-hidden="true">&bull;</span> Project starts here</span>
+    <div class="process-phase-head">
+      <span class="process-phase-title">Preliminary<span class="process-phase-sub">— demand, design &amp; quote</span></span>
     </div>
-    <ol class="build-process-steps">
-      <li>
-        <span>Step 01</span>
-        <h4>Property check</h4>
-        <p>We review the address, backyard, access and obvious property constraints to decide whether the project looks worth taking further.</p>
-      </li>
-      <li>
-        <span>Step 02</span>
-        <h4>Survey, design &amp; structural</h4>
-        <p>We carry out a site survey and soil test, then develop the structural design and confirm the home meets energy efficiency requirements under the National Construction Code.</p>
-      </li>
-      <li>
-        <span>Step 03</span>
-        <h4>Design finalisation</h4>
-        <p>We finalise the complete set of drawings and technical specifications, including internal fit-out choices such as kitchen, bathroom and window details.</p>
-      </li>
-      <li>
-        <span>Step 04</span>
-        <h4>Quotation &amp; sign-off</h4>
-        <p>We prepare a full quotation based on the finalised design, setting out the total cost and payment stages. Once you approve the design and price, we move to a construction contract.</p>
-      </li>
-    </ol>
-  </section>
+    <div class="process-step-row">
+      <div class="process-step"><div class="process-connector p1"></div><div class="process-circle p1">1</div><h4>Property check</h4><p>Address, backyard and access reviewed.</p></div>
+      <div class="process-step"><div class="process-connector p1"></div><div class="process-circle p1">2</div><h4>Survey, design &amp; structural</h4><p>Site survey, soil test, structural design, energy compliance.</p></div>
+      <div class="process-step"><div class="process-connector p1"></div><div class="process-circle p1">3</div><h4>Design finalisation</h4><p>Drawings and fit-out specifications confirmed.</p></div>
+      <div class="process-step"><div class="process-circle p1">4</div><h4>Quotation &amp; sign-off</h4><p>Quotation prepared, design and price approved.</p></div>
+    </div>
+  </div>
 
-  <section class="process-phase process-phase-onsite" aria-labelledby="detail-onsite-title">
-    <div class="process-phase-label">
-      <span>Phase 02</span>
-      <h3 id="detail-onsite-title">Construction &amp; handover</h3>
+  <div class="process-phase-container p2" id="process-phase-2">
+    <div class="process-phase-head">
+      <span class="process-phase-title">Construction &amp; handover<span class="process-phase-sub">— building and delivering the home</span></span>
     </div>
-    <ol class="build-process-steps build-process-steps-short">
-      <li>
-        <span>Step 05</span>
-        <h4>Contract &amp; approval</h4>
-        <p>We sign a formal construction contract confirming price, timing and payment terms, then arrange the building approval required before work can start on site.</p>
-      </li>
-      <li>
-        <span>Step 06</span>
-        <h4>Construction</h4>
-        <p>Construction proceeds through each stage — from foundations through to internal fit-out — with inspections at every stage before moving to the next.</p>
-      </li>
-      <li>
-        <span>Step 07</span>
-        <h4>Inspection &amp; handover</h4>
-        <p>We complete final inspections, resolve any outstanding items, and hand the finished home over to you.</p>
-      </li>
-    </ol>
-  </section>
+    <div class="process-step-row short">
+      <div class="process-step"><div class="process-connector p2"></div><div class="process-circle p2">5</div><h4>Contract &amp; approval</h4><p>Construction contract signed, building approval arranged.</p></div>
+      <div class="process-step"><div class="process-connector p2"></div><div class="process-circle p2">6</div><h4>Construction</h4><p>Foundations through internal fit-out, inspected at every stage.</p></div>
+      <div class="process-step"><div class="process-circle p2">7</div><h4>Inspection &amp; handover</h4><p>Final inspections complete, home handed over.</p></div>
+    </div>
+    <div class="process-milestone-end-wrap"><span class="process-milestone end"><span aria-hidden="true">&check;</span> Home handed over</span></div>
+  </div>
 
   <p class="timeline-note">The programme is confirmed once the required investigations, approval pathway and project scope are known. Timing can vary with the property, approvals, site conditions, weather and client decisions.</p>
+
+  <script>
+  (function(){
+    var targets=[document.getElementById('process-phase-1'),document.getElementById('process-phase-2')];
+    if('IntersectionObserver' in window){
+      var io=new IntersectionObserver(function(entries){
+        entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('revealed'); io.unobserve(e.target); } });
+      },{threshold:0.2});
+      targets.forEach(function(el){ if(el) io.observe(el); });
+    } else {
+      targets.forEach(function(el){ if(el) el.classList.add('revealed'); });
+    }
+  })();
+  </script>
 </article>

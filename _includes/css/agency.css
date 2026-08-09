@@ -6668,8 +6668,7 @@ html {
 }
 
 .build-layout-lead {
-  max-width: 640px;
-  margin: 0 0 28px;
+  margin: 0 0 22px;
   color: var(--brand-navy, #17384a);
   font-size: clamp(24px, 2.4vw, 30px);
   font-weight: 600;

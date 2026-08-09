@@ -163,6 +163,10 @@
     margin: 24px 0 0;
   }
 
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
   .footer-main {
     padding-top: 44px;
     padding-bottom: 40px;

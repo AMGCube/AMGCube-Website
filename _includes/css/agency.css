@@ -6669,7 +6669,7 @@ html {
 
 .build-layout-lead {
   max-width: 640px;
-  margin: 0 0 24px;
+  margin: 0 0 28px;
   color: var(--brand-navy, #17384a);
   font-size: clamp(24px, 2.4vw, 30px);
   font-weight: 600;
@@ -6678,8 +6678,11 @@ html {
   text-transform: none;
 }
 
-.build-layout-body {
-  max-width: 720px;
+.build-layout-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(260px, 0.85fr);
+  gap: 48px;
+  align-items: start;
 }
 
 .build-layout-body p {
@@ -6691,6 +6694,60 @@ html {
 
 .build-layout-body p + p {
   margin-top: 18px;
+}
+
+.build-layout-specs {
+  background: var(--surface-muted, #f3f3f0);
+  border: 1px solid var(--surface-line, rgba(19, 53, 68, 0.12));
+  border-radius: 12px;
+  padding: 26px 24px;
+}
+
+.specs-heading {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--brand-accent-dark, #a67d00);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin: 0 0 16px;
+}
+
+.specs-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--surface-line, rgba(19, 53, 68, 0.12));
+}
+
+.specs-row:last-of-type {
+  border-bottom: none;
+}
+
+.specs-k {
+  font-size: 13px;
+  color: var(--type-muted, #5a6b73);
+}
+
+.specs-v {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--brand-navy, #17384a);
+}
+
+.specs-note {
+  margin: 14px 0 0;
+  padding-top: 12px;
+  border-top: 1px solid var(--surface-line, rgba(19, 53, 68, 0.12));
+  font-size: 12.5px;
+  color: var(--type-muted, #5a6b73);
+  line-height: 1.6;
+}
+
+@media (max-width: 767px) {
+  .build-layout-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .build-detail-site .build-context-note,

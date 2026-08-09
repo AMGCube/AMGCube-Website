@@ -5603,9 +5603,12 @@ html {
 
 .site-question-copy h3 {
   margin: 0 0 13px;
-  font-size: 22px;
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
   line-height: 1.35;
+  text-transform: uppercase;
+  color: var(--brand-accent-dark, #a67d00);
 }
 
 .site-question-copy > p {
@@ -6630,9 +6633,10 @@ html {
 
 .build-detail-next > .container {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-columns: minmax(0, 560px) auto;
   align-items: center;
   gap: 40px;
+  justify-content: space-between;
 }
 
 .build-detail-next h2 {

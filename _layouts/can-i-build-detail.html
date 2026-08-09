@@ -15,6 +15,7 @@
     </div>
   </main>
 
+  {% unless page.skip_next_cta %}
   <section class="build-detail-next" aria-label="Can I Build next step">
     <div class="container">
       <div>
@@ -27,6 +28,7 @@
       </div>
     </div>
   </section>
+  {% endunless %}
 
   {% include js.html %}
   {% include footer.html %}

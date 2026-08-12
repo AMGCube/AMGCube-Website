@@ -39,3 +39,18 @@ Icon
 # Files that might appear on external disk
 .Spotlight-V100
 .Trashes
+
+# =========================
+# Local tooling (not part of the Jekyll site)
+# =========================
+
+node_modules/
+
+# Working photos for tools/project-progress-image-processor are local only.
+# The directories themselves are kept via .gitkeep.
+tools/project-progress-image-processor/incoming/*
+tools/project-progress-image-processor/processed/*
+tools/project-progress-image-processor/rejected/*
+!tools/project-progress-image-processor/incoming/.gitkeep
+!tools/project-progress-image-processor/processed/.gitkeep
+!tools/project-progress-image-processor/rejected/.gitkeep

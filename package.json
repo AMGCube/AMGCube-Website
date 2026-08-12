@@ -1,0 +1,12 @@
+{
+  "name": "amgcube-website-tools",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Local maintenance tooling for the AMGCube website. Not part of the Jekyll build.",
+  "scripts": {
+    "process-progress-images": "node tools/project-progress-image-processor/process-images.js"
+  },
+  "dependencies": {
+    "sharp": "^0.35.3"
+  }
+}

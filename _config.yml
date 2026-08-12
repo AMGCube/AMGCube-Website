@@ -48,6 +48,11 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - LICENSE
+  # Local image-processing tool — must never be published or copied into _site.
+  - tools
+  - node_modules
+  - package.json
+  - package-lock.json
 
 collections:
   posts:

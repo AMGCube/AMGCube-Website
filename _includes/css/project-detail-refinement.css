@@ -130,3 +130,18 @@
     display: none;
   }
 }
+
+/* Part C — optional progress-update description.
+   Only renders when a progress entry sets `description:`; existing entries are
+   unaffected. The parent figcaption is uppercase small-caps, so this resets to
+   sentence case for readable prose. */
+.project-detail-progress-note {
+  display: block;
+  margin-top: 6px;
+  color: var(--type-subtle);
+  font-size: var(--type-small);
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  line-height: 1.5;
+}

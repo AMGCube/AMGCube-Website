@@ -16,7 +16,10 @@ description: "Explore AMGCube granny flat projects across Brisbane, with practic
     </header>
 
     <div class="projects-list" id="projects-list">
-      {% assign unique_posts = site.posts | where: "categories", "Projects" | sort: "date" | reverse %}
+      {% comment %}
+        Transitional source: the _projects collection plus any project still
+        living in _posts. Remove the concat once every project has moved.
+      {% endcomment %}{% assign legacy_projects = site.posts | where: "categories", "Projects" %}{% assign unique_posts = site.projects | concat: legacy_projects | sort: "date" | reverse %}
       {% assign public_projects = unique_posts | where_exp: "post", "post.listed != false" %}
       {% for post in public_projects %}
         <article class="project-record">

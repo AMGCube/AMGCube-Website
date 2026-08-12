@@ -109,12 +109,21 @@
           </header>
 
           <div class="project-detail-progress-grid">
-            {% for item in page.progress %}
+            {% comment %}
+              Progress entries come in two accepted shapes:
+                A) structured (_projects collection) — date / stage / title / description / images[]
+                B) legacy (_posts)                   — img / text / alt
+            {% endcomment %}{% for item in page.progress %}{% if item.images %}{% capture caption %}{{ item.date | date: "%-d %B %Y" }}{% if item.stage %} · {{ item.stage }}{% endif %}{% if item.title %} · {{ item.title }}{% endif %}{% endcapture %}{% for image in item.images %}
+              <figure class="project-detail-progress-item">
+                <img src="{{ image.src | relative_url }}" loading="lazy" alt="{{ image.alt | default: page.card-title | default: page.title }} — {{ caption | default: 'project progress' }}">
+                {% if caption != '' %}<figcaption>{{ caption }}{% if item.description %}<span class="project-detail-progress-note">{{ item.description }}</span>{% endif %}</figcaption>{% endif %}
+              </figure>
+            {% endfor %}{% else %}
               <figure class="project-detail-progress-item">
                 <img src="{{ item.img | relative_url }}" loading="lazy" alt="{{ item.alt | default: page.card-title | default: page.title }} — {{ item.text | default: 'project progress' }}">
                 {% if item.text %}<figcaption>{{ item.text }}</figcaption>{% endif %}
               </figure>
-            {% endfor %}
+            {% endif %}{% endfor %}
           </div>
         </div>
       </section>

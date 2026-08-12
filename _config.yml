@@ -53,6 +53,9 @@ collections:
   posts:
     output: true
     permalink: /:path/
+  projects:
+    output: true
+    permalink: /projects/:name/
   faqs:
     output: true
   guides:

@@ -33,7 +33,7 @@ council: Brisbane
 project-status: In Progress
 status-label: In Progress
 status-key: in-progress                     # in-progress | completed
-current-stage: Underground Services         # 当前施工阶段
+current-stage: Slab                         # 当前施工阶段
 
 # --- Specification ----------------------------------------------------------
 project-type: Granny flat
@@ -67,6 +67,22 @@ og_image: /img/projects/sunnybank-hills-granny-flat/hero.webp
 #   description 选填 · 一到两句说明（填写后显示在图片说明下方）
 #   images      必填 · 至少一张；每张需要 src 和 alt
 progress:
+  - date: 2026-08-11
+    stage: Slab
+    title: Concrete slab completed
+    description: Concrete was poured and finished, marking the completion of the slab stage.
+    images:
+      - src: /img/projects/sunnybank-hills-granny-flat/progress/2026-08-11-slab-completed.webp
+        alt: Workers screeding and finishing the freshly poured concrete slab
+
+  - date: 2026-08-07
+    stage: Foundation
+    title: Structural inspection completed
+    description: The foundation reinforcement and preparation were completed, and the structural engineer carried out the required inspection before the concrete pour.
+    images:
+      - src: /img/projects/sunnybank-hills-granny-flat/progress/2026-08-07-foundation-reinforcement.webp
+        alt: Steel reinforcement mesh and timber formwork in place across the slab area before the concrete pour
+
   - date: 2026-07-22
     stage: Stormwater, sewer and water services completed
     title: Council inspection passed
@@ -97,4 +113,4 @@ progress:
 
 This granny flat project is located in Sunnybank Hills QLD 4109 and is currently in progress.
 
-The current recorded stage is **underground services**. Further project information and construction updates will be added as the work develops and details become available for publication.
+The current recorded stage is **slab**. Further project information and construction updates will be added as the work develops and details become available for publication.

@@ -62,7 +62,4 @@ collections:
     output: true
     permalink: /projects/:name/
   faqs:
-    output: true
-  guides:
-    output: true
-    permalink: /guides/:title/
+    output: false

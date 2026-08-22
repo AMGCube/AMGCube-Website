@@ -35,14 +35,22 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
+    "@type": [
+      "ProfessionalService",
+      "HomeAndConstructionBusiness"
+    ],
     "name": "{{ site.company.legal_name }}",
     "alternateName": "AMGCUBE",
+    "identifier": {
+      "@type": "PropertyValue",
+      "propertyID": "QBCC Licence",
+      "value": {{ site.company.qbcc_licence_number | jsonify }}
+    },
     "description": "{{ site.description | escape }}",
     "url": "{{ site.url }}/",
     "image": "{{ site.url }}/img/og/og-default.webp",
     "logo": "{{ site.url }}/img/about/logo-title.png",
-    "telephone": "+61 458 533 333",
+    "telephone": {{ site.company.phone | jsonify }},
     "priceRange": "$$$",
     "address": {
       "@type": "PostalAddress",
@@ -50,18 +58,18 @@
       "addressRegion": "QLD",
       "addressCountry": "AU"
     },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "-27.4705",
-      "longitude": "153.0260"
-    },
     "areaServed": ["Brisbane", "South East Queensland"],
     "contactPoint": {
       "@type": "ContactPoint",
       "contactType": "sales",
-      "telephone": "+61 458 533 333",
-      "email": "info@amgcube.com",
+      "telephone": {{ site.company.phone | jsonify }},
+      "email": {{ site.company.email | jsonify }},
       "availableLanguage": ["English"]
+    },
+    "memberOf": {
+      "@type": "Organization",
+      "name": "Master Builders Queensland",
+      "url": "https://www.mbqld.com.au/"
     },
     "sameAs": []
   }

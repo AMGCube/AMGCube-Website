@@ -1,10 +1,11 @@
 # AMGCUBE
 
-AMGCUBE is a QBCC-licensed granny flat builder designing and building secondary dwellings across Brisbane and South East Queensland. Each project is shaped around the specific block, including site access, slope, services and planning constraints. Typical builds are 60-100 m2 with 1 to 3 bedrooms, priced from 250000 AUD including design, engineering, approvals, construction and handover. A completed display home is open by appointment at 146 Dowding Street, Oxley, Brisbane.
+AMGCUBE PTY LTD (AMGCUBE) is a QBCC-licensed granny flat builder designing and building secondary dwellings across Brisbane and South East Queensland. Each project is shaped around the specific block, including site access, slope, services and planning constraints. Typical builds are 60–100 m² with 1 to 3 bedrooms, priced from $250,000 AUD including design, engineering, approvals, construction and handover. A completed display home is open by appointment at 146 Dowding Street, Oxley, Brisbane.
 
 ## Key facts
 
-- QBCC Licence: 15616213 (Builder - Low Rise)
+- QBCC Licence: 15616213 (Builder – Low Rise)
+- Member: Master Builders Queensland
 - Location: Brisbane, Queensland, Australia
 - Service area: Brisbane and South East Queensland
 - Phone: +61 458 533 333 or email: info@amgcube.com
@@ -14,8 +15,11 @@ AMGCUBE is a QBCC-licensed granny flat builder designing and building secondary 
 - [Home](https://amgcube.com/): Service overview, pricing and timelines.
 - [Can I Build?](https://amgcube.com/can-i-build/): Site feasibility, size, cost and process overview.
 - [Site Feasibility](https://amgcube.com/can-i-build/site-feasibility/): Usable space, access, slope and services.
+- [Size & Layout](https://amgcube.com/can-i-build/size-and-layout/): Council limits, usable size and layout considerations for the block.
 - [Cost & Budget](https://amgcube.com/can-i-build/cost-and-budget/): Starting price and what drives the final cost.
-- [Process & Timeline](https://amgcube.com/can-i-build/process-and-timeline/): Six-step path to handover, typically 4 to 6 months.
+- [Process & Timeline](https://amgcube.com/can-i-build/process-and-timeline/): Property assessment, design, engineering, approvals, construction, inspections and handover.
 - [Projects](https://amgcube.com/projects/): Completed and current granny flat projects.
+- [Oxley Granny Flat Project](https://amgcube.com/projects/146dowding/): A completed 80m² granny flat in Oxley and AMGCUBE display home.
+- [Sunnybank Hills Granny Flat Project](https://amgcube.com/projects/brisbane-granny-flat-project/): A current 80m² granny flat project in Sunnybank Hills documenting real construction progress.
 - [About](https://amgcube.com/about/): Company story and approach.
 - [Contact](https://amgcube.com/contact/): Email and phone contact, display home visits.

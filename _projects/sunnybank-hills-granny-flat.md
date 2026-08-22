@@ -11,6 +11,8 @@
 
 # --- Identity ---------------------------------------------------------------
 title: Sunnybank Hills Granny Flat          # 项目正式名称
+description: Follow the construction of an 80m² granny flat in Sunnybank Hills, Brisbane, with real project progress documented from site preparation through to completion.
+last_modified_at: 2026-08-22
 card-title: Nym Ct, Sunnybank Hills         # 列表卡片与详情页标题
 subtitle: Active granny flat project in Sunnybank Hills, Brisbane
 layout: project

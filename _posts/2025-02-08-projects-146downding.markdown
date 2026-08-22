@@ -1,5 +1,7 @@
 ---
 title: Oxley Granny Flat Project
+description: A completed 80m² granny flat project in Oxley, Brisbane, with real construction details, project timeline and a display home available to visit.
+last_modified_at: 2026-08-22
 card-title: Dowding St, Oxley
 subtitle: Completed two-bedroom granny flat in Oxley, Brisbane
 layout: project

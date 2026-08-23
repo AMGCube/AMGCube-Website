@@ -1,67 +1,31 @@
-Agency Jekyll theme
-====================
+# AMGCUBE Website
 
-Agency theme based on [Agency bootstrap theme ](https://startbootstrap.com/template-overviews/agency/)
+Jekyll source for [amgcube.com](https://amgcube.com), deployed from the `gh-pages` branch with GitHub Pages.
 
-# How to use
+## Public pages
 
-###Portfolio 
+- `/`
+- `/can-i-build/` and its four detail pages
+- `/projects/`
+- `/projects/146dowding/`
+- `/projects/brisbane-granny-flat-project/`
+- `/about/`
+- `/contact/`
 
-Portfolio projects are in '/_posts'
+## Structure
 
-Images are in '/img/portfolio'
+- Page sources: `index.html` and `pages/`
+- Current project sources: `_posts/2025-02-08-projects-146downding.markdown` and `_projects/sunnybank-hills-granny-flat.md`
+- Layouts: `_layouts/`
+- Shared components and CSS: `_includes/`
+- Current images: `img/`
+- Internal maintenance documentation: `docs/` (excluded from Production)
 
-###About
+## Local build
 
-Images are in '/img/about/'
+```bash
+bundle exec jekyll clean
+bundle exec jekyll build
+```
 
-###Team
-
-Team members and info are in '_config.yml'
-
-Images are in '/img/team/'
-
-
-# Demo
-
-View this jekyll theme in action [here](https://y7kim.github.io/agency-jekyll-theme)
-
-=========
-For more details, read [documentation](http://jekyllrb.com/)
-
-=========
-文档结构
-project-root/
-├── _data/
-├── _includes/
-├── _layouts/
-├── _posts/
-├── assets/
-│   ├── css/
-│   │   └── style.css
-│   ├── js/
-│   │   └── main.js
-│   ├── img/
-│       └── logo.png
-├── _config.yml
-├── index.html
-└── README.md
-
-===========
-新文档结构（2月6日）
-/
-│── index.html            # 首页（不再展示博客文章）
-│── products.html         # 产品分类页面
-│── services.html         # 服务分类页面
-│── blog.html             # 博客分类页面（所有文章在这里显示）
-│── _posts/               # Markdown 文章（自动生成博客）
-│── _layouts/
-│   ├── default.html      # 默认模板
-│   ├── category.html     # 分类页模板（用于 /blog/ /products/ 等）
-│   ├── post.html         # 文章详情模板（用于单篇博客）
-│── _includes/
-│   ├── header.html       # 全局导航
-│   ├── footer.html       # 页脚
-│── css/
-│   ├── agency.css        # 主要样式
-
+See `AGENTS.md` and `docs/WEBSITE-MAINTENANCE.md` for the current maintenance and deployment workflow.

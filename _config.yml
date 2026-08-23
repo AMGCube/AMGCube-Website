@@ -42,6 +42,7 @@ include:
 # Repository-only maintenance files; never publish these with the site.
 # AGENTS.md contains Liquid template syntax that would otherwise break the build.
 exclude:
+  - docs
   - templates
   - AGENTS.md
   - README.md
@@ -61,5 +62,3 @@ collections:
   projects:
     output: true
     permalink: /projects/:name/
-  faqs:
-    output: false

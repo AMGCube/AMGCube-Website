@@ -1,6 +1,8 @@
 # AMGCUBE 网站日常维护
 
-本说明只覆盖两个常用操作。建议每次在GitHub创建独立维护分支，完成检查后再合并到网站发布分支。
+本说明只覆盖首页 Hero 和 Projects 的常用维护操作。建议每次在 GitHub 创建独立维护分支，完成检查后再合并到网站发布分支。
+
+当前正式页面包括 Home、Can I Build 及四个子页、Projects、Oxley、Sunnybank Hills、About 和 Contact。内部文档位于 `docs/`，该目录不会输出到 Production。
 
 ## 1. 更换首页Hero图片
 
@@ -15,29 +17,25 @@
 
 直接用原文件名覆盖可以不改代码，但新文件名更容易避免浏览器缓存。
 
-## 2. 新增和维护Projects项目
+## 2. 新增和维护 Projects 项目
 
-> **过渡说明（2026-08）**
-> Sunnybank Hills项目已迁移到新的`_projects/`目录，维护方式见下方「3. Sunnybank Hills项目」。
-> Oxley和One Sino Park仍在`_posts/`，继续按本节说明维护。两种方式目前同时有效。
-
-项目文件位于`_posts/`，图片位于`img/projects/`。
+项目数据统一放在 `_projects/`，图片放在 `img/projects/<slug>/`。现有 Oxley 项目因历史 URL 兼容仍保留在 `_posts/2025-02-08-projects-146downding.markdown`；维护 Oxley 时直接更新该文件，不要移动或改动其 permalink。
 
 ### 新增项目
 
-1. 复制`templates/project-template.md`的内容。
-2. 在`_posts/`创建新文件，例如`2026-08-06-projects-suburb-granny-flat.md`。
+1. 参考 `templates/project-template.md` 的字段。
+2. 在 `_projects/` 创建以 slug 命名的文件，例如 `suburb-granny-flat.md`。
 3. 粘贴模板并填写字段；不要删除开头和正文前的`---`。
-4. 在`img/projects/`上传独立项目目录，例如`img/projects/suburb-granny-flat/`。
+4. 在 `img/projects/` 上传同名项目目录，例如 `img/projects/suburb-granny-flat/`。
 5. 确认Markdown中的图片路径与GitHub中的文件名完全一致，注意大小写。
 6. `date`越新，项目在Projects列表中越靠前。
 
 ### 更新施工进度
 
 1. 将新图片上传到项目的`progress/`目录。
-2. 打开对应的`_posts`项目文件。
-3. 在`progress:`下方最上面加入新的`img / text / alt`记录。
-4. 横图使用`orientation: landscape`，竖图使用`orientation: portrait`。
+2. 打开对应的 `_projects` 项目文件；Oxley 仍更新上述 `_posts` 文件。
+3. 按项目文件现有 `progress:` 数据结构，在最上面加入新记录。
+4. 保持该项目当前使用的字段格式；每张图片都应填写准确的 `alt`。
 
 ### 隐藏项目
 
@@ -71,7 +69,7 @@ featured: false
 
 **同一时间原则上只应有一个项目设置为`featured: true`。** 如果误设多个，首页会显示`date`最新的项目；如果没有任何featured项目，网站会自动回退到Oxley展示房。
 
-## 3. Sunnybank Hills项目（新维护方式）
+## 3. Sunnybank Hills 项目
 
 数据文件：`_projects/sunnybank-hills-granny-flat.md`
 图片目录：`img/projects/sunnybank-hills-granny-flat/`

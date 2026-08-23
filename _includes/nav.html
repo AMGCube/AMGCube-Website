@@ -1,7 +1,7 @@
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
         <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-navbar">
+            <button type="button" class="navbar-toggle" aria-controls="bs-navbar" aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -25,15 +25,3 @@
         </div>
     </div>
 </nav>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        window.addEventListener("scroll", function () {
-            var navbar = document.querySelector(".navbar-default");
-            if (window.scrollY > 50) {
-                navbar.classList.add("navbar-shrink");
-            } else {
-                navbar.classList.remove("navbar-shrink");
-            }
-        });
-    });
-</script>

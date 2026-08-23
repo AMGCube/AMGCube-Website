@@ -53,14 +53,6 @@ hero-image: /img/projects/sunnybank-hills-granny-flat/hero.webp
 hero-alt: Front elevation drawing for the Sunnybank Hills granny flat project
 og_image: /img/projects/sunnybank-hills-granny-flat/hero.webp
 
-# 平面图与效果图已存在于 img/projects/sunnybank-hills-granny-flat/plans/，
-# 但目前没有任何页面区块显示它们。需要展示时再启用，避免出现"填了却不生效"的字段。
-# gallery:
-#   - src: /img/projects/sunnybank-hills-granny-flat/plans/floor-plan.webp
-#     alt: Floor plan for the Sunnybank Hills granny flat
-#   - src: /img/projects/sunnybank-hills-granny-flat/plans/front-elevation.webp
-#     alt: Front elevation for the Sunnybank Hills granny flat
-
 # --- Progress updates -------------------------------------------------------
 # 最新的记录放最上面。字段说明：
 #   date        必填 · YYYY-MM-DD

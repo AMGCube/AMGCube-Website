@@ -17,9 +17,6 @@ date: 2026-08-06
 # 项目网址，必须唯一；使用小写英文和连字符
 permalink: /projects/suburb-granny-flat/
 
-# 必须保留，否则不会进入Projects数据源
-categories: ["Projects"]
-
 # true显示在Projects列表；false隐藏但保留详情页
 listed: true
 
@@ -41,10 +38,10 @@ floor-area: "80m²"
 layout-summary: "2 bedrooms, 2 bathrooms"
 
 # 在建项目填写开工日期；不适用时删除
-commencement: "6 August 2026"
+commencement: 2026-08-06
 
 # 完工项目填写；在建项目删除或继续注释
-# completion: "January 2027"
+# completion: 2027-01-15
 
 # 已知工期时填写
 # construction-time: "Approximately 4 months"
@@ -61,17 +58,20 @@ current-stage: "Site Preparation"
 card-description: "An active granny flat project in Suburb, Brisbane."
 card-cta: "View Project Updates"
 
-# 施工记录按最新到最早排列；竖图orientation改为portrait
+# 施工记录按最新到最早排列
 progress:
-  - img: /img/projects/suburb-granny-flat/progress/2026-08-06-site-preparation.webp
-    text: "6 August 2026 · Site preparation"
-    alt: "Site preparation underway at the Suburb property"
-    orientation: landscape
+  - date: 2026-08-06
+    stage: Site preparation
+    title: Site preparation underway
+    images:
+      - src: /img/projects/suburb-granny-flat/progress/2026-08-06-site-preparation.webp
+        alt: "Site preparation underway at the Suburb property"
 
-  - img: /img/projects/suburb-granny-flat/progress/2026-08-01-before-construction.webp
-    text: "1 August 2026 · Before construction"
-    alt: "Suburb backyard before construction"
-    orientation: landscape
+  - date: 2026-08-01
+    stage: Before construction
+    images:
+      - src: /img/projects/suburb-granny-flat/progress/2026-08-01-before-construction.webp
+        alt: "Suburb backyard before construction"
 ---
 
 在这里填写项目概述正文。正文会显示在Project Overview区域。

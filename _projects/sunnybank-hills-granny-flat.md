@@ -61,6 +61,14 @@ og_image: /img/projects/sunnybank-hills-granny-flat/hero.webp
 #   description 选填 · 一到两句说明（填写后显示在图片说明下方）
 #   images      必填 · 至少一张；每张需要 src 和 alt
 progress:
+  - date: 2026-08-23
+    stage: Termite protection
+    title: Kordon barrier installed
+    description: The Kordon termite protection barrier has been installed and the project is awaiting main frame construction.
+    images:
+      - src: /img/projects/sunnybank-hills-granny-flat/progress/2026-08-23-kordon-termite-barrier.webp
+        alt: Kordon termite protection barrier installed around the slab at the Sunnybank Hills granny flat site
+
   - date: 2026-08-11
     stage: Slab
     title: Concrete slab completed

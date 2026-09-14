@@ -35,7 +35,7 @@ council: Brisbane
 project-status: In Progress
 status-label: In Progress
 status-key: in-progress                     # in-progress | completed
-current-stage: Slab                         # 当前施工阶段
+current-stage: Framing                         # 当前施工阶段
 
 # --- Specification ----------------------------------------------------------
 project-type: Granny flat

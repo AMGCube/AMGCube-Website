@@ -61,6 +61,14 @@ og_image: /img/projects/sunnybank-hills-granny-flat/hero.webp
 #   description 选填 · 一到两句说明（填写后显示在图片说明下方）
 #   images      必填 · 至少一张；每张需要 src 和 alt
 progress:
+  - date: 2026-09-08
+    stage: Framing
+    title: Timber Framing Completed
+    description: The timber wall frames and roof trusses have been installed, completing the main framing stage.
+    images:
+      - src: /img/projects/sunnybank-hills-granny-flat/progress/2026-09-08-framing-completed.webp
+        alt: Timber frames have been installed, completing the main framing stage.
+        
   - date: 2026-08-23
     stage: Termite protection
     title: Kordon barrier installed
